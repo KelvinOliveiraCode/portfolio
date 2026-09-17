@@ -9,6 +9,12 @@
 <meta name="description" content="Portfólio de Kelvin Oliveira: projetos de dados e IA em Python, Excel e React. 4 bootcamps com seleção (Santander, Bradesco, Riachuelo, CI&T).">
 <meta property="og:title" content="Kelvin Oliveira — Dados &amp; IA">
 <meta property="og:description" content="Projetos de dados e IA: ML, dashboards Excel, agentes. 4 bootcamps com seleção.">
+<meta property="og:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="Kelvin Oliveira — Dados e IA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -144,6 +150,13 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .bcard:hover .tags span{border-color:rgba(241,241,238,.16)}
 
 .proj{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.pcard[hidden]{display:none}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filters button{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text-muted);background:transparent;border:1px solid var(--border);padding:8px 18px;cursor:pointer;transition:border-color .5s var(--ease),color .5s var(--ease),background .5s var(--ease)}
+.filters button:hover{color:var(--white);border-color:rgba(241,241,238,.24)}
+.filters button.active{color:#050505;background:var(--light);border-color:var(--light)}
+.lang-btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;color:var(--light);background:transparent;border:1px solid var(--light-dim);padding:7px 14px;cursor:pointer;transition:background .5s var(--ease),color .5s var(--ease)}
+.lang-btn:hover{background:var(--light);color:#050505}
 .pcard{overflow:hidden;display:flex;flex-direction:column}
 .pcard .cap{height:150px;position:relative;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);
   background:
@@ -229,29 +242,30 @@ footer ul a:hover{color:var(--white)}
   <div class="inner">
     <span class="logo">KELVIN <b>OLIVEIRA</b></span>
     <ul>
-      <li><a href="#bootcamps">Bootcamps</a></li>
-      <li><a href="#projetos">Projetos</a></li>
-      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#bootcamps" data-i18n="navBoot">Bootcamps</a></li>
+      <li><a href="#projetos" data-i18n="navProj">Projetos</a></li>
+      <li><a href="#sobre" data-i18n="navAbout">Sobre</a></li>
     </ul>
+    <button id="lang-toggle" class="lang-btn" aria-label="Switch to English">EN</button>
   </div>
 </nav>
 
 <header class="hero">
   <div class="hero-inner">
-    <span class="eyebrow">Dados · Inteligência Artificial · Software</span>
-    <h1>Construo ferramentas que transformam<br>dados em <span class="gold">decisão</span>.</h1>
-    <p class="hero-sub">Estudante de Ciência da Computação (IFPA) construindo pipelines de dados, modelos de machine learning e agentes de IA. Quatro bootcamps corporativos com etapa seletiva — Santander, Bradesco, Riachuelo e CI&T — concluídos em 2026, na DIO.</p>
+    <span class="eyebrow" data-i18n="eyebrow">Dados · Inteligência Artificial · Software</span>
+    <h1 data-i18n="heroTitle">Construo ferramentas que transformam<br>dados em <span class="gold">decisão</span>.</h1>
+    <p class="hero-sub" data-i18n="heroSub">Estudante de Ciência da Computação (IFPA) construindo pipelines de dados, modelos de machine learning e agentes de IA. Quatro bootcamps corporativos com etapa seletiva — Santander, Bradesco, Riachuelo e CI&T — concluídos em 2026, na DIO.</p>
     <div class="hero-links">
       <a class="btn" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn ghost" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="btn ghost" href="#projetos">Ver projetos ↓</a>
+      <a class="btn ghost" href="#projetos" data-i18n="btnProj">Ver projetos ↓</a>
     </div>
     <div class="hero-facts">
-      <div class="fact"><b>169h</b><span>bootcamps com seleção</span></div>
-      <div class="fact"><b>8</b><span>projetos publicados</span></div>
-      <div class="fact"><b>2</b><span>graduações em curso</span></div>
-      <div class="fact"><b>Python</b><span>linguagem principal</span></div>
-      <div class="fact"><b>Inglês</b><span>intermediário–avançado</span></div>
+      <div class="fact"><b>169h</b><span data-i18n="factBoot">bootcamps com seleção</span></div>
+      <div class="fact"><b>8</b><span data-i18n="factProj">projetos publicados</span></div>
+      <div class="fact"><b>2</b><span data-i18n="factGrad">graduações em curso</span></div>
+      <div class="fact"><b>Python</b><span data-i18n="factLang">linguagem principal</span></div>
+      <div class="fact"><b data-i18n="factEngB">Inglês</b><span data-i18n="factEng">intermediário–avançado</span></div>
     </div>
   </div>
 </header>
@@ -259,8 +273,8 @@ footer ul a:hover{color:var(--white)}
 <main>
   <section id="bootcamps">
     <div class="sec-head">
-      <h2>Bootcamps com seleção</h2>
-      <span class="sec-num">01 — FORMAÇÃO APLICADA</span>
+      <h2 data-i18n="secBoot">Bootcamps com seleção</h2>
+      <span class="sec-num" data-i18n="secBootNum">01 — FORMAÇÃO APLICADA</span>
     </div>
     <div class="bootcamps">
       <article class="bcard">
@@ -268,8 +282,8 @@ footer ul a:hover{color:var(--white)}
         <div class="body">
           <span class="co">Bradesco</span>
           <h3>GenAI, Dados &amp; Cyber</h3>
-          <div class="meta">52 horas · concluído em 18/07/2026</div>
-          <p>IA generativa, análise de dados (Excel, SQL, Power Query, Python) e cibersegurança aplicada ao setor financeiro. Projeto final: BIA, agente financeiro com validação anti-alucinação.</p>
+          <div class="meta" data-i18n="b1m">52 horas · concluído em 18/07/2026</div>
+          <p data-i18n="b1d">IA generativa, análise de dados (Excel, SQL, Power Query, Python) e cibersegurança aplicada ao setor financeiro. Projeto final: BIA, agente financeiro com validação anti-alucinação.</p>
           <div class="tags"><span>Python</span><span>SQL</span><span>Power Query</span><span>GenAI</span></div>
         </div>
       </article>
@@ -278,8 +292,8 @@ footer ul a:hover{color:var(--white)}
         <div class="body">
           <span class="co">Riachuelo</span>
           <h3>Criando Produtos com IA</h3>
-          <div class="meta">35 horas · concluído em 20/07/2026</div>
-          <p>Do MVP ao produto: agentes de IA, SaaS com IA generativa, automação de workflows com n8n e vibe coding. Projeto final: ATS Resume Builder, gerador de currículos com deploy online.</p>
+          <div class="meta" data-i18n="b2m">35 horas · concluído em 20/07/2026</div>
+          <p data-i18n="b2d">Do MVP ao produto: agentes de IA, SaaS com IA generativa, automação de workflows com n8n e vibe coding. Projeto final: ATS Resume Builder, gerador de currículos com deploy online.</p>
           <div class="tags"><span>React</span><span>TypeScript</span><span>n8n</span><span>SaaS</span></div>
         </div>
       </article>
@@ -288,8 +302,8 @@ footer ul a:hover{color:var(--white)}
         <div class="body">
           <span class="co">Santander</span>
           <h3>Excel com IA e Claude</h3>
-          <div class="meta">29 horas · concluído em 23/08/2026</div>
-          <p>Excel 365 e Power Query com IA no fluxo de trabalho: Copilot para consultas SQL e ETL, Claude Code e GPT Agents gerando relatórios. Quatro desafios práticos entregues.</p>
+          <div class="meta" data-i18n="b3m">29 horas · concluído em 23/08/2026</div>
+          <p data-i18n="b3d">Excel 365 e Power Query com IA no fluxo de trabalho: Copilot para consultas SQL e ETL, Claude Code e GPT Agents gerando relatórios. Quatro desafios práticos entregues.</p>
           <div class="tags"><span>Excel</span><span>Power Query</span><span>Copilot</span><span>Claude Code</span></div>
         </div>
       </article>
@@ -298,8 +312,8 @@ footer ul a:hover{color:var(--white)}
         <div class="body">
           <span class="co">CI&amp;T</span>
           <h3>Java AI Copilot</h3>
-          <div class="meta">53 horas · concluído em 11/09/2026</div>
-          <p>Java moderno com Spring Boot e GitHub Copilot: 27 cursos, 2 desafios de projeto e 2 de código. Projetos: API REST com padrões GoF e assistente financeiro por voz com Spring AI.</p>
+          <div class="meta" data-i18n="b4m">53 horas · concluído em 11/09/2026</div>
+          <p data-i18n="b4d">Java moderno com Spring Boot e GitHub Copilot: 27 cursos, 2 desafios de projeto e 2 de código. Projetos: API REST com padrões GoF e assistente financeiro por voz com Spring AI.</p>
           <div class="tags"><span>Java</span><span>Spring Boot</span><span>Copilot</span><span>API REST</span></div>
         </div>
       </article>
@@ -308,79 +322,86 @@ footer ul a:hover{color:var(--white)}
 
   <section id="projetos">
     <div class="sec-head">
-      <h2>Projetos</h2>
-      <span class="sec-num">02 — CONSTRUÍDO</span>
+      <h2 data-i18n="secProj">Projetos</h2>
+      <span class="sec-num" data-i18n="secProjNum">02 — CONSTRUÍDO</span>
+    </div>
+    <div class="filters" role="group" data-i18n-aria="fLabel" aria-label="Filtrar projetos">
+      <button class="active" data-filter="all" data-i18n="fAll" aria-pressed="true">Todos</button>
+      <button data-filter="python" aria-pressed="false">Python</button>
+      <button data-filter="java" aria-pressed="false">Java</button>
+      <button data-filter="excel" aria-pressed="false">Excel</button>
+      <button data-filter="react" aria-pressed="false">React</button>
     </div>
     <div class="proj">
-      <article class="pcard">
+      <article class="pcard" data-cat="python">
         <div class="cap"><span class="mono">deteccao-de-fraudes</span></div>
         <div class="body">
-          <h3>Detecção de fraude em cartão de crédito</h3>
+          <h3 data-i18n="p1t">Detecção de fraude em cartão de crédito</h3>
           <div class="stack">Python · pandas · scikit-learn · Matplotlib</div>
-          <p>Pipeline completo de ML sobre dataset público de 284.807 transações (0,17% fraudes): tratamento de desbalanceamento, comparação de modelos, otimização de hiperparâmetros e serialização do modelo final.</p>
+          <p data-i18n="p1d">Pipeline completo de ML sobre dataset público de 284.807 transações (0,17% fraudes): tratamento de desbalanceamento, comparação de modelos, otimização de hiperparâmetros e serialização do modelo final.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/deteccao-de-fraudes" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="react">
         <div class="cap"><span class="mono">gerador-de-curriculos-ats</span></div>
         <div class="body">
-          <h3>ATS Resume Builder</h3>
+          <h3 data-i18n="p2t">ATS Resume Builder</h3>
           <div class="stack">React 18 · TypeScript · Tailwind CSS · Vite</div>
-          <p>Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real, exportação PDF A4 e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo, com deploy online.</p>
+          <p data-i18n="p2d">Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real, exportação PDF A4 e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo, com deploy online.</p>
           <div class="links"><a class="live" href="https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/" target="_blank" rel="noopener">demo ↗</a><a href="https://github.com/KelvinOliveiraCode/gerador-de-curriculos-ats" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="python">
         <div class="cap"><span class="mono">dio-lab-bia-do-futuro</span></div>
         <div class="body">
-          <h3>BIA — Banco Inteligente Assistente</h3>
+          <h3 data-i18n="p3t">BIA — Banco Inteligente Assistente</h3>
           <div class="stack">Python · Streamlit · pandas · engenharia de prompts</div>
-          <p>Assistente financeiro proativo que analisa histórico de transações, recomenda investimentos por perfil de risco e valida as próprias respostas em 4 camadas anti-alucinação. Projeto final do bootcamp Bradesco.</p>
+          <p data-i18n="p3d">Assistente financeiro proativo que analisa histórico de transações, recomenda investimentos por perfil de risco e valida as próprias respostas em 4 camadas anti-alucinação. Projeto final do bootcamp Bradesco.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/dio-lab-bia-do-futuro" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="react">
         <div class="cap"><span class="mono">finvibe-ai</span></div>
         <div class="body">
-          <h3>FinVibe AI</h3>
+          <h3 data-i18n="p4t">FinVibe AI</h3>
           <div class="stack">React · TypeScript · Tailwind CSS</div>
-          <p>Dashboard de finanças pessoais: score financeiro, controle de orçamento por categoria, metas com projeção e assistente conversacional que responde perguntas sobre os dados do usuário.</p>
+          <p data-i18n="p4d">Dashboard de finanças pessoais: score financeiro, controle de orçamento por categoria, metas com projeção e assistente conversacional que responde perguntas sobre os dados do usuário.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/finvibe-ai" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="excel">
         <div class="cap"><span class="mono">dashboard-xbox</span></div>
         <div class="body">
-          <h3>Dashboard de vendas — Xbox Game Pass</h3>
+          <h3 data-i18n="p5t">Dashboard de vendas — Xbox Game Pass</h3>
           <div class="stack">Excel · SUMIFS · parâmetros · 7 KPIs</div>
-          <p>Modelagem de negócio em planilha: simula a operação do Game Pass (planos, regiões, add-ons, ciclos de faturamento) com agregações automáticas e 6 gráficos executivos recalculados por parâmetro. Desafio Santander.</p>
+          <p data-i18n="p5d">Modelagem de negócio em planilha: simula a operação do Game Pass (planos, regiões, add-ons, ciclos de faturamento) com agregações automáticas e 6 gráficos executivos recalculados por parâmetro. Desafio Santander.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/dashboard-xbox" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="excel python">
         <div class="cap"><span class="mono">excel-para-investimentos</span></div>
         <div class="body">
-          <h3>Simulador de investimentos em FIIs</h3>
+          <h3 data-i18n="p6t">Simulador de investimentos em FIIs</h3>
           <div class="stack">Excel · fórmulas financeiras · Python</div>
-          <p>Simulador de carteira de fundos imobiliários com alocação por perfil de risco, fórmulas financeiras e manutenção da planilha automatizada por script Python. Desafio Santander.</p>
+          <p data-i18n="p6d">Simulador de carteira de fundos imobiliários com alocação por perfil de risco, fórmulas financeiras e manutenção da planilha automatizada por script Python. Desafio Santander.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/excel-para-investimentos" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="java">
         <div class="cap"><span class="mono">kodapay-api</span></div>
         <div class="body">
-          <h3>KodaPay — API de pagamentos</h3>
+          <h3 data-i18n="p7t">KodaPay — API de pagamentos</h3>
           <div class="stack">Java 21 · Spring Boot 3.5 · 6 padrões GoF</div>
-          <p>API REST de pagamentos com 6 padrões GoF (Chain, Strategy, Observer, Builder, Factory, Singleton), 26 testes e CI verde. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <p data-i18n="p7d">API REST de pagamentos com 6 padrões GoF (Chain, Strategy, Observer, Builder, Factory, Singleton), 26 testes e CI verde. Desafio de projeto do bootcamp CI&amp;T.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodapay-api" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
-      <article class="pcard">
+      <article class="pcard" data-cat="java">
         <div class="cap"><span class="mono">kodabudget-api</span></div>
         <div class="body">
-          <h3>KodaBudget — finanças por voz</h3>
+          <h3 data-i18n="p8t">KodaBudget — finanças por voz</h3>
           <div class="stack">Java 21 · Spring AI · Whisper · edge-tts</div>
-          <p>Assistente financeiro que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <p data-i18n="p8d">Assistente financeiro que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. Desafio de projeto do bootcamp CI&amp;T.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodabudget-api" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
@@ -389,21 +410,21 @@ footer ul a:hover{color:var(--white)}
 
   <section id="sobre">
     <div class="sec-head">
-      <h2>Sobre</h2>
-      <span class="sec-num">03 — TRAJETÓRIA</span>
+      <h2 data-i18n="secAbout">Sobre</h2>
+      <span class="sec-num" data-i18n="secAboutNum">03 — TRAJETÓRIA</span>
     </div>
     <div class="about-grid">
       <div>
-        <p><strong>De onde venho.</strong> Em 2026 fundei o ecossistema KODAROS — hoje 4 sites de tecnologia e educação publicados e em produção — e lancei o Garimpo, site de curadoria de ofertas com catálogo de 32 produtos. No mesmo período, passei na etapa seletiva de quatro bootcamps corporativos da DIO e a cada um saí com um projeto publicado.</p>
-        <p><strong>O que faço.</strong> Pipelines de dados e modelos de ML em Python (pandas, scikit-learn), análise e dashboards em Excel/Power Query com IA no fluxo de trabalho (Copilot, Claude Code, GPT Agents), e interfaces em React/TypeScript para colocar essas análises na mão do usuário.</p>
-        <p><strong>Para onde vou.</strong> Busco estágio em análise ou engenharia de dados, onde a teoria de Ciência da Computação encontra problemas reais.</p>
+        <p data-i18n="a1"><strong>De onde venho.</strong> Em 2026 fundei o ecossistema KODAROS — hoje 4 sites de tecnologia e educação publicados e em produção — e lancei o Garimpo, site de curadoria de ofertas com catálogo de 32 produtos. No mesmo período, passei na etapa seletiva de quatro bootcamps corporativos da DIO e a cada um saí com um projeto publicado.</p>
+        <p data-i18n="a2"><strong>O que faço.</strong> Pipelines de dados e modelos de ML em Python (pandas, scikit-learn), análise e dashboards em Excel/Power Query com IA no fluxo de trabalho (Copilot, Claude Code, GPT Agents), e interfaces em React/TypeScript para colocar essas análises na mão do usuário.</p>
+        <p data-i18n="a3"><strong>Para onde vou.</strong> Busco estágio em análise ou engenharia de dados, onde a teoria de Ciência da Computação encontra problemas reais.</p>
       </div>
       <div class="timeline">
-        <div class="item"><b>Ciência da Computação — IFPA</b><span>abr 2026 — dez 2029</span></div>
-        <div class="item"><b>Garimpo — curadoria de ofertas</b><span>ago 2026 — atual</span></div>
-        <div class="item"><b>KODAROS — ecossistema de 4 sites</b><span>jul 2026 — atual</span></div>
-        <div class="item"><b>Bootcamps DIO — Santander · Bradesco · Riachuelo · CI&amp;T</b><span>jul — set 2026 · 169h</span></div>
-        <div class="item"><b>Análise e Desenvolvimento de Sistemas — UNIASSELVI</b><span>2026 — 2028</span></div>
+        <div class="item"><b data-i18n="t1">Ciência da Computação — IFPA</b><span>abr 2026 — dez 2029</span></div>
+        <div class="item"><b data-i18n="t2">Garimpo — curadoria de ofertas</b><span>ago 2026 — atual</span></div>
+        <div class="item"><b data-i18n="t3">KODAROS — ecossistema de 4 sites</b><span>jul 2026 — atual</span></div>
+        <div class="item"><b data-i18n="t4">Bootcamps DIO — Santander · Bradesco · Riachuelo · CI&amp;T</b><span>jul — set 2026 · 169h</span></div>
+        <div class="item"><b data-i18n="t5">Análise e Desenvolvimento de Sistemas — UNIASSELVI</b><span>2026 — 2028</span></div>
       </div>
     </div>
   </section>
@@ -422,6 +443,7 @@ footer ul a:hover{color:var(--white)}
 
 <script src="assets/cosmic-bg.js"></script>
 <script src="assets/engraving.js"></script>
+<script src="assets/lang.js"></script>
 
 </body>
 </html>

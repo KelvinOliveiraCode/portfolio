@@ -112,6 +112,7 @@
 
       /* each card tilts a touch more, only when near viewport center band */
       for (var i = 0; i < cards.length; i++) {
+        if (cards[i].hidden) continue;
         var r = cards[i].getBoundingClientRect();
         if (r.bottom < -80 || r.top > window.innerHeight + 80) continue;
         /* don't fight the scroll-reveal transform until it's done */
@@ -155,6 +156,28 @@
       document.addEventListener('touchstart', gesto, { passive: true });
       document.addEventListener('scroll', gesto, { passive: true });
     }
+  }
+
+  /* ---- project filters: Todos/Python/Java/Excel/React ---- */
+  var filterBox = document.querySelector('.filters');
+  if (filterBox) {
+    var fbtns = [].slice.call(filterBox.querySelectorAll('button[data-filter]'));
+    var fcards = [].slice.call(document.querySelectorAll('.pcard'));
+    filterBox.addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('button[data-filter]') : null;
+      if (!b) return;
+      var f = b.getAttribute('data-filter');
+      fbtns.forEach(function (x) {
+        var on = x === b;
+        x.classList.toggle('active', on);
+        x.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      fcards.forEach(function (c) {
+        if (f === 'all') { c.hidden = false; return; }
+        var cats = (c.getAttribute('data-cat') || '').split(/\s+/);
+        c.hidden = cats.indexOf(f) === -1;
+      });
+    });
   }
 
   /* ---- gold word in h1: slow celestial breathing ---- */
