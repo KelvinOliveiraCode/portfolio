@@ -12,7 +12,7 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var TAU = Math.PI * 2;
 
-  var grainCv, hatchCv, drift = 0, t = 0;
+  var grainCv, hatchCv, grainPat = null, drift = 0, t = 0;
   var stars = [];
   var points = [];
 
@@ -37,6 +37,8 @@
       id.data[i + 3] = Math.random() < .5 ? 12 : 4;
     }
     g.putImageData(id, 0, 0);
+    /* padrão criado uma vez: createPattern por frame causa jank */
+    grainPat = ctx.createPattern(grainCv, 'repeat');
 
     /* giant faint cross-hatch */
     hatchCv = document.createElement('canvas');
@@ -87,10 +89,9 @@
     /* grain tile drifting */
     drift = (ts * .004) % 256;
     ctx.globalAlpha = 1;
-    var pat = ctx.createPattern(grainCv, 'repeat');
     ctx.save();
     ctx.translate(-drift, drift * .6);
-    ctx.fillStyle = pat;
+    ctx.fillStyle = grainPat;
     ctx.fillRect(0, 0, W + 256, H + 256);
     ctx.restore();
 

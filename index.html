@@ -55,8 +55,6 @@ body{
     radial-gradient(ellipse 120% 90% at 50% 50%, transparent 0%, transparent 38%, rgba(2,3,5,.68) 100%),
     linear-gradient(180deg, rgba(2,3,5,.55) 0%, rgba(2,3,5,.28) 40%, rgba(2,3,5,.62) 100%);
 }
-#fractal-bg{position:fixed;top:0;left:0;z-index:-1;pointer-events:none}
-
 /* printed-paper grain over everything */
 body::before{
   content:"";position:fixed;inset:0;z-index:100;pointer-events:none;opacity:.055;
@@ -132,6 +130,7 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 
 .bootcamps{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 .bcard{overflow:hidden;display:flex;flex-direction:column}
+.bcard>a{display:block;line-height:0}
 .bcard img{width:100%;height:170px;object-fit:cover;object-position:center 30%;display:block;transition:filter 1.4s var(--ease),opacity 1.4s var(--ease);opacity:.92}
 .bcard:hover img{opacity:1}
 .bcard .body{padding:22px 24px 24px;display:flex;flex-direction:column;flex:1}
@@ -249,7 +248,7 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="hero-facts">
       <div class="fact"><b>169h</b><span>bootcamps com seleção</span></div>
-      <div class="fact"><b>6</b><span>projetos publicados</span></div>
+      <div class="fact"><b>8</b><span>projetos publicados</span></div>
       <div class="fact"><b>2</b><span>graduações em curso</span></div>
       <div class="fact"><b>Python</b><span>linguagem principal</span></div>
       <div class="fact"><b>Inglês</b><span>intermediário–avançado</span></div>
@@ -265,7 +264,7 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="bootcamps">
       <article class="bcard">
-        <img src="assets/cert-bradesco.jpg" alt="Certificado Bootcamp Bradesco — GenAI, Dados &amp; Cyber">
+        <a href="https://www.dio.me/certificate/KMAJ7SSK" target="_blank" rel="noopener" aria-label="Verificar certificado Bradesco na DIO"><img src="assets/cert-bradesco.jpg" alt="Certificado Bootcamp Bradesco — GenAI, Dados &amp; Cyber"></a>
         <div class="body">
           <span class="co">Bradesco</span>
           <h3>GenAI, Dados &amp; Cyber</h3>
@@ -275,7 +274,7 @@ footer ul a:hover{color:var(--white)}
         </div>
       </article>
       <article class="bcard">
-        <img src="assets/cert-riachuelo.jpg" alt="Certificado Bootcamp Riachuelo — Criando Produtos com IA">
+        <a href="https://www.dio.me/certificate/LFLKAR7D" target="_blank" rel="noopener" aria-label="Verificar certificado Riachuelo na DIO"><img src="assets/cert-riachuelo.jpg" alt="Certificado Bootcamp Riachuelo — Criando Produtos com IA"></a>
         <div class="body">
           <span class="co">Riachuelo</span>
           <h3>Criando Produtos com IA</h3>
@@ -285,7 +284,7 @@ footer ul a:hover{color:var(--white)}
         </div>
       </article>
       <article class="bcard">
-        <img src="assets/cert-santander.jpg" alt="Certificado Bootcamp Santander — Excel com IA e Claude">
+        <a href="https://www.dio.me/certificate/GVYJJU4L" target="_blank" rel="noopener" aria-label="Verificar certificado Santander na DIO"><img src="assets/cert-santander.jpg" alt="Certificado Bootcamp Santander — Excel com IA e Claude"></a>
         <div class="body">
           <span class="co">Santander</span>
           <h3>Excel com IA e Claude</h3>
@@ -295,7 +294,7 @@ footer ul a:hover{color:var(--white)}
         </div>
       </article>
       <article class="bcard">
-        <img src="assets/cert-cit.jpg" alt="Certificado Bootcamp CI&amp;T — Java AI Copilot">
+        <a href="https://www.dio.me/certificate/MF1MLIW4" target="_blank" rel="noopener" aria-label="Verificar certificado CI&amp;T na DIO"><img src="assets/cert-cit.jpg" alt="Certificado Bootcamp CI&amp;T — Java AI Copilot"></a>
         <div class="body">
           <span class="co">CI&amp;T</span>
           <h3>Java AI Copilot</h3>
@@ -314,21 +313,21 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="proj">
       <article class="pcard">
-        <div class="cap"><span class="mono">fraud-detection-project</span></div>
+        <div class="cap"><span class="mono">deteccao-de-fraudes</span></div>
         <div class="body">
           <h3>Detecção de fraude em cartão de crédito</h3>
           <div class="stack">Python · pandas · scikit-learn · Matplotlib</div>
           <p>Pipeline completo de ML sobre dataset público de 284.807 transações (0,17% fraudes): tratamento de desbalanceamento, comparação de modelos, otimização de hiperparâmetros e serialização do modelo final.</p>
-          <div class="links"><a href="https://github.com/KelvinOliveiraCode/fraud-detection-project" target="_blank" rel="noopener">código ↗</a></div>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/deteccao-de-fraudes" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard">
-        <div class="cap"><span class="mono">ats-resume-builder</span></div>
+        <div class="cap"><span class="mono">gerador-de-curriculos-ats</span></div>
         <div class="body">
           <h3>ATS Resume Builder</h3>
           <div class="stack">React 18 · TypeScript · Tailwind CSS · Vite</div>
           <p>Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real, exportação PDF A4 e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo, com deploy online.</p>
-          <div class="links"><a class="live" href="https://kelvinoliveiracode.github.io/ats-resume-builder" target="_blank" rel="noopener">demo ↗</a><a href="https://github.com/KelvinOliveiraCode/ats-resume-builder" target="_blank" rel="noopener">código ↗</a></div>
+          <div class="links"><a class="live" href="https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/" target="_blank" rel="noopener">demo ↗</a><a href="https://github.com/KelvinOliveiraCode/gerador-de-curriculos-ats" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard">
@@ -350,12 +349,12 @@ footer ul a:hover{color:var(--white)}
         </div>
       </article>
       <article class="pcard">
-        <div class="cap"><span class="mono">Dashboard-Xbox</span></div>
+        <div class="cap"><span class="mono">dashboard-xbox</span></div>
         <div class="body">
           <h3>Dashboard de vendas — Xbox Game Pass</h3>
           <div class="stack">Excel · SUMIFS · parâmetros · 7 KPIs</div>
           <p>Modelagem de negócio em planilha: simula a operação do Game Pass (planos, regiões, add-ons, ciclos de faturamento) com agregações automáticas e 6 gráficos executivos recalculados por parâmetro. Desafio Santander.</p>
-          <div class="links"><a href="https://github.com/KelvinOliveiraCode/Dashboard-Xbox" target="_blank" rel="noopener">código ↗</a></div>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/dashboard-xbox" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard">
@@ -365,6 +364,24 @@ footer ul a:hover{color:var(--white)}
           <div class="stack">Excel · fórmulas financeiras · Python</div>
           <p>Simulador de carteira de fundos imobiliários com alocação por perfil de risco, fórmulas financeiras e manutenção da planilha automatizada por script Python. Desafio Santander.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/excel-para-investimentos" target="_blank" rel="noopener">código ↗</a></div>
+        </div>
+      </article>
+      <article class="pcard">
+        <div class="cap"><span class="mono">kodapay-api</span></div>
+        <div class="body">
+          <h3>KodaPay — API de pagamentos</h3>
+          <div class="stack">Java 21 · Spring Boot 3.5 · 6 padrões GoF</div>
+          <p>API REST de pagamentos com 6 padrões GoF (Chain, Strategy, Observer, Builder, Factory, Singleton), 26 testes e CI verde. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodapay-api" target="_blank" rel="noopener">código ↗</a></div>
+        </div>
+      </article>
+      <article class="pcard">
+        <div class="cap"><span class="mono">kodabudget-api</span></div>
+        <div class="body">
+          <h3>KodaBudget — finanças por voz</h3>
+          <div class="stack">Java 21 · Spring AI · Whisper · edge-tts</div>
+          <p>Assistente financeiro que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodabudget-api" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
     </div>

@@ -15,6 +15,11 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('in');
           io.unobserve(entry.target);
+          /* o delay do stagger travava o hover depois: limpa após o reveal */
+          (function (el) {
+            var wait = parseFloat(el.style.transitionDelay || '0') * 1000 + 1750;
+            setTimeout(function () { el.style.transitionDelay = '0s'; }, wait);
+          })(entry.target);
         }
       });
     }, { threshold: .12, rootMargin: '0px 0px -6% 0px' });
@@ -55,7 +60,7 @@
       }
     }
 
-    document.documentElement.addEventListener('mouseleave', function () {
+    document.addEventListener('mouseleave', function () {
       ring.classList.remove('on');
       init = false;
     });
@@ -81,6 +86,17 @@
     });
     /* scrolling brings new cards into the band — recompute once */
     window.addEventListener('scroll', function () { kick(); }, { passive: true });
+    /* mouse saiu da janela: tilt volta ao neutro em vez de congelar torto */
+    document.addEventListener('mouseleave', function () {
+      rx = 0; ry = 0;
+      var plate = document.getElementById('plate');
+      if (plate) {
+        var im = plate.querySelector('video, img');
+        (im || plate).style.transform = '';
+      }
+      for (var i = 0; i < cards.length; i++) cards[i].style.transform = '';
+      kick();
+    });
 
     function tiltLoop() {
       /* slow ceremonial easing, not snappy */
