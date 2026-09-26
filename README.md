@@ -1,13 +1,13 @@
 # Portfolio — Kelvin Oliveira · Dados & IA
 
-![Site](https://img.shields.io/badge/site-live-FFE4A8?style=flat-square&label=kelvinoliveiracode.github.io%2FPortfolio)
+![Site](https://img.shields.io/badge/site-live-FFE4A8?style=flat-square&label=kelvinoliveiracode.github.io%2Fportfolio)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
 
 Portfólio pessoal de **Kelvin Oliveira** — pipelines de dados, ML e produtos digitais. Single-page em HTML/CSS/JS puro com direção de arte "Cosmic Engraving": fundo `#050607`, placa fixa com vídeo ASCII de gravura cósmica (`gravura-ascii.mp4`) que inclina com o mouse, tipografia Cormorant Garamond sobre serif Georgia e acento âmbar `#FFE4A8`.
 
-**Live:** https://kelvinoliveiracode.github.io/Portfolio/
+**Live:** https://kelvinoliveiracode.github.io/portfolio/
 
 ---
 
@@ -18,9 +18,9 @@ Portfólio pessoal de **Kelvin Oliveira** — pipelines de dados, ML e produtos 
 | Seção | Conteúdo |
 |---|---|
 | **Hero** | "Construo ferramentas que transformam dados em decisões" sobre a placa de gravura em parallax |
-| **Bootcamps com seleção** | Santander Excel + IA (29h), Bradesco (52h), Riachuelo (35h) — 2026, etapa seletiva aprovada em todos |
-| **Projetos** | Detecção de fraude em cartão de crédito · ATS Resume Builder · BIA — Banco Inteligente Assistente · FinVibe AI · Dashboard de vendas Xbox Game Pass · Simulador de investimentos em FIIs · GenAI, Dados & Cyber · Criando Produtos com IA · Excel com IA e Claude |
-| **Sobre** | Trajetória: fundou o ecossistema KODAROS em 2026 (4 sites de tecnologia e educação publicados) e lançou o Garimpo (curadoria de ofertas) |
+| **Bootcamps com seleção** | Santander Excel + IA (29h), Bradesco GenAI (52h), Riachuelo (35h), CI&T Java AI Copilot (53h) — 2026, 169h, etapa seletiva aprovada em todos |
+| **Projetos** | Detecção de fraude em cartão de crédito · ATS Resume Builder · BIA — Banco Inteligente Assistente · FinVibe AI · Dashboard Xbox Game Pass · Simulador de FIIs · KodaPay API · KodaBudget voz |
+| **Sobre** | Trajetória: fundou o ecossistema KODAROS em 2026 (6 sites/produtos publicados) e lançou o Garimpo (131 ofertas em 8 categorias) |
 
 ### Stack técnica que o portfólio apresenta
 
@@ -52,16 +52,16 @@ Portfólio pessoal de **Kelvin Oliveira** — pipelines de dados, ML e produtos 
 
 Personal portfolio for **Kelvin Oliveira** — data pipelines, ML and digital products. Single-page vanilla HTML/CSS/JS with a "Cosmic Engraving" art direction: `#050607` background, a fixed plate with an ASCII cosmic engraving video (`gravura-ascii.mp4`) that tilts with the mouse, Cormorant Garamond over Georgia serif and an amber `#FFE4A8` accent.
 
-**Live:** https://kelvinoliveiracode.github.io/Portfolio/
+**Live:** https://kelvinoliveiracode.github.io/portfolio/
 
 ### Sections
 
 | Section | Content |
 |---|---|
-| **Hero** | "Construo ferramentas que transformam dados em decisões" over the parallax engraving plate |
-| **Selective bootcamps** | Santander Excel + AI (29h), Bradesco (52h), Riachuelo (35h) — 2026, passed the selection stage in all three |
-| **Projects** | Credit card fraud detection · ATS Resume Builder · BIA — Intelligent Banking Assistant · FinVibe AI · Xbox Game Pass sales dashboard · FII investment simulator · GenAI, Data & Cyber · Building Products with AI · Excel with AI and Claude |
-| **About** | Founded the KODAROS ecosystem in 2026 (4 tech/education sites in production) and launched Garimpo (curated deals) |
+| **Hero** | "I build tools that turn data into decisions" over the parallax engraving plate |
+| **Selective bootcamps** | Santander Excel + AI (29h), Bradesco GenAI (52h), Riachuelo (35h), CI&T Java AI Copilot (53h) — 2026, 169h total, selected in all four |
+| **Projects** | Credit card fraud detection · ATS Resume Builder · BIA — Smart Bank Assistant · FinVibe AI · Xbox Game Pass dashboard · FII simulator · KodaPay API · KodaBudget voice |
+| **About** | Founded the KODAROS ecosystem in 2026 (6 published sites/products) and launched Garimpo (131 deals in 8 categories) |
 
 ### The technical stack it presents
 
