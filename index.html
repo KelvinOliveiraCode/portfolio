@@ -6,7 +6,7 @@
 <title>Kelvin Oliveira — Dados &amp; IA</title>
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/favicon-180.png">
-<meta name="description" content="Portfólio de Kelvin Oliveira: projetos de dados e IA em Python, Excel e React. 4 bootcamps com seleção (Santander, Bradesco, Riachuelo, CI&T).">
+<meta name="description" content="Portfólio de Kelvin Oliveira: projetos de dados e IA em Python, Excel e React. 4 bootcamps com seleção (Santander, Bradesco, Riachuelo, CI&T)."><meta name="color-scheme" content="dark light">
 <meta property="og:title" content="Kelvin Oliveira — Dados &amp; IA">
 <meta property="og:description" content="Projetos de dados e IA: ML, dashboards Excel, agentes. 4 bootcamps com seleção.">
 <meta property="og:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
@@ -15,6 +15,13 @@
 <meta property="og:image:alt" content="Kelvin Oliveira — Dados e IA">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
+<meta property="og:url" content="https://kelvinoliveiracode.github.io/portfolio/">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://kelvinoliveiracode.github.io/portfolio/">
+<meta name="theme-color" content="#050607">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Kelvin Oliveira","jobTitle":"Data & IA — Estagiário","knowsAbout":["Data Engineering","Machine Learning","Python","React","Java","Spring Boot","SQL","Excel"],"address":{"@type":"PostalAddress","addressLocality":"Ananindeua","addressRegion":"PA","addressCountry":"BR"},"url":"https://kelvinoliveiracode.github.io/portfolio/","sameAs":["https://github.com/KelvinOliveiraCode","https://www.linkedin.com/in/kelvin-oliveira-code/","https://web.dio.me/users/kelvinrebelosw"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
@@ -92,18 +99,20 @@ header.hero{min-height:100vh;display:flex;align-items:center;padding:120px 24px 
   max-width:1000px;margin:0 auto;width:100%;
 }
 .eyebrow{font-family:var(--mono);font-size:12px;color:var(--light);letter-spacing:.25em;text-transform:uppercase;margin-bottom:24px;display:block;animation:fadeUp 1.8s .2s var(--ease) both}
-.eyebrow::before{content:"✦ "}
-h1{font-family:var(--serif);font-size:clamp(42px,7.4vw,78px);font-weight:500;line-height:1.06;letter-spacing:.005em;animation:fadeUp 2s .45s var(--ease) both}
+h1{font-family:var(--serif);font-size:clamp(36px,6vw,64px);font-weight:500;line-height:1.1;letter-spacing:.005em;animation:fadeUp 2s .45s var(--ease) both}
 h1 .gold{color:var(--light)}
-.hero-sub{max-width:640px;margin-top:28px;color:var(--text-muted);font-size:18.5px;animation:fadeUp 2.2s .75s var(--ease) both}
-.hero-links{margin-top:48px;display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 2.2s 1.05s var(--ease) both}
+.hero-sub{max-width:640px;margin-top:28px;color:var(--text-muted);font-size:18.5px;animation:fadeUp 2.2s .75s var(--ease) both; background: rgba(5,6,7,.65); backdrop-filter: blur(4px); }
+.hero-links{margin-top:48px;display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 2.2s 1.05s var(--ease) both; background: rgba(5,6,7,.65); backdrop-filter: blur(4px); }
 .btn{border:1px solid var(--light-dim);color:var(--light);padding:13px 28px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;background:transparent;transition:background .6s var(--ease),color .6s var(--ease),border-color .6s var(--ease)}
 .btn:hover{background:var(--light);color:#050505;border-color:var(--light);text-decoration:none}
-.btn.ghost{border-color:rgba(241,241,238,.22);color:var(--gray-300)}
-.btn.ghost:hover{background:var(--white);color:#050505;border-color:var(--white)}
-.hero-facts{display:flex;gap:38px;margin-top:72px;flex-wrap:wrap;animation:fadeUp 2.4s 1.35s var(--ease) both}
-.fact{border-left:1px solid rgba(241,241,238,.14);padding-left:16px}
-.fact b{display:block;font-size:27px;color:var(--white);font-weight:500;font-family:var(--serif)}
+  .btn.ghost{border-color:rgba(241,241,238,.22);color:var(--gray-300)}
+  .btn.ghost:hover{background:var(--white);color:#050505;border-color:var(--white)}
+  .btn.primary{background:var(--light);color:#050505;border-color:var(--light)}
+  .btn.primary:hover{background:var(--white);color:#050505;border-color:var(--white)}
+  .hero-tech{max-width:640px;margin-top:16px;color:var(--gray-500);font-size:14px;font-family:var(--mono);letter-spacing:.08em;text-shadow:0 1px 2px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.6)}
+.hero-facts{display:grid;grid-template-columns:repeat(2,minmax(140px,1fr));gap:22px;margin-top:72px; background: rgba(5,6,7,.65); backdrop-filter: blur(4px); }
+.fact{padding:12px 14px;border-radius:6px;background:rgba(13,15,19,.55)}
+.fact b{display:block;font-size:25px;color:var(--white);font-weight:500;font-family:var(--serif)}
 .fact span{color:var(--text-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
 
 main{max-width:1000px;margin:0 auto;padding:0 24px}
@@ -111,7 +120,6 @@ section{padding:96px 0}
 section + section{border-top:1px solid rgba(241,241,238,.07)}
 .sec-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:46px}
 .sec-num{font-family:var(--mono);font-size:12px;color:var(--text-muted);letter-spacing:.22em}
-.sec-num::before{content:"✦ ";color:var(--light)}
 h2{font-family:var(--serif);font-size:34px;font-weight:500}
 
 /* panels: slightly dark, slightly transparent — text always over scrim */
@@ -123,9 +131,7 @@ h2{font-family:var(--serif);font-size:34px;font-weight:500}
     repeating-linear-gradient(45deg,rgba(241,241,238,.02) 0 1px,transparent 1px 7px),
     repeating-linear-gradient(135deg,rgba(241,241,238,.014) 0 1px,transparent 1px 7px);
   border:1px solid var(--border);
-  transform-style:preserve-3d;
-  transition:border-color 1s var(--ease),background-color 1s var(--ease),transform 1.2s var(--ease),box-shadow 1.2s var(--ease);
-  will-change:transform;
+  transition:border-color 1s var(--ease),background-color 1s var(--ease);
 }
 .bcard:hover,.pcard:hover{border-color:rgba(241,241,238,.24)}
 /* readability shadows on all body text */
@@ -158,15 +164,12 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .lang-btn{font-family:var(--mono);font-size:11.5px;letter-spacing:.18em;color:var(--light);background:transparent;border:1px solid var(--light-dim);padding:7px 14px;cursor:pointer;transition:background .5s var(--ease),color .5s var(--ease)}
 .lang-btn:hover{background:var(--light);color:#050505}
 .pcard{overflow:hidden;display:flex;flex-direction:column}
-.pcard .cap{height:150px;position:relative;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);
+.pcard .cap{height:118px;position:relative;display:flex;align-items:center;justify-content:center;border-bottom:1px solid var(--border);
   background:
     repeating-linear-gradient(45deg,rgba(241,241,238,.022) 0 1px,transparent 1px 6px),
     repeating-linear-gradient(135deg,rgba(241,241,238,.016) 0 1px,transparent 1px 6px),
     #0A0C0F}
-.pcard .cap::after{content:"✦";position:absolute;top:12px;right:16px;font-size:10px;color:var(--light-dim);transition:color 1s var(--ease),transform 1s var(--ease)}
-.pcard:hover .cap::after{color:var(--light-soft);transform:rotate(90deg)}
-.pcard .cap .mono{color:var(--gray-500);font-size:14px;letter-spacing:.1em;transition:color 1s var(--ease)}
-.pcard:hover .cap .mono{color:var(--gray-300)}
+.pcard .cap .mono{color:var(--gray-300);font-size:12.5px;letter-spacing:.14em;text-transform:uppercase}
 .pcard .body{padding:24px;flex:1;display:flex;flex-direction:column}
 .pcard h3{font-family:var(--serif);font-size:20px;font-weight:500;margin-bottom:5px}
 .pcard .stack{font-family:var(--mono);font-size:11.5px;color:var(--text-muted);letter-spacing:.1em;margin-bottom:14px}
@@ -177,6 +180,18 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .pcard .links a:hover{color:var(--white)}
 .pcard .links a.live{color:var(--light)}
 .pcard .links a.live:hover{color:var(--white)}
+.pcard .result{margin-top:14px;padding-top:14px;border-top:1px dashed rgba(241,241,238,.14);font-family:var(--mono);font-size:11.5px;letter-spacing:.04em;color:var(--gray-300)}
+.pcard .result b{color:var(--light);font-weight:400;text-transform:uppercase;letter-spacing:.12em;font-size:10.5px}
+.pcard .badge{position:absolute;top:12px;right:14px;font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--light);background:rgba(241,241,238,.08);border:1px solid rgba(255,228,168,.32);padding:4px 10px;border-radius:3px;backdrop-filter:blur(4px);pointer-events:none;text-shadow:0 1px 2px rgba(0,0,0,.85)}
+.contact-body{max-width:640px}
+.contact-body p{color:var(--text-muted);font-size:16px;margin-bottom:26px}
+.contact-body p strong{color:var(--white);font-weight:400}
+.contact-links{display:flex;gap:14px;flex-wrap:wrap}
+.proof{margin-top:4px;font-size:14px}
+.proof a{color:var(--light);border-bottom:1px solid var(--light-dim)}
+.proof a:hover{color:var(--white);border-color:var(--white)}
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--light);color:#050505;font-family:var(--mono);font-size:12px;padding:10px 18px;z-index:200}
+.skip-link:focus{left:12px;top:12px}
 
 .about-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:52px}
 .about-grid > div:first-child{
@@ -188,7 +203,7 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .about-grid p{color:var(--text-muted);font-size:16px;margin-bottom:18px}
 .about-grid p strong{color:var(--white);font-weight:400}
 .timeline .item{position:relative;padding-bottom:28px}
-.timeline .item::before{content:"✦";position:absolute;left:-32px;top:4px;font-size:9px;line-height:1;color:var(--light);animation:starPulse 4s ease-in-out infinite}
+.timeline .item::before{content:"";position:absolute;left:-29px;top:8px;width:7px;height:7px;background:var(--light);transform:rotate(45deg)}
 .timeline .item b{display:block;font-weight:400;font-size:16.5px;font-family:var(--serif);font-size:18px}
 .timeline .item span{font-family:var(--mono);font-size:11.5px;color:var(--text-muted);letter-spacing:.1em}
 
@@ -199,44 +214,44 @@ footer ul{display:flex;gap:24px;list-style:none;font-family:var(--mono);font-siz
 footer ul a{color:var(--text-muted)}
 footer ul a:hover{color:var(--white)}
 
-/* scroll reveal — slow ceremonial entrances */
-.rv{opacity:0;transform:translateY(28px);transition:opacity 1.6s var(--ease),transform 1.6s var(--ease)}
+/* scroll reveal — single subtle entrance */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
 .rv.in{opacity:1;transform:none}
-
-/* gold word in h1 breathes like starlight */
-.breathe-gold{animation:goldBreathe 6s ease-in-out infinite}
-@keyframes goldBreathe{0%,100%{opacity:1}50%{opacity:.78}}
-
-/* trailing star cursor */
-#cursor-ring{position:fixed;top:0;left:0;width:26px;height:26px;border:1px solid rgba(241,241,238,.3);border-radius:50%;pointer-events:none;z-index:999;transform:translate(-50%,-50%);transition:width .5s var(--ease),height .5s var(--ease),border-color .5s var(--ease),background .5s var(--ease),opacity .5s;opacity:0}
-#cursor-ring.on{opacity:1}
-#cursor-ring.hot{width:38px;height:38px;border-color:var(--light-soft);background:rgba(255,228,168,.05)}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
-@keyframes starPulse{0%,100%{transform:scale(1);opacity:.9}50%{transform:scale(1.55);opacity:.45}}
 
+/* ---(labels 03) infraestrutura: grade de cards --- */
+.sec-intro{max-width:760px;color:var(--text-muted);font-size:15px;margin:0 0 32px}
+#infra .proj{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+#infra .pcard .cap .badge{color:var(--light);border-color:rgba(241,241,238,.3)}
+@media (max-width:640px){#infra .proj{grid-template-columns:1fr}}
 @media(max-width:820px){
   .bootcamps{grid-template-columns:1fr}
   .proj{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
-  nav ul{display:none}
-  .hero-facts{gap:24px}
+  nav .inner{padding:12px 16px;flex-wrap:wrap;gap:10px}
+  nav .logo{font-size:12px;letter-spacing:.22em}
+  nav ul{display:flex;gap:16px;font-size:10.5px}
+  .lang-btn{padding:6px 10px;font-size:10.5px}
+   .hero-facts{grid-template-columns:1fr;gap:16px;margin-top:44px}
+  header.hero{padding:110px 20px 64px}
+  section{padding:64px 0}
 }
 
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
   .rv{opacity:1;transform:none}
-  #cursor-ring{display:none}
 }
 </style>
 </head>
 <body>
+<a class="skip-link" href="#bootcamps" data-i18n="skip">Pular para o conteúdo</a>
 
 <div id="plate" aria-hidden="true">
-  <video src="assets/gravura-ascii.mp4" poster="assets/gravura-poster.jpg" autoplay muted loop playsinline preload="auto"></video>
+  <video src="assets/gravura-ascii.mp4" poster="assets/gravura-poster.jpg" autoplay muted loop playsinline preload="metadata" style="width:100%;height:100%;object-fit:cover;background:none;"></video>
 </div>
-<canvas id="fractal-bg" aria-hidden="true"></canvas>
+<canvas id="fractal-bg" aria-hidden="true" style="width:100%;height:100%;"></canvas>
 
 <nav>
   <div class="inner">
@@ -244,7 +259,9 @@ footer ul a:hover{color:var(--white)}
     <ul>
       <li><a href="#bootcamps" data-i18n="navBoot">Bootcamps</a></li>
       <li><a href="#projetos" data-i18n="navProj">Projetos</a></li>
+        <li><a href="#infra" data-i18n="navInfra">Infra</a></li>
       <li><a href="#sobre" data-i18n="navAbout">Sobre</a></li>
+      <li><a href="#contato" data-i18n="navContato">Contato</a></li>
     </ul>
     <button id="lang-toggle" class="lang-btn" aria-label="Switch to English">EN</button>
   </div>
@@ -255,17 +272,18 @@ footer ul a:hover{color:var(--white)}
     <span class="eyebrow" data-i18n="eyebrow">Dados · Inteligência Artificial · Software</span>
     <h1 data-i18n="heroTitle">Construo ferramentas que transformam<br>dados em <span class="gold">decisão</span>.</h1>
     <p class="hero-sub" data-i18n="heroSub">Estudante de Ciência da Computação (IFPA) construindo pipelines de dados, modelos de machine learning e agentes de IA. Quatro bootcamps corporativos com etapa seletiva — Santander, Bradesco, Riachuelo e CI&T — concluídos em 2026, na DIO.</p>
+    <p class="hero-tech" data-i18n="heroTech">Python · React · Java · SQL · Excel · Power Query · scikit-learn · Spring Boot</p>
     <div class="hero-links">
-      <a class="btn" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
-      <a class="btn ghost" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn primary" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn ghost" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
       <a class="btn ghost" href="#projetos" data-i18n="btnProj">Ver projetos ↓</a>
+      <a class="btn ghost" href="#contato" data-i18n="btnContato">Falar comigo ↓</a>
     </div>
     <div class="hero-facts">
       <div class="fact"><b>169h</b><span data-i18n="factBoot">bootcamps com seleção</span></div>
       <div class="fact"><b>8</b><span data-i18n="factProj">projetos publicados</span></div>
-      <div class="fact"><b>2</b><span data-i18n="factGrad">graduações em curso</span></div>
-      <div class="fact"><b>Python</b><span data-i18n="factLang">linguagem principal</span></div>
-      <div class="fact"><b data-i18n="factEngB">Inglês</b><span data-i18n="factEng">intermediário–avançado</span></div>
+      <div class="fact"><b data-i18n="factOpenB">Aberto</b><span data-i18n="factOpen">estágio em dados ou backend</span></div>
+      <div class="fact"><b>4</b><span data-i18n="factNum">sites KODAROS em produção</span></div>
     </div>
   </div>
 </header>
@@ -327,87 +345,331 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="filters" role="group" data-i18n-aria="fLabel" aria-label="Filtrar projetos">
       <button class="active" data-filter="all" data-i18n="fAll" aria-pressed="true">Todos</button>
+      <button data-filter="infra" aria-pressed="false" data-i18n="fInfra">Infra</button>
       <button data-filter="python" aria-pressed="false">Python</button>
       <button data-filter="java" aria-pressed="false">Java</button>
       <button data-filter="excel" aria-pressed="false">Excel</button>
       <button data-filter="react" aria-pressed="false">React</button>
+      <button data-filter="fullstack" aria-pressed="false">Fullstack</button>
     </div>
     <div class="proj">
       <article class="pcard" data-cat="python">
-        <div class="cap"><span class="mono">deteccao-de-fraudes</span></div>
+        <div class="cap"><span class="mono">Python · Machine Learning</span></div>
         <div class="body">
           <h3 data-i18n="p1t">Detecção de fraude em cartão de crédito</h3>
           <div class="stack">Python · pandas · scikit-learn · Matplotlib</div>
           <p data-i18n="p1d">Pipeline completo de ML sobre dataset público de 284.807 transações (0,17% fraudes): tratamento de desbalanceamento, comparação de modelos, otimização de hiperparâmetros e serialização do modelo final.</p>
+          <p class="result" data-i18n="p1r"><b>Entrega:</b> notebook reproduzível + modelo final serializado.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/deteccao-de-fraudes" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="react">
-        <div class="cap"><span class="mono">gerador-de-curriculos-ats</span></div>
+        <div class="cap"><span class="mono">React · Produto no ar</span></div>
         <div class="body">
           <h3 data-i18n="p2t">ATS Resume Builder</h3>
           <div class="stack">React 18 · TypeScript · Tailwind CSS · Vite</div>
           <p data-i18n="p2d">Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real, exportação PDF A4 e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo, com deploy online.</p>
+          <p class="result" data-i18n="p2r"><b>Entrega:</b> demo online + exportação PDF A4.</p>
           <div class="links"><a class="live" href="https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/" target="_blank" rel="noopener">demo ↗</a><a href="https://github.com/KelvinOliveiraCode/gerador-de-curriculos-ats" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="python">
-        <div class="cap"><span class="mono">dio-lab-bia-do-futuro</span></div>
+        <div class="cap"><span class="mono">Python · Agente de IA</span><span class="badge">Case mais técnico</span></div>
         <div class="body">
           <h3 data-i18n="p3t">BIA — Banco Inteligente Assistente</h3>
           <div class="stack">Python · Streamlit · pandas · engenharia de prompts</div>
           <p data-i18n="p3d">Assistente financeiro proativo que analisa histórico de transações, recomenda investimentos por perfil de risco e valida as próprias respostas em 4 camadas anti-alucinação. Projeto final do bootcamp Bradesco.</p>
+          <p class="result" data-i18n="p3r"><b>Entrega:</b> app interativo + validação em 4 camadas.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/dio-lab-bia-do-futuro" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="react">
-        <div class="cap"><span class="mono">finvibe-ai</span></div>
+        <div class="cap"><span class="mono">React · Dashboard</span></div>
         <div class="body">
           <h3 data-i18n="p4t">FinVibe AI</h3>
           <div class="stack">React · TypeScript · Tailwind CSS</div>
           <p data-i18n="p4d">Dashboard de finanças pessoais: score financeiro, controle de orçamento por categoria, metas com projeção e assistente conversacional que responde perguntas sobre os dados do usuário.</p>
+          <p class="result" data-i18n="p4r"><b>Entrega:</b> dashboard + assistente sobre os dados.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/finvibe-ai" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="excel">
-        <div class="cap"><span class="mono">dashboard-xbox</span></div>
+        <div class="cap"><span class="mono">Excel · Dashboard</span></div>
         <div class="body">
           <h3 data-i18n="p5t">Dashboard de vendas — Xbox Game Pass</h3>
           <div class="stack">Excel · SUMIFS · parâmetros · 7 KPIs</div>
           <p data-i18n="p5d">Modelagem de negócio em planilha: simula a operação do Game Pass (planos, regiões, add-ons, ciclos de faturamento) com agregações automáticas e 6 gráficos executivos recalculados por parâmetro. Desafio Santander.</p>
+          <p class="result" data-i18n="p5r"><b>Entrega:</b> planilha parametrizada + 6 gráficos.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/dashboard-xbox" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="excel python">
-        <div class="cap"><span class="mono">excel-para-investimentos</span></div>
+        <div class="cap"><span class="mono">Excel + Python · Simulador</span></div>
         <div class="body">
           <h3 data-i18n="p6t">Simulador de investimentos em FIIs</h3>
           <div class="stack">Excel · fórmulas financeiras · Python</div>
           <p data-i18n="p6d">Simulador de carteira de fundos imobiliários com alocação por perfil de risco, fórmulas financeiras e manutenção da planilha automatizada por script Python. Desafio Santander.</p>
+          <p class="result" data-i18n="p6r"><b>Entrega:</b> planilha + script de manutenção.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/excel-para-investimentos" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="java">
-        <div class="cap"><span class="mono">kodapay-api</span></div>
+        <div class="cap"><span class="mono">Java · API REST</span><span class="badge">6 padrões GoF + CI verde</span></div>
         <div class="body">
           <h3 data-i18n="p7t">KodaPay — API de pagamentos</h3>
           <div class="stack">Java 21 · Spring Boot 3.5 · 6 padrões GoF</div>
           <p data-i18n="p7d">API REST de pagamentos com 6 padrões GoF (Chain, Strategy, Observer, Builder, Factory, Singleton), 26 testes e CI verde. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <p class="result" data-i18n="p7r"><b>Entrega:</b> API + 26 testes, CI verde.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodapay-api" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
       <article class="pcard" data-cat="java">
-        <div class="cap"><span class="mono">kodabudget-api</span></div>
+        <div class="cap"><span class="mono">Java · Voz + IA</span></div>
         <div class="body">
           <h3 data-i18n="p8t">KodaBudget — finanças por voz</h3>
           <div class="stack">Java 21 · Spring AI · Whisper · edge-tts</div>
           <p data-i18n="p8d">Assistente financeiro que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. Desafio de projeto do bootcamp CI&amp;T.</p>
+          <p class="result" data-i18n="p8r"><b>Entrega:</b> transcrição local + resposta falada.</p>
           <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodabudget-api" target="_blank" rel="noopener">código ↗</a></div>
         </div>
       </article>
+      <article class="pcard" data-cat="fullstack">
+        <div class="cap"><span class="mono">Web · Produto próprio</span><span class="badge">Projeto autônomo</span></div>
+        <div class="body">
+          <h3 data-i18n="p9t">KODAROS — ecossistema de 4 sites</h3>
+          <div class="stack">HTML · CSS · JavaScript · React · GitHub Pages</div>
+          <p data-i18n="p9d">Evoluí da ideia ao ar: 4 sites de tecnologia e educação publicados e em produção. O portfólio que você vê é um deles; o Garimpo (curadoria de 32 ofertas) e outros completam o ecossistema. Arquitetura, branding, deploy e manutenção por conta própria.</p>
+          <p class="result" data-i18n="p9r"><b>Entrega:</b> 4 sites live + roadmap de engenharia de dados pessoal.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">código ↗</a></div>
+</article>
+<article class="pcard" data-cat="fullstack">
+  <div class="cap"><span class="mono">HTML · CSS · JavaScript</span><span class="badge">Curadoria</span></div>
+  <div class="body">
+    <h3 data-i18n="p10t">Garimpo — Curadoria de Ofertas</h3>
+    <div class="stack">HTML · CSS · JavaScript · GitHub Pages</div>
+    <p data-i18n="p10d">Site de curadoria de ofertas com catálogo expandido, lançado em ago 2026 e em manutenção ativa.</p>
+    <p class="result"><b>Entrega:</b> site live + repositório GitHub.</p>
+    <div class="links"><a href="https://github.com/KelvinOliveiraCode/Garimpo" target="_blank" rel="noopener">código ↗</a></div>
+  </div>
+</article>
     </div>
   </section>
 
+  <section id="infra">
+    <div class="sec-head">
+      <h2 data-i18n="secInfra">Infraestrutura e redes</h2>
+      <span class="sec-num" data-i18n="secInfraNum">03 &mdash; LABORAT&Oacute;RIOS</span>
+    </div>
+    <p class="sec-intro" data-i18n="infraIntro">24 reposit&oacute;rios de infraestrutura, automa&ccedil;&atilde;o e service desk, todos com testes, cobertura medida, documenta&ccedil;&atilde;o em PT/EN e CI no Windows. Dados fict&iacute;cios, execu&ccedil;&atilde;o local, sem nuvem paga.</p>
+    <div class="proj">
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_rede_lab_topologiat">Validador de rede LAN</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_rede_lab_topologiad">Confere sub-redes, rotas, Vlans, trunk e capacidade de um projeto de rede, com relatorio de problemas.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/rede-lab-topologia" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_calculadora_enlace_cobret">Orcamento de enlace de cobre</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_calculadora_enlace_cobred">Soma a perda de insercao do canal inteiro e emite laudo com a conta aberta para conferencia.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/calculadora-enlace-cobre" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_wifi_site_surveyt">Levantamento de Wi-Fi por andar</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_wifi_site_surveyd">Mapa de calor de RSSI, dimensionamento de AP e deteccao de conflito de canal.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/wifi-site-survey" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_pentest_lab_scannert">Scanner de app vulneravel</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_pentest_lab_scannerd">Audita um laboratorio local com 11 falhas plantadas, cada uma com CWE e veredito.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/pentest-lab-scanner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_cftv_simulador_nvrt">Simulador de NVR</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_cftv_simulador_nvrd">Gravacao, busca por horario e saude de 24 cameras simuladas, com 3 falhas detectadas.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/cftv-simulador-nvr" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_camera_onboardingt">Onboarding de camera IP</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_camera_onboardingd">Prepara cameras em lote, com nomenclatura padrao, inventario sem duplicar e log por camera.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/camera-onboarding" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_vms_integration_labst">Integracao de VMS</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_vms_integration_labsd">Quatro incidentes correlacionados e trilha de auditoria append-only com hash encadeado.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/vms-integration-labs" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_modbus_scannert">Protocolo Modbus TCP</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_modbus_scannerd">Servidor de laboratorio, scanner e leitura de medidores, com o protocolo implementado do zero.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/modbus-scanner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_network_ci_pipelinet">Validador de configuracao para CI</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_network_ci_pipelined">Parser de blocos, 24 regras de rede e relatorio que roda em pipeline de integracao.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/network-ci-pipeline" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_infra_as_code_labt">Laboratorio de IaC</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_infra_as_code_labd">Plano, diff de tres estados e idempotencia: o que mudaria e o que ja esta no equipamento.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/infra-as-code-lab" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_config_backup_switchest">Backup de configuracao de switch</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_config_backup_switchesd">Compara coletas normalizadas e sobe alerta quando a diferenca nao foi declarada.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/config-backup-switches" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">net</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_vpc_3_tier_segurat">VPC em 3 camadas com firewall</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_vpc_3_tier_segurad">Motor de decisao stateful, bastion e tracer que mostra em qual regra o trafego foi barrado.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/vpc-3-tier-segura" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">cloud</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_finops_dashboardt">Analise de fatura de nuvem</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_finops_dashboardd">Atribui custo por projeto, detecta gasto anomalo por IQR e projeta o fim do mes.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/finops-dashboard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">cloud</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_serverless_log_guardt">Funcao serverless simulada</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_serverless_log_guardd">Recebe evento, normaliza, mascara dado sensivel, aplica retencao e estima custo.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/serverless-log-guard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">energy</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_energy_dashboard_predialt">Dashboard de energia predial</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_energy_dashboard_prediald">Consumo por andar, linha de base, custo pela tarifa e alerta de desvio, em HTTP local.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/energy-dashboard-predial" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">energy</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_demand_limitingt">Corte de demanda</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_demand_limitingd">Simula tarifacao horaria e distribui o corte entre cargas para nao estourar a demanda contratada.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/demand-limiting" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">infra</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_rack_plannert">Planejador de rack</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_rack_plannerd">Altura em U, peso, amperagem por fase e temperatura estimada, com aviso quando estoura.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/rack-planner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">suporte</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_kb_searcht">Busca por similaridade</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_kb_searchd">O tecnico digita o sintoma em portugues e recebe os procedimentos relevantes, com TF-IDF escrito a mao.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/kb-search" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">suporte</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_helpdesk_ticketst">Service desk local</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_helpdesk_ticketsd">Fila por severidade e tempo de espera, SLA de resposta e resolucao separados, MTTR e inventario.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/helpdesk-tickets" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">suporte</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_workstation_onboardingt">Preparo de estacao Windows</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_workstation_onboardingd">Scripts PowerShell com dry-run por padrao, log com timestamp e verificacao final de estado.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/workstation-onboarding" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">cabos</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_certificador_cobre_simuladot">Certificacao de cabo</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_certificador_cobre_simuladod">Mapa de fiacao, NEXT, split pair e laudo que nomeia o limite estourado.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/certificador-cobre-simulado" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">sec</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_siem_logs_labt">Pipeline de deteccao</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_siem_logs_labd">Sete regras, correlacao temporal e alertas MITRE ATT&CK sobre 2.378 eventos sinteticos.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/siem-logs-lab" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>
+      <article class="pcard" data-cat="python infra">
+        <div class="cap"><span class="mono">sec</span><span class="badge">+ testes</span></div>
+        <div class="body">
+          <h3 data-i18n="i_threat_intel_dashboardt">Inteligencia de ameaca</h3>
+          <div class="stack">Python - pytest - Windows</div>
+          <p data-i18n="i_threat_intel_dashboardd">Compara versao e faixa afetada, e calcula risco com piso e teto, sobre dados ficticios.</p>
+          <div class="links"><a href="https://github.com/KelvinOliveiraCode/threat-intel-dashboard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
+        </div>
+      </article>    </div>
+  </section>
   <section id="sobre">
     <div class="sec-head">
       <h2 data-i18n="secAbout">Sobre</h2>
@@ -415,16 +677,32 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="about-grid">
       <div>
-        <p data-i18n="a1"><strong>De onde venho.</strong> Em 2026 fundei o ecossistema KODAROS — hoje 4 sites de tecnologia e educação publicados e em produção — e lancei o Garimpo, site de curadoria de ofertas com catálogo de 32 produtos. No mesmo período, passei na etapa seletiva de quatro bootcamps corporativos da DIO e a cada um saí com um projeto publicado.</p>
+        <p data-i18n="a1"><strong>De onde venho.</strong> Em 2026 fundei o ecossistema KODAROS — hoje 4 sites de tecnologia e educação publicados e em produção — e lancei o Garimpo, site de curadoria de ofertas com catálogo expandido. No mesmo período, passei na etapa seletiva de quatro bootcamps corporativos da DIO e a cada um saí com um projeto publicado.</p>
         <p data-i18n="a2"><strong>O que faço.</strong> Pipelines de dados e modelos de ML em Python (pandas, scikit-learn), análise e dashboards em Excel/Power Query com IA no fluxo de trabalho (Copilot, Claude Code, GPT Agents), e interfaces em React/TypeScript para colocar essas análises na mão do usuário.</p>
         <p data-i18n="a3"><strong>Para onde vou.</strong> Busco estágio em análise ou engenharia de dados, onde a teoria de Ciência da Computação encontra problemas reais.</p>
+        <p class="proof" data-i18n="aProof">KODAROS e Garimpo: repositórios em <a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">github.com/KelvinOliveiraCode ↗</a></p>
       </div>
       <div class="timeline">
-        <div class="item"><b data-i18n="t1">Ciência da Computação — IFPA</b><span>abr 2026 — dez 2029</span></div>
+        <div class="item"><b data-i18n="t1">Ciência da Computação — IFPA</b><span data-i18n="t1s">abr 2026 — dez 2029 · cursando</span></div>
         <div class="item"><b data-i18n="t2">Garimpo — curadoria de ofertas</b><span>ago 2026 — atual</span></div>
         <div class="item"><b data-i18n="t3">KODAROS — ecossistema de 4 sites</b><span>jul 2026 — atual</span></div>
         <div class="item"><b data-i18n="t4">Bootcamps DIO — Santander · Bradesco · Riachuelo · CI&amp;T</b><span>jul — set 2026 · 169h</span></div>
-        <div class="item"><b data-i18n="t5">Análise e Desenvolvimento de Sistemas — UNIASSELVI</b><span>2026 — 2028</span></div>
+        <div class="item"><b data-i18n="t5">Análise e Desenvolvimento de Sistemas — UNIASSELVI</b><span data-i18n="t5s">2026 — 2028 · cursando</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="sec-head">
+      <h2 data-i18n="secContato">Contato</h2>
+      <span class="sec-num" data-i18n="secContatoNum">04 — CONVERSA</span>
+    </div>
+    <div class="contact-body">
+      <p data-i18n="contatoD"><strong>Aberto a estágio</strong> em análise de dados, engenharia de dados ou backend Java. Base em Ananindeua, PA. O caminho mais rápido é o LinkedIn.</p>
+      <div class="contact-links">
+        <a class="btn primary" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn ghost" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn ghost" href="https://web.dio.me/users/kelvinrebelosw" target="_blank" rel="noopener">DIO ↗</a>
       </div>
     </div>
   </section>
