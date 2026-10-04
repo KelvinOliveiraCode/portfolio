@@ -110,8 +110,8 @@ h1 .gold{color:var(--light)}
   .btn.primary{background:var(--light);color:#050505;border-color:var(--light)}
   .btn.primary:hover{background:var(--white);color:#050505;border-color:var(--white)}
   .hero-tech{max-width:640px;margin-top:16px;color:var(--gray-500);font-size:14px;font-family:var(--mono);letter-spacing:.08em;text-shadow:0 1px 2px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.6)}
-.hero-facts{display:grid;grid-template-columns:repeat(2,minmax(140px,1fr));gap:22px;margin-top:72px; background: rgba(5,6,7,.65); backdrop-filter: blur(4px); }
-.fact{padding:12px 14px;border-radius:6px;background:rgba(13,15,19,.55)}
+.hero-facts{display:grid;grid-template-columns:repeat(2,minmax(140px,1fr));gap:22px;margin-top:72px}
+.fact{padding:2px 0}
 .fact b{display:block;font-size:25px;color:var(--white);font-weight:500;font-family:var(--serif)}
 .fact span{color:var(--text-muted);font-size:11.5px;font-family:var(--mono);letter-spacing:.12em;text-transform:uppercase}
 
@@ -214,7 +214,7 @@ footer ul a:hover{color:var(--white)}
 @keyframes fadeUp{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 @keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
 
-/* ---(labels 03) infraestrutura: grade de cards --- */
+/* grade de cards de projetos */
 @media(max-width:820px){
   .bootcamps{grid-template-columns:1fr}
   .proj{grid-template-columns:1fr}
@@ -331,180 +331,179 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="filters" role="group" data-i18n-aria="fLabel" aria-label="Filtrar projetos">
       <button class="active" data-filter="all" data-i18n="fAll" aria-pressed="true">Todos</button>
-      <button data-filter="infra" aria-pressed="false" data-i18n="fInfra">Infra</button>
-      <button data-filter="python" aria-pressed="false">Python</button>
-      <button data-filter="java" aria-pressed="false">Java</button>
-      <button data-filter="excel" aria-pressed="false">Excel</button>
-      <button data-filter="react" aria-pressed="false">React</button>
-      <button data-filter="fullstack" aria-pressed="false">Fullstack</button>
+      <button data-filter="dados" aria-pressed="false" data-i18n="fDados">Dados & IA</button>
+      <button data-filter="seg" aria-pressed="false" data-i18n="fSeg">Cybersegurança</button>
+      <button data-filter="backend" aria-pressed="false" data-i18n="fBack">Backend Java</button>
+      <button data-filter="frontend" aria-pressed="false" data-i18n="fFront">Frontend</button>
+      <button data-filter="redes" aria-pressed="false" data-i18n="fRedes">Redes & Infra</button>
     </div>
     <div class="proj">
-      <article class="pcard" data-cat="python">
+      <article class="pcard" data-cat="dados">
         <h3>deteccao-de-fraudes</h3>
         <p data-i18n="p1d">Pipeline completo de ML sobre 284.807 transações (0,17% fraudes) — ROC AUC 0.94, Recall 0.74: desbalanceamento, 3 modelos comparados e modelo final serializado.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/deteccao-de-fraudes" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="react">
+      <article class="pcard" data-cat="frontend">
         <h3>gerador-de-curriculos-ats</h3>
-        <p data-i18n="p2d">Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real, exportação PDF A4 e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo, com deploy online.</p>
+        <p data-i18n="p2d">Gerador de currículos compatível com sistemas ATS: coluna única, pré-visualização em tempo real e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo.</p>
         <div class="links"><a class="live" href="https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/" target="_blank" rel="noopener">demo &#8599;</a><a href="https://github.com/KelvinOliveiraCode/gerador-de-curriculos-ats" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="python">
+      <article class="pcard" data-cat="dados">
         <h3>dio-lab-bia-do-futuro</h3>
         <p data-i18n="p3d">Assistente financeiro proativo que analisa histórico de transações, recomenda investimentos por perfil de risco e valida as próprias respostas em 4 camadas anti-alucinação. Projeto final do bootcamp Bradesco.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/dio-lab-bia-do-futuro" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="react">
+      <article class="pcard" data-cat="dados">
         <h3>finvibe-ai</h3>
         <p data-i18n="p4d">Dashboard de finanças pessoais: score financeiro, controle de orçamento por categoria, metas com projeção e assistente conversacional que responde perguntas sobre os dados do usuário.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/finvibe-ai" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="excel">
+      <article class="pcard" data-cat="dados">
         <h3>dashboard-xbox</h3>
         <p data-i18n="p5d">Modelagem de negócio em planilha: simula a operação do Game Pass (planos, regiões, add-ons, ciclos de faturamento) com agregações automáticas e 6 gráficos executivos recalculados por parâmetro. Desafio Santander.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/dashboard-xbox" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="excel">
+      <article class="pcard" data-cat="dados">
         <h3>dashboard-vendas-porsche-dio</h3>
         <p data-i18n="p6d">Simulador de carteira de fundos imobiliários com alocação por perfil de risco, fórmulas financeiras e manutenção da planilha automatizada por script Python. Desafio Santander.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/excel-para-investimentos" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="java">
+      <article class="pcard" data-cat="backend">
         <h3>kodapay-api</h3>
         <p data-i18n="p7d">API REST de pagamentos com 6 padrões GoF (Chain, Strategy, Observer, Builder, Factory, Singleton), 26 testes e CI verde. Desafio de projeto do bootcamp CI&amp;T.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodapay-api" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="java">
+      <article class="pcard" data-cat="backend">
         <h3>kodabudget-api</h3>
         <p data-i18n="p8d">Assistente financeiro que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. Desafio de projeto do bootcamp CI&amp;T.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/kodabudget-api" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="fullstack">
+      <article class="pcard" data-cat="frontend">
         <h3>kodaros-landing</h3>
         <p data-i18n="p9d">Evoluí da ideia ao ar: 4 sites de tecnologia e educação publicados e em produção. O portfólio que você vê é um deles; o Garimpo (curadoria de 32 ofertas) e outros completam o ecossistema. Arquitetura, branding, deploy e manutenção por conta própria.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="fullstack">
+      <article class="pcard" data-cat="frontend">
         <h3>garimpo</h3>
         <p data-i18n="p10d">Site de curadoria de ofertas com catálogo expandido, lançado em ago 2026 e em manutenção ativa.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/Garimpo" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>rede-lab-topologia</h3>
         <p data-i18n="i_rede_lab_topologiad">Validador de projeto de rede LAN: sub-redes, rotas, Vlans, trunk e capacidade.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/rede-lab-topologia" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>modbus-scanner</h3>
         <p data-i18n="i_modbus_scannerd">Protocolo Modbus TCP implementado do zero, com servidor de lab, scanner e leitura de medidores.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/modbus-scanner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>pentest-lab-scanner</h3>
         <p data-i18n="i_pentest_lab_scannerd">Audita um app vulneravel em lab local e confirma 11 falhas plantadas, cada uma com CWE e veredito.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/pentest-lab-scanner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>wifi-site-survey</h3>
         <p data-i18n="i_wifi_site_surveyd">Mapa de calor de RSSI por andar, dimensionamento de access point e conflito de canal.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/wifi-site-survey" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>network-ci-pipeline</h3>
         <p data-i18n="i_network_ci_pipelined">Validador de configuracao de rede para CI, com 24 regras e relatorio de achados.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/network-ci-pipeline" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>threat-intel-dashboard</h3>
         <p data-i18n="i_threat_intel_dashboardd">Curador de inteligencia de ameaca ficticia: versao, faixa afetada e formula de risco.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/threat-intel-dashboard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>config-backup-switches</h3>
         <p data-i18n="i_config_backup_switchesd">Backup de configuracao de switch com deteccao por hash e normalizacao antes de comparar.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/config-backup-switches" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>infra-as-code-lab</h3>
         <p data-i18n="i_infra_as_code_labd">Laboratorio de IaC: plano, diff de tres estados e idempotencia de configuracao.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/infra-as-code-lab" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>vpc-3-tier-segura</h3>
         <p data-i18n="i_vpc_3_tier_segurad">Simulador de VPC em 3 camadas com firewall stateful, bastion e tracer de caminho.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/vpc-3-tier-segura" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>certificador-cobre-simulado</h3>
         <p data-i18n="i_certificador_cobre_simuladod">Certificacao de cabo: mapa de fiacao, NEXT, split pair e laudo com o limite estourado.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/certificador-cobre-simulado" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>calculadora-enlace-cobre</h3>
         <p data-i18n="i_calculadora_enlace_cobred">Orcamento de perda do canal inteiro de um enlace de cobre, com laudo para conferencia manual.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/calculadora-enlace-cobre" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>siem-logs-lab</h3>
         <p data-i18n="i_siem_logs_labd">Pipeline de deteccao com 7 regras, correlacao temporal e alertas MITRE ATT&CK.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/siem-logs-lab" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>cftv-simulador-nvr</h3>
         <p data-i18n="i_cftv_simulador_nvrd">Simulador de NVR com gravacao, busca por horario e 3 falhas plantadas de integridade.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/cftv-simulador-nvr" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>camera-onboarding</h3>
         <p data-i18n="i_camera_onboardingd">Onboarding de camera IP em lote, com nomenclatura padrao e inventario sem duplicar.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/camera-onboarding" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>vms-integration-labs</h3>
         <p data-i18n="i_vms_integration_labsd">Laboratorio de integracao VMS com 4 incidentes correlacionados e trilha de auditoria com hash.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/vms-integration-labs" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>finops-dashboard</h3>
         <p data-i18n="i_finops_dashboardd">Analise de fatura de nuvem ficticia: atribuicao de custo, anomalia por IQR e projecao do mes.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/finops-dashboard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="seg">
         <h3>serverless-log-guard</h3>
         <p data-i18n="i_serverless_log_guardd">Funcao serverless simulada que normaliza evento, mascara dado sensivel e estima custo.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/serverless-log-guard" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>lab-backup-recuperacao</h3>
         <p data-i18n="i_lab_backup_recuperacaod">Backup local com ciclo completo: hash, compressao, rotina GFS e restauracao verificada.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/lab-backup-recuperacao" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="dados">
         <h3>kb-search</h3>
         <p data-i18n="i_kb_searchd">Busca por similaridade em base de conhecimento, com TF-IDF e cosseno escritos a mao.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/kb-search" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>demand-limiting</h3>
         <p data-i18n="i_demand_limitingd">Simula tarifacao horaria e calcula corte de demanda para nao estourar a contratado.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/demand-limiting" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>helpdesk-tickets</h3>
         <p data-i18n="i_helpdesk_ticketsd">Service desk local com fila por severidade, SLA de resposta e resolucao, MTTR e inventario.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/helpdesk-tickets" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>workstation-onboarding</h3>
         <p data-i18n="i_workstation_onboardingd">Scripts PowerShell de preparo de estacao Windows, com dry-run por padrao e log datado.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/workstation-onboarding" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>rack-planner</h3>
         <p data-i18n="i_rack_plannerd">Planejador de rack: altura em U, peso, amperagem por fase e temperatura estimada.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/rack-planner" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
       </article>
-      <article class="pcard" data-cat="infra">
+      <article class="pcard" data-cat="redes">
         <h3>energy-dashboard-predial</h3>
         <p data-i18n="i_energy_dashboard_prediald">Dashboard web local de consumo de energia por andar, com linha de base e alerta de desvio.</p>
         <div class="links"><a href="https://github.com/KelvinOliveiraCode/energy-dashboard-predial" target="_blank" rel="noopener">c&oacute;digo &#8599;</a></div>
