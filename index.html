@@ -46,7 +46,7 @@
   --ease:cubic-bezier(.16,1,.3,1);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
 body{
   background:var(--bg);color:var(--white);font-family:Georgia,'Times New Roman',serif;line-height:1.65;position:relative;
 }
@@ -86,12 +86,12 @@ a:hover{color:var(--white)}
 ::-webkit-scrollbar-thumb{background:var(--gray-900);border:2px solid var(--bg)}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(5,6,7,.94);border-bottom:1px solid var(--border);animation:fadeDown 1.4s .1s var(--ease) both}
-nav .inner{max-width:1000px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between}
+nav .inner{max-width:1000px;margin:0 auto;padding:15px 24px;display:flex;align-items:center;justify-content:space-between;gap:6px 16px;flex-wrap:wrap}
 nav .logo{font-size:14px;letter-spacing:.35em;text-transform:uppercase;color:var(--white)}
 nav .logo::before{content:"✦ ";color:var(--light);font-size:11px}
 nav .logo b{color:var(--light);font-weight:400}
-nav ul{display:flex;gap:28px;list-style:none;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.18em}
-nav ul a{color:var(--text-muted)}
+nav ul{display:flex;gap:28px;list-style:none;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.18em;flex-wrap:wrap}
+nav ul a{color:var(--text-muted);display:inline-block;padding:7px 0}
 nav ul a:hover{color:var(--white)}
 
 header.hero{min-height:100vh;display:flex;align-items:center;padding:120px 24px 80px}
@@ -180,11 +180,8 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .contact-body{max-width:640px}
 .contact-body p{color:var(--text-muted);font-size:16px;margin-bottom:26px}
 .contact-body p strong{color:var(--white);font-weight:400}
-.contact-links{display:flex;gap:14px;flex-wrap:wrap}
-.contact-phone{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;font-family:var(--mono);margin:-8px 0 26px}
-.contact-phone span{font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--text-muted)}
-.contact-phone a{font-size:20px;color:var(--light);border-bottom:1px solid var(--light-dim);font-family:var(--serif);letter-spacing:.02em}
-.contact-phone a:hover{color:var(--white);border-color:var(--white)}
+.contact-links{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.link-group{display:inline-flex;gap:14px;flex-wrap:wrap}
 .btn.wa{border-color:rgba(37,211,102,.45);color:#25d366}
 .btn.wa:hover{background:#25d366;border-color:#25d366;color:#050505}
 
@@ -223,8 +220,8 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 footer{border-top:1px solid rgba(241,241,238,.07);padding:48px 24px;margin-top:24px}
 footer .inner{max-width:1000px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
 footer .mono{color:var(--text-muted);font-size:12px;letter-spacing:.08em}
-footer ul{display:flex;gap:24px;list-style:none;font-family:var(--mono);font-size:12px;letter-spacing:.06em}
-footer ul a{color:var(--text-muted)}
+footer ul{display:flex;gap:24px;list-style:none;font-family:var(--mono);font-size:12px;letter-spacing:.06em;flex-wrap:wrap}
+footer ul a{color:var(--text-muted);overflow-wrap:anywhere}
 footer ul a:hover{color:var(--white)}
 
 /* scroll reveal — single subtle entrance */
@@ -240,14 +237,33 @@ footer ul a:hover{color:var(--white)}
   .proj{grid-template-columns:1fr}
   .areas-grid{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr}
-  nav .inner{padding:12px 16px;flex-wrap:wrap;gap:10px}
+  nav .inner{padding:12px 16px;flex-wrap:wrap;gap:8px 10px}
   nav .logo{font-size:12px;letter-spacing:.22em}
-  nav ul{display:flex;gap:16px;font-size:10.5px}
-  .lang-btn{padding:6px 10px;font-size:10.5px}
+  nav ul{display:flex;gap:4px 14px;font-size:10.5px;letter-spacing:.1em;justify-content:center;width:100%;order:3}
+  nav ul a{padding:9px 2px}
+  .lang-btn{padding:9px 12px;font-size:11px}
+  .filters button{padding:11px 15px;font-size:10.5px;letter-spacing:.1em}
+  .btn{padding:13px 22px}
+  footer{padding:36px 16px}
+  footer .inner{justify-content:center;text-align:center;gap:14px}
+  footer ul{gap:8px 16px;font-size:11px;justify-content:center}
+  footer ul a{display:inline-block;padding:9px 2px}
    .hero-facts{grid-template-columns:1fr;gap:16px;margin-top:44px}
   header.hero{padding:110px 20px 64px}
   section{padding:64px 0}
-  .contact-body p, .contact-phone{margin-bottom:22px}
+  .contact-body p{margin-bottom:22px}
+}
+
+/* telas muito estreitas: o nav em coluna e o rodape compacto */
+@media(max-width:400px){
+  .inner,main .inner,section .inner{padding-left:16px;padding-right:16px}
+  nav .logo{font-size:11px;letter-spacing:.16em}
+  nav ul{gap:2px 10px;letter-spacing:.06em}
+  nav ul a{padding:9px 1px}
+  .eyebrow{font-size:10px;letter-spacing:.16em}
+  .filters button{padding:11px 11px;letter-spacing:.06em}
+  .acard{padding:20px 18px 22px}
+  .pcard{padding:18px 18px 20px}
 }
 
 @media(prefers-reduced-motion:reduce){
@@ -628,13 +644,13 @@ footer ul a:hover{color:var(--white)}
     </div>
     <div class="contact-body">
       <p data-i18n="contatoD"><strong>Aberto a estágio</strong> em análise de dados, engenharia de dados, backend Java, cibersegurança ou TI/redes. Base em Ananindeua, PA. O caminho mais rápido é o LinkedIn — mas, se preferir, chame no WhatsApp.</p>
-      <p class="contact-phone"><span data-i18n="phoneLabel">Telefone / WhatsApp</span><a href="https://wa.me/5591986134599" data-i18n-aria="waAria" aria-label="Chamar no WhatsApp" target="_blank" rel="noopener">(91) 98613-4599</a></p>
       <div class="contact-links">
         <a class="btn wa" href="https://wa.me/5591986134599?text=Ol%C3%A1%2C%20Kelvin!%20Vi%20seu%20portf%C3%B3lio." target="_blank" rel="noopener" data-i18n="waBtn">WhatsApp (91) 98613-4599</a>
         <a class="btn primary" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn ↗</a>
-        <a class="btn ghost" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
-        <a class="btn ghost" href="https://web.dio.me/users/kelvinrebelosw" target="_blank" rel="noopener">DIO ↗</a>
-        <a class="btn ghost" href="tel:+5591986134599" data-i18n="callBtn">Ligar</a>
+        <span class="link-group">
+          <a class="btn ghost" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost" href="https://web.dio.me/users/kelvinrebelosw" target="_blank" rel="noopener">DIO ↗</a>
+        </span>
       </div>
     </div>
   </section>
@@ -645,9 +661,9 @@ footer ul a:hover{color:var(--white)}
     <span class="mono">© 2026 Kelvin Rebelo de Oliveira — Ananindeua, PA</span>
     <ul>
       <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">github.com/KelvinOliveiraCode</a></li>
-      <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener">(91) 98613-4599</a></li>
-      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">linkedin</a></li>
       <li><a href="https://web.dio.me/users/kelvinrebelosw" target="_blank" rel="noopener">DIO</a></li>
+      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">linkedin</a></li>
+      <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener">(91) 98613-4599</a></li>
     </ul>
   </div>
 </footer>
