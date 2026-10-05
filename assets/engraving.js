@@ -106,7 +106,10 @@
       });
 
       if (!moreBox || !moreBtn) return;
-      if (current !== 'all' || hiddenCount === 0) {
+      /* o botao so aparece no filtro "Todos" (nos demais, todos os cards
+         da categoria ja cabem). Expandido, hiddenCount = 0, mas o botao
+         precisa continuar visivel com o texto "Mostrar menos". */
+      if (current !== 'all' || (!expanded && hiddenCount === 0)) {
         moreBox.hidden = true;
         return;
       }
@@ -146,8 +149,10 @@
 
     render();
 
-    /* o toggle de idioma reescreve o botao: mantem a contagem correta */
-    document.addEventListener('k-port-lang', render);
+    /* o toggle de idioma reescreve o botao: mantem a contagem e o rotulo.
+       O evento e disparado em window pelo lang.js, entao o listener fica
+       em window: um evento nao desce de window para document. */
+    window.addEventListener('k-port-lang', render);
     window.addEventListener('storage', function (e) { if (e.key === 'k-port-lang') render(); });
   }
 
