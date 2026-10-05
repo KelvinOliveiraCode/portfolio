@@ -5,7 +5,7 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---- scroll reveal: section heads, panels, timeline ---- */
-  var revealables = [].slice.call(document.querySelectorAll('section > .sec-head, .bcard, .pcard, .about-grid > div, .timeline .item, .hero-facts .fact'));
+  var revealables = [].slice.call(document.querySelectorAll('section > .sec-head, .bcard, .pcard, .acard, .about-grid > div, .timeline .item, .hero-facts .fact'));
 
   if (reduce || !('IntersectionObserver' in window)) {
     revealables.forEach(function (el) { el.classList.add('in'); });
@@ -62,26 +62,93 @@
     }
   }
 
-  /* ---- project filters: Todos/Python/Java/Excel/React ---- */
+  /* ---- project filters + "mostrar mais" ---- */
   var filterBox = document.querySelector('.filters');
   if (filterBox) {
     var fbtns = [].slice.call(filterBox.querySelectorAll('button[data-filter]'));
     var fcards = [].slice.call(document.querySelectorAll('.pcard'));
+    var moreBox = document.querySelector('.proj-more');
+    var moreBtn = document.getElementById('proj-more-btn');
+    var INITIAL = 6;
+    var expanded = false;
+    var current = 'all';
+
+    /* rotulos PT/EN do botao: o texto base fica no HTML, o JS recalcula a contagem */
+    var LABELS = { pt: { more: 'Mostrar mais', less: 'Mostrar menos' }, en: { more: 'Show more', less: 'Show less' } };
+
+    function dict() {
+      try { return localStorage.getItem('k-port-lang') === 'en' ? LABELS.en : LABELS.pt; }
+      catch (e) { return LABELS.pt; }
+    }
+
+    /* aplica a categoria + o limite de 6 (limite so vale no filtro "Todos") */
+    function render() {
+      var visible = 0, hiddenCount = 0;
+      var limited = current === 'all' && !expanded;
+      fcards.forEach(function (c) {
+        var cats = (c.getAttribute('data-cat') || '').split(/\s+/);
+        var match = current === 'all' || cats.indexOf(current) !== -1;
+        var collapsed = limited && visible >= INITIAL;
+        c.hidden = !match;
+        c.classList.toggle('collapsed', match && collapsed);
+        if (match) {
+          if (collapsed) { hiddenCount++; }
+          else {
+            visible++;
+            /* cards que estavam com display:none nunca dispararam o
+               IntersectionObserver do reveal: sem isto ficariam invisiveis */
+            if (c.classList.contains('rv')) {
+              c.classList.add('in');
+              c.style.transitionDelay = '0s';
+            }
+          }
+        }
+      });
+
+      if (!moreBox || !moreBtn) return;
+      if (current !== 'all' || hiddenCount === 0) {
+        moreBox.hidden = true;
+        return;
+      }
+      moreBox.hidden = false;
+      var L = dict();
+      moreBtn.textContent = expanded
+        ? L.less
+        : L.more + ' (' + hiddenCount + ')';
+    }
+
     filterBox.addEventListener('click', function (e) {
       var b = e.target.closest ? e.target.closest('button[data-filter]') : null;
       if (!b) return;
-      var f = b.getAttribute('data-filter');
       fbtns.forEach(function (x) {
         var on = x === b;
         x.classList.toggle('active', on);
         x.setAttribute('aria-pressed', on ? 'true' : 'false');
       });
-      fcards.forEach(function (c) {
-        if (f === 'all') { c.hidden = false; return; }
-        var cats = (c.getAttribute('data-cat') || '').split(/\s+/);
-        c.hidden = cats.indexOf(f) === -1;
-      });
+      current = b.getAttribute('data-filter');
+      expanded = false;
+      render();
     });
+
+    if (moreBtn) {
+      moreBtn.addEventListener('click', function () {
+        expanded = !expanded;
+        render();
+        if (!expanded) {
+          var sec = document.getElementById('projetos');
+          if (sec) {
+            var y = sec.getBoundingClientRect().top + window.pageYOffset - 70;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+          }
+        }
+      });
+    }
+
+    render();
+
+    /* o toggle de idioma reescreve o botao: mantem a contagem correta */
+    document.addEventListener('k-port-lang', render);
+    window.addEventListener('storage', function (e) { if (e.key === 'k-port-lang') render(); });
   }
 
   /* ---- gold word in h1: slow celestial breathing ---- */
