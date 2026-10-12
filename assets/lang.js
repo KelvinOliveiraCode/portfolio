@@ -103,6 +103,8 @@
       waBtn: 'WhatsApp (91) 98613-4599',
       waAria: 'Chamar no WhatsApp',
       metaDesc: 'Portfólio de Kelvin Oliveira: projetos de dados e IA em Python, Excel e React, backend Java, cibersegurança, redes e infraestrutura. 4 bootcamps com seleção (Santander, Bradesco, Riachuelo, CI&T).',
+      tagDest: 'destaque',
+      footCopy: '© 2026 Kelvin Rebelo de Oliveira, Ananindeua, PA',
     },
     en: {
       skip: 'Skip to content',
@@ -205,6 +207,8 @@
       waBtn: 'WhatsApp (91) 98613-4599',
       waAria: 'Message on WhatsApp',
       metaDesc: 'Kelvin Oliveira\u2019s portfolio: data and AI projects in Python, Excel and React, Java backend, cybersecurity, networks and infrastructure. 4 selective bootcamps (Santander, Bradesco, Riachuelo, CI&T).',
+      tagDest: 'featured',
+      footCopy: '© 2026 Kelvin Rebelo de Oliveira, Ananindeua, PA, Brazil',
     },
   };
 

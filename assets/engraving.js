@@ -1,4 +1,4 @@
-/* Engraving interactions: slow reveal, breathing gold word, cursor ring. */
+﻿/* Engraving interactions: slow reveal, breathing gold word, cursor ring. */
 
 (function () {
   'use strict';
@@ -15,7 +15,7 @@
         if (entry.isIntersecting) {
           entry.target.classList.add('in');
           io.unobserve(entry.target);
-          /* o delay do stagger travava o hover depois: limpa após o reveal */
+          /* o delay do stagger travava o hover depois: limpa apÃ³s o reveal */
           (function (el) {
             var wait = parseFloat(el.style.transitionDelay || '0') * 1000 + 1750;
             setTimeout(function () { el.style.transitionDelay = '0s'; }, wait);
@@ -43,7 +43,7 @@
       plateVideo.removeAttribute('autoplay');
       plateVideo.pause();
     } else {
-      /* iOS exige a propriedade muted, não só o atributo */
+      /* iOS exige a propriedade muted, nÃ£o sÃ³ o atributo */
       plateVideo.muted = true;
       var tentaPlay = function () {
         var p = plateVideo.play();
@@ -155,6 +155,32 @@
     window.addEventListener('k-port-lang', render);
     window.addEventListener('storage', function (e) { if (e.key === 'k-port-lang') render(); });
   }
+
+  /* ---- GoatCounter: cliques nos links dos projetos ----
+     featured: evento completo (nome + categoria); gc-full: evento basico;
+     os demais (projetos mais simples) contam apenas a visita a pagina. */
+  document.querySelectorAll('.pcard').forEach(function (card) {
+    var modo = card.classList.contains('featured') ? 'destaque'
+             : card.classList.contains('gc-full') ? 'basico'
+             : 'leve';
+    if (modo === 'leve') return;
+    var h3 = card.querySelector('h3');
+    var nome = h3 ? h3.textContent : 'projeto';
+    var slug = nome.toLowerCase().normalize('NFD')
+                 .replace(/[\u0300-\u036f]/g, '')
+                 .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    var cat = (card.getAttribute('data-cat') || '').trim();
+    card.querySelectorAll('.links a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        if (typeof goatcounter === 'undefined' || !goatcounter.count) return;
+        goatcounter.count({
+          path: '/clique/' + slug,
+          title: modo === 'destaque' ? nome + ' [destaque: ' + cat + ']' : nome,
+          event: true
+        });
+      });
+    });
+  });
 
   /* ---- gold word in h1: slow celestial breathing ---- */
   if (!reduce) {
