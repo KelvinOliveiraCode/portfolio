@@ -1,4 +1,4 @@
-/* Engraving interactions — slow reveal, breathing gold word, cursor ring. */
+/* Engraving interactions: slow reveal, breathing gold word, cursor ring. */
 
 (function () {
   'use strict';

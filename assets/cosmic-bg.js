@@ -1,6 +1,6 @@
-/* Cosmic Engraving overlay — the engraved plate image (fixed, behind) does the
+/* Cosmic Engraving overlay: the engraved plate image (fixed, behind) does the
    heavy lifting; this canvas adds only living texture on top: paper grain,
-   faint hatching, dust, motes. Slow, ceremonial. No second star — the plate owns it. */
+   faint hatching, dust, motes. Slow, ceremonial. No second star, the plate owns it. */
 
 (function () {
   'use strict';
