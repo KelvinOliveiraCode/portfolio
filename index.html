@@ -145,10 +145,10 @@ h2{font-family:var(--serif);font-size:clamp(28px,3.2vw,38px);font-weight:500}
 }
 .bcard:hover,.pcard:hover{border-color:rgba(241,241,238,.24)}
 /* readability shadows on all body text */
-p, .bcard .meta, .tags span, .fact span, .timeline .item span, nav ul a, footer .mono, footer ul a, .eyebrow{
+p, .bcard .meta, .tags span, .fact span, nav ul a, footer .mono, footer ul a, .eyebrow{
   text-shadow:0 1px 2px rgba(0,0,0,.85), 0 0 8px rgba(0,0,0,.6);
 }
-h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.8), 0 0 16px rgba(0,0,0,.55); }
+h1,h2,h3,.fact b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.8), 0 0 16px rgba(0,0,0,.55); }
 
 /* as grades ganham coluna à medida que a tela cresce: 1 -> 2 -> 4 (nunca encolhidas) */
 .bootcamps{display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(16px,1.8vw,26px)}
@@ -221,21 +221,13 @@ h1,h2,h3,.fact b,.timeline .item b,nav .logo{ text-shadow:0 2px 4px rgba(0,0,0,.
 .skip-link:focus{left:12px;top:12px}
 
 /* composição centralizada: texto e linha do tempo lado a lado, como um par no centro */
-.about-grid{display:grid;grid-template-columns:minmax(0,var(--measure)) minmax(280px,420px);justify-content:center;justify-items:center;align-items:start;text-align:center;gap:clamp(28px,4vw,72px)}
-/* estreitou: os dois blocos empilham em vez de espremerem */
-@media(max-width:1000px){.about-grid{grid-template-columns:minmax(0,1fr)}}
+/* texto do sobre: coluna única no centro, em medida de leitura */
+.about-grid{display:grid;grid-template-columns:minmax(0,var(--measure));justify-content:center;text-align:center}
 .about-grid > div:first-child{
   padding:0;max-width:var(--measure);
 }
-.timeline{
-  max-width:520px;margin:0 auto;padding:0;
-}
 .about-grid p{color:var(--text-muted);font-size:16px;margin-bottom:18px}
 .about-grid p strong{color:var(--white);font-weight:400}
-.timeline .item{position:relative;padding-bottom:28px;text-align:center}
-.timeline .item::before{content:"";display:block;width:7px;height:7px;margin:0 auto 12px;background:var(--light);transform:rotate(45deg)}
-.timeline .item b{display:block;font-weight:400;font-size:16.5px;font-family:var(--serif);font-size:18px}
-.timeline .item span{font-family:var(--mono);font-size:11.5px;color:var(--text-muted);letter-spacing:.1em}
 
 footer{padding:clamp(36px,4vw,48px) var(--gutter);margin-top:24px}
 footer .inner{max-width:var(--shell);margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
@@ -647,13 +639,6 @@ footer ul a:hover{color:var(--white)}
         <p data-i18n="a2"><strong>O que faço.</strong> Pipelines de dados e modelos de ML em Python (pandas, scikit-learn), análise e dashboards em Excel/Power Query com IA no fluxo de trabalho (Copilot, Claude Code, GPT Agents), interfaces em React/TypeScript e PWAs, APIs REST em Java com Spring Boot — e, do outro lado da mesa, laboratórios de <strong>cibersegurança</strong> (pentest, SIEM, MITRE ATT&amp;CK), <strong>redes</strong> (LAN, Modbus, Wi-Fi, VPC, IaC) e <strong>TI</strong> (service desk, automação de estações, backup e recuperação, CFTV/VMS). É onde minha base de Ciência da Computação encontra o mundo real.</p>
         <p data-i18n="a3"><strong>Para onde vou.</strong> Busco estágio em análise/engenharia de dados, backend Java ou segurança e infraestrutura de TI — onde a teoria de Ciência da Computação encontra problemas reais.</p>
         <p class="proof" data-i18n="aProof">KODAROS e Garimpo: repositórios em <a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">github.com/KelvinOliveiraCode ↗</a></p>
-      </div>
-      <div class="timeline">
-        <div class="item"><b data-i18n="t1">Ciência da Computação — IFPA</b><span data-i18n="t1s">abr 2026 — dez 2029 · cursando</span></div>
-        <div class="item"><b data-i18n="t2">Garimpo — curadoria de ofertas</b><span>ago 2026 — atual</span></div>
-        <div class="item"><b data-i18n="t3">KODAROS — ecossistema de 6 sites</b><span>jul 2026 — atual</span></div>
-        <div class="item"><b data-i18n="t4">Bootcamps DIO — Santander · Bradesco · Riachuelo · CI&amp;T</b><span>jul — set 2026 · 169h</span></div>
-        <div class="item"><b data-i18n="t5">Análise e Desenvolvimento de Sistemas — UNIASSELVI</b><span data-i18n="t5s">2026 — 2028 · cursando</span></div>
       </div>
     </div>
   </section>
