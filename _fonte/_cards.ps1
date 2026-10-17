@@ -84,7 +84,7 @@ $($cards -join "`n")
       </div>
 
       <div class="conta-linha" style="margin-top:var(--s6)">
-        <span class="contagem"><b>12</b> <span data-pt="dos 100 projetos t&#234;m p&#225;gina publicada e funcionando" data-en="of the 100 projects have a published, working page">dos 100 projetos t&#234;m p&#225;gina publicada e funcionando</span></span>
+        <span class="contagem"><b>$($d.vivos)</b> <span data-pt="dos $($d.total) projetos t&#234;m p&#225;gina publicada e funcionando" data-en="of the $($d.total) projects have a published, working page">dos $($d.total) projetos t&#234;m p&#225;gina publicada e funcionando</span></span>
         <span class="conta-acoes">
           <span class="contagem" id="vitrine-conta" aria-live="polite"></span>
           <button type="button" class="btn ghost mais-btn" id="vitrine-mais" aria-controls="vitrine" data-pt="Mostrar mais" data-en="Show more">Mostrar mais</button>

@@ -15,7 +15,6 @@
     "camera-onboarding": ["infra"],
     "certificador-cobre-simulado": ["infra"],
     "cftv-simulador-nvr": ["infra"],
-    "chopp-gourmet": ["web"],
     "classificador-documentos-fiscais": ["dados"],
     "cloud4all": ["web"],
     "cofre-senhas-aes256": ["cyber"],
@@ -23,7 +22,6 @@
     "container-scanner-imagens": ["cyber"],
     "dashboard-metricas-site": ["web"],
     "dashboard-sla-helpdesk": ["ti"],
-    "dashboard-vendas-porsche-dio": ["web", "dados"],
     "dashboard-vendas-streamlit": ["dados"],
     "dashboard-xbox": ["dados"],
     "demand-limiting": ["infra"],
@@ -92,7 +90,6 @@
     "sistema-agendamento-consultas": ["backend"],
     "slidestage": ["web"],
     "status-page-multi-regiao": ["infra"],
-    "techcards": ["web"],
     "tessumax-landing": ["web"],
     "threat-intel-dashboard": ["cyber"],
     "validador-qos-voip": ["infra"],
@@ -190,22 +187,10 @@
       "d": { "pt": "Gerador de currículos legível por robôs de triagem: coluna única, pré-visualização em tempo real e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo.", "en": "A résumé builder readable by screening robots: single column, real-time preview and a bilingual PT/EN interface. Riachuelo bootcamp capstone." }
     },
     {
-      "n": "dashboard-vendas-porsche-dio", "a": ["web", "dados"], "stack": ["HTML", "CSS", "Vanilla JS"],
-      "t": { "pt": "Dashboard de vendas Porsche", "en": "Porsche sales dashboard" },
-      "badge": { "pt": "Desafio Santander", "en": "Santander challenge" },
-      "d": { "pt": "Dashboard de vendas em HTML, CSS e JavaScript puro, com zero dependências: gráficos desenhados à mão e leitura executiva dos números.", "en": "A sales dashboard in plain HTML, CSS and JavaScript with zero dependencies: hand-drawn charts and an executive read of the numbers." }
-    },
-    {
       "n": "modelos-de-sites", "a": ["web"], "stack": ["HTML", "CSS", "Design"],
       "t": { "pt": "Mostruário de 20 modelos de sites", "en": "Showcase of 20 site templates" },
       "badge": { "pt": "No ar", "en": "Live" },
       "d": { "pt": "Vinte landing pages completas, uma para cada nicho de negócio, publicadas como mostruário vivo de layout, tipografia e ritmo visual.", "en": "Twenty complete landing pages, one per business niche, published as a living showcase of layout, typography and visual rhythm." }
-    },
-    {
-      "n": "techcards", "a": ["web"], "stack": ["HTML", "Offline", "Education"],
-      "t": { "pt": "TechCards — flashcards técnicos", "en": "TechCards — technical flashcards" },
-      "badge": { "pt": "Projeto acadêmico", "en": "Academic project" },
-      "d": { "pt": "Flashcards offline de Sistemas Operacionais, Arquitetura e Inglês técnico, feito como projeto acadêmico de Ciência da Computação.", "en": "Offline flashcards on Operating Systems, Architecture and technical English, built as a Computer Science academic project." }
     },
     {
       "n": "guias-estudo", "a": ["web"], "stack": ["HTML", "Content", "SEO"],
@@ -224,12 +209,6 @@
       "t": { "pt": "Tessumax — landing page", "en": "Tessumax — landing page" },
       "badge": { "pt": "No ar", "en": "Live" },
       "d": { "pt": "Landing page comercial publicada para marca de produtos têxteis, com narrativa de produto, prova visual e caminho direto para contato.", "en": "A published commercial landing page for a textile brand, with product narrative, visual proof and a direct path to contact." }
-    },
-    {
-      "n": "chopp-gourmet", "a": ["web"], "stack": ["HTML", "Branding", "Mobile"],
-      "t": { "pt": "Chopp Gourmet — página de marca", "en": "Chopp Gourmet — brand page" },
-      "badge": { "pt": "No ar", "en": "Live" },
-      "d": { "pt": "Página de marca para produto alimentício artesanal, pensada para celular: apresentação, apetite visual e contato em um único fluxo.", "en": "A brand page for a handmade food product, built mobile-first: presentation, visual appetite and contact in a single flow." }
     },
     {
       "n": "portfolio", "a": ["web"], "stack": ["HTML", "CSS", "Vanilla JS"],

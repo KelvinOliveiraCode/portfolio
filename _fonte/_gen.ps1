@@ -3,6 +3,16 @@
 $ROOT = if (Test-Path "$PSScriptRoot\index.html") { $PSScriptRoot } else { Split-Path -Parent $PSScriptRoot }
 # os JSON de dados viajam junto do script (na entrega ficam em _fonte/)
 $DATA = $PSScriptRoot
+
+# Repos que NAO entram no site (a lista fica em _fora.local.txt, que nao viaja
+# para o repositorio publicado): saem da vitrine, do arquivo e das contagens.
+$FORA = @()
+if (Test-Path "$DATA\_fora.local.txt") {
+  $FORA = @(Get-Content "$DATA\_fora.local.txt" -Encoding UTF8 |
+            Where-Object { $_.Trim() -and $_.Trim() -notmatch '^#' } |
+            ForEach-Object { $_.Trim() })
+}
+
 $raw = Get-Content "$DATA\_raw.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 $cur = Get-Content "$DATA\_curadoria.json" -Raw -Encoding UTF8 | ConvertFrom-Json
 $CFG = Get-Content "$DATA\_acentos.json" -Raw -Encoding UTF8 | ConvertFrom-Json
@@ -75,6 +85,7 @@ foreach ($f in $cur.featured) { $featSet[$f.n] = $true }
 $lista = @()
 foreach ($r in ($raw | Sort-Object name)) {
   $slug = $r.name
+  if ($FORA -contains $slug) { continue }
   $areas = @()
   if ($cur.areas.PSObject.Properties.Name -contains $slug) { $areas = @($cur.areas.$slug) }
   $live = $null

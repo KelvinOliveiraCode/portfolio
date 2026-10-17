@@ -254,8 +254,8 @@
   }
 
   /* ---------------- vitrine: destaques em lotes ----------------
-     Os 24 destaques de uma vez deixavam a pagina longa; o primeiro lote
-     cabe na tela e o resto chega no clique. */
+     Todos os destaques de uma vez deixavam a pagina longa; o primeiro
+     lote cabe na tela e o resto chega no clique. */
   function vitrine() {
     var grade = $('#vitrine');
     var botao = $('#vitrine-mais');
