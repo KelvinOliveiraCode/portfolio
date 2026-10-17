@@ -80,8 +80,6 @@ portfolio-kelvin/
 │   ├── _titulos_en.json    traduções à mão dos títulos
 │   ├── _gen.ps1            _raw.json + _curadoria.json -> assets/projetos.js
 │   └── _cards.ps1          assets/projetos.js -> cards injetados no index.html
-├── projeto java/
-│   └── techcards/          app desktop à parte (Java 21 + JavaFX + SQLite, Maven)
 └── .github/
     └── workflows/
         └── deploy.yml      publicação no GitHub Pages a cada push em main
@@ -102,7 +100,7 @@ portfolio-kelvin/
 - Cinco repositórios devolveram HTTP 404 na verificação de página ao vivo (`olaria`, `slidestage`, `finvibe-ai`, `opencode-browser-chat`, `livro-financeiro`) e ficaram sem o selo “no ar”.
 - O site é de página única — não há páginas individuais por projeto; cada item aponta para o GitHub ou para a página publicada quando existe.
 - Não há testes automatizados para o site (HTML/CSS/JavaScript).
-- A distribuição do `techcards` (Java 21 + JavaFX + SQLite) é voltada a Windows (zip com JRE 21 embutido via `jpackage`); o comando de desenvolvimento pressupõe uma instalação local do Maven.
+- A versão desktop do app de estudos (Java 21 + JavaFX + SQLite) é voltada a Windows (zip com JRE 21 embutido via `jpackage`); o comando de desenvolvimento pressupõe uma instalação local do Maven.
 
 ## Licença
 
