@@ -1,0 +1,241 @@
+{
+  "areas": {
+    "agente-suporte-bancario-rag": ["dados"],
+    "analisador-logs-ssh-mitre": ["cyber"],
+    "analisador-pcap-anomalias": ["cyber"],
+    "analise-churn-cohort": ["dados"],
+    "api-gestao-frota-veiculos": ["backend"],
+    "app-bancario-digital": ["backend"],
+    "auditor-headers-seguranca": ["cyber"],
+    "backup-gfs-verificacao-hash": ["ti"],
+    "backup-remoto-s3-criptografado": ["ti"],
+    "bot-fii-sentimento": ["dados"],
+    "calculadora-enlace-cobre": ["infra"],
+    "calculadora-financeira-pwa": ["web"],
+    "camera-onboarding": ["infra"],
+    "certificador-cobre-simulado": ["infra"],
+    "cftv-simulador-nvr": ["infra"],
+    "chopp-gourmet": ["web"],
+    "classificador-documentos-fiscais": ["dados"],
+    "cloud4all": ["web"],
+    "cofre-senhas-aes256": ["cyber"],
+    "config-backup-switches": ["infra"],
+    "container-scanner-imagens": ["cyber"],
+    "dashboard-metricas-site": ["web"],
+    "dashboard-sla-helpdesk": ["ti"],
+    "dashboard-vendas-porsche-dio": ["web", "dados"],
+    "dashboard-vendas-streamlit": ["dados"],
+    "dashboard-xbox": ["dados"],
+    "demand-limiting": ["infra"],
+    "desligamento-agendado-frota": ["ti"],
+    "deteccao-de-fraudes": ["dados"],
+    "detector-deepfake-audio": ["cyber", "dados"],
+    "dio-lab-bia-do-futuro": ["dados"],
+    "editor-json-visual": ["web"],
+    "energy-dashboard-predial": ["infra", "dados"],
+    "etl-vendas-datawarehouse": ["dados"],
+    "excel-para-investimentos": ["dados"],
+    "finops-alerta-orcamento": ["infra"],
+    "finops-dashboard": ["infra"],
+    "finvibe-ai": ["web"],
+    "forense-memoria-simples": ["cyber"],
+    "garimpo": ["web"],
+    "gerador-curriculos-ats-v2": ["web"],
+    "gerador-de-curriculos-ats": ["web"],
+    "guias-estudo": ["web"],
+    "helpdesk-tickets": ["ti"],
+    "honeypot-portas-evidencia": ["cyber"],
+    "iac-terraform-github-actions": ["infra"],
+    "infra-as-code-lab": ["infra"],
+    "inventario-ativos-ti": ["ti"],
+    "javaforge": ["backend"],
+    "kb-search": ["dados"],
+    "kodabudget-api": ["backend"],
+    "kodapay-api": ["backend"],
+    "kodapay-api-v2": ["backend"],
+    "kodaros-ferramentas": ["web"],
+    "kodaros-landing": ["web"],
+    "lab-backup-recuperacao": ["ti"],
+    "loja-ebooks-kodaros": ["web"],
+    "loja-virtual-completa": ["backend"],
+    "mapeador-rede-lan-arp": ["infra"],
+    "marketplace-servicos-freelance": ["backend"],
+    "miniguia-estudos-notebooklm": ["dados"],
+    "mlops-registro-drift": ["dados"],
+    "modbus-scanner": ["infra"],
+    "modelos-de-sites": ["web"],
+    "monitor-qos-enlace": ["infra"],
+    "network-ci-pipeline": ["infra"],
+    "olaria": ["web"],
+    "opencode-browser-chat": ["web"],
+    "organizador-imposto-de-renda": ["dados"],
+    "pagina-status-sistema": ["web"],
+    "pentest-lab-scanner": ["cyber"],
+    "pipeline-iot-energia": ["infra"],
+    "portal-autoatendimento-helpdesk": ["ti"],
+    "portal-cliente-oauth2-rbac": ["backend", "cyber"],
+    "portfolio": ["web"],
+    "previsao-demanda-estoque": ["dados"],
+    "previsor-inadimplencia-xgboost": ["dados"],
+    "prompt-analise-feedbacks-bancarios-dio": ["dados"],
+    "rack-planner": ["infra"],
+    "recomendador-produtos-ml": ["dados"],
+    "rede-lab-topologia": ["infra"],
+    "relatorio-compliance-lgpd": ["cyber"],
+    "reset-senha-ad-automacao": ["ti"],
+    "scanner-owasp-top10-web": ["cyber"],
+    "scanner-portas-banner": ["cyber"],
+    "serverless-log-guard": ["cyber"],
+    "siem-logs-lab": ["cyber"],
+    "siem-luz-brute-force": ["cyber"],
+    "simulador-ospf-simples": ["infra"],
+    "sistema-agendamento-consultas": ["backend"],
+    "slidestage": ["web"],
+    "status-page-multi-regiao": ["infra"],
+    "techcards": ["web"],
+    "tessumax-landing": ["web"],
+    "threat-intel-dashboard": ["cyber"],
+    "validador-qos-voip": ["infra"],
+    "vms-integration-labs": ["infra"],
+    "vpc-3-tier-segura": ["infra"],
+    "wifi-site-survey": ["infra"],
+    "workstation-onboarding": ["ti"]
+  },
+  "featured": [
+    {
+      "n": "kodabudget-api", "a": ["backend"], "stack": ["Java 21", "Spring AI", "Whisper", "REST"],
+      "t": { "pt": "Assistente financeiro por voz", "en": "Voice-first finance assistant" },
+      "badge": { "pt": "Projeto final CI&T", "en": "CI&T capstone" },
+      "d": { "pt": "API que ouve, entende e responde por voz: transcrição local com Whisper, tool calling com Spring AI e resposta falada. O modelo não inventa saldo — só responde sobre os dados do usuário.", "en": "An API that listens, understands and answers by voice: local Whisper transcription, Spring AI tool calling and spoken replies. It never invents a balance — it only answers over the user's own data." }
+    },
+    {
+      "n": "kodapay-api", "a": ["backend"], "stack": ["Java 21", "Spring Boot 3", "GoF", "CI"],
+      "t": { "pt": "API de pagamentos com padrões GoF", "en": "Payments API with GoF patterns" },
+      "badge": { "pt": "Projeto final CI&T", "en": "CI&T capstone" },
+      "d": { "pt": "API REST de pagamentos que aplica seis padrões de projeto (Chain, Strategy, Observer, Builder, Factory, Singleton), com testes automatizados e pipeline verde.", "en": "A payments REST API applying six design patterns (Chain, Strategy, Observer, Builder, Factory, Singleton), with automated tests and a green pipeline." }
+    },
+    {
+      "n": "deteccao-de-fraudes", "a": ["dados"], "stack": ["Python", "scikit-learn", "pandas"],
+      "t": { "pt": "Detecção de fraude em cartão", "en": "Credit-card fraud detection" },
+      "d": { "pt": "Pipeline de machine learning sobre 284 mil transações com 0,17% de fraude: tratamento de desbalanceamento, três modelos comparados e ROC AUC 0.94 no modelo final.", "en": "A machine-learning pipeline over 284k transactions with 0.17% fraud: imbalance handling, three models compared and ROC AUC 0.94 on the final model." }
+    },
+    {
+      "n": "dio-lab-bia-do-futuro", "a": ["dados"], "stack": ["Python", "GenAI", "LLM"],
+      "t": { "pt": "BIA — agente financeiro anti-alucinação", "en": "BIA — anti-hallucination finance agent" },
+      "badge": { "pt": "Projeto final Bradesco", "en": "Bradesco capstone" },
+      "d": { "pt": "Agente financeiro que analisa o histórico de transações, recomenda investimentos por perfil de risco e valida as próprias respostas em quatro camadas antes de responder.", "en": "A finance agent that reads the transaction history, recommends investments by risk profile and validates its own answers through four layers before replying." }
+    },
+    {
+      "n": "pentest-lab-scanner", "a": ["cyber"], "stack": ["Python", "CWE", "AppSec"],
+      "t": { "pt": "Scanner de pentest com laudo por CWE", "en": "Pentest scanner with CWE reporting" },
+      "d": { "pt": "Audita uma aplicação deliberadamente vulnerável em laboratório local e confirma 11 falhas plantadas, cada uma classificada por CWE com veredito de exploração.", "en": "Audits a deliberately vulnerable app in a local lab and confirms 11 planted flaws, each classified by CWE with an exploitation verdict." }
+    },
+    {
+      "n": "siem-logs-lab", "a": ["cyber"], "stack": ["Python", "MITRE ATT&CK", "SIEM"],
+      "t": { "pt": "Pipeline de detecção estilo SIEM", "en": "SIEM-style detection pipeline" },
+      "d": { "pt": "Pipeline local de detecção com sete regras, correlação temporal entre eventos e alertas mapeados em MITRE ATT&CK.", "en": "A local detection pipeline with seven rules, temporal correlation across events and alerts mapped to MITRE ATT&CK." }
+    },
+    {
+      "n": "vpc-3-tier-segura", "a": ["infra"], "stack": ["Python", "Cloud", "Firewall"],
+      "t": { "pt": "VPC em 3 camadas com firewall stateful", "en": "Three-tier VPC with stateful firewall" },
+      "d": { "pt": "Simulador de rede em três camadas com firewall stateful, bastion host e tracer de caminho que mostra por onde cada pacote pode ou não passar.", "en": "A three-tier network simulator with a stateful firewall, bastion host and a path tracer showing where each packet may or may not travel." }
+    },
+    {
+      "n": "wifi-site-survey", "a": ["infra"], "stack": ["Python", "RF", "Heatmap"],
+      "t": { "pt": "Survey de Wi-Fi com mapa de calor", "en": "Wi-Fi survey with heatmap" },
+      "d": { "pt": "Levantamento de cobertura por andar: mapa de calor de RSSI, dimensionamento de access points e detecção de conflito de canal.", "en": "Per-floor coverage survey: RSSI heatmap, access-point sizing and channel-conflict detection." }
+    },
+    {
+      "n": "modbus-scanner", "a": ["infra"], "stack": ["Python", "Modbus TCP", "Sockets"],
+      "t": { "pt": "Modbus TCP escrito do zero", "en": "Modbus TCP from scratch" },
+      "d": { "pt": "Protocolo Modbus TCP implementado sem biblioteca: servidor de laboratório, scanner de rede industrial e leitura de medidores reais.", "en": "The Modbus TCP protocol implemented without a library: a lab server, an industrial network scanner and real meter readings." }
+    },
+    {
+      "n": "javaforge", "a": ["backend"], "stack": ["Rust", "SQLite", "Tooling"],
+      "t": { "pt": "JavaForge — construtor visual de Swing", "en": "JavaForge — visual Swing builder" },
+      "d": { "pt": "Ferramenta desktop escrita em Rust que monta interfaces Java Swing por arrastar e soltar, guarda o projeto em SQLite e liga eventos sem código.", "en": "A desktop tool written in Rust that builds Java Swing interfaces by drag and drop, stores the project in SQLite and wires events without code." }
+    },
+    {
+      "n": "kb-search", "a": ["dados"], "stack": ["Python", "TF-IDF", "NLP"],
+      "t": { "pt": "Busca por similaridade com TF-IDF à mão", "en": "Similarity search with hand-written TF-IDF" },
+      "d": { "pt": "Busca semântica em base de conhecimento com TF-IDF e cosseno implementados manualmente, sem biblioteca de busca — para mostrar o que acontece por dentro.", "en": "Semantic search over a knowledge base with TF-IDF and cosine written by hand, no search library — to show what happens underneath." }
+    },
+    {
+      "n": "olaria", "a": ["web"], "stack": ["JavaScript", "Editor", "Export"],
+      "t": { "pt": "Olaria — construtor de landing pages", "en": "Olaria — landing-page builder" },
+      "d": { "pt": "Editor visual para quem não programa: arrasta blocos na tela, alterna para o código quando quiser e exporta HTML estático pronto para publicar.", "en": "A visual editor for non-programmers: drag blocks on canvas, switch to code whenever you want and export static HTML ready to publish." }
+    },
+    {
+      "n": "kodaros-ferramentas", "a": ["web"], "stack": ["PWA", "JavaScript", "Service Worker"],
+      "t": { "pt": "KODAROS Ferramentas — 53 calculadoras", "en": "KODAROS Tools — 53 calculators" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "PWA offline-first com 53 calculadoras de negócio: funciona sem internet, instala na tela inicial e guarda o histórico no próprio aparelho.", "en": "An offline-first PWA with 53 business calculators: works without internet, installs to the home screen and keeps history on the device." }
+    },
+    {
+      "n": "garimpo", "a": ["web"], "stack": ["HTML", "CSS", "SEO"],
+      "t": { "pt": "Garimpo — curadoria de ofertas", "en": "Garimpo — curated offers" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Catálogo com 131 ofertas em oito categorias, filtros, lista de desejos e SEO — tudo no navegador, sem servidor e sem banco de dados.", "en": "A 131-offer catalog across eight categories, with filters, wishlist and SEO — entirely in the browser, no server and no database." }
+    },
+    {
+      "n": "cloud4all", "a": ["web"], "stack": ["HTML", "Rule engine", "Comparison"],
+      "t": { "pt": "Cloud4All — a nuvem ideal por regra aberta", "en": "Cloud4All — the right cloud by open rule" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Comparador de 124 serviços de oito provedores que escolhe a nuvem por filtro determinístico e critério declarado, em vez de ranking patrocinado.", "en": "A comparer of 124 services across eight providers that picks a cloud by deterministic filter and a declared rule, instead of a sponsored ranking." }
+    },
+    {
+      "n": "gerador-de-curriculos-ats", "a": ["web"], "stack": ["React", "TypeScript", "Tailwind"],
+      "t": { "pt": "Gerador de currículos ATS", "en": "ATS-friendly résumé builder" },
+      "badge": { "pt": "Projeto final Riachuelo", "en": "Riachuelo capstone" },
+      "d": { "pt": "Gerador de currículos legível por robôs de triagem: coluna única, pré-visualização em tempo real e interface bilíngue PT/EN. Projeto final do bootcamp Riachuelo.", "en": "A résumé builder readable by screening robots: single column, real-time preview and a bilingual PT/EN interface. Riachuelo bootcamp capstone." }
+    },
+    {
+      "n": "dashboard-vendas-porsche-dio", "a": ["web", "dados"], "stack": ["HTML", "CSS", "Vanilla JS"],
+      "t": { "pt": "Dashboard de vendas Porsche", "en": "Porsche sales dashboard" },
+      "badge": { "pt": "Desafio Santander", "en": "Santander challenge" },
+      "d": { "pt": "Dashboard de vendas em HTML, CSS e JavaScript puro, com zero dependências: gráficos desenhados à mão e leitura executiva dos números.", "en": "A sales dashboard in plain HTML, CSS and JavaScript with zero dependencies: hand-drawn charts and an executive read of the numbers." }
+    },
+    {
+      "n": "modelos-de-sites", "a": ["web"], "stack": ["HTML", "CSS", "Design"],
+      "t": { "pt": "Mostruário de 20 modelos de sites", "en": "Showcase of 20 site templates" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Vinte landing pages completas, uma para cada nicho de negócio, publicadas como mostruário vivo de layout, tipografia e ritmo visual.", "en": "Twenty complete landing pages, one per business niche, published as a living showcase of layout, typography and visual rhythm." }
+    },
+    {
+      "n": "techcards", "a": ["web"], "stack": ["HTML", "Offline", "Education"],
+      "t": { "pt": "TechCards — flashcards técnicos", "en": "TechCards — technical flashcards" },
+      "badge": { "pt": "Projeto acadêmico", "en": "Academic project" },
+      "d": { "pt": "Flashcards offline de Sistemas Operacionais, Arquitetura e Inglês técnico, feito como projeto acadêmico de Ciência da Computação.", "en": "Offline flashcards on Operating Systems, Architecture and technical English, built as a Computer Science academic project." }
+    },
+    {
+      "n": "guias-estudo", "a": ["web"], "stack": ["HTML", "Content", "SEO"],
+      "t": { "pt": "Guias de estudo publicados", "en": "Published study guides" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Coleção de guias de estudo escritos e publicados na web, reunindo o que aprendi nos bootcamps em material que outra pessoa consegue seguir.", "en": "A collection of study guides written and published on the web, turning what I learned in the bootcamps into material someone else can follow." }
+    },
+    {
+      "n": "kodaros-landing", "a": ["web"], "stack": ["HTML", "Branding", "Deploy"],
+      "t": { "pt": "KODAROS — plataforma", "en": "KODAROS — platform" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Site principal do ecossistema KODAROS: oito e-books, diagnóstico interativo e as ferramentas, com identidade, deploy e manutenção por conta própria.", "en": "The main site of the KODAROS ecosystem: eight e-books, an interactive diagnosis and the tools, with identity, deploy and maintenance done in-house." }
+    },
+    {
+      "n": "tessumax-landing", "a": ["web"], "stack": ["HTML", "Landing", "Conversion"],
+      "t": { "pt": "Tessumax — landing page", "en": "Tessumax — landing page" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Landing page comercial publicada para marca de produtos têxteis, com narrativa de produto, prova visual e caminho direto para contato.", "en": "A published commercial landing page for a textile brand, with product narrative, visual proof and a direct path to contact." }
+    },
+    {
+      "n": "chopp-gourmet", "a": ["web"], "stack": ["HTML", "Branding", "Mobile"],
+      "t": { "pt": "Chopp Gourmet — página de marca", "en": "Chopp Gourmet — brand page" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Página de marca para produto alimentício artesanal, pensada para celular: apresentação, apetite visual e contato em um único fluxo.", "en": "A brand page for a handmade food product, built mobile-first: presentation, visual appetite and contact in a single flow." }
+    },
+    {
+      "n": "portfolio", "a": ["web"], "stack": ["HTML", "CSS", "Vanilla JS"],
+      "t": { "pt": "Este portfólio", "en": "This portfolio" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "O site que você está lendo: página única, bilíngue PT/EN, sem framework e sem build, publicada direto do repositório via GitHub Actions.", "en": "The site you are reading: a single-bilingual PT/EN page, no framework and no build step, published straight from the repository through GitHub Actions." }
+    }
+  ]
+}
