@@ -14,7 +14,7 @@
 
 ## O que é
 
-Portfólio ,  Kelvin Oliveira | Portfolio: dados, IA e produtos digitais
+Portfólio ,  Kelvin Oliveira
 
 ---
 
