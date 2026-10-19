@@ -40,7 +40,6 @@
     "garimpo": ["web"],
     "gerador-curriculos-ats-v2": ["web"],
     "gerador-de-curriculos-ats": ["web"],
-    "guias-estudo": ["web"],
     "helpdesk-tickets": ["ti"],
     "honeypot-portas-evidencia": ["cyber"],
     "iac-terraform-github-actions": ["infra"],
@@ -191,12 +190,6 @@
       "t": { "pt": "Mostruário de 20 modelos de sites", "en": "Showcase of 20 site templates" },
       "badge": { "pt": "No ar", "en": "Live" },
       "d": { "pt": "Vinte landing pages completas, uma para cada nicho de negócio, publicadas como mostruário vivo de layout, tipografia e ritmo visual.", "en": "Twenty complete landing pages, one per business niche, published as a living showcase of layout, typography and visual rhythm." }
-    },
-    {
-      "n": "guias-estudo", "a": ["web"], "stack": ["HTML", "Content", "SEO"],
-      "t": { "pt": "Guias de estudo publicados", "en": "Published study guides" },
-      "badge": { "pt": "No ar", "en": "Live" },
-      "d": { "pt": "Coleção de guias de estudo escritos e publicados na web, reunindo o que aprendi nos bootcamps em material que outra pessoa consegue seguir.", "en": "A collection of study guides written and published on the web, turning what I learned in the bootcamps into material someone else can follow." }
     },
     {
       "n": "kodaros-landing", "a": ["web"], "stack": ["HTML", "Branding", "Deploy"],
