@@ -54,7 +54,7 @@ do Pará) e a linha de copyright do rodapé.
 
 ## Verificação feita antes de publicar
 
-- 97 repositórios, 9 páginas no ar, 21 destaques e 4 certificados conferidos um por um;
+- 96 repositórios, 8 páginas no ar, 20 destaques e 4 certificados conferidos um por um;
 - 160 elementos de revelação acendem ao rolar, na ordem, sem deixar seção invisível;
 - contadores chegam aos valores finais e, se o navegador não animar, o número real já está no HTML;
 - filtro por área (6 áreas), busca sem acento e estado vazio funcionando;
