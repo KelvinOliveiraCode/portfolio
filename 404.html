@@ -3,8 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>página não encontrada | Kelvin Oliveira</title>
-<meta name="description" content="A página que você procurou não existe. Volte ao portfólio de Kelvin Oliveira.">
+<title data-pt-content="página não encontrada | Kelvin Oliveira" data-en-content="page not found | Kelvin Oliveira">página não encontrada | Kelvin Oliveira</title>
+<meta name="description" content="A página que você procurou não existe. Volte ao portfólio de Kelvin Oliveira."
+      data-pt-content="A página que você procurou não existe. Volte ao portfólio de Kelvin Oliveira."
+      data-en-content="The page you were looking for does not exist. Go back to Kelvin Oliveira's portfolio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -28,14 +30,74 @@
   .btn{display:inline-block;border:1px solid var(--light-dim);color:var(--light);padding:13px 28px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-decoration:none;transition:background .6s,color .6s}
   .btn:hover{background:var(--light);color:#050505}
   :focus-visible{outline:2px solid var(--light);outline-offset:2px}
+  #lang-toggle{position:fixed;top:16px;right:16px;background:none;border:1px solid var(--light-dim);color:var(--light);padding:8px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;cursor:pointer;transition:background .6s,color .6s}
+  #lang-toggle:hover{background:var(--light);color:#050505}
 </style>
 </head>
 <body>
+<button type="button" id="lang-toggle" aria-label="Switch to English" title="Switch to English">EN</button>
 <main>
   <span class="eyebrow">404</span>
-  <h1>Esta página saiu do ar.</h1>
-  <p>O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial.</p>
-  <a class="btn" href="https://kelvinoliveiracode.github.io/portfolio/">Voltar ao portfólio</a>
+  <h1 data-pt="Esta página saiu do ar." data-en="This page is off the air.">Esta página saiu do ar.</h1>
+  <p data-pt="O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial." data-en="The link you followed does not exist (or never did). The portfolio, the projects and the contact details are all on the home page.">O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial.</p>
+  <a class="btn" href="https://kelvinoliveiracode.github.io/portfolio/" data-pt="Voltar ao portfólio" data-en="Back to the portfolio">Voltar ao portfólio</a>
 </main>
+<script>
+  // Mesma chave de idioma do index.html (ko-lang): a escolha persiste entre as paginas.
+  (function () {
+    var KEY = 'ko-lang';
+    var lang = 'pt';
+    try {
+      var saved = localStorage.getItem(KEY);
+      if (saved === 'en' || saved === 'pt') lang = saved;
+      // sem preferencia salva, segue o navegador: mesma regra do index.html,
+      // senao quem chega pelo 404 em ingles veria a pagina em portugues.
+      else if ((navigator.language || '').toLowerCase().indexOf('pt') !== 0) lang = 'en';
+    } catch (e) { /* ignora */ }
+
+    function aplicar(l) {
+      var mapa = l === 'pt' ? 'pt' : 'en';
+      document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
+
+      var els = document.querySelectorAll('[data-pt], [data-en]');
+      for (var i = 0; i < els.length; i++) {
+        var v = els[i].getAttribute('data-' + mapa);
+        if (v !== null) els[i].textContent = v;
+      }
+
+      var t = document.querySelector('title[data-pt-content]');
+      if (t) {
+        var tv = t.getAttribute('data-' + mapa + '-content');
+        if (tv !== null) document.title = tv;
+      }
+      var metas = document.querySelectorAll('meta[data-pt-content]');
+      for (var j = 0; j < metas.length; j++) {
+        var mv = metas[j].getAttribute('data-' + mapa + '-content');
+        if (mv !== null) metas[j].setAttribute('content', mv);
+      }
+
+      var btn = document.getElementById('lang-toggle');
+      if (btn) {
+        btn.textContent = l === 'pt' ? 'EN' : 'PT';
+        // rotulo no idioma da pagina: nada de portugues sobrando no modo EN
+        var lbl = l === 'pt' ? 'Switch to English' : 'Switch to Portuguese';
+        btn.setAttribute('aria-label', lbl);
+        btn.setAttribute('title', lbl);
+      }
+
+      try { localStorage.setItem(KEY, l); } catch (e) { /* ignora */ }
+    }
+
+    aplicar(lang);
+
+    var btn = document.getElementById('lang-toggle');
+    if (btn) {
+      btn.addEventListener('click', function () {
+        lang = lang === 'pt' ? 'en' : 'pt';
+        aplicar(lang);
+      });
+    }
+  })();
+</script>
 </body>
 </html>

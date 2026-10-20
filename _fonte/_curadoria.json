@@ -16,12 +16,14 @@
     "certificador-cobre-simulado": ["infra"],
     "cftv-simulador-nvr": ["infra"],
     "classificador-documentos-fiscais": ["dados"],
+    "chopp-gourmet": ["web"],
     "cloud4all": ["web"],
     "cofre-senhas-aes256": ["cyber"],
     "config-backup-switches": ["infra"],
     "container-scanner-imagens": ["cyber"],
     "dashboard-metricas-site": ["web"],
     "dashboard-sla-helpdesk": ["ti"],
+    "dashboard-vendas-porsche-dio": ["dados"],
     "dashboard-vendas-streamlit": ["dados"],
     "dashboard-xbox": ["dados"],
     "demand-limiting": ["infra"],
@@ -40,7 +42,6 @@
     "garimpo": ["web"],
     "gerador-curriculos-ats-v2": ["web"],
     "gerador-de-curriculos-ats": ["web"],
-    "guias-estudo": ["web"],
     "helpdesk-tickets": ["ti"],
     "honeypot-portas-evidencia": ["cyber"],
     "iac-terraform-github-actions": ["infra"],
@@ -58,6 +59,7 @@
     "loja-virtual-completa": ["backend"],
     "mapeador-rede-lan-arp": ["infra"],
     "marketplace-servicos-freelance": ["backend"],
+    "MegaAGT": ["ti"],
     "miniguia-estudos-notebooklm": ["dados"],
     "mlops-registro-drift": ["dados"],
     "modbus-scanner": ["infra"],
@@ -91,6 +93,7 @@
     "slidestage": ["web"],
     "status-page-multi-regiao": ["infra"],
     "tessumax-landing": ["web"],
+    "techcards": ["web"],
     "threat-intel-dashboard": ["cyber"],
     "validador-qos-voip": ["infra"],
     "vms-integration-labs": ["infra"],
@@ -193,12 +196,6 @@
       "d": { "pt": "Vinte landing pages completas, uma para cada nicho de negócio, publicadas como mostruário vivo de layout, tipografia e ritmo visual.", "en": "Twenty complete landing pages, one per business niche, published as a living showcase of layout, typography and visual rhythm." }
     },
     {
-      "n": "guias-estudo", "a": ["web"], "stack": ["HTML", "Content", "SEO"],
-      "t": { "pt": "Guias de estudo publicados", "en": "Published study guides" },
-      "badge": { "pt": "No ar", "en": "Live" },
-      "d": { "pt": "Coleção de guias de estudo escritos e publicados na web, reunindo o que aprendi nos bootcamps em material que outra pessoa consegue seguir.", "en": "A collection of study guides written and published on the web, turning what I learned in the bootcamps into material someone else can follow." }
-    },
-    {
       "n": "kodaros-landing", "a": ["web"], "stack": ["HTML", "Branding", "Deploy"],
       "t": { "pt": "KODAROS — plataforma", "en": "KODAROS — platform" },
       "badge": { "pt": "No ar", "en": "Live" },
@@ -215,6 +212,24 @@
       "t": { "pt": "Este portfólio", "en": "This portfolio" },
       "badge": { "pt": "No ar", "en": "Live" },
       "d": { "pt": "O site que você está lendo: página única, bilíngue PT/EN, sem framework e sem build, publicada direto do repositório via GitHub Actions.", "en": "The site you are reading: a single-bilingual PT/EN page, no framework and no build step, published straight from the repository through GitHub Actions." }
+    },
+    {
+      "n": "dashboard-vendas-porsche-dio", "a": ["dados"], "stack": ["React", "TypeScript", "Recharts"],
+      "t": { "pt": "Dashboard de Vendas Porsche (DIO)", "en": "Porsche Sales Dashboard" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Dashboard de vendas com React e TypeScript: gráficos por modelo e período, filtros, tabela de vendas e um assistente que responde sobre os dados com regras abertas. Estado guardado no navegador, sem backend.", "en": "A sales dashboard in React and TypeScript: charts by model and period, filters, a sales table and an assistant that answers over the data with open rules. State kept in the browser, no backend." }
+    },
+    {
+      "n": "techcards", "a": ["web"], "stack": ["HTML", "Vanilla JS", "Educational"],
+      "t": { "pt": "TechCards — flashcards técnicos", "en": "TechCards — technical flashcards" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Flashcards técnicos offline (sistemas operacionais, arquitetura e inglês) numa página única sem build: perguntas e respostas, temas e navegação por teclado. Trabalho acadêmico de Ciência da Computação.", "en": "Offline technical flashcards (operating systems, architecture and English) in a single zero-build page: questions and answers, themes and keyboard navigation. An academic Computer Science project." }
+    },
+    {
+      "n": "chopp-gourmet", "a": ["web"], "stack": ["HTML", "CSS", "Vanilla JS"],
+      "t": { "pt": "Chopp Gourmet — página de produto", "en": "Chopp Gourmet — product page" },
+      "badge": { "pt": "No ar", "en": "Live" },
+      "d": { "pt": "Página de produto com catálogo de sabores, passo a passo de compra e pagamento via Pix com QR Code. Um exemplo de página comercial completa, rápida e sem dependências.", "en": "A product one-pager with a flavor catalog, a how-to-buy guide and Pix checkout with a QR code. A complete, fast, dependency-free example of a commercial page." }
     }
   ]
 }

@@ -43,7 +43,11 @@ function AreaRotulo($codes) {
 
 # ---------------- VITRINE ----------------
 $cards = @()
-$ordenada = @($d.vitrine | Sort-Object @{ Expression = { if ($_.live) { 0 } else { 1 } } })
+# ordem estavel: primeiro os que tem pagina no ar, depois por nome.
+# o segundo criterio (n) desempata os que caem no mesmo grupo: sem ele o
+# Sort-Object pode devolver a mesma chave numa ordem diferente a cada
+# execucao e o HTML gerado mudaria sem nenhuma alteracao de conteudo.
+$ordenada = @($d.vitrine | Sort-Object @{ Expression = { if ($_.live) { 0 } else { 1 } } }, @{ Expression = { $_.n } })
 foreach ($v in $ordenada) {
   $rot = AreaRotulo $v.a
   $vivo = [bool]$v.live
@@ -51,6 +55,9 @@ foreach ($v in $ordenada) {
 
   $selo = if ($vivo) {
     '<span class="badge-live" data-pt="No ar" data-en="Live">No ar</span>'
+  } elseif ([string]::IsNullOrWhiteSpace($v.badge.pt)) {
+    # selo vazio nao vira pilula: some do HTML inteiro
+    ''
   } else {
     '<span class="badge-note" data-pt="' + (Esc $v.badge.pt) + '" data-en="' + (Esc $v.badge.en) + '">' + (Esc $v.badge.pt) + '</span>'
   }
@@ -105,7 +112,10 @@ foreach ($p in ($d.lista | Sort-Object n)) {
   $tipo = if ($p.l) { '<span class="chip">' + (Esc $p.l) + '</span>' } else { '' }
   $ano = '<span class="chip">' + $p.y + '</span>'
   $seloVivo = if ($p.live) { '<span class="chip live" data-pt="no ar" data-en="live">no ar</span>' } else { '' }
-  $tituloAttr = if ($p.d) { ' title="' + (Esc $p.d) + '"' } else { '' }
+  # o title carrega a descricao; em EN entra a versao inglesa quando existe.
+  # o title="" puro mantem o texto em PT antes do JS rodar (sem JS, sem i18n).
+  $descEN = if ($p.de) { $p.de } else { $p.d }
+  $tituloAttr = if ($p.d) { ' title="' + (Esc $p.d) + '" data-pt-title="' + (Esc $p.d) + '" data-en-title="' + (Esc $descEN) + '"' } else { '' }
   # titulo em ingles: se o repo nao estiver no mapa, o proprio titulo PT serve
   $te = if ($p.te) { $p.te } else { $p.t }
   $linkSite = if ($p.live) { '<a class="lnk primary" href="' + $p.live + '" target="_blank" rel="noopener" data-pt="site &#8599;" data-en="site &#8599;">site &#8599;</a>' } else { '' }
@@ -146,16 +156,19 @@ $html = [System.IO.File]::ReadAllText("$ROOT\index.html", [System.Text.Encoding]
 # o bloco reinjetado ja traz o proprio <div class="vitrine">, entao o regex
 # precisa consumir o div existente (se nao, ele fica duplicado e engole as
 # secoes seguintes dentro do grid da vitrine)
+# o \s* inicial consome as quebras de linha E as linhas em branco que ficam
+# antes do div: sem isso cada execucao empurrava o conteudo mais para baixo
+# e o arquivo acumulava linhas vazias a cada geracao.
 $html = [regex]::Replace($html,
-  '(?s)[ \t]*<div class="vitrine"[^>]*>.*?(?=<div class="sec-head" style="margin-top:var\(--s9\)">)',
-  "      <!--#VITRINE#-->" + "`n`n      ")
+  '(?s)\s*<div class="vitrine"[^>]*>.*?(?=<div class="sec-head" style="margin-top:var\(--s9\)">)',
+  "`n      <!--#VITRINE#-->" + "`n`n      ")
 
 # o bloco do arquivo tambem traz o proprio <div class="arq-grid"> e a linha de
 # contagem que fica DEPOIS da grade (o "mostrar mais" no fim da lista, nao no
 # topo: acima da grade o clique parecia nao fazer nada)
 $html = [regex]::Replace($html,
-  '(?s)[ \t]*<div class="arq-grid" id="arquivo">.*?(\s*)(?=</div>\s*</section>\s*<!-- =+ CERTIFICADOS)',
-  ("      <!--#ARQUIVO#-->" + '$1'))
+  '(?s)\s*<div class="arq-grid" id="arquivo">.*?(\s*)(?=</div>\s*</section>\s*<!-- =+ CERTIFICADOS)',
+  ("`n      <!--#ARQUIVO#-->" + '$1'))
 
 if ($html.IndexOf('<!--#VITRINE#-->') -lt 0 -or $html.IndexOf('<!--#ARQUIVO#-->') -lt 0) {
   throw 'Nao encontrei os marcadores #VITRINE# / #ARQUIVO# no index.html.'

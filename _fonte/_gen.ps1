@@ -43,6 +43,13 @@ if (Test-Path "$DATA\_titulos_en.json") {
   foreach ($t in $en.PSObject.Properties) { $TITE[$t.Name] = $t.Value }
 }
 
+# descricoes em ingles (arquivo separado: texto escrito a mao)
+$DESCEN = @{}
+if (Test-Path "$DATA\_desc_en.json") {
+  $de = Get-Content "$DATA\_desc_en.json" -Raw -Encoding UTF8 | ConvertFrom-Json
+  foreach ($t in $de.PSObject.Properties) { $DESCEN[$t.Name] = $t.Value }
+}
+
 function Humanizar($slug) {
   if ($TIT.ContainsKey($slug)) { return $TIT[$slug] }
 
@@ -60,18 +67,70 @@ function Humanizar($slug) {
   return ($out -join ' ')
 }
 
-function LimparDesc($d, $slug) {
+# As descricoes do GitHub chegam em dois formatos:
+#   "Texto em portugues | Text in english"  -> formato dos repos com descricao bilingue
+#   "Titulo — complemento: ..."             -> repos com uma unica descricao
+# A primeira parte e' o texto de portugues; depois da barra vertical vem o de
+# ingles. "Projeto funcional — slug" e' um placeholder e nao conta como descricao.
+function DividirDesc($d) {
   if ([string]::IsNullOrWhiteSpace($d)) { return $null }
   $t = $d.Trim()
-  $t = $t -replace '^\s*Projeto\s+funcional\s*[\u2013\u2014-]\s*', ''
-  $t = $t -replace '\s*[\u2013\u2014|]\s*.*$', ''
-  $t = $t.Trim()
+
+  # "Projeto funcional — slug" e' um placeholder do proprio gerador: nao tem
+  # descricao nenhuma, so o nome do repositorio.
+  if ($t -match '^\s*Projeto\s+funcional\s*[\u2013\u2014-]\s*') { return $null }
+
+  $pt = $t
+  $en = $null
+  if ($t -match '\|') {
+    $parts = $t -split '\|', 2
+    $pt = $parts[0].Trim()
+    $en = $parts[1].Trim()
+  }
+  return @{ pt = $pt; en = $en }
+}
+
+# Descricao em portugues mostrada no site.
+function LimparDesc($d, $slug) {
+  $div = DividirDesc $d
+  if (-not $div) { return $null }
+  $t = $div.pt.Trim()
   if ($t.Length -lt 24) { return $null }
   # descartar quando a descricao e apenas o proprio nome do repositorio
   $norm = ($t.ToLower() -replace '[^a-z0-9]', '')
   $slugnorm = ($slug.ToLower() -replace '[^a-z0-9]', '')
   if ($norm -eq $slugnorm -or $norm -eq $slugnorm + 'projetofuncional') { return $null }
   return $t
+}
+
+# Descricao em ingles: o arquivo _desc_en.json escrito a mao tem prioridade;
+# senao o trecho depois da barra vertical na descricao do GitHub; senao a propria
+# descricao, quando ela ja foi escrita em ingles.
+function DescEN($d, $slug) {
+  # 1) traducao escrita a mao tem prioridade
+  if ($DESCEN.ContainsKey($slug)) { return $DESCEN[$slug] }
+
+  $div = DividirDesc $d
+  if (-not $div) { return $null }
+
+  # 2) o trecho depois do " | " na descricao do GitHub
+  if ($div.en) {
+    $t = $div.en.Trim()
+    if ($t.Length -ge 8) { return $t }
+    return $null
+  }
+
+  # 3) sem " | ": so vale se a descricao ja estiver em ingles. As palavras
+  # abaixo sao marcadores de portugues; sem nenhum deles, o texto e ingles.
+  $marcadores = 'ç|ã|õ|á|é|í|ó|ú|â|ê|à|\bde\b|\bdo\b|\bda\b|\bcom\b|\bpara\b|\bpor\b|\bque\b|\bsistema\b|\bprojeto\b|\bgerador\b|\bdashboard\b|\bsimulador\b'
+  $t = $div.pt.Trim()
+  if ($t -match $marcadores) { return $null }
+  # a descricao que e' so o nome do repositorio nao e' descricao
+  $norm = ($t.ToLower() -replace '[^a-z0-9]', '')
+  $slugnorm = ($slug.ToLower() -replace '[^a-z0-9]', '')
+  if ($norm -eq $slugnorm) { return $null }
+  if ($t.Length -ge 8) { return $t }
+  return $null
 }
 
 function Topics($t) {
@@ -100,6 +159,7 @@ foreach ($r in ($raw | Sort-Object name)) {
     live = $live
     a    = $areas
     d    = (LimparDesc $r.description $slug)
+    de   = (DescEN $r.description $slug)
     tp   = (Topics $r.topics)
     f    = [bool]$featSet[$slug]
   }

@@ -153,7 +153,7 @@ input:focus-visible {
 /* ---------- fundo: a chapa gravada ---------- */
 #plate {
   position: fixed; inset: 0; z-index: -2; overflow: hidden;
-  background: var(--paper) url("assets/gravura-poster.jpg") center / cover no-repeat;
+  background: var(--paper) url("gravura-poster.jpg") center / cover no-repeat;
 }
 #plate video {
   position: absolute; top: 50%; left: 50%;

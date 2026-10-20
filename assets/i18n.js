@@ -39,13 +39,49 @@
     }
   };
 
+  // data-<lang>-<sufixo> -> atributo real do elemento.
+  // O seletor abaixo precisa cobrir TODOS esses sufixos: um elemento que so
+  // declara data-pt-aria (sem data-pt) nao casa com [data-pt] e ficaria
+  // com o texto em portugues para sempre.
+  var ATRIBUTOS = {
+    aria: 'aria-label',
+    ph: 'placeholder',
+    title: 'title',
+    alt: 'alt',
+    content: 'content'
+  };
+
+  // ---------- metadados (title, description, og, twitter) ----------
+  // As tags de metadados nao aceitam data-pt/data-en, entao cada uma carrega
+  // o par completo em atributos proprios: data-pt-content / data-en-content.
+  function aplicarMeta(mapa) {
+    var title = document.querySelector('title[data-pt-content]');
+    if (title) {
+      var t = title.getAttribute('data-' + mapa + '-content');
+      if (t !== null) document.title = t;
+    }
+
+    var metas = document.querySelectorAll('meta[data-pt-content]');
+    for (var i = 0; i < metas.length; i++) {
+      var m = metas[i];
+      var val = m.getAttribute('data-' + mapa + '-content');
+      if (val !== null) m.setAttribute('content', val);
+    }
+  }
+
   function aplicar(l) {
     var mapa = l === 'pt' ? 'pt' : 'en';
 
     document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
     window.KO_LANG = l;
 
-    var els = document.querySelectorAll('[data-pt], [data-en]');
+    var els = document.querySelectorAll(
+      '[data-pt], [data-en], ' +
+      '[data-pt-aria], [data-en-aria], [data-pt-ph], [data-en-ph], ' +
+      '[data-pt-title], [data-en-title], [data-pt-alt], [data-en-alt], ' +
+      '[data-pt-content], [data-en-content], ' +
+      '[data-pt-ld], [data-en-ld]'
+    );
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
 
@@ -55,19 +91,25 @@
         else el.textContent = v;
       }
 
-      var a = el.getAttribute('data-' + mapa + '-aria');
-      if (a !== null) el.setAttribute('aria-label', a);
+      for (var k in ATRIBUTOS) {
+        if (!Object.prototype.hasOwnProperty.call(ATRIBUTOS, k)) continue;
+        var val = el.getAttribute('data-' + mapa + '-' + k);
+        if (val !== null) el.setAttribute(ATRIBUTOS[k], val);
+      }
 
-      var p = el.getAttribute('data-' + mapa + '-ph');
-      if (p !== null) el.setAttribute('placeholder', p);
+      // JSON-LD: duas versoes completas do objeto, trocadas no lugar
+      var ld = el.getAttribute('data-' + mapa + '-ld');
+      if (ld !== null) el.textContent = ld;
     }
 
     var btn = document.getElementById('lang-toggle');
     if (btn) {
       btn.textContent = l === 'pt' ? 'EN' : 'PT';
-      btn.setAttribute('aria-label', l === 'pt' ? 'Switch to English' : 'Mudar para português');
-      btn.setAttribute('title', l === 'pt' ? 'Switch to English' : 'Mudar para português');
+      btn.setAttribute('aria-label', l === 'pt' ? 'Switch to English' : 'Switch to Portuguese');
+      btn.setAttribute('title', l === 'pt' ? 'Switch to English' : 'Switch to Portuguese');
     }
+
+    aplicarMeta(mapa);
 
     var fg = document.getElementById('filtros');
     if (fg) fg.setAttribute('aria-label', TEXTOS[mapa].areaLabel);

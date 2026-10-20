@@ -137,7 +137,10 @@
   "titulos": {
     "javaforge": "JavaForge",
     "slidestage": "SlideStage",
-    "guias-estudo": "Guias de Estudo",
+    "techcards": "TechCards",
+    "chopp-gourmet": "Chopp Gourmet",
+    "dashboard-vendas-porsche-dio": "Dashboard de Vendas Porsche (DIO)",
+    "MegaAGT": "MegaAGT",
     "kodabudget-api": "KodaBudget API",
     "kodapay-api": "KodaPay API",
     "kodapay-api-v2": "KodaPay API v2",
