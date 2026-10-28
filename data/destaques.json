@@ -1,0 +1,208 @@
+{
+  "order": [
+    "javaforge",
+    "kodabudget-api",
+    "kodapay-api",
+    "deteccao-de-fraudes",
+    "dio-lab-bia-do-futuro",
+    "pentest-lab-scanner",
+    "siem-logs-lab",
+    "modbus-scanner",
+    "vpc-3-tier-segura",
+    "wifi-site-survey",
+    "kb-search"
+  ],
+  "textos": {
+    "javaforge": {
+      "area": "backend",
+      "titulo": { "pt": "JavaForge — construtor visual de Swing", "en": "JavaForge — visual Swing builder" },
+      "stack": ["Rust", "SQLite", "Tooling"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: uma ferramenta desktop escrita em Rust que monta interfaces Java Swing por arrastar e soltar.",
+        "en": "The abstraction: a desktop tool written in Rust that builds Java Swing interfaces by drag and drop."
+      },
+      "entregas": [
+        { "pt": "Interfaces Swing montadas por arrastar e soltar, sem escrever o boilerplate à mão.", "en": "Swing interfaces assembled by drag and drop, without hand-writing the boilerplate." },
+        { "pt": "Projeto persistido em SQLite — a ferramenta guarda e reabre o trabalho do usuário.", "en": "Projects persist in SQLite — the tool saves and reopens the user's work." },
+        { "pt": "Eventos ligados sem código manual, encurtando o caminho do protótipo à aplicação.", "en": "Events wired without manual code, shortening the path from prototype to application." },
+        { "pt": "Escrita em Rust, fora da zona de conforto Java da lista de linguagens.", "en": "Written in Rust, outside the Java comfort zone of my active language list." }
+      ],
+      "metricasExtras": []
+    },
+    "kodabudget-api": {
+      "area": "backend",
+      "titulo": { "pt": "Assistente financeiro por voz", "en": "Voice-first finance assistant" },
+      "stack": ["Java 21", "Spring AI", "Whisper", "REST"],
+      "badge": { "pt": "Projeto final CI&T", "en": "CI&T capstone" },
+      "oQue": {
+        "pt": "Abstração: uma API que ouve, entende e responde por voz sobre as finanças do usuário.",
+        "en": "The abstraction: an API that listens, understands and answers by voice over the user's own finances."
+      },
+      "entregas": [
+        { "pt": "Transcrição local com Whisper — o áudio do usuário não depende de nuvem.", "en": "Local transcription with Whisper — the user's audio does not depend on the cloud." },
+        { "pt": "Tool calling com Spring AI responde só sobre os dados do usuário.", "en": "Spring AI tool calling answers only over the user's own data." },
+        { "pt": "O modelo não inventa saldo: a resposta sai dos dados consultados, não da imaginação do LLM.", "en": "The model never invents a balance: the answer comes from the queried data, not from the LLM's imagination." },
+        { "pt": "Ciclo completo por voz: pergunta falada, consulta e resposta falada.", "en": "A full voice loop: spoken question, query and spoken reply." }
+      ],
+      "metricasExtras": []
+    },
+    "kodapay-api": {
+      "area": "backend",
+      "titulo": { "pt": "API de pagamentos com padrões GoF", "en": "Payments API with GoF patterns" },
+      "stack": ["Java 21", "Spring Boot 3", "GoF", "CI"],
+      "badge": { "pt": "Projeto final CI&T", "en": "CI&T capstone" },
+      "oQue": {
+        "pt": "Abstração: uma API REST de pagamentos onde cada padrão de projeto existe por um motivo declarado.",
+        "en": "The abstraction: a payments REST API where every design pattern exists for a stated reason."
+      },
+      "entregas": [
+        { "pt": "Seis padrões GoF aplicados com propósito: Chain, Strategy, Observer, Builder, Factory e Singleton.", "en": "Six GoF patterns applied with purpose: Chain, Strategy, Observer, Builder, Factory and Singleton." },
+        { "pt": "Testes automatizados cobrindo os caminhos de pagamento.", "en": "Automated tests covering the payment paths." },
+        { "pt": "Pipeline de integração contínua verde — o padrão de código não é só documento.", "en": "A green continuous-integration pipeline — the pattern catalogue is not just a document." },
+        { "pt": "Projeto final do bootcamp CI&T, avaliado com critério externo.", "en": "The CI&T bootcamp capstone, evaluated against external criteria." }
+      ],
+      "metricasExtras": [ { "v": "6", "pt": "padrões GoF aplicados com propósito", "en": "GoF patterns applied with purpose" } ]
+    },
+    "deteccao-de-fraudes": {
+      "area": "dados",
+      "titulo": { "pt": "Detecção de fraude em cartão", "en": "Credit-card fraud detection" },
+      "stack": ["Python", "scikit-learn", "pandas"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: um pipeline de machine learning que decide transação por transação se algo está errado.",
+        "en": "The abstraction: a machine-learning pipeline that decides, transaction by transaction, whether something is wrong."
+      },
+      "entregas": [
+        { "pt": "284 mil transações reais processadas de ponta a ponta.", "en": "284k real transactions processed end to end." },
+        { "pt": "Fraude em 0,17% das amostras: desbalanceamento tratado, não ignorado.", "en": "Fraud in 0.17% of samples: imbalance handled, not ignored." },
+        { "pt": "Três modelos comparados com critério declarado antes da escolha final.", "en": "Three models compared against a declared criterion before the final choice." },
+        { "pt": "ROC AUC 0.94 no modelo final, com relatório escrito antes de comemorar o número.", "en": "ROC AUC 0.94 on the final model, with the report written before celebrating the number." }
+      ],
+      "metricasExtras": [
+        { "v": "284k", "pt": "transações processadas", "en": "transactions processed" },
+        { "v": "0,17%", "pt": "de fraude na base", "en": "fraud rate in the dataset" },
+        { "v": "0.94", "pt": "ROC AUC do modelo final", "en": "ROC AUC on the final model" }
+      ]
+    },
+    "dio-lab-bia-do-futuro": {
+      "area": "dados",
+      "titulo": { "pt": "BIA — agente financeiro anti-alucinação", "en": "BIA — anti-hallucination finance agent" },
+      "stack": ["Python", "GenAI", "LLM"],
+      "badge": { "pt": "Projeto final Bradesco", "en": "Bradesco capstone" },
+      "oQue": {
+        "pt": "Abstração: um agente de IA financeira que só fala depois de provar o que vai dizer.",
+        "en": "The abstraction: a finance AI agent that only speaks after proving what it is about to say."
+      },
+      "entregas": [
+        { "pt": "Histórico de transações analisado antes de qualquer recomendação.", "en": "Transaction history analysed before any recommendation." },
+        { "pt": "Recomendação de investimento por perfil de risco, não por palpite do modelo.", "en": "Investment advice by risk profile, not by the model's hunch." },
+        { "pt": "Quatro camadas de validação anti-alucinação entre o modelo e a resposta final.", "en": "Four anti-hallucination validation layers between the model and the final answer." },
+        { "pt": "Projeto final do bootcamp Bradesco, no domínio financeiro real.", "en": "The Bradesco bootcamp capstone, in the real financial domain." }
+      ],
+      "metricasExtras": [ { "v": "4", "pt": "camadas de validação anti-alucinação", "en": "anti-hallucination validation layers" } ]
+    },
+    "pentest-lab-scanner": {
+      "area": "cyber",
+      "titulo": { "pt": "Scanner de pentest com laudo por CWE", "en": "Pentest scanner with CWE reporting" },
+      "stack": ["Python", "CWE", "AppSec"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: um scanner que audita uma aplicação vulnerável em laboratório e devolve laudo técnico.",
+        "en": "The abstraction: a scanner that audits a deliberately vulnerable app in a lab and returns a technical report."
+      },
+      "entregas": [
+        { "pt": "11 falhas plantadas na aplicação de laboratório, confirmadas uma a uma.", "en": "11 planted flaws in the lab application, confirmed one by one." },
+        { "pt": "Cada falha classificada por CWE com veredito de exploração.", "en": "Every flaw classified by CWE with an exploitation verdict." },
+        { "pt": "Ambiente delimitado: o scanner ataca só o laboratório local.", "en": "Bounded scope: the scanner attacks only the local lab." },
+        { "pt": "O laudo sai no formato que um time de AppSec espera ler.", "en": "The report comes out in the shape an AppSec team expects to read." }
+      ],
+      "metricasExtras": [ { "v": "11", "pt": "falhas plantadas e confirmadas", "en": "planted flaws confirmed" } ]
+    },
+    "siem-logs-lab": {
+      "area": "cyber",
+      "titulo": { "pt": "Pipeline de detecção estilo SIEM", "en": "SIEM-style detection pipeline" },
+      "stack": ["Python", "MITRE ATT&CK", "SIEM"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: a camada de detecção de um SIEM, reconstruída em laboratório para entender cada regra por dentro.",
+        "en": "The abstraction: the detection layer of a SIEM, rebuilt in a lab to understand every rule from the inside."
+      },
+      "entregas": [
+        { "pt": "Sete regras de detecção avaliando eventos em tempo real.", "en": "Seven detection rules evaluating events in real time." },
+        { "pt": "Correlação temporal entre eventos — o alerta nasce do padrão, não do ruído.", "en": "Temporal correlation across events — the alert comes from the pattern, not the noise." },
+        { "pt": "Alertas mapeados em MITRE ATT&CK, a taxonomia que integra com o resto do mercado.", "en": "Alerts mapped to MITRE ATT&CK, the taxonomy that plugs into the rest of the industry." },
+        { "pt": "Rodando local, sem depender de plataforma paga para aprender detecção.", "en": "Runs locally, with no paid platform needed to learn detection." }
+      ],
+      "metricasExtras": [ { "v": "7", "pt": "regras de detecção mapeadas", "en": "detection rules mapped" } ]
+    },
+    "modbus-scanner": {
+      "area": "infra",
+      "titulo": { "pt": "Modbus TCP escrito do zero", "en": "Modbus TCP from scratch" },
+      "stack": ["Python", "Modbus TCP", "Sockets"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: o protocolo industrial Modbus TCP reimplementado sem biblioteca, byte a byte.",
+        "en": "The abstraction: the industrial Modbus TCP protocol reimplemented without a library, byte by byte."
+      },
+      "entregas": [
+        { "pt": "Protocolo implementado sem biblioteca — cada frame construído à mão.", "en": "The protocol implemented without a library — every frame built by hand." },
+        { "pt": "Servidor de laboratório que emula equipamentos de chão de fábrica.", "en": "A lab server emulating shop-floor equipment." },
+        { "pt": "Scanner de rede industrial para descobrir e ler medidores.", "en": "An industrial network scanner to discover and read meters." },
+        { "pt": "Leitura em medidores reais, não só em simulação.", "en": "Reads from real meters, not only from simulation." }
+      ],
+      "metricasExtras": []
+    },
+    "vpc-3-tier-segura": {
+      "area": "infra",
+      "titulo": { "pt": "VPC em 3 camadas com firewall stateful", "en": "Three-tier VPC with stateful firewall" },
+      "stack": ["Python", "Cloud", "Firewall"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: uma nuvem em miniatura onde cada pacote tem de provar que pode passar.",
+        "en": "The abstraction: a miniature cloud where every packet has to prove it may pass."
+      },
+      "entregas": [
+        { "pt": "Rede em três camadas com firewall stateful entre elas.", "en": "A three-tier network with a stateful firewall between tiers." },
+        { "pt": "Bastion host como único caminho para entrar na rede interna.", "en": "A bastion host as the only path into the internal network." },
+        { "pt": "Tracer de caminho que mostra por onde cada pacote pode ou não passar.", "en": "A path tracer showing where each packet may or may not travel." },
+        { "pt": "A topologia de referência de nuvem segura, entendida camada por camada.", "en": "The reference topology of a secure cloud, understood tier by tier." }
+      ],
+      "metricasExtras": []
+    },
+    "wifi-site-survey": {
+      "area": "infra",
+      "titulo": { "pt": "Survey de Wi-Fi com mapa de calor", "en": "Wi-Fi survey with heatmap" },
+      "stack": ["Python", "RF", "Heatmap"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: o levantamento de cobertura Wi-Fi que uma equipe de rede profissional faria, transformado em ferramenta.",
+        "en": "The abstraction: the Wi-Fi coverage survey a professional network crew would run, turned into a tool."
+      },
+      "entregas": [
+        { "pt": "Mapa de calor de RSSI por andar, legível sem conhecimento de RF.", "en": "A per-floor RSSI heatmap, readable without RF expertise." },
+        { "pt": "Dimensionamento de access points a partir da cobertura medida.", "en": "Access-point sizing derived from measured coverage." },
+        { "pt": "Detecção de conflito de canal entre redes vizinhas.", "en": "Channel-conflict detection between neighbouring networks." },
+        { "pt": "Decisão de compra e posicionamento de equipamento embasada em número, não em chute.", "en": "Buying and placement decisions backed by numbers, not hunches." }
+      ],
+      "metricasExtras": []
+    },
+    "kb-search": {
+      "area": "dados",
+      "titulo": { "pt": "Busca por similaridade com TF-IDF à mão", "en": "Similarity search with hand-written TF-IDF" },
+      "stack": ["Python", "TF-IDF", "NLP"],
+      "badge": null,
+      "oQue": {
+        "pt": "Abstração: TF-IDF e similaridade de cosseno escritos à mão para mostrar o que acontece dentro de toda busca.",
+        "en": "The abstraction: TF-IDF and cosine similarity written by hand to show what happens inside every search engine."
+      },
+      "entregas": [
+        { "pt": "TF-IDF e cosseno implementados manualmente, sem biblioteca de busca.", "en": "TF-IDF and cosine implemented by hand, with no search library." },
+        { "pt": "Busca semântica numa base de conhecimento real.", "en": "Semantic search over a real knowledge base." },
+        { "pt": "Resultado explicável: dá para rastrear por que cada documento ficou onde ficou.", "en": "Explainable results: you can trace why each document ranked where it did." },
+        { "pt": "A matemática da busca entendida, não só chamada.", "en": "The mathematics of search understood, not just called." }
+      ],
+      "metricasExtras": []
+    }
+  }
+}

@@ -1,0 +1,305 @@
+{
+ "agente-suporte-bancario-rag": [
+  "dados"
+ ],
+ "analisador-logs-ssh-mitre": [
+  "cyber"
+ ],
+ "analisador-pcap-anomalias": [
+  "cyber"
+ ],
+ "analise-churn-cohort": [
+  "dados"
+ ],
+ "api-gestao-frota-veiculos": [
+  "backend"
+ ],
+ "app-bancario-digital": [
+  "backend"
+ ],
+ "auditor-headers-seguranca": [
+  "cyber"
+ ],
+ "backup-gfs-verificacao-hash": [
+  "ti"
+ ],
+ "backup-remoto-s3-criptografado": [
+  "ti"
+ ],
+ "bot-fii-sentimento": [
+  "dados"
+ ],
+ "calculadora-enlace-cobre": [
+  "infra"
+ ],
+ "calculadora-financeira-pwa": [
+  "web"
+ ],
+ "camera-onboarding": [
+  "infra"
+ ],
+ "certificador-cobre-simulado": [
+  "infra"
+ ],
+ "cftv-simulador-nvr": [
+  "infra"
+ ],
+ "classificador-documentos-fiscais": [
+  "dados"
+ ],
+ "chopp-gourmet": [
+  "web"
+ ],
+ "cloud4all": [
+  "web"
+ ],
+ "cofre-senhas-aes256": [
+  "cyber"
+ ],
+ "config-backup-switches": [
+  "infra"
+ ],
+ "container-scanner-imagens": [
+  "cyber"
+ ],
+ "dashboard-metricas-site": [
+  "web"
+ ],
+ "dashboard-sla-helpdesk": [
+  "ti"
+ ],
+ "dashboard-vendas-porsche-dio": [
+  "dados"
+ ],
+ "dashboard-vendas-streamlit": [
+  "dados"
+ ],
+ "dashboard-xbox": [
+  "dados"
+ ],
+ "demand-limiting": [
+  "infra"
+ ],
+ "desligamento-agendado-frota": [
+  "ti"
+ ],
+ "deteccao-de-fraudes": [
+  "dados"
+ ],
+ "detector-deepfake-audio": [
+  "cyber",
+  "dados"
+ ],
+ "dio-lab-bia-do-futuro": [
+  "dados"
+ ],
+ "editor-json-visual": [
+  "web"
+ ],
+ "energy-dashboard-predial": [
+  "infra",
+  "dados"
+ ],
+ "etl-vendas-datawarehouse": [
+  "dados"
+ ],
+ "excel-para-investimentos": [
+  "dados"
+ ],
+ "finops-alerta-orcamento": [
+  "infra"
+ ],
+ "finops-dashboard": [
+  "infra"
+ ],
+ "finvibe-ai": [
+  "web"
+ ],
+ "forense-memoria-simples": [
+  "cyber"
+ ],
+ "garimpo": [
+  "web"
+ ],
+ "gerador-curriculos-ats-v2": [
+  "web"
+ ],
+ "gerador-de-curriculos-ats": [
+  "web"
+ ],
+ "helpdesk-tickets": [
+  "ti"
+ ],
+ "honeypot-portas-evidencia": [
+  "cyber"
+ ],
+ "iac-terraform-github-actions": [
+  "infra"
+ ],
+ "infra-as-code-lab": [
+  "infra"
+ ],
+ "inventario-ativos-ti": [
+  "ti"
+ ],
+ "javaforge": [
+  "backend"
+ ],
+ "kb-search": [
+  "dados"
+ ],
+ "kodabudget-api": [
+  "backend"
+ ],
+ "kodapay-api": [
+  "backend"
+ ],
+ "kodapay-api-v2": [
+  "backend"
+ ],
+ "kodaros-ferramentas": [
+  "web"
+ ],
+ "kodaros-landing": [
+  "web"
+ ],
+ "lab-backup-recuperacao": [
+  "ti"
+ ],
+ "loja-ebooks-kodaros": [
+  "web"
+ ],
+ "loja-virtual-completa": [
+  "backend"
+ ],
+ "mapeador-rede-lan-arp": [
+  "infra"
+ ],
+ "marketplace-servicos-freelance": [
+  "backend"
+ ],
+ "MegaAGT": [
+  "ti"
+ ],
+ "miniguia-estudos-notebooklm": [
+  "dados"
+ ],
+ "mlops-registro-drift": [
+  "dados"
+ ],
+ "modbus-scanner": [
+  "infra"
+ ],
+ "modelos-de-sites": [
+  "web"
+ ],
+ "monitor-qos-enlace": [
+  "infra"
+ ],
+ "network-ci-pipeline": [
+  "infra"
+ ],
+ "olaria": [
+  "web"
+ ],
+ "opencode-browser-chat": [
+  "web"
+ ],
+ "organizador-imposto-de-renda": [
+  "dados"
+ ],
+ "pagina-status-sistema": [
+  "web"
+ ],
+ "pentest-lab-scanner": [
+  "cyber"
+ ],
+ "pipeline-iot-energia": [
+  "infra"
+ ],
+ "portal-autoatendimento-helpdesk": [
+  "ti"
+ ],
+ "portal-cliente-oauth2-rbac": [
+  "backend",
+  "cyber"
+ ],
+ "portfolio": [
+  "web"
+ ],
+ "previsao-demanda-estoque": [
+  "dados"
+ ],
+ "previsor-inadimplencia-xgboost": [
+  "dados"
+ ],
+ "prompt-analise-feedbacks-bancarios-dio": [
+  "dados"
+ ],
+ "rack-planner": [
+  "infra"
+ ],
+ "recomendador-produtos-ml": [
+  "dados"
+ ],
+ "rede-lab-topologia": [
+  "infra"
+ ],
+ "relatorio-compliance-lgpd": [
+  "cyber"
+ ],
+ "reset-senha-ad-automacao": [
+  "ti"
+ ],
+ "scanner-owasp-top10-web": [
+  "cyber"
+ ],
+ "scanner-portas-banner": [
+  "cyber"
+ ],
+ "serverless-log-guard": [
+  "cyber"
+ ],
+ "siem-logs-lab": [
+  "cyber"
+ ],
+ "siem-luz-brute-force": [
+  "cyber"
+ ],
+ "simulador-ospf-simples": [
+  "infra"
+ ],
+ "sistema-agendamento-consultas": [
+  "backend"
+ ],
+ "slidestage": [
+  "web"
+ ],
+ "status-page-multi-regiao": [
+  "infra"
+ ],
+ "tessumax-landing": [
+  "web"
+ ],
+ "techcards": [
+  "web"
+ ],
+ "threat-intel-dashboard": [
+  "cyber"
+ ],
+ "validador-qos-voip": [
+  "infra"
+ ],
+ "vms-integration-labs": [
+  "infra"
+ ],
+ "vpc-3-tier-segura": [
+  "infra"
+ ],
+ "wifi-site-survey": [
+  "infra"
+ ],
+ "workstation-onboarding": [
+  "ti"
+ ]
+}

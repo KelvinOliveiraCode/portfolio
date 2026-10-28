@@ -1,0 +1,1469 @@
+{
+ "fetchedAt": "2026-10-25",
+ "source": "https://api.github.com/users/KelvinOliveiraCode/repos",
+ "total": 103,
+ "repos": [
+  {
+   "name": "agente-suporte-bancario-rag",
+   "description": "Projeto funcional — agente-suporte-bancario-rag",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:49:13Z",
+   "pushed": "2026-10-18T14:12:21Z",
+   "live": false,
+   "sizeKb": 36
+  },
+  {
+   "name": "analisador-logs-ssh-mitre",
+   "description": "Projeto funcional — analisador-logs-ssh-mitre",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:49:29Z",
+   "pushed": "2026-10-18T14:12:25Z",
+   "live": false,
+   "sizeKb": 24
+  },
+  {
+   "name": "analisador-pcap-anomalias",
+   "description": "Projeto funcional — analisador-pcap-anomalias",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:49:45Z",
+   "pushed": "2026-10-18T14:12:28Z",
+   "live": false,
+   "sizeKb": 26
+  },
+  {
+   "name": "analise-churn-cohort",
+   "description": "Projeto funcional — analise-churn-cohort",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:50:01Z",
+   "pushed": "2026-10-18T14:12:32Z",
+   "live": false,
+   "sizeKb": 57
+  },
+  {
+   "name": "api-gestao-frota-veiculos",
+   "description": "Projeto funcional — api-gestao-frota-veiculos",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:50:18Z",
+   "pushed": "2026-10-18T14:12:36Z",
+   "live": false,
+   "sizeKb": 41
+  },
+  {
+   "name": "app-bancario-digital",
+   "description": "Projeto funcional — app-bancario-digital",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:50:35Z",
+   "pushed": "2026-10-18T14:12:40Z",
+   "live": false,
+   "sizeKb": 62
+  },
+  {
+   "name": "auditor-headers-seguranca",
+   "description": "Projeto funcional — auditor-headers-seguranca",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:50:57Z",
+   "pushed": "2026-10-18T14:12:44Z",
+   "live": false,
+   "sizeKb": 18
+  },
+  {
+   "name": "backup-gfs-verificacao-hash",
+   "description": "Projeto funcional — backup-gfs-verificacao-hash",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:51:13Z",
+   "pushed": "2026-10-18T14:12:48Z",
+   "live": false,
+   "sizeKb": 26
+  },
+  {
+   "name": "backup-remoto-s3-criptografado",
+   "description": "Projeto funcional — backup-remoto-s3-criptografado",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:51:28Z",
+   "pushed": "2026-10-18T14:12:52Z",
+   "live": false,
+   "sizeKb": 27
+  },
+  {
+   "name": "bot-fii-sentimento",
+   "description": "Projeto funcional — bot-fii-sentimento",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T21:51:44Z",
+   "pushed": "2026-10-18T14:12:56Z",
+   "live": false,
+   "sizeKb": 115
+  },
+  {
+   "name": "calculadora-enlace-cobre",
+   "description": "Orcamento de perda e laudo de certificacao para enlace de cabo de cobre",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:54:58Z",
+   "pushed": "2026-10-18T14:10:13Z",
+   "live": false,
+   "sizeKb": 50
+  },
+  {
+   "name": "calculadora-financeira-pwa",
+   "description": "Projeto funcional — calculadora-financeira-pwa",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T22:25:17Z",
+   "pushed": "2026-10-18T14:13:00Z",
+   "live": false,
+   "sizeKb": 51
+  },
+  {
+   "name": "camera-onboarding",
+   "description": "Onboarding de camera IP em lote: descoberta, nomenclatura, idempotencia e log",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:43:37Z",
+   "pushed": "2026-10-18T14:11:09Z",
+   "live": false,
+   "sizeKb": 52
+  },
+  {
+   "name": "certificador-cobre-simulado",
+   "description": "Simula certificacao de cabo: mapa de fiacao, NEXT, split pair e laudo com limite estourado",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:45:17Z",
+   "pushed": "2026-10-18T14:11:22Z",
+   "live": false,
+   "sizeKb": 52
+  },
+  {
+   "name": "cftv-simulador-nvr",
+   "description": "Simulador de NVR: gravacao, busca por evento e 3 falhas plantadas de integridade",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:43:02Z",
+   "pushed": "2026-10-18T14:11:05Z",
+   "live": false,
+   "sizeKb": 53
+  },
+  {
+   "name": "chopp-gourmet",
+   "description": "Chopp Gourmet - Sorvete em saquinho com casquinha de chocolate",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-09-26T21:45:36Z",
+   "pushed": "2026-10-18T14:10:03Z",
+   "live": false,
+   "sizeKb": 82
+  },
+  {
+   "name": "classificador-documentos-fiscais",
+   "description": "Projeto funcional — classificador-documentos-fiscais",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:37:01Z",
+   "pushed": "2026-10-18T14:14:37Z",
+   "live": false,
+   "sizeKb": 23
+  },
+  {
+   "name": "cloud4all",
+   "description": "Cloud4All — a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA",
+   "language": "HTML",
+   "homepage": "https://kelvinoliveiracode.github.io/cloud4all/",
+   "topics": [],
+   "created": "2026-10-05T21:16:13Z",
+   "pushed": "2026-10-18T14:11:45Z",
+   "live": true,
+   "sizeKb": 107
+  },
+  {
+   "name": "cofre-senhas-aes256",
+   "description": "Projeto funcional — cofre-senhas-aes256",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T22:26:07Z",
+   "pushed": "2026-10-18T14:13:04Z",
+   "live": false,
+   "sizeKb": 24
+  },
+  {
+   "name": "config-backup-switches",
+   "description": "Backup de configuracao de switches com deteccao por hash e normalizacao antes de comparar",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:55:54Z",
+   "pushed": "2026-10-18T14:10:21Z",
+   "live": false,
+   "sizeKb": 87
+  },
+  {
+   "name": "container-scanner-imagens",
+   "description": "Projeto funcional — container-scanner-imagens",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:12:40Z",
+   "pushed": "2026-10-18T14:14:18Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "dashboard-metricas-site",
+   "description": "Projeto funcional — dashboard-metricas-site",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T22:26:58Z",
+   "pushed": "2026-10-18T14:13:08Z",
+   "live": false,
+   "sizeKb": 48
+  },
+  {
+   "name": "dashboard-sla-helpdesk",
+   "description": "Projeto funcional — dashboard-sla-helpdesk",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:38:25Z",
+   "pushed": "2026-10-18T14:14:41Z",
+   "live": false,
+   "sizeKb": 28
+  },
+  {
+   "name": "dashboard-vendas-porsche-dio",
+   "description": "Dashboard de vendas Porsche em React/TypeScript, com graficos, assistente de IA e persistencia local | Porsche sales dashboard in React/TypeScript, with charts, AI assistant and local persistence",
+   "language": "TypeScript",
+   "homepage": "https://kelvinoliveiracode.github.io/dashboard-vendas-porsche-dio/",
+   "topics": [
+    "css",
+    "dashboard",
+    "data-visualization",
+    "github-pages",
+    "html",
+    "sales-analytics",
+    "vanilla-js",
+    "zero-dependencies"
+   ],
+   "created": "2026-07-07T23:55:26Z",
+   "pushed": "2026-10-18T14:09:01Z",
+   "live": true,
+   "sizeKb": 108
+  },
+  {
+   "name": "dashboard-vendas-streamlit",
+   "description": "Projeto funcional — dashboard-vendas-streamlit",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T22:27:51Z",
+   "pushed": "2026-10-18T14:13:12Z",
+   "live": false,
+   "sizeKb": 18
+  },
+  {
+   "name": "dashboard-xbox",
+   "description": "Dashboard de vendas Xbox Game Pass em Excel: KPIs, SUMIFS e simulação de cenários | Xbox Game Pass sales dashboard in Excel",
+   "language": null,
+   "homepage": null,
+   "topics": [
+    "business-intelligence",
+    "dashboard",
+    "data-analysis",
+    "excel",
+    "kpi",
+    "sales-dashboard",
+    "sumifs",
+    "xlsx"
+   ],
+   "created": "2026-08-23T19:48:09Z",
+   "pushed": "2026-10-18T14:09:35Z",
+   "live": false,
+   "sizeKb": 249
+  },
+  {
+   "name": "demand-limiting",
+   "description": "Simula tarifacao horaria e calcula corte de demanda para nao estourar a contratada",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-04T00:16:53Z",
+   "pushed": "2026-10-18T14:11:31Z",
+   "live": false,
+   "sizeKb": 178
+  },
+  {
+   "name": "desligamento-agendado-frota",
+   "description": "Projeto funcional — desligamento-agendado-frota",
+   "language": "PowerShell",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:13:32Z",
+   "pushed": "2026-10-18T14:14:22Z",
+   "live": false,
+   "sizeKb": 16
+  },
+  {
+   "name": "deteccao-de-fraudes",
+   "description": "Detecção de fraude em cartão com ML: 3 modelos, 284k transações, ROC AUC 0.94 | Credit card fraud detection with ML",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "class-imbalance",
+    "data-science",
+    "fraud-detection",
+    "kaggle-dataset",
+    "machine-learning",
+    "python",
+    "random-forest",
+    "scikit-learn",
+    "smote"
+   ],
+   "created": "2026-07-17T20:49:10Z",
+   "pushed": "2026-10-18T14:09:12Z",
+   "live": false,
+   "sizeKb": 56
+  },
+  {
+   "name": "detector-deepfake-audio",
+   "description": "Projeto funcional — detector-deepfake-audio",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T22:28:43Z",
+   "pushed": "2026-10-18T14:13:16Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "dio-lab-bia-do-futuro",
+   "description": "BIA — Agente financeiro bancário com IA generativa, anti-alucinação em 4 camadas | Banking AI agent with 4-layer anti-hallucination",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "ai-agent",
+    "anti-hallucination",
+    "chatbot",
+    "customer-experience",
+    "dio",
+    "fintech",
+    "generative-ai",
+    "pandas",
+    "python",
+    "streamlit"
+   ],
+   "created": "2026-07-18T13:29:38Z",
+   "pushed": "2026-10-18T14:09:17Z",
+   "live": false,
+   "sizeKb": 64
+  },
+  {
+   "name": "editor-json-visual",
+   "description": "Projeto funcional — editor-json-visual",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:39:49Z",
+   "pushed": "2026-10-18T14:14:45Z",
+   "live": false,
+   "sizeKb": 45
+  },
+  {
+   "name": "energy-dashboard-predial",
+   "description": "Dashboard web local de consumo de energia por andar, com linha de base e desvio",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-04T00:16:19Z",
+   "pushed": "2026-10-18T14:11:27Z",
+   "live": false,
+   "sizeKb": 185
+  },
+  {
+   "name": "esquematicoedu",
+   "description": "Página interativa do canal educacional EsquemáticoEdu - nós, linhas e aulas em esquema",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-24T13:00:46Z",
+   "pushed": "2026-10-24T13:20:31Z",
+   "live": false,
+   "sizeKb": 2504
+  },
+  {
+   "name": "etl-vendas-datawarehouse",
+   "description": "Projeto funcional — etl-vendas-datawarehouse",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:27:57Z",
+   "pushed": "2026-10-18T14:13:31Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "excel-para-investimentos",
+   "description": "Simulador de investimentos em FIIs no Excel com FV, cenários e perfis de alocação | FII investment simulator in Excel",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "dio",
+    "excel",
+    "fii",
+    "financial-simulation",
+    "fv-function",
+    "investments",
+    "openpyxl",
+    "scenario-analysis"
+   ],
+   "created": "2026-08-23T14:15:30Z",
+   "pushed": "2026-10-18T14:09:28Z",
+   "live": false,
+   "sizeKb": 136
+  },
+  {
+   "name": "finops-alerta-orcamento",
+   "description": "Projeto funcional — finops-alerta-orcamento",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:14:24Z",
+   "pushed": "2026-10-18T14:14:26Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "finops-dashboard",
+   "description": "Analise de fatura de nuvem ficticia: atribuicao de custo, anomalia por IQR e projecao",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:41:50Z",
+   "pushed": "2026-10-18T14:10:57Z",
+   "live": false,
+   "sizeKb": 60
+  },
+  {
+   "name": "finvibe-ai",
+   "description": "Finanças pessoais com React, TypeScript e IA: score, metas, orçamento e insights | Personal finance app with React, TypeScript and AI",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [
+    "ai-assistant",
+    "dark-mode",
+    "dio",
+    "personal-finance",
+    "react",
+    "recharts",
+    "tailwindcss",
+    "typescript",
+    "vite"
+   ],
+   "created": "2026-07-20T20:30:00Z",
+   "pushed": "2026-10-18T14:09:20Z",
+   "live": false,
+   "sizeKb": 106
+  },
+  {
+   "name": "forense-memoria-simples",
+   "description": "Projeto funcional — forense-memoria-simples",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:06:18Z",
+   "pushed": "2026-10-18T14:13:19Z",
+   "live": false,
+   "sizeKb": 22
+  },
+  {
+   "name": "garimpo",
+   "description": "Curadoria de 131 ofertas Shopee: filtros, wishlist e SEO — 100% client-side | Curated Shopee deals site, 100% client-side",
+   "language": "HTML",
+   "homepage": "https://kelvinoliveiracode.github.io/garimpo/",
+   "topics": [
+    "client-side",
+    "curated-deals",
+    "github-pages",
+    "localstorage",
+    "seo",
+    "shopee",
+    "vanilla-js",
+    "webperf"
+   ],
+   "created": "2026-08-29T15:06:17Z",
+   "pushed": "2026-10-18T14:09:44Z",
+   "live": true,
+   "sizeKb": 41957
+  },
+  {
+   "name": "gerador-curriculos-ats-v2",
+   "description": "Projeto funcional — gerador-curriculos-ats-v2",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:41:12Z",
+   "pushed": "2026-10-18T14:14:49Z",
+   "live": false,
+   "sizeKb": 71
+  },
+  {
+   "name": "gerador-de-curriculos-ats",
+   "description": "Gerador de currículos ATS-friendly com React, TypeScript e Tailwind | ATS-friendly resume builder with live preview and PDF export",
+   "language": "TypeScript",
+   "homepage": "https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/",
+   "topics": [
+    "ats",
+    "career-tools",
+    "github-pages",
+    "localstorage",
+    "pdf-export",
+    "react",
+    "resume-builder",
+    "tailwindcss",
+    "typescript",
+    "vite"
+   ],
+   "created": "2026-07-20T23:17:06Z",
+   "pushed": "2026-10-18T14:09:24Z",
+   "live": true,
+   "sizeKb": 574
+  },
+  {
+   "name": "helpdesk-tickets",
+   "description": "Service desk local: fila, SLA por severidade, inventario e relatorio de desempenho",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-04T00:17:27Z",
+   "pushed": "2026-10-18T14:11:36Z",
+   "live": false,
+   "sizeKb": 81
+  },
+  {
+   "name": "honeypot-portas-evidencia",
+   "description": "Projeto funcional — honeypot-portas-evidencia",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:07:08Z",
+   "pushed": "2026-10-18T14:13:23Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "iac-terraform-github-actions",
+   "description": "Projeto funcional — iac-terraform-github-actions",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:15:17Z",
+   "pushed": "2026-10-18T14:14:30Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "infra-as-code-lab",
+   "description": "Laboratorio de IaC: plano, diff e idempotencia de tres estados para infraestrutura",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:57:59Z",
+   "pushed": "2026-10-18T14:10:32Z",
+   "live": false,
+   "sizeKb": 96
+  },
+  {
+   "name": "inventario-ativos-ti",
+   "description": "Projeto funcional — inventario-ativos-ti",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:07:58Z",
+   "pushed": "2026-10-18T14:13:27Z",
+   "live": false,
+   "sizeKb": 32
+  },
+  {
+   "name": "javaforge",
+   "description": "JavaForge: Visual Java Swing app builder with SQLite. Drag-and-drop UI, no-code event connections, generates complete Maven projects.",
+   "language": "Rust",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-13T20:17:13Z",
+   "pushed": "2026-10-18T14:12:03Z",
+   "live": false,
+   "sizeKb": 34013
+  },
+  {
+   "name": "kb-search",
+   "description": "Busca por similaridade em base de conhecimento com TF-IDF escrito a mao",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:44:44Z",
+   "pushed": "2026-10-18T14:11:17Z",
+   "live": false,
+   "sizeKb": 64
+  },
+  {
+   "name": "KelvinOliveiraCode",
+   "description": "Perfil — Kelvin Oliveira | Dados, IA e produtos digitais",
+   "language": null,
+   "homepage": "https://kelvinoliveiracode.github.io/portfolio/",
+   "topics": [
+    "brazil",
+    "data-science",
+    "dio",
+    "excel",
+    "java",
+    "machine-learning",
+    "portfolio",
+    "profile",
+    "python",
+    "react",
+    "spring-boot",
+    "typescript"
+   ],
+   "created": "2026-09-10T14:10:02Z",
+   "pushed": "2026-10-20T16:51:11Z",
+   "live": true,
+   "sizeKb": 35
+  },
+  {
+   "name": "kodabudget-api",
+   "description": "Assistente financeiro com IA por voz: Whisper + tool calling Spring AI + edge-tts | Voice-powered finance assistant with Spring AI tool calling",
+   "language": "Java",
+   "homepage": null,
+   "topics": [
+    "edge-tts",
+    "hexagonal-architecture",
+    "java",
+    "openai-api",
+    "spring-ai",
+    "spring-boot",
+    "streamlit",
+    "tool-calling",
+    "voice-assistant",
+    "whisper"
+   ],
+   "created": "2026-09-07T14:11:30Z",
+   "pushed": "2026-10-18T14:09:59Z",
+   "live": false,
+   "sizeKb": 53
+  },
+  {
+   "name": "kodapay-api",
+   "description": "API REST de pagamentos com 6 padrões GoF, Spring Boot 3 e Java 21 | Payment REST API with 6 GoF patterns",
+   "language": "Java",
+   "homepage": null,
+   "topics": [
+    "chain-of-responsibility",
+    "clean-architecture",
+    "design-patterns",
+    "gof-patterns",
+    "java",
+    "junit5",
+    "observer-pattern",
+    "rest-api",
+    "spring-boot",
+    "strategy-pattern"
+   ],
+   "created": "2026-09-07T00:12:50Z",
+   "pushed": "2026-10-18T14:09:55Z",
+   "live": false,
+   "sizeKb": 64
+  },
+  {
+   "name": "kodapay-api-v2",
+   "description": "Projeto funcional — kodapay-api-v2",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:42:35Z",
+   "pushed": "2026-10-18T14:14:53Z",
+   "live": false,
+   "sizeKb": 36
+  },
+  {
+   "name": "kodaros-ferramentas",
+   "description": "PWA com 53 calculadoras de negócio, offline-first via service worker | Business calculators PWA, offline-first",
+   "language": "JavaScript",
+   "homepage": "https://kelvinoliveiracode.github.io/kodaros-ferramentas/",
+   "topics": [
+    "accessibility",
+    "business-tools",
+    "calculators",
+    "github-pages",
+    "offline-first",
+    "pwa",
+    "service-worker",
+    "vanilla-js"
+   ],
+   "created": "2026-08-24T00:16:38Z",
+   "pushed": "2026-10-18T14:09:39Z",
+   "live": true,
+   "sizeKb": 5840
+  },
+  {
+   "name": "kodaros-landing",
+   "description": "KODAROS — plataforma: 8 e-books, diagnóstico interativo e ferramentas | KODAROS platform landing with interactive diagnosis funnel",
+   "language": "HTML",
+   "homepage": "https://kelvinoliveiracode.github.io/kodaros-landing/",
+   "topics": [
+    "css",
+    "digital-products",
+    "github-pages",
+    "html",
+    "interactive-quiz",
+    "landing-page",
+    "marketing-funnel",
+    "vanilla-js"
+   ],
+   "created": "2026-09-06T12:59:42Z",
+   "pushed": "2026-10-22T23:32:28Z",
+   "live": true,
+   "sizeKb": 15780
+  },
+  {
+   "name": "kodaros-mostruario",
+   "description": "Mostruário de landing pages — 50 demos, uma para cada nicho",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-22T22:28:15Z",
+   "pushed": "2026-10-22T23:12:34Z",
+   "live": false,
+   "sizeKb": 3119
+  },
+  {
+   "name": "lab-backup-recuperacao",
+   "description": "Backup local com ciclo completo: hash, compressao, GFS, restauracao e conferencia byte a byte",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:58:57Z",
+   "pushed": "2026-10-18T14:10:39Z",
+   "live": false,
+   "sizeKb": 433
+  },
+  {
+   "name": "loja-ebooks-kodaros",
+   "description": "Projeto funcional — loja-ebooks-kodaros",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:30:26Z",
+   "pushed": "2026-10-18T14:13:35Z",
+   "live": false,
+   "sizeKb": 53
+  },
+  {
+   "name": "loja-virtual-completa",
+   "description": "Projeto funcional — loja-virtual-completa",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:16:10Z",
+   "pushed": "2026-10-18T14:14:34Z",
+   "live": false,
+   "sizeKb": 46
+  },
+  {
+   "name": "mapeador-rede-lan-arp",
+   "description": "Projeto funcional — mapeador-rede-lan-arp",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:31:17Z",
+   "pushed": "2026-10-18T14:13:39Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "marketplace-servicos-freelance",
+   "description": "Projeto funcional — marketplace-servicos-freelance",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:43:58Z",
+   "pushed": "2026-10-18T14:14:57Z",
+   "live": false,
+   "sizeKb": 57
+  },
+  {
+   "name": "MegaAGT",
+   "description": "MegaAGT — app desktop (Tauri + Rust) para o OpenCode CLI v2: sessoes, subagentes, raciocinio e diffs em um so lugar",
+   "language": "Rust",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-07T18:40:56Z",
+   "pushed": "2026-10-17T22:36:29Z",
+   "live": false,
+   "sizeKb": 795
+  },
+  {
+   "name": "miniguia-estudos-notebooklm",
+   "description": "Miniguia de engenharia de prompts com NotebookLM: 10 prompts testados | Prompt engineering miniguide with NotebookLM",
+   "language": null,
+   "homepage": null,
+   "topics": [
+    "ai-tools",
+    "experimentation",
+    "learning",
+    "notebooklm",
+    "prompt-engineering",
+    "study-guide"
+   ],
+   "created": "2026-07-09T20:21:48Z",
+   "pushed": "2026-10-18T14:09:05Z",
+   "live": false,
+   "sizeKb": 34
+  },
+  {
+   "name": "mlops-registro-drift",
+   "description": "Projeto funcional — mlops-registro-drift",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:32:08Z",
+   "pushed": "2026-10-18T14:13:43Z",
+   "live": false,
+   "sizeKb": 23
+  },
+  {
+   "name": "modbus-scanner",
+   "description": "Protocolo Modbus TCP do zero: servidor de lab, scanner e leitura de medidores",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:40:28Z",
+   "pushed": "2026-10-19T17:53:35Z",
+   "live": false,
+   "sizeKb": 143
+  },
+  {
+   "name": "modelos-de-sites",
+   "description": "Mostruario de 20 landing pages por nicho, uma para cada segmento",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-11T14:31:06Z",
+   "pushed": "2026-10-18T14:11:54Z",
+   "live": false,
+   "sizeKb": 612
+  },
+  {
+   "name": "monitor-qos-enlace",
+   "description": "Projeto funcional — monitor-qos-enlace",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:44:45Z",
+   "pushed": "2026-10-18T14:15:00Z",
+   "live": false,
+   "sizeKb": 23
+  },
+  {
+   "name": "network-ci-pipeline",
+   "description": "Validador de configuracao de rede para CI: parser de blocos, 24 regras e relatorio",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:58:20Z",
+   "pushed": "2026-10-18T14:10:36Z",
+   "live": false,
+   "sizeKb": 100
+  },
+  {
+   "name": "olaria",
+   "description": "Olaria: Landing page builder for non-technical users. Visual editor + code view, exports single-file HTML for GitHub Pages.",
+   "language": "JavaScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-13T20:17:14Z",
+   "pushed": "2026-10-18T14:12:08Z",
+   "live": false,
+   "sizeKb": 4364
+  },
+  {
+   "name": "opencode-browser-chat",
+   "description": "OpenCode Browser Chat: Floating chat extension for Chromium (Brave/Chrome) with your OpenCode models, text/image selection menus, and skills integration.",
+   "language": "JavaScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-13T20:17:13Z",
+   "pushed": "2026-10-18T14:11:59Z",
+   "live": false,
+   "sizeKb": 125
+  },
+  {
+   "name": "organizador-imposto-de-renda",
+   "description": "Organizador de IRPF em Excel: validações, hiperlinks e consolidado automático | Tax return organizer in Excel",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "conditional-formatting",
+    "data-validation",
+    "dio",
+    "excel",
+    "hyperlinks",
+    "irpf",
+    "openpyxl",
+    "tax-return"
+   ],
+   "created": "2026-08-23T19:36:45Z",
+   "pushed": "2026-10-18T14:09:32Z",
+   "live": false,
+   "sizeKb": 42
+  },
+  {
+   "name": "pagina-status-sistema",
+   "description": "Projeto funcional — pagina-status-sistema",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:33:00Z",
+   "pushed": "2026-10-18T14:13:47Z",
+   "live": false,
+   "sizeKb": 42
+  },
+  {
+   "name": "pentest-lab-scanner",
+   "description": "Scanner de app vulneravel em lab local, com 11 falhas plantadas e deteccao por CWE",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:57:10Z",
+   "pushed": "2026-10-18T14:10:25Z",
+   "live": false,
+   "sizeKb": 89
+  },
+  {
+   "name": "pipeline-iot-energia",
+   "description": "Projeto funcional — pipeline-iot-energia",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:45:24Z",
+   "pushed": "2026-10-18T14:15:04Z",
+   "live": false,
+   "sizeKb": 20
+  },
+  {
+   "name": "portal-autoatendimento-helpdesk",
+   "description": "Projeto funcional — portal-autoatendimento-helpdesk",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:33:52Z",
+   "pushed": "2026-10-18T14:13:51Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "portal-cliente-oauth2-rbac",
+   "description": "Projeto funcional — portal-cliente-oauth2-rbac",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:46:03Z",
+   "pushed": "2026-10-18T14:15:08Z",
+   "live": false,
+   "sizeKb": 66
+  },
+  {
+   "name": "portfolio",
+   "description": "Portfólio — Kelvin Oliveira | Portfolio: dados, IA e produtos digitais",
+   "language": "HTML",
+   "homepage": "https://kelvinoliveiracode.github.io/portfolio/",
+   "topics": [
+    "cosmic-theme",
+    "engraving",
+    "github-pages",
+    "personal-website",
+    "portfolio",
+    "vanilla-js"
+   ],
+   "created": "2026-09-02T19:15:08Z",
+   "pushed": "2026-10-20T17:52:31Z",
+   "live": true,
+   "sizeKb": 8609
+  },
+  {
+   "name": "previsao-demanda-estoque",
+   "description": "Projeto funcional — previsao-demanda-estoque",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T23:34:44Z",
+   "pushed": "2026-10-18T14:13:55Z",
+   "live": false,
+   "sizeKb": 18
+  },
+  {
+   "name": "previsor-inadimplencia-xgboost",
+   "description": "Projeto funcional — previsor-inadimplencia-xgboost",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T12:46:47Z",
+   "pushed": "2026-10-18T14:15:12Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "prompt-analise-feedbacks-bancarios-dio",
+   "description": "Prompt para análise de feedbacks bancários: CX, insights e prioridades | Prompt for banking CX feedback analysis",
+   "language": null,
+   "homepage": null,
+   "topics": [
+    "banking",
+    "customer-experience",
+    "data-analysis",
+    "dio",
+    "insights",
+    "prompt-engineering"
+   ],
+   "created": "2026-07-10T23:38:04Z",
+   "pushed": "2026-10-18T14:09:08Z",
+   "live": false,
+   "sizeKb": 23
+  },
+  {
+   "name": "rack-planner",
+   "description": "Planejador de rack: altura em U, peso, amperagem por fase e temperatura estimada",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:30:05Z",
+   "pushed": "2026-10-18T14:10:47Z",
+   "live": false,
+   "sizeKb": 62
+  },
+  {
+   "name": "recomendador-produtos-ml",
+   "description": "Projeto funcional — recomendador-produtos-ml",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:06:34Z",
+   "pushed": "2026-10-18T14:13:59Z",
+   "live": false,
+   "sizeKb": 20
+  },
+  {
+   "name": "rede-lab-topologia",
+   "description": "Validador de projeto de rede LAN: sub-redes, roteamento, Vlan e capacidade, com relatorio de problemas",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:54:12Z",
+   "pushed": "2026-10-18T14:10:10Z",
+   "live": false,
+   "sizeKb": 73
+  },
+  {
+   "name": "relatorio-compliance-lgpd",
+   "description": "Projeto funcional — relatorio-compliance-lgpd",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T13:18:28Z",
+   "pushed": "2026-10-18T14:15:16Z",
+   "live": false,
+   "sizeKb": 34
+  },
+  {
+   "name": "reset-senha-ad-automacao",
+   "description": "Projeto funcional — reset-senha-ad-automacao",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:07:26Z",
+   "pushed": "2026-10-18T14:14:03Z",
+   "live": false,
+   "sizeKb": 20
+  },
+  {
+   "name": "scanner-owasp-top10-web",
+   "description": "Projeto funcional — scanner-owasp-top10-web",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T13:19:00Z",
+   "pushed": "2026-10-18T14:15:19Z",
+   "live": false,
+   "sizeKb": 31
+  },
+  {
+   "name": "scanner-portas-banner",
+   "description": "Projeto funcional — scanner-portas-banner",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:08:18Z",
+   "pushed": "2026-10-18T14:14:07Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "serverless-log-guard",
+   "description": "Funcao serverless simulada: normaliza evento, mascara PII, aplica retencao e custo",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:42:26Z",
+   "pushed": "2026-10-18T14:11:01Z",
+   "live": false,
+   "sizeKb": 45
+  },
+  {
+   "name": "siem-logs-lab",
+   "description": "Pipeline local de deteccao: 7 regras, correlacao temporal e alertas MITRE ATT&CK",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:57:34Z",
+   "pushed": "2026-10-18T14:10:28Z",
+   "live": false,
+   "sizeKb": 98
+  },
+  {
+   "name": "siem-luz-brute-force",
+   "description": "Projeto funcional — siem-luz-brute-force",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T13:19:32Z",
+   "pushed": "2026-10-18T14:15:23Z",
+   "live": false,
+   "sizeKb": 23
+  },
+  {
+   "name": "simulador-ospf-simples",
+   "description": "Projeto funcional — simulador-ospf-simples",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:09:07Z",
+   "pushed": "2026-10-18T14:14:10Z",
+   "live": false,
+   "sizeKb": 21
+  },
+  {
+   "name": "sistema-agendamento-consultas",
+   "description": "Projeto funcional — sistema-agendamento-consultas",
+   "language": "Java",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T13:20:07Z",
+   "pushed": "2026-10-18T14:15:27Z",
+   "live": false,
+   "sizeKb": 58
+  },
+  {
+   "name": "slidestage",
+   "description": "SlideStage: HTML slide editor with visual canvas and code editing in one Tauri app. Export single-file HTML for GitHub Pages.",
+   "language": "TypeScript",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-13T20:17:14Z",
+   "pushed": "2026-10-18T14:12:13Z",
+   "live": false,
+   "sizeKb": 2863
+  },
+  {
+   "name": "status-page-multi-regiao",
+   "description": "Projeto funcional — status-page-multi-regiao",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T00:09:57Z",
+   "pushed": "2026-10-18T14:14:14Z",
+   "live": false,
+   "sizeKb": 17
+  },
+  {
+   "name": "techcards",
+   "description": "TechCards - flashcards tecnicos offline (SO, Arquitetura, Ingles). Projeto academico de Ciencia da Computacao.",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-09-29T20:42:25Z",
+   "pushed": "2026-10-18T14:10:06Z",
+   "live": false,
+   "sizeKb": 35
+  },
+  {
+   "name": "tessumax-landing",
+   "description": "Tessumax landing page",
+   "language": "HTML",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-16T00:20:52Z",
+   "pushed": "2026-10-18T14:12:17Z",
+   "live": false,
+   "sizeKb": 2384
+  },
+  {
+   "name": "threat-intel-dashboard",
+   "description": "Curador de inteligencia de ameaca ficticia: versao, faixa afetada e formula de risco",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:55:37Z",
+   "pushed": "2026-10-18T14:10:17Z",
+   "live": false,
+   "sizeKb": 78
+  },
+  {
+   "name": "validador-qos-voip",
+   "description": "Projeto funcional — validador-qos-voip",
+   "language": "Python",
+   "homepage": null,
+   "topics": [],
+   "created": "2026-10-17T13:20:47Z",
+   "pushed": "2026-10-18T14:15:31Z",
+   "live": false,
+   "sizeKb": 19
+  },
+  {
+   "name": "vms-integration-labs",
+   "description": "Laboratorio de integracao VMS: incidentes correlacionados e trilha append-only com hash",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:44:10Z",
+   "pushed": "2026-10-18T14:11:13Z",
+   "live": false,
+   "sizeKb": 56
+  },
+  {
+   "name": "vpc-3-tier-segura",
+   "description": "Simulador de VPC em 3 camadas com firewall stateful, bastion e tracer de caminho",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T22:59:18Z",
+   "pushed": "2026-10-18T14:10:43Z",
+   "live": false,
+   "sizeKb": 81
+  },
+  {
+   "name": "wifi-site-survey",
+   "description": "Levantamento de Wi-Fi por andar: mapa de calor de RSSI, dimensionamento de AP e conflito de canal",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-03T23:41:15Z",
+   "pushed": "2026-10-18T14:10:54Z",
+   "live": false,
+   "sizeKb": 319
+  },
+  {
+   "name": "workstation-onboarding",
+   "description": "Scripts PowerShell de preparo de estacao Windows, com dry-run por padrao e log",
+   "language": "Python",
+   "homepage": null,
+   "topics": [
+    "automation",
+    "bilingual",
+    "infrastructure",
+    "networking",
+    "portfolio",
+    "windows"
+   ],
+   "created": "2026-10-04T00:17:59Z",
+   "pushed": "2026-10-18T14:11:41Z",
+   "live": false,
+   "sizeKb": 77
+  }
+ ]
+}

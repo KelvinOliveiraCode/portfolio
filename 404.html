@@ -2,67 +2,198 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-pt-content="página não encontrada | Kelvin Oliveira" data-en-content="page not found | Kelvin Oliveira">página não encontrada | Kelvin Oliveira</title>
 <meta name="description" content="A página que você procurou não existe. Volte ao portfólio de Kelvin Oliveira."
       data-pt-content="A página que você procurou não existe. Volte ao portfólio de Kelvin Oliveira."
       data-en-content="The page you were looking for does not exist. Go back to Kelvin Oliveira's portfolio.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<meta name="author" content="Kelvin Rebelo de Oliveira">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23000'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23fff'/%3E%3C/svg%3E">
+<!-- Página autônoma de propósito: o GitHub Pages serve este arquivo em
+     qualquer URL inexistente, inclusive em caminhos fundos, onde
+     caminhos relativos quebrariam. Por isso o CSS e o JS vivem aqui
+     dentro e os links apontam para a URL canônica do site. O visual
+     segue os tokens do site (preto, branco, cinza, sans de sistema). -->
 <style>
-  :root{
-    --bg:#050607;
-    --text:#F1F1EE;
-    --text-muted:rgba(241,241,238,.72);
-    --light:#FFE4A8;
-    --light-dim:rgba(255,228,168,.22);
-    --mono:'Space Mono',monospace;
-    --serif:'Cormorant Garamond',serif;
+  :root {
+    --bg: #000000;
+    --fg: #ffffff;
+    --muted: #787878;
+    --line-strong: rgba(255, 255, 255, 0.18);
+    --radius: 2px;
+    --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   }
-  *{margin:0;padding:0;box-sizing:border-box}
-  body{background:var(--bg);color:var(--text);font-family:var(--serif);min-height:100svh;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center}
-  main{max-width:560px}
-  .eyebrow{font-family:var(--mono);font-size:12px;color:var(--light);letter-spacing:.25em;text-transform:uppercase;display:block;margin-bottom:20px}
-  h1{font-size:clamp(34px,6vw,52px);font-weight:500;line-height:1.1;margin-bottom:18px}
-  p{font-size:17px;line-height:1.65;color:var(--text-muted);margin-bottom:32px}
-  a{color:var(--light)}
-  .btn{display:inline-block;border:1px solid var(--light-dim);color:var(--light);padding:13px 28px;font-family:var(--mono);font-size:12.5px;letter-spacing:.14em;text-decoration:none;transition:background .6s,color .6s}
-  .btn:hover{background:var(--light);color:#050505}
-  :focus-visible{outline:2px solid var(--light);outline-offset:2px}
-  #lang-toggle{position:fixed;top:16px;right:16px;background:none;border:1px solid var(--light-dim);color:var(--light);padding:8px 14px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;cursor:pointer;transition:background .6s,color .6s}
-  #lang-toggle:hover{background:var(--light);color:#050505}
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { background: var(--bg); }
+  body {
+    min-height: 100svh;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font);
+    font-weight: 400;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; }
+  button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+  :focus-visible { outline: 2px solid var(--fg); outline-offset: 3px; }
+
+  /* grão do fundo, igual ao do site */
+  .grao {
+    pointer-events: none; position: fixed; inset: 0; z-index: 60;
+    opacity: 0.03; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)' opacity='1'/></svg>");
+  }
+
+  /* nav pill centrada, transparência igual à do site */
+  .nav-bar {
+    position: fixed; top: 22px; left: 50%; transform: translateX(-50%);
+    z-index: 40;
+    display: flex; align-items: center; gap: 2px;
+    padding: 6px;
+    border-radius: 999px;
+  }
+  .nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+  .nav-links a {
+    font-size: 15px; color: rgba(255, 255, 255, 0.82);
+    text-decoration: none;
+    padding: 8px 18px; min-height: 34px;
+    display: inline-flex; align-items: center;
+    border-radius: 999px;
+    transition: color 200ms;
+  }
+  .nav-links a:hover { color: var(--fg); }
+  .lang-btn {
+    font-size: 15px; width: 34px; height: 34px;
+    color: rgba(255, 255, 255, 0.82);
+    transition: color 200ms;
+  }
+  .lang-btn:hover { color: var(--fg); }
+
+  /* composição: texto na coluna de 1192px, alinhado à esquerda */
+  main {
+    min-height: 100svh;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px max(20px, calc(50% - 596px)) 96px;
+  }
+  .rotulo {
+    display: inline-block;
+    font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 24px;
+  }
+  .rotulo b { font-weight: 400; color: var(--fg); }
+  h1 {
+    font-size: clamp(2.5rem, 5.5vw, 4.25rem);
+    font-weight: 500; line-height: 1.03; letter-spacing: -0.04em;
+    max-width: 22ch;
+    text-wrap: balance;
+  }
+  .texto {
+    margin-top: 24px;
+    color: var(--muted);
+    font-size: 1.234rem; line-height: 1.4;
+    max-width: 46ch;
+  }
+  .acoes {
+    margin-top: 32px;
+    display: flex; flex-wrap: wrap; gap: 16px; align-items: center;
+  }
+  .btn-solido {
+    display: inline-flex; align-items: center; min-height: 44px;
+    padding: 10px 24px;
+    background: var(--fg); color: var(--bg);
+    text-decoration: none;
+    font-size: 13px; letter-spacing: 0.04em;
+    border-radius: var(--radius);
+    transition: background 200ms;
+  }
+  .btn-solido:hover { background: rgba(255, 255, 255, 0.8); }
+  .btn-linha {
+    display: inline-flex; align-items: center; min-height: 44px;
+    padding: 10px 4px;
+    color: var(--muted); text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: var(--line-strong);
+    font-size: 13px;
+    transition: color 200ms, text-decoration-color 200ms;
+  }
+  .btn-linha:hover { color: var(--fg); text-decoration-color: var(--fg); }
+
+  @media (max-width: 560px) {
+    .nav-bar { top: 12px; padding: 4px; max-width: calc(100vw - 24px); overflow-x: auto; scrollbar-width: none; }
+    .nav-bar::-webkit-scrollbar { display: none; }
+    .nav-links a { font-size: 13px; padding: 6px 10px; min-height: 30px; white-space: nowrap; }
+    main { padding-top: 104px; padding-bottom: 64px; }
+    .texto { font-size: 1.0625rem; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+  }
 </style>
 </head>
 <body>
-<button type="button" id="lang-toggle" aria-label="Switch to English" title="Switch to English">EN</button>
-<main>
-  <span class="eyebrow">404</span>
+
+<div class="grao" aria-hidden="true"></div>
+
+<nav class="nav-bar" aria-label="Navegação principal" data-pt-aria="Navegação principal" data-en-aria="Main navigation">
+  <ul class="nav-links">
+    <li><a href="https://kelvinoliveiracode.github.io/portfolio/" data-pt="Início" data-en="Home">Início</a></li>
+    <li><a href="https://kelvinoliveiracode.github.io/portfolio/sobre/" data-pt="Sobre" data-en="About">Sobre</a></li>
+    <li><a href="https://kelvinoliveiracode.github.io/portfolio/projetos/" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+    <li><a href="https://kelvinoliveiracode.github.io/portfolio/certificados/" data-pt="Certificados" data-en="Certificates">Certificados</a></li>
+  </ul>
+  <button id="lang-toggle" class="lang-btn" type="button" aria-live="polite">EN</button>
+</nav>
+
+<main id="inicio">
+  <span class="rotulo"><b>404</b> — <span data-pt="página não encontrada" data-en="page not found">página não encontrada</span></span>
   <h1 data-pt="Esta página saiu do ar." data-en="This page is off the air.">Esta página saiu do ar.</h1>
-  <p data-pt="O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial." data-en="The link you followed does not exist (or never did). The portfolio, the projects and the contact details are all on the home page.">O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial.</p>
-  <a class="btn" href="https://kelvinoliveiracode.github.io/portfolio/" data-pt="Voltar ao portfólio" data-en="Back to the portfolio">Voltar ao portfólio</a>
+  <p class="texto" data-pt="O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial." data-en="The link you followed does not exist (or never did). The portfolio, the projects and the contact details are all on the home page.">O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial.</p>
+  <div class="acoes">
+    <a class="btn-solido" href="https://kelvinoliveiracode.github.io/portfolio/" data-pt="Voltar ao início" data-en="Back to home">Voltar ao início</a>
+    <a class="btn-linha" href="https://kelvinoliveiracode.github.io/portfolio/projetos/" data-pt="Ver os projetos" data-en="See the projects">Ver os projetos</a>
+  </div>
 </main>
+
 <script>
-  // Mesma chave de idioma do index.html (ko-lang): a escolha persiste entre as paginas.
+  // Mesma chave de idioma do site (ko-lang): a escolha persiste entre as páginas.
   (function () {
     var KEY = 'ko-lang';
     var lang = 'pt';
     try {
       var saved = localStorage.getItem(KEY);
       if (saved === 'en' || saved === 'pt') lang = saved;
-      // sem preferencia salva, segue o navegador: mesma regra do index.html,
-      // senao quem chega pelo 404 em ingles veria a pagina em portugues.
+      // sem preferência salva, segue o navegador — mesma regra do site
       else if ((navigator.language || '').toLowerCase().indexOf('pt') !== 0) lang = 'en';
     } catch (e) { /* ignora */ }
+
+    // No preview local (404.html aberto direto), os links absolutos da
+    // URL canônica viram relativos — assim a navegação de revisão fica
+    // no próprio projeto. No GitHub Pages, servido em caminho fundo, os
+    // links seguem absolutos (é o único jeito de acertar a raiz).
+    if (/\/404\.html$/.test(location.pathname)) {
+      var ABS = 'https://kelvinoliveiracode.github.io/portfolio/';
+      var links = document.querySelectorAll('a[href^="' + ABS + '"]');
+      for (var li = 0; li < links.length; li++) {
+        links[li].setAttribute('href', './' + links[li].getAttribute('href').slice(ABS.length));
+      }
+    }
 
     function aplicar(l) {
       var mapa = l === 'pt' ? 'pt' : 'en';
       document.documentElement.lang = l === 'pt' ? 'pt-BR' : 'en';
 
-      var els = document.querySelectorAll('[data-pt], [data-en]');
+      var els = document.querySelectorAll('[data-pt], [data-en], [data-pt-aria], [data-en-aria]');
       for (var i = 0; i < els.length; i++) {
         var v = els[i].getAttribute('data-' + mapa);
         if (v !== null) els[i].textContent = v;
+        var a = els[i].getAttribute('data-' + mapa + '-aria');
+        if (a !== null) els[i].setAttribute('aria-label', a);
       }
 
       var t = document.querySelector('title[data-pt-content]');
@@ -79,7 +210,6 @@
       var btn = document.getElementById('lang-toggle');
       if (btn) {
         btn.textContent = l === 'pt' ? 'EN' : 'PT';
-        // rotulo no idioma da pagina: nada de portugues sobrando no modo EN
         var lbl = l === 'pt' ? 'Switch to English' : 'Switch to Portuguese';
         btn.setAttribute('aria-label', lbl);
         btn.setAttribute('title', lbl);

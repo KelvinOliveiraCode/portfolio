@@ -1,0 +1,96 @@
+{
+  "pt": {
+    "nav": { "inicio": "Início", "sobre": "Sobre", "projetos": "Projetos", "certificados": "Certificados" },
+    "strip": { "area": "Área", "destaque": "Destaque", "noAr": "no ar" },
+    "hero": { "scroll": "↓ role para ver o detalhe" },
+    "numeros": {
+      "repos": "repositórios públicos, sincronizados com o GitHub",
+      "noAr": "projetos com página publicada e funcionando",
+      "bootcamps": "bootcamps corporativos com etapa seletiva, concluídos em 2026",
+      "horas": "horas de formação concluída na DIO"
+    },
+    "arvore": {
+      "etiqueta": "Explorador do repositório",
+      "raiz": "portfolio/",
+      "raizNome": "GitHub de Kelvin",
+      "raizDesc": "Raiz: o perfil KelvinOliveiraCode no GitHub. Cada ramo abaixo é uma área de atuação; cada folha é um repositório público.",
+      "oQueFaz": "O que faz",
+      "stack": "Stack",
+      "tamanho": "Tamanho",
+      "repositorios": "repositórios",
+      "abrirNoGithub": "abrir no GitHub ↗",
+      "paginaNoAr": "página no ar ↗",
+      "semDescricao": "Repositório sem descrição — o código está no GitHub.",
+      "areas": {
+        "dados": "Dados & IA — pipelines em Python, machine learning com scikit-learn e XGBoost, dashboards e agentes com validação anti-alucinação.",
+        "backend": "Backend — APIs REST com Spring Boot 3 e Java 21, padrões de projeto com propósito, testes e CI.",
+        "web": "Web & Produto — sites estáticos em HTML/CSS/JS puro, PWAs offline-first e produtos que saem da ideia ao deploy.",
+        "cyber": "Cibersegurança — pentest com laudo por CWE, detecção com alertas MITRE ATT&CK, honeypot e conformidade LGPD.",
+        "infra": "Redes & Infraestrutura — topologia LAN, Modbus TCP do zero, survey de Wi-Fi, VPC em camadas e infraestrutura como código.",
+        "ti": "TI & Suporte — service desk com SLA, automação de estações, backup com verificação por hash e onboarding de câmeras."
+      }
+    },
+    "projetos": {
+      "filtroTodos": "Todos",
+      "areaDados": "Dados & IA", "areaBackend": "Backend", "areaWeb": "Web & Produto", "areaCyber": "Cibersegurança", "areaInfra": "Redes & Infra", "areaTi": "TI & Suporte",
+      "buscar": "Buscar por nome",
+      "noAr": "no ar",
+      "temCase": "tem caso de estudo",
+      "estruturaContar": "repositórios",
+      "vazio": "Nada encontrado para esta busca.",
+      "caso": "caso"
+    },
+    "caso": { "anterior": "anterior", "proximo": "próximo", "papel": "Autor individual: desenhei, escrevi e mantenho todos os códigos deste projeto." },
+    "certificados": { "verificar": "verificar na DIO ↗", "concluido": "concluído" },
+    "contato": { "convite": "Tenho interesse em oportunidades em dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.", "falar": "Falar comigo" },
+    "rodape": { "paginas": "Páginas", "contato": "Contato", "direitos": "© 2026 Kelvin Rebelo de Oliveira" },
+    "areasNomes": { "dados": "Dados & IA", "backend": "Backend", "web": "Web & Produto", "cyber": "Cibersegurança", "infra": "Redes & Infra", "ti": "TI & Suporte" }
+  },
+  "en": {
+    "nav": { "inicio": "Home", "sobre": "About", "projetos": "Projects", "certificados": "Certificates" },
+    "strip": { "area": "Area", "destaque": "Featured", "noAr": "live" },
+    "hero": { "scroll": "↓ scroll for the detail" },
+    "numeros": {
+      "repos": "public repositories, synced with GitHub",
+      "noAr": "projects with a published, working page",
+      "bootcamps": "corporate bootcamps with a selective stage, completed in 2026",
+      "horas": "hours of completed training at DIO"
+    },
+    "arvore": {
+      "etiqueta": "Repository explorer",
+      "raiz": "portfolio/",
+      "raizNome": "Kelvin's GitHub",
+      "raizDesc": "Root: Kelvin's GitHub profile. Each branch below is a working area; each leaf is a public repository.",
+      "oQueFaz": "What it does",
+      "stack": "Stack",
+      "tamanho": "Size",
+      "repositorios": "repositories",
+      "abrirNoGithub": "open on GitHub ↗",
+      "paginaNoAr": "live page ↗",
+      "semDescricao": "Repository without a description — the code is on GitHub.",
+      "areas": {
+        "dados": "Data & AI — Python pipelines, machine learning with scikit-learn and XGBoost, dashboards and agents with anti-hallucination validation.",
+        "backend": "Backend — REST APIs with Spring Boot 3 and Java 21, design patterns with a stated reason, tests and CI.",
+        "web": "Web & Product — static sites in plain HTML/CSS/JS, offline-first PWAs and products that go from idea to deploy.",
+        "cyber": "Cybersecurity — pentest with CWE reporting, detection with MITRE ATT&CK alerts, honeypots and LGPD compliance.",
+        "infra": "Networking & Infrastructure — LAN topology, Modbus TCP from scratch, Wi-Fi surveys, tiered VPC and infrastructure as code.",
+        "ti": "IT & Support — service desk with SLA, workstation automation, verified backups and camera onboarding."
+      }
+    },
+    "projetos": {
+      "filtroTodos": "All",
+      "areaDados": "Data & AI", "areaBackend": "Backend", "areaWeb": "Web & Product", "areaCyber": "Cybersecurity", "areaInfra": "Networking & Infra", "areaTi": "IT & Support",
+      "buscar": "Search by name",
+      "noAr": "live",
+      "temCase": "has a case study",
+      "estruturaContar": "repositories",
+      "vazio": "Nothing found for this search.",
+      "caso": "case"
+    },
+    "caso": { "anterior": "previous", "proximo": "next", "papel": "Individual author: I designed, wrote and maintain every line of this project." },
+    "certificados": { "verificar": "verify at DIO ↗", "concluido": "completed" },
+    "contato": { "convite": "I'm open to opportunities in data, backend, cybersecurity or IT — if your team needs someone who already ships published projects, get in touch.", "falar": "Get in touch" },
+    "rodape": { "paginas": "Pages", "contato": "Contact", "direitos": "© 2026 Kelvin Rebelo de Oliveira" },
+    "areasNomes": { "dados": "Data & AI", "backend": "Backend", "web": "Web & Product", "cyber": "Cybersecurity", "infra": "Networking & Infra", "ti": "IT & Support" }
+  }
+}

@@ -1,117 +1,44 @@
-# portfolio
+# portfolio-kelvin-v2
 
-<div align="center">
+Portfólio multipágina de Kelvin Oliveira — HTML/CSS/JS puros, sem build, PT/EN.
 
-[English](README.en.md) · **Português (Brasil)**
+Direção visual, em quatro linhas:
+- Preto absoluto e branco, sem acento cromático; sans de sistema em toda a interface.
+- Um único motivo decorativo: o planeta de Terra em pontos (canvas 2D) com órbita fechada, no hero de todas as páginas — nada sangra pela borda e nada cresce sem limite.
+- Cada número do site rastreia uma fonte (`data/repos.json`, certificados com link de verificação); dado sem origem não entra.
+- Movimento curto e opcional (respeita `prefers-reduced-motion`); contraste mínimo 4,5:1 em todo texto.
 
-</div>
+## Páginas
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS) [![Vanilla JS](https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222?style=flat-square&logo=githubpages)](https://pages.github.com/) [![MIT License](https://img.shields.io/badge/License-MIT-f4c430?style=flat-square)](LICENSE)
+| Rota | O que é |
+|------|---------|
+| `/` | Home: capa com planeta, resumo, números e explorador em árvore do GitHub |
+| `/projetos/` | Arquivo completo dos repositórios, com filtro por área e busca |
+| `/projetos/<slug>/` | 11 casos de estudo (gerados por `scripts/gen-case-pages.mjs`) |
+| `/sobre/` | Trajetória e competências por camada |
+| `/certificados/` | 4 certificados DIO com link de verificação |
+| `/404.html` | Página de erro autônoma, no mesmo visual do site |
 
-### Portfólio ,  Kelvin Oliveira
+## Dados
 
----
+- `data/repos.json` — snapshot dos repositórios públicos, atualizado no deploy por `scripts/sync-repos.mjs` (GitHub API; em falha, mantém o snapshot commitado).
+- `data/destaques.json` — textos curados dos casos; `scripts/gen-case-pages.mjs` gera as páginas a partir deles. Rerodar o gerador após editar.
+- `data/areas.json`, `data/live-pages.json`, `data/i18n.json` — áreas, páginas no ar, rótulos de interface.
 
-## O que é
+## Deploy
 
-Portfólio ,  Kelvin Oliveira
+GitHub Actions (`.github/workflows/deploy.yml`) → GitHub Pages sob `/portfolio/`. O pipeline sincroniza `repos.json`, regenera as páginas de caso e publica.
 
----
+## Desenvolvimento local
 
-## Início Rápido
+```bash
+python scripts/servidor_local.py
+# http://localhost:8791 (Cache-Control: no-store, sem cache velho de CSS/JS)
+```
 
-Abra `index.html` diretamente no navegador, ou sirva localmente:
+Ou, sem o script:
 
 ```bash
 python -m http.server 8080
-# Acesse http://localhost:8080
+# abra http://localhost:8080/index.html
 ```
-
-Ou faça deploy no GitHub Pages / Netlify / Vercel com configuração zero.
-
-## Como funciona
-
-**Arquitetura zero-build, arquivo único** ,  tudo vive em `index.html`:
-- **HTML5** estrutura semântica
-- **CSS3** propriedades customizadas para tema (claro/escuro)
-- **Vanilla ES6+ JavaScript** ,  sem framework, sem build
-- **localStorage** para persistência de tema
-- **Catálogo JSON** (`catalogo.json`) como fonte de dados aberta
-
----
-
-## Capacidades
-
-| Capacidade | Descrição |
-|------------|-------------|
-| Motor de Recomendação | Filtro determinístico: Área ∩ Preço -> Provedor -> Tier gratuito -> Nível de config |
-| Catálogo | 124 serviços de 8 provedores (AWS, Azure, GCP, Oracle, Cloudflare, DO, Firebase, Google) |
-| Dados Abertos | catalogo.json + llms.txt para consumo por chat de IA |
-| Educação | Vocabulário de nuvem (IaaS/PaaS/SaaS), myth-busting, glossário, quiz de 5 perguntas |
-| Tematização | Modo claro/escuro persistido em localStorage, sem CSS externo |
-| Zero Build | index.html único ,  deploy em qualquer lugar (GitHub Pages, Netlify, Vercel) |
-| Auditoria | Cada decisão do filtro exibida: "Como chegamos aqui" rastreia todos 124 serviços |
-| Sem Rastreamento | Sem contas de usuário, sem analytics, sem dependências externas |
-
-
----
-
-
-
----
-
-## Perguntas Frequentes
-
-<details>
-<summary><strong>O que é este projeto?</strong></summary>
-
-Um estudo/projeto em vanilla JS demonstrando Custom CSS styling, JSON data catalog, Single-page HTML entry, Vanilla JavaScript logic.
-
-</details>
-
-<details>
-<summary><strong>Como executar?</strong></summary>
-
-Veja [Início Rápido](#início-rápido) para comandos copiáveis.
-
-</details>
-
-<details>
-<summary><strong>Há testes?</strong></summary>
-
-Nenhum teste automatizado neste repositório.
-
-</details>
-
-<details>
-<summary><strong>Posso usar em produção?</strong></summary>
-
-Este é um **projeto de estudo/portfólio**. Revise e endureça (auth, persistência, monitoramento, etc.) antes de usar em produção.
-
-</details>
-
-
-
----
-
-## Documentação
-
-- **Código-Fonte** ,  Navegue pelo diretório `src/` para detalhes de implementação
-- **Referência da API** ,  N/A
-- **Diagrama de Arquitetura** ,  Veja [architecture.mermaid](docs/architecture.mermaid) (se presente)
-- **Changelog** ,  [CHANGELOG.md](CHANGELOG.md) (se presente)
-- **Contribuindo** ,  [CONTRIBUTING.md](CONTRIBUTING.md) (se presente)
-
-## Licença
-
-[MIT](LICENSE) ,  Kelvin Oliveira
-
----
-
-<div align="center">
-
-**Construído com** · Vanilla HTML/CSS/JS
-
-**Autor** · [Kelvin Oliveira](https://github.com/KelvinOliveiraCode) · [Portfolio](https://kelvinoliveiracode.github.io/portfolio/)
-
-</div>

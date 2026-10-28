@@ -1,0 +1,62 @@
+/* ============================================================
+   tokens.css — única fonte de verdade de estilo do site.
+   Fundo #000, texto #fff, cinza para o secundário, linhas
+   rgba 8%/18%, superfícies planas, sem acento cromático.
+   Tipografia: sans de sistema em peso 400 (títulos 500),
+   escala medida da referência.
+   ============================================================ */
+
+:root {
+  /* Neutros puros: preto absoluto, branco, cinza */
+  --bg: #000000;
+  --bg-2: #0d0d0d;       /* superfície plana de seção alternativa */
+  --bg-3: #1a1a1a;       /* painel/hover */
+  --muted: #787878;      /* secundário: 4,7:1 sobre o preto (AA) */
+  --fg: #ffffff;         /* texto principal */
+
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.18);
+
+  /* Sem acento cromático: ênfase é o próprio branco */
+  --accent: #ffffff;
+  --accent-soft: rgba(255, 255, 255, 0.1);
+
+  /* Sans de sistema, igual à referência: uma única família
+     para tudo — sem mono, sem serif. */
+  --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-display);
+
+  /* Escala medida @1440: corpo 15.5px, lead 19.74px,
+     h2 31px/400, número grande 72px/400, h1 118px/500. */
+  --fs-0: 0.75rem;                         /* 12px — microrrótulos */
+  --fs-1: 0.8125rem;                       /* 13px — legenda */
+  --fs-2: 0.96875rem;                      /* 15.5px — corpo */
+  --fs-3: 1.0625rem;                       /* 17px — secundário */
+  --fs-4: 1.234rem;                        /* 19.74px — lead/parágrafo */
+  --fs-5: 1.5rem;                          /* 24px */
+  --fs-6: 1.9375rem;                       /* 31px */
+  --fs-name: clamp(2.5rem, 6vw, 3.5rem);   /* nome no hero de subpáginas */
+  --fs-h2: clamp(1.375rem, 2.2vw, 1.9375rem);  /* 31px no desktop */
+
+  /* Espaçamento base 8 */
+  --s-2: 8px;
+  --s-3: 16px;
+  --s-4: 24px;
+  --s-5: 32px;
+  --s-6: 48px;
+  --s-7: 64px;
+  --s-8: 96px;
+  --s-9: 128px;
+  --gutter: clamp(20px, 5vw, 72px);        /* vácuo interno de borda a borda */
+
+  /* Raio e sombra: 2 níveis, superfícies planas */
+  --r-1: 2px;
+  --r-2: 8px;
+  --shadow-1: 0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.55);
+
+  --t: 200ms;                              /* mudança de estado */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* saída suave — entrada e revelação */
+
+  --measure: 860px;                        /* coluna de texto medida da referência */
+}

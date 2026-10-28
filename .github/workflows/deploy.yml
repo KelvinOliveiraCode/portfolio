@@ -29,6 +29,19 @@ jobs:
         with:
           enablement: true
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sincronizar data/repos.json (GitHub API)
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/sync-repos.mjs
+
+      - name: Regenerar páginas de caso
+        run: node scripts/gen-case-pages.mjs
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

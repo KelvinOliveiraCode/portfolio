@@ -1,0 +1,41 @@
+/* ============================================================
+   index.css — ajustes exclusivos da home. estrutura comum
+   vem de site.css; aqui só caem regras que não existem nas
+   subpáginas.
+   ============================================================ */
+
+.eyebrow { margin-bottom: var(--s-4); }
+
+/* linha de metadados reaproveitada fora do hero */
+.resumo-meta { margin-top: var(--s-5); }
+.linha-meta span { color: var(--muted); }
+.resumo-meta a {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: var(--line-strong);
+}
+.resumo-meta a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+/* a árvore e o painel entram sem regra própria: layout em site.css */
+
+/* a lista 01–04 fica colada à prosa do meu papel */
+#meu-papel .etapas { margin-top: var(--s-6); }
+#meu-papel .etapas a {
+  font-family: var(--font-mono);
+  font-size: var(--fs-1);
+  color: var(--accent);
+  text-decoration: none;
+}
+#meu-papel .etapas a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* convite: empilha o rótulo, o título e as ações */
+.convite .rotulo { margin-bottom: var(--s-3); }
+
+/* selo "no ar" das folhas da árvore */
+.no-ar {
+  margin-left: auto;
+  font-size: var(--fs-0);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}

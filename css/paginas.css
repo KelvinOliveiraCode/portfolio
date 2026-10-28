@@ -1,0 +1,162 @@
+/* ============================================================
+   paginas.css — ajustes exclusivos das subpáginas (projetos,
+   caso, sobre, certificados). A estrutura comum vem de site.css.
+   ============================================================ */
+
+/* ---------- hero compacto das subpáginas ---------- */
+/* Nas subpáginas o hero fica no fluxo (o de site.css é a capa fixa da
+   home), com respiro abaixo da nav e a mesma composição em duas
+   colunas: texto à esquerda, planeta à direita — ambos dentro da
+   coluna de conteúdo, nunca encostados na borda da viewport. */
+body:not([data-prefix=""]) .hero {
+  padding-top: 136px;
+  padding-bottom: 80px;
+}
+@media (min-width: 901px) {
+  body:not([data-prefix=""]) .hero {
+    grid-template-columns: minmax(0, 1fr) clamp(240px, 26vw, 360px);
+  }
+}
+@media (max-width: 900px) {
+  /* empilhado e alinhado à esquerda, como no desktop */
+  body:not([data-prefix=""]) .hero {
+    padding-top: 108px;
+    padding-bottom: 64px;
+    text-align: left;
+    justify-items: start;
+  }
+  body:not([data-prefix=""]) .hero .linha-meta { justify-content: flex-start; }
+  body:not([data-prefix=""]) .hero-cena { justify-self: center; width: min(62vw, 280px); }
+}
+body:not([data-prefix=""]) .hero .eyebrow { display: none; }
+body:not([data-prefix=""]) .hero h1 {
+  font-size: var(--fs-6);
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.15;
+  max-width: none;
+}
+body:not([data-prefix=""]) .hero > * { animation: none; }
+.hero .badge-case {
+  display: inline-block; margin-left: var(--s-3);
+  font-family: var(--font-display); font-size: 13px;
+  letter-spacing: normal; text-transform: none;
+  color: var(--muted);
+  vertical-align: middle;
+}
+body:not([data-prefix=""]) .hero .linha-lead {
+  font-size: var(--fs-4);
+  color: var(--muted);
+  max-width: 52ch;
+}
+
+/* ---------- filtros do arquivo ---------- */
+.filtros { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; margin-top: var(--s-6); }
+.filtro {
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  min-height: 44px; padding: 8px 14px;
+  color: var(--muted); transition: color var(--t);
+}
+.filtro:hover { color: var(--fg); }
+.filtro[aria-pressed="true"] { color: var(--fg); text-decoration: underline; text-underline-offset: 5px; }
+.filtro-busca {
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  min-height: 44px; padding: 8px 14px;
+  background: transparent; color: var(--fg);
+  border-bottom: 1px solid var(--line-strong);
+  width: min(100%, 240px);
+}
+.filtro-busca:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.contagem-arquivo {
+  margin-top: var(--s-4);
+  font-family: var(--font-display); font-size: var(--fs-0);
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted);
+}
+.arquivo-vazio { padding: var(--s-6) 0; color: var(--muted); font-size: var(--fs-2); }
+
+/* ---------- grade de cards do arquivo ---------- */
+.arquivo-grid {
+  margin-top: var(--s-5);
+  display: grid; gap: var(--s-6) var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.card-a { padding: var(--s-4) 0; display: flex; flex-direction: column; gap: 10px; transition: transform var(--t) var(--ease); }
+.card-a:hover { transform: translateY(-2px); }
+.card-a h3 { font-family: var(--font-display); font-weight: 500; font-size: var(--fs-2); letter-spacing: 0.01em; }
+.card-a h3 a { color: var(--fg); text-decoration: none; }
+.card-a h3 a:hover { color: var(--accent); }
+.card-a p { font-size: var(--fs-2); color: var(--muted); max-width: 42ch; }
+.card-a .linha-chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.card-a .chip {
+  font-family: var(--font-mono); font-size: var(--fs-0);
+  color: var(--muted);
+}
+.card-a .chip.case { color: var(--fg); }
+.card-a .chip.no-ar { color: var(--fg); }
+.card-a .linha-links { margin-top: auto; display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.card-a .linha-links a {
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  color: var(--accent); text-decoration: none;
+}
+.card-a .linha-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- navegação anterior/próximo do caso ---------- */
+.prev-next {
+  display: flex; justify-content: space-between; gap: var(--s-4);
+  margin-top: var(--s-7);
+}
+.prev-next a {
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  color: var(--accent); text-decoration: none; max-width: 44ch;
+}
+.prev-next a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.prev-next .lado { display: flex; flex-direction: column; gap: 4px; }
+.prev-next .lado small { font-family: var(--font-display); font-size: var(--fs-0); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.prev-next .lado.fim { align-items: flex-end; text-align: right; }
+
+/* ---------- grade de stack (sobre) ---------- */
+.stack-grid {
+  display: grid; gap: var(--s-5) var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: var(--s-6);
+}
+.stack-cell { padding: var(--s-4) 0; }
+.stack-cell h3 {
+  font-family: var(--font-display); font-size: var(--fs-1); font-weight: 400;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg);
+  display: flex; align-items: center; gap: 8px;
+}
+.stack-cell h3 svg { width: 20px; height: 20px; color: var(--accent); flex: 0 0 auto; }
+.stack-cell ul { margin-top: var(--s-3); list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.stack-cell li {
+  font-family: var(--font-mono); font-size: var(--fs-0);
+  color: var(--muted);
+}
+
+/* ---------- certificados ---------- */
+.certs {
+  margin-top: var(--s-6);
+  display: grid; gap: var(--s-6) var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+.cert { padding: var(--s-4) 0; display: flex; flex-direction: column; gap: var(--s-3); transition: transform var(--t) var(--ease); }
+.cert:hover { transform: translateY(-2px); }
+.cert-fig { display: block; }
+.cert-fig img { width: 100%; height: auto; }
+.cert-org { font-family: var(--font-display); font-size: var(--fs-0); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }
+.cert h3 { font-weight: 400; font-size: var(--fs-3); margin-top: 6px; }
+.cert-meta { font-family: var(--font-mono); font-size: var(--fs-1); color: var(--muted); margin-top: 4px; }
+.cert p { font-size: var(--fs-2); color: var(--fg); max-width: 48ch; margin-top: var(--s-2); }
+.cert .lnk {
+  margin-top: auto;
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  color: var(--accent); text-decoration: none;
+}
+.cert .lnk:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 560px) {
+  .arquivo-grid, .certs, .stack-grid { grid-template-columns: 1fr; }
+  .prev-next { flex-direction: column; }
+  .prev-next .lado.fim { align-items: flex-start; text-align: left; }
+}

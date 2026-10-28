@@ -1,0 +1,375 @@
+/* ============================================================
+   site.css — esqueleto compartilhado de todas as páginas.
+   Anatomia copiada da referência (medida ao vivo, valores
+   nossos): nav pill fixa centrada e transparente, hero fixo da
+   home que some ao rolar, coluna de conteúdo de 1192px alinhada
+   à esquerda, prosa 19.74px cinza #737373, rodapé em 3 colunas.
+   Scroll nativo — só o visual vem da referência.
+   ============================================================ */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background: var(--bg);
+  /* nenhuma cena decorativa deve gerar rolagem horizontal */
+  overflow-x: clip;
+}
+
+body {
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: clip;
+  /* fundo fica no html: o conteúdo se apoia nas cenas [data-globe]
+     (js/planeta.js) */
+  background: transparent;
+  color: var(--fg);
+  font-family: var(--font-display);
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection { background: var(--fg); color: var(--bg); }
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.skip {
+  position: absolute; left: -999px; top: 12px; z-index: 100;
+  background: var(--fg); color: var(--bg);
+  font-family: var(--font-display); font-size: var(--fs-1);
+  padding: 12px 16px; border-radius: var(--r-1);
+}
+.skip:focus { left: 12px; }
+
+/* ---------- utilitário: coluna de conteúdo 1192px ---------- */
+/* A referência usa container 1320 com padding 120/64/160: sobra
+   uma coluna de 1192px encostada à esquerda. Aqui o vácuo é
+   padding interno que centraliza a coluna de 1192px. */
+.secao, .bloco-id, .convite {
+  padding: 78px max(var(--gutter), calc(50% - 596px));
+}
+.medida, .prosa, .secao-cab h2, .secao-cab p { max-width: var(--measure); }
+
+/* a home tem o hero fixo por cima: o conteúdo só entra quando o
+   usuário rola — nada visível sob o hero no primeiro ecrã */
+/* o conteúdo da home só entra depois que o texto inicial do hero
+   sumiu de todo (JS solta body.hero-saiu; ver js/efeitos.js).
+   O hero fica FORA do portão — é o texto inicial que deve aparecer
+   sozinho no primeiro ecrã. */
+body[data-prefix=""] main { padding-top: 100vh; }
+body[data-prefix=""].hero-espera main > :not(.hero) { opacity: 0; }
+body[data-prefix=""].hero-saiu main > :not(.hero) { opacity: 1; transition: opacity 420ms var(--ease); }
+
+/* ---------- globo de Terra (js/planeta.js) ---------- */
+/* A cena é uma caixa quadrada: a esfera e a órbita vivem inteiras
+   dentro dela. Nada sangra pela borda da viewport e nada cresce sem
+   limite — a mesma linguagem de pontos do resto do site, só que com
+   escala fechada. */
+[data-globe] { position: relative; }
+.globo { position: absolute; inset: 0; pointer-events: none; }
+.globo canvas { width: 100%; height: 100%; display: block; }
+
+/* ---------- revelação no scroll (js/efeitos.js) ---------- */
+.revela { opacity: 0; transform: translateY(18px); }
+.visto .revela, .revela.visto {
+  opacity: 1; transform: none;
+  transition: opacity 640ms var(--ease), transform 640ms var(--ease);
+  transition-delay: var(--atraso, 0ms);
+}
+
+/* ---------- faixa de destaques (strip.js popula; elemento
+   mantido no HTML, só escondido — a referência não tem faixa) ---------- */
+.topo-strip { display: none; }
+
+/* ---------- navegação: pill fixa centrada, transparente ---------- */
+.nav-bar {
+  position: fixed; top: 22px; left: 50%; transform: translateX(-50%);
+  z-index: 40;
+  display: flex; align-items: center; gap: 2px;
+  padding: 6px;
+  background: transparent;
+  border-radius: 999px;
+}
+.nav-bar .marca {
+  font-family: var(--font-display); font-size: 15px; font-weight: 500;
+  color: var(--fg); text-decoration: none;
+  padding: 8px 18px; min-height: 34px;
+  display: inline-flex; align-items: center;
+}
+.nav-bar .marca b { color: var(--accent); }
+.nav-links { display: flex; align-items: center; gap: 2px; list-style: none; }
+.nav-links a {
+  font-family: var(--font-display); font-size: 15px; font-weight: 400;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none; text-transform: none; letter-spacing: normal;
+  padding: 8px 18px; min-height: 34px;
+  display: inline-flex; align-items: center;
+  border-radius: 999px;
+  transition: color var(--t);
+}
+/* ativo: pill branca com texto preto, peso 500 */
+.nav-links a[aria-current="page"] { background: var(--fg); color: var(--bg); font-weight: 500; }
+.nav-links a:hover { color: var(--fg); }
+.nav-end { display: flex; align-items: center; gap: 2px; }
+.nav-end .ico {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; color: rgba(255, 255, 255, 0.82); transition: color var(--t);
+}
+.nav-end .ico:hover { color: var(--fg); }
+.lang-btn {
+  font-family: var(--font-display); font-size: 15px; font-weight: 400;
+  width: 34px; height: 34px; color: rgba(255, 255, 255, 0.82);
+  transition: color var(--t);
+}
+.lang-btn:hover { color: var(--fg); }
+
+/* ---------- hero: composição em duas colunas ----------
+   Texto à esquerda, cena do planeta à direita, ambos dentro da mesma
+   coluna de conteúdo (1192px) — nada encosta na borda da viewport.
+   A home usa o hero como capa fixa; as subpáginas, no fluxo. */
+.hero {
+  position: relative; z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(300px, 32vw, 470px);
+  align-items: center;
+  column-gap: clamp(32px, 5vw, 96px);
+  padding: 0 max(var(--gutter), calc(50% - 596px));
+  text-align: left;
+}
+/* home: capa fixa sobre o conteúdo, que já aparece por baixo; ao
+   rolar, ela some com opacity (js/efeitos.js). pointer-events none
+   deixa os links do conteúdo clicáveis por baixo. */
+body[data-prefix=""] .hero {
+  position: fixed; inset: 0; z-index: 5; pointer-events: none;
+}
+body[data-prefix=""] .hero a,
+body[data-prefix=""] .hero button { pointer-events: auto; }
+
+.hero-texto { min-width: 0; }
+.hero-cena { width: 100%; aspect-ratio: 1 / 1; justify-self: end; }
+
+.hero .eyebrow { margin-bottom: var(--s-4); }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 500;
+  font-size: clamp(2.75rem, 6.6vw, 6.25rem); line-height: 0.98; letter-spacing: -0.045em;
+}
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero .linha-lead { margin-top: var(--s-4); font-size: var(--fs-4); line-height: 1.35; max-width: 40ch; }
+.hero .linha-meta {
+  margin-top: var(--s-5); font-family: var(--font-display); font-size: var(--fs-1);
+  color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline;
+}
+.hero .linha-meta a { color: var(--fg); text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--line-strong); }
+.hero .linha-meta a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+.indicador-scroll {
+  margin-top: var(--s-6);
+  font-family: var(--font-display); font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  white-space: nowrap;
+}
+
+/* ---------- cabeçalho de seção ---------- */
+/* Sem eyebrows numerados: a referência usa só um h2 pequeno branco. */
+.secao-cab { margin-bottom: var(--s-5); }
+.secao-cab .num { display: none; }
+.secao-cab h2 {
+  font-weight: 400; font-size: var(--fs-4); line-height: 1.32;
+  margin-top: 0;
+}
+.secao-cab p { margin-top: var(--s-3); font-size: var(--fs-4); color: var(--muted); line-height: 1.32; }
+
+/* ---------- grade de números ---------- */
+.numeros {
+  display: grid; gap: 40px;
+  grid-template-columns: repeat(4, minmax(0, 230px));
+}
+.numero { padding: 0; }
+.numero b {
+  display: block; font-family: var(--font-display); font-weight: 400;
+  font-size: 72px; line-height: 1;
+  letter-spacing: normal;
+}
+.numero span { display: block; margin-top: 10px; font-size: 15px; color: var(--muted); max-width: 24ch; }
+.numero .duracao { display: block; margin-top: 8px; font-size: 13px; }
+.suave { color: var(--accent); }
+
+/* ---------- blocos de prosa ---------- */
+.prosa p { font-size: var(--fs-4); color: var(--muted); line-height: 1.32; }
+.prosa p + p { margin-top: 26px; }
+.prosa strong { color: var(--fg); font-weight: 400; }
+.prosa em { font-style: normal; color: var(--fg); }
+
+/* ---------- entregas: parágrafos; papel: role rows ---------- */
+.etapas { list-style: none; display: grid; gap: 24px; max-width: var(--measure); }
+.etapas li p { font-size: var(--fs-4); color: var(--muted); line-height: 1.32; }
+/* role rows da home: rótulo branco 17px numa coluna de 200px,
+   descrição cinza 15.5px na outra — geometria da referência */
+#meu-papel .etapas li {
+  display: grid; grid-template-columns: 200px minmax(0, 1fr);
+  gap: 20px; align-items: baseline;
+}
+#meu-papel .etapas li strong {
+  font-size: 17px; font-weight: 400; color: var(--fg);
+}
+#meu-papel .etapas li p { font-size: var(--fs-2); line-height: 1.5; max-width: 972px; }
+#meu-papel .etapas a { color: var(--fg); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: var(--line-strong); }
+#meu-papel .etapas a:hover { text-decoration-color: var(--fg); }
+
+/* ---------- árvore ---------- */
+.arvore-zona { display: grid; gap: var(--s-6); grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr); align-items: start; }
+[role="tree"] { font-family: var(--font-display); font-size: var(--fs-2); }
+[role="tree"] li { list-style: none; }
+[role="tree"] button.nodo {
+  display: flex; align-items: center; gap: 10px; width: 100%;
+  min-height: 44px; padding: 6px 10px; text-align: left;
+  font-family: var(--font-display); font-size: var(--fs-1);
+  color: var(--muted); border-radius: var(--r-1);
+  transition: color var(--t), background var(--t);
+}
+[role="tree"] button.nodo:hover { color: var(--fg); background: var(--bg-2); }
+[role="tree"] button.nodo[aria-expanded="true"], [role="tree"] button.nodo[aria-selected="true"] { color: var(--fg); }
+[role="tree"] button.nodo[aria-selected="true"] { background: var(--accent-soft); }
+[role="tree"] button.nodo .marca-nodo { color: var(--fg); }
+[role="tree"] button.nodo .tamanho { margin-left: auto; color: var(--muted); font-size: var(--fs-0); }
+[role="tree"] button.nodo .versus { color: var(--line-strong); }
+[role="tree"] ul[role="group"] { margin-left: 20px; border-left: 1px solid var(--line); }
+.setinha { flex: 0 0 auto; transition: transform var(--t); color: var(--muted); }
+[aria-expanded="true"] .setinha { transform: rotate(90deg); }
+
+.arvore-painel { padding: var(--s-4) 0; position: sticky; top: 80px; }
+.arvore-painel h3 { font-weight: 400; font-size: var(--fs-3); }
+.arvore-painel .tamanho-fila { font-family: var(--font-display); font-size: var(--fs-1); color: var(--muted); margin: 6px 0 var(--s-3); }
+.arvore-painel p { color: var(--muted); font-size: var(--fs-2); max-width: 40ch; }
+.arvore-painel .pilha { margin-top: var(--s-3); display: flex; flex-wrap: wrap; gap: 8px; }
+.arvore-painel .pilha span { font-family: var(--font-display); font-size: var(--fs-0); color: var(--muted); }
+.arvore-painel a { display: inline-block; margin-top: var(--s-4); font-family: var(--font-display); font-size: var(--fs-1); color: var(--fg); }
+
+/* ---------- convite ---------- */
+.convite h2 { font-weight: 400; font-size: var(--fs-h2); max-width: 22ch; }
+.convite p { margin-top: var(--s-3); color: var(--muted); font-size: var(--fs-4); max-width: 48ch; }
+.convite .acoes { margin-top: var(--s-4); display: flex; flex-wrap: wrap; gap: var(--s-3); }
+.btn-solido {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px var(--s-4);
+  background: var(--fg); color: var(--bg); text-decoration: none;
+  font-family: var(--font-display); font-size: var(--fs-1); letter-spacing: 0.04em;
+  border-radius: var(--r-1); transition: background var(--t), color var(--t);
+}
+.btn-solido:hover { background: rgba(255, 255, 255, 0.8); }
+.btn-linha {
+  display: inline-flex; align-items: center; min-height: 44px; padding: 10px var(--s-4);
+  color: var(--muted); text-decoration: underline; text-underline-offset: 5px;
+  text-decoration-color: var(--line-strong);
+  font-family: var(--font-display); font-size: var(--fs-1);
+  transition: color var(--t), text-decoration-color var(--t);
+}
+.btn-linha:hover { color: var(--fg); text-decoration-color: var(--fg); }
+
+/* ---------- rodapé: 3 colunas (blurb | Páginas | Contato) ---------- */
+.rodape {
+  padding: 96px max(var(--gutter), calc(50% - 596px)) 64px;
+  display: grid; gap: 24px 64px;
+  grid-template-columns: minmax(0, 420px) minmax(0, 315px) minmax(0, 315px);
+  align-items: start;
+}
+.rodape h3 {
+  font-family: var(--font-display); font-size: var(--fs-3); font-weight: 400;
+  text-transform: none; letter-spacing: normal;
+  color: var(--fg); margin-bottom: var(--s-4);
+}
+.rodape ul { list-style: none; display: grid; gap: 12px; }
+.rodape a { text-decoration: none; color: var(--muted); font-size: var(--fs-3); }
+.rodape a:hover { color: var(--fg); }
+.rodape .rodape-blurb p {
+  font-size: var(--fs-3); color: var(--muted); line-height: 1.5;
+  max-width: 420px;
+}
+.rodape .rodape-blurb p + p { margin-top: 12px; }
+
+/* ---------- grain do fundo (próprio, bem sutil) ---------- */
+.grao {
+  pointer-events: none; position: fixed; inset: 0; z-index: 60;
+  opacity: 0.03; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23g)' opacity='1'/></svg>");
+}
+
+/* ---------- entrada do hero (uma vez, ao carregar a página) ---------- */
+body[data-prefix=""] .hero > * { animation: surge 640ms var(--ease) both; }
+body[data-prefix=""] .hero > *:nth-child(2) { animation-delay: 90ms; }
+@keyframes surge { from { opacity: 0; transform: translateY(16px); } }
+
+/* ---------- rótulos (eyebrow, kicker do convite) ---------- */
+.rotulo, .eyebrow {
+  display: inline-block;
+  font-family: var(--font-display); font-size: var(--fs-0); font-weight: 400;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ---------- navegação entre abas ---------- */
+@view-transition { navigation: auto; }
+@supports not (view-transition-name: root) {
+  body { animation: chega 360ms var(--ease) both; }
+}
+@keyframes chega { from { opacity: 0; } }
+
+/* ---------- responsivo ---------- */
+@media (max-width: 1100px) {
+  .numeros { grid-template-columns: repeat(2, minmax(0, 230px)); }
+}
+
+@media (max-width: 900px) {
+  /* composição empilhada: texto em cima, planeta embaixo, ambos
+     dentro da largura da tela — a cena deixa de disputar a coluna */
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    row-gap: clamp(16px, 4vh, 36px);
+    text-align: center;
+  }
+  .hero-texto { max-width: 560px; }
+  .hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); }
+  .hero .linha-lead { max-width: 44ch; }
+  .hero .linha-meta { justify-content: center; }
+  .hero-cena { width: min(58vw, 290px); justify-self: center; }
+  body[data-prefix=""] .hero { padding-top: 88px; padding-bottom: 28px; align-content: center; }
+  .indicador-scroll { margin-top: var(--s-5); }
+  .arvore-zona { grid-template-columns: 1fr; }
+  .arvore-painel { position: static; }
+  .nav-bar { max-width: calc(100vw - 24px); overflow-x: auto; scrollbar-width: none; }
+  .nav-bar::-webkit-scrollbar { display: none; }
+  .nav-end .ico { display: none; }
+  .rodape { grid-template-columns: 1fr; gap: var(--s-5); }
+}
+
+/* telas baixas na horizontal: a esfera sairia do primeiro ecrã */
+@media (max-width: 900px) and (max-height: 560px) {
+  .hero-cena { display: none; }
+}
+
+@media (max-width: 560px) {
+  .secao, .bloco-id, .convite { padding-left: var(--s-4); padding-right: var(--s-4); }
+  .rodape { padding-left: var(--s-4); padding-right: var(--s-4); }
+  .nav-bar { top: 12px; padding: 4px; }
+  .nav-links a, .nav-bar .marca { font-size: 13px; padding: 6px 10px; min-height: 30px; }
+  .numeros { grid-template-columns: 1fr; }
+  .numeros .numero b { font-size: 56px; }
+  #meu-papel .etapas li { grid-template-columns: 1fr; gap: 6px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .revela { opacity: 1; transform: none; }
+}

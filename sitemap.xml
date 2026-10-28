@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://kelvinoliveiracode.github.io/portfolio/</loc>
-    <lastmod>2026-10-17</lastmod>
-  </url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/javaforge/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/kodabudget-api/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/kodapay-api/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/deteccao-de-fraudes/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/dio-lab-bia-do-futuro/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/pentest-lab-scanner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/siem-logs-lab/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/modbus-scanner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/vpc-3-tier-segura/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/wifi-site-survey/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/projetos/kb-search/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/sobre/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://kelvinoliveiracode.github.io/portfolio/certificados/</loc><lastmod>2026-10-25</lastmod></url>
 </urlset>

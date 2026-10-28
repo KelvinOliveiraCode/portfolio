@@ -1,0 +1,42 @@
+{
+ "verifierizedAt": "2026-10-25",
+ "source": "index.html aprovado do repo; cada URL testada com HTTP 200 em 2026-10-25",
+ "pages": [
+  {
+   "repo": "cloud4all",
+   "url": "https://kelvinoliveiracode.github.io/cloud4all/"
+  },
+  {
+   "repo": "dashboard-vendas-porsche-dio",
+   "url": "https://kelvinoliveiracode.github.io/dashboard-vendas-porsche-dio/"
+  },
+  {
+   "repo": "garimpo",
+   "url": "https://kelvinoliveiracode.github.io/garimpo/"
+  },
+  {
+   "repo": "gerador-de-curriculos-ats",
+   "url": "https://kelvinoliveiracode.github.io/gerador-de-curriculos-ats/"
+  },
+  {
+   "repo": "kodaros-ferramentas",
+   "url": "https://kelvinoliveiracode.github.io/kodaros-ferramentas/"
+  },
+  {
+   "repo": "kodaros-landing",
+   "url": "https://kelvinoliveiracode.github.io/kodaros-landing/"
+  },
+  {
+   "repo": "modelos-de-sites",
+   "url": "https://kelvinoliveiracode.github.io/modelos-de-sites/"
+  },
+  {
+   "repo": "portfolio",
+   "url": "https://kelvinoliveiracode.github.io/portfolio/"
+  },
+  {
+   "repo": "tessumax-landing",
+   "url": "https://kelvinoliveiracode.github.io/tessumax-landing/"
+  }
+ ]
+}
