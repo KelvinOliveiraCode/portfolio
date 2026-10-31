@@ -1,0 +1,9 @@
+# SITE_NEEDS_INPUT.md — Pendências que exigem decisão do dono (segunda onda)
+
+1. **Métricas de agentes.** As páginas dizem "orquestro agentes de IA" sem números (quantos agentes por projeto, tempo economizado, taxa de retrabalho). Se houver métricas reais, vale acrescentar ao §04 da home.
+2. **Modelos usados (lista de modelos usados).** O texto cita "Claude Code & GPT Agents" (vindos dos bootcamps) e "GitHub Copilot". Falta confirmar modelos/ferramentas que o dono usa hoje no dia a dia — pode merecer célula própria na grade de competências ("Idiomas" e "Documentação" foram removidos da grade para obedecer aos 8 grupos do posicionamento; assim que você confirmar, dá para recriá-los ou mover para outra página).
+3. **Windows Server / Active Directory.** Ficaram na célula "Produto e negócio" por falta de grupo de TI na grade — decidir se vão para "Redes e infraestrutura" ou para um grupo novo.
+4. **Decisões de orquestração.** O §04 agora afirma "orquestrei os agentes que a implementaram". Se houver detalhe público e franco (ex.: hub de agentes, scripts de orquestração), pode virar caso de estudo no lugar do parágrafo genérico.
+5. **JSON-LD da home.** Alterei `jobTitle`/`description` do `ld+json` para bater com o rótulo oficial — se o dono preferir reverter ao "Desenvolvedor de Software" original, é uma linha.
+6. **og:description / twitter:description** da home e das páginas continuam com o texto "103 repositórios públicos..." — a especificação pedia só *meta description* e og:title; se quiser alinhar também a social-preview description ao posicionamento, é uma edição extra por página.
+7. **Desenvolvedor de Software em outros lugares.** Páginas de caso (`projetos/*/index.html`) não foram tocadas por instrução explícita; se contêm "escrevo/laudo", seguem temporariamente fora do padrão — fazer terceira onda.
