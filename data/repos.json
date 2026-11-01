@@ -1,5 +1,5 @@
 {
- "fetchedAt": "2026-10-25",
+ "fetchedAt": "2026-11-01",
  "source": "https://api.github.com/users/KelvinOliveiraCode/repos",
  "total": 103,
  "repos": [
@@ -11,8 +11,8 @@
    "topics": [],
    "created": "2026-10-16T21:49:13Z",
    "pushed": "2026-10-18T14:12:21Z",
-   "live": false,
-   "sizeKb": 36
+   "sizeKb": 36,
+   "live": false
   },
   {
    "name": "analisador-logs-ssh-mitre",
@@ -21,9 +21,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:49:29Z",
-   "pushed": "2026-10-18T14:12:25Z",
-   "live": false,
-   "sizeKb": 24
+   "pushed": "2026-10-31T21:57:08Z",
+   "sizeKb": 27,
+   "live": false
   },
   {
    "name": "analisador-pcap-anomalias",
@@ -32,9 +32,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:49:45Z",
-   "pushed": "2026-10-18T14:12:28Z",
-   "live": false,
-   "sizeKb": 26
+   "pushed": "2026-10-31T21:55:33Z",
+   "sizeKb": 29,
+   "live": false
   },
   {
    "name": "analise-churn-cohort",
@@ -43,9 +43,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:50:01Z",
-   "pushed": "2026-10-18T14:12:32Z",
-   "live": false,
-   "sizeKb": 57
+   "pushed": "2026-10-31T21:24:09Z",
+   "sizeKb": 60,
+   "live": false
   },
   {
    "name": "api-gestao-frota-veiculos",
@@ -55,8 +55,8 @@
    "topics": [],
    "created": "2026-10-16T21:50:18Z",
    "pushed": "2026-10-18T14:12:36Z",
-   "live": false,
-   "sizeKb": 41
+   "sizeKb": 41,
+   "live": false
   },
   {
    "name": "app-bancario-digital",
@@ -66,8 +66,8 @@
    "topics": [],
    "created": "2026-10-16T21:50:35Z",
    "pushed": "2026-10-18T14:12:40Z",
-   "live": false,
-   "sizeKb": 62
+   "sizeKb": 62,
+   "live": false
   },
   {
    "name": "auditor-headers-seguranca",
@@ -76,9 +76,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:50:57Z",
-   "pushed": "2026-10-18T14:12:44Z",
-   "live": false,
-   "sizeKb": 18
+   "pushed": "2026-11-01T12:48:31Z",
+   "sizeKb": 18,
+   "live": false
   },
   {
    "name": "backup-gfs-verificacao-hash",
@@ -87,9 +87,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:51:13Z",
-   "pushed": "2026-10-18T14:12:48Z",
-   "live": false,
-   "sizeKb": 26
+   "pushed": "2026-11-01T12:47:56Z",
+   "sizeKb": 26,
+   "live": false
   },
   {
    "name": "backup-remoto-s3-criptografado",
@@ -98,9 +98,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:51:28Z",
-   "pushed": "2026-10-18T14:12:52Z",
-   "live": false,
-   "sizeKb": 27
+   "pushed": "2026-11-01T12:51:03Z",
+   "sizeKb": 27,
+   "live": false
   },
   {
    "name": "bot-fii-sentimento",
@@ -109,9 +109,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T21:51:44Z",
-   "pushed": "2026-10-18T14:12:56Z",
-   "live": false,
-   "sizeKb": 115
+   "pushed": "2026-11-01T12:52:23Z",
+   "sizeKb": 115,
+   "live": false
   },
   {
    "name": "calculadora-enlace-cobre",
@@ -128,8 +128,8 @@
    ],
    "created": "2026-10-03T22:54:58Z",
    "pushed": "2026-10-18T14:10:13Z",
-   "live": false,
-   "sizeKb": 50
+   "sizeKb": 50,
+   "live": false
   },
   {
    "name": "calculadora-financeira-pwa",
@@ -138,9 +138,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T22:25:17Z",
-   "pushed": "2026-10-18T14:13:00Z",
-   "live": false,
-   "sizeKb": 51
+   "pushed": "2026-11-01T12:47:08Z",
+   "sizeKb": 51,
+   "live": false
   },
   {
    "name": "camera-onboarding",
@@ -156,9 +156,9 @@
     "windows"
    ],
    "created": "2026-10-03T23:43:37Z",
-   "pushed": "2026-10-18T14:11:09Z",
-   "live": false,
-   "sizeKb": 52
+   "pushed": "2026-10-31T21:46:03Z",
+   "sizeKb": 56,
+   "live": false
   },
   {
    "name": "certificador-cobre-simulado",
@@ -175,8 +175,8 @@
    ],
    "created": "2026-10-03T23:45:17Z",
    "pushed": "2026-10-18T14:11:22Z",
-   "live": false,
-   "sizeKb": 52
+   "sizeKb": 52,
+   "live": false
   },
   {
    "name": "cftv-simulador-nvr",
@@ -193,8 +193,8 @@
    ],
    "created": "2026-10-03T23:43:02Z",
    "pushed": "2026-10-18T14:11:05Z",
-   "live": false,
-   "sizeKb": 53
+   "sizeKb": 53,
+   "live": false
   },
   {
    "name": "chopp-gourmet",
@@ -204,8 +204,8 @@
    "topics": [],
    "created": "2026-09-26T21:45:36Z",
    "pushed": "2026-10-18T14:10:03Z",
-   "live": false,
-   "sizeKb": 82
+   "sizeKb": 82,
+   "live": false
   },
   {
    "name": "classificador-documentos-fiscais",
@@ -214,20 +214,20 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:37:01Z",
-   "pushed": "2026-10-18T14:14:37Z",
-   "live": false,
-   "sizeKb": 23
+   "pushed": "2026-10-31T22:06:52Z",
+   "sizeKb": 26,
+   "live": false
   },
   {
    "name": "cloud4all",
    "description": "Cloud4All — a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA",
-   "language": "HTML",
+   "language": "JavaScript",
    "homepage": "https://kelvinoliveiracode.github.io/cloud4all/",
    "topics": [],
    "created": "2026-10-05T21:16:13Z",
-   "pushed": "2026-10-18T14:11:45Z",
-   "live": true,
-   "sizeKb": 107
+   "pushed": "2026-10-31T20:08:33Z",
+   "sizeKb": 229,
+   "live": true
   },
   {
    "name": "cofre-senhas-aes256",
@@ -236,9 +236,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T22:26:07Z",
-   "pushed": "2026-10-18T14:13:04Z",
-   "live": false,
-   "sizeKb": 24
+   "pushed": "2026-11-01T00:50:30Z",
+   "sizeKb": 28,
+   "live": false
   },
   {
    "name": "config-backup-switches",
@@ -254,9 +254,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:55:54Z",
-   "pushed": "2026-10-18T14:10:21Z",
-   "live": false,
-   "sizeKb": 87
+   "pushed": "2026-10-31T21:43:47Z",
+   "sizeKb": 91,
+   "live": false
   },
   {
    "name": "container-scanner-imagens",
@@ -265,9 +265,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:12:40Z",
-   "pushed": "2026-10-18T14:14:18Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-10-31T23:23:28Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "dashboard-metricas-site",
@@ -276,9 +276,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T22:26:58Z",
-   "pushed": "2026-10-18T14:13:08Z",
-   "live": false,
-   "sizeKb": 48
+   "pushed": "2026-11-01T00:57:42Z",
+   "sizeKb": 52,
+   "live": false
   },
   {
    "name": "dashboard-sla-helpdesk",
@@ -287,9 +287,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:38:25Z",
-   "pushed": "2026-10-18T14:14:41Z",
-   "live": false,
-   "sizeKb": 28
+   "pushed": "2026-10-31T22:02:50Z",
+   "sizeKb": 31,
+   "live": false
   },
   {
    "name": "dashboard-vendas-porsche-dio",
@@ -308,8 +308,8 @@
    ],
    "created": "2026-07-07T23:55:26Z",
    "pushed": "2026-10-18T14:09:01Z",
-   "live": true,
-   "sizeKb": 108
+   "sizeKb": 108,
+   "live": true
   },
   {
    "name": "dashboard-vendas-streamlit",
@@ -318,9 +318,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T22:27:51Z",
-   "pushed": "2026-10-18T14:13:12Z",
-   "live": false,
-   "sizeKb": 18
+   "pushed": "2026-11-01T00:45:34Z",
+   "sizeKb": 22,
+   "live": false
   },
   {
    "name": "dashboard-xbox",
@@ -338,9 +338,9 @@
     "xlsx"
    ],
    "created": "2026-08-23T19:48:09Z",
-   "pushed": "2026-10-18T14:09:35Z",
-   "live": false,
-   "sizeKb": 249
+   "pushed": "2026-10-31T21:07:58Z",
+   "sizeKb": 252,
+   "live": false
   },
   {
    "name": "demand-limiting",
@@ -357,8 +357,8 @@
    ],
    "created": "2026-10-04T00:16:53Z",
    "pushed": "2026-10-18T14:11:31Z",
-   "live": false,
-   "sizeKb": 178
+   "sizeKb": 178,
+   "live": false
   },
   {
    "name": "desligamento-agendado-frota",
@@ -367,9 +367,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:13:32Z",
-   "pushed": "2026-10-18T14:14:22Z",
-   "live": false,
-   "sizeKb": 16
+   "pushed": "2026-10-31T23:58:23Z",
+   "sizeKb": 20,
+   "live": false
   },
   {
    "name": "deteccao-de-fraudes",
@@ -388,9 +388,9 @@
     "smote"
    ],
    "created": "2026-07-17T20:49:10Z",
-   "pushed": "2026-10-18T14:09:12Z",
-   "live": false,
-   "sizeKb": 56
+   "pushed": "2026-10-31T19:16:54Z",
+   "sizeKb": 62,
+   "live": false
   },
   {
    "name": "detector-deepfake-audio",
@@ -399,9 +399,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T22:28:43Z",
-   "pushed": "2026-10-18T14:13:16Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-11-01T12:45:02Z",
+   "sizeKb": 21,
+   "live": false
   },
   {
    "name": "dio-lab-bia-do-futuro",
@@ -421,9 +421,9 @@
     "streamlit"
    ],
    "created": "2026-07-18T13:29:38Z",
-   "pushed": "2026-10-18T14:09:17Z",
-   "live": false,
-   "sizeKb": 64
+   "pushed": "2026-10-31T18:54:54Z",
+   "sizeKb": 69,
+   "live": false
   },
   {
    "name": "editor-json-visual",
@@ -432,9 +432,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:39:49Z",
-   "pushed": "2026-10-18T14:14:45Z",
-   "live": false,
-   "sizeKb": 45
+   "pushed": "2026-10-31T22:10:09Z",
+   "sizeKb": 49,
+   "live": false
   },
   {
    "name": "energy-dashboard-predial",
@@ -451,8 +451,8 @@
    ],
    "created": "2026-10-04T00:16:19Z",
    "pushed": "2026-10-18T14:11:27Z",
-   "live": false,
-   "sizeKb": 185
+   "sizeKb": 185,
+   "live": false
   },
   {
    "name": "esquematicoedu",
@@ -461,9 +461,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-24T13:00:46Z",
-   "pushed": "2026-10-24T13:20:31Z",
-   "live": false,
-   "sizeKb": 2504
+   "pushed": "2026-10-31T20:22:08Z",
+   "sizeKb": 2508,
+   "live": false
   },
   {
    "name": "etl-vendas-datawarehouse",
@@ -472,9 +472,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:27:57Z",
-   "pushed": "2026-10-18T14:13:31Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-11-01T00:16:46Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "excel-para-investimentos",
@@ -493,8 +493,8 @@
    ],
    "created": "2026-08-23T14:15:30Z",
    "pushed": "2026-10-18T14:09:28Z",
-   "live": false,
-   "sizeKb": 136
+   "sizeKb": 136,
+   "live": false
   },
   {
    "name": "finops-alerta-orcamento",
@@ -503,9 +503,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:14:24Z",
-   "pushed": "2026-10-18T14:14:26Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T23:20:54Z",
+   "sizeKb": 23,
+   "live": false
   },
   {
    "name": "finops-dashboard",
@@ -522,8 +522,8 @@
    ],
    "created": "2026-10-03T23:41:50Z",
    "pushed": "2026-10-18T14:10:57Z",
-   "live": false,
-   "sizeKb": 60
+   "sizeKb": 60,
+   "live": false
   },
   {
    "name": "finvibe-ai",
@@ -542,9 +542,9 @@
     "vite"
    ],
    "created": "2026-07-20T20:30:00Z",
-   "pushed": "2026-10-18T14:09:20Z",
-   "live": false,
-   "sizeKb": 106
+   "pushed": "2026-10-31T19:22:37Z",
+   "sizeKb": 112,
+   "live": false
   },
   {
    "name": "forense-memoria-simples",
@@ -553,9 +553,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:06:18Z",
-   "pushed": "2026-10-18T14:13:19Z",
-   "live": false,
-   "sizeKb": 22
+   "pushed": "2026-10-31T21:36:58Z",
+   "sizeKb": 26,
+   "live": false
   },
   {
    "name": "garimpo",
@@ -573,9 +573,9 @@
     "webperf"
    ],
    "created": "2026-08-29T15:06:17Z",
-   "pushed": "2026-10-18T14:09:44Z",
-   "live": true,
-   "sizeKb": 41957
+   "pushed": "2026-10-31T20:11:58Z",
+   "sizeKb": 41962,
+   "live": true
   },
   {
    "name": "gerador-curriculos-ats-v2",
@@ -584,9 +584,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:41:12Z",
-   "pushed": "2026-10-18T14:14:49Z",
-   "live": false,
-   "sizeKb": 71
+   "pushed": "2026-10-31T21:11:26Z",
+   "sizeKb": 76,
+   "live": false
   },
   {
    "name": "gerador-de-curriculos-ats",
@@ -606,9 +606,9 @@
     "vite"
    ],
    "created": "2026-07-20T23:17:06Z",
-   "pushed": "2026-10-18T14:09:24Z",
-   "live": true,
-   "sizeKb": 574
+   "pushed": "2026-10-31T19:19:15Z",
+   "sizeKb": 579,
+   "live": true
   },
   {
    "name": "helpdesk-tickets",
@@ -624,9 +624,9 @@
     "windows"
    ],
    "created": "2026-10-04T00:17:27Z",
-   "pushed": "2026-10-18T14:11:36Z",
-   "live": false,
-   "sizeKb": 81
+   "pushed": "2026-10-31T21:02:39Z",
+   "sizeKb": 86,
+   "live": false
   },
   {
    "name": "honeypot-portas-evidencia",
@@ -635,9 +635,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:07:08Z",
-   "pushed": "2026-10-18T14:13:23Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-10-31T21:40:04Z",
+   "sizeKb": 25,
+   "live": false
   },
   {
    "name": "iac-terraform-github-actions",
@@ -646,9 +646,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:15:17Z",
-   "pushed": "2026-10-18T14:14:30Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T20:51:10Z",
+   "sizeKb": 23,
+   "live": false
   },
   {
    "name": "infra-as-code-lab",
@@ -664,9 +664,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:57:59Z",
-   "pushed": "2026-10-18T14:10:32Z",
-   "live": false,
-   "sizeKb": 96
+   "pushed": "2026-10-31T20:57:27Z",
+   "sizeKb": 100,
+   "live": false
   },
   {
    "name": "inventario-ativos-ti",
@@ -675,9 +675,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:07:58Z",
-   "pushed": "2026-10-18T14:13:27Z",
-   "live": false,
-   "sizeKb": 32
+   "pushed": "2026-11-01T00:40:59Z",
+   "sizeKb": 35,
+   "live": false
   },
   {
    "name": "javaforge",
@@ -686,9 +686,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-13T20:17:13Z",
-   "pushed": "2026-10-18T14:12:03Z",
-   "live": false,
-   "sizeKb": 34013
+   "pushed": "2026-10-31T20:02:16Z",
+   "sizeKb": 34020,
+   "live": false
   },
   {
    "name": "kb-search",
@@ -705,8 +705,8 @@
    ],
    "created": "2026-10-03T23:44:44Z",
    "pushed": "2026-10-18T14:11:17Z",
-   "live": false,
-   "sizeKb": 64
+   "sizeKb": 64,
+   "live": false
   },
   {
    "name": "KelvinOliveiraCode",
@@ -729,8 +729,8 @@
    ],
    "created": "2026-09-10T14:10:02Z",
    "pushed": "2026-10-20T16:51:11Z",
-   "live": true,
-   "sizeKb": 35
+   "sizeKb": 35,
+   "live": true
   },
   {
    "name": "kodabudget-api",
@@ -750,9 +750,9 @@
     "whisper"
    ],
    "created": "2026-09-07T14:11:30Z",
-   "pushed": "2026-10-18T14:09:59Z",
-   "live": false,
-   "sizeKb": 53
+   "pushed": "2026-10-31T19:07:53Z",
+   "sizeKb": 58,
+   "live": false
   },
   {
    "name": "kodapay-api",
@@ -772,9 +772,9 @@
     "strategy-pattern"
    ],
    "created": "2026-09-07T00:12:50Z",
-   "pushed": "2026-10-18T14:09:55Z",
-   "live": false,
-   "sizeKb": 64
+   "pushed": "2026-10-31T19:04:14Z",
+   "sizeKb": 71,
+   "live": false
   },
   {
    "name": "kodapay-api-v2",
@@ -783,9 +783,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:42:35Z",
-   "pushed": "2026-10-18T14:14:53Z",
-   "live": false,
-   "sizeKb": 36
+   "pushed": "2026-10-31T21:17:39Z",
+   "sizeKb": 40,
+   "live": false
   },
   {
    "name": "kodaros-ferramentas",
@@ -803,9 +803,9 @@
     "vanilla-js"
    ],
    "created": "2026-08-24T00:16:38Z",
-   "pushed": "2026-10-18T14:09:39Z",
-   "live": true,
-   "sizeKb": 5840
+   "pushed": "2026-10-31T14:16:30Z",
+   "sizeKb": 5846,
+   "live": true
   },
   {
    "name": "kodaros-landing",
@@ -823,9 +823,9 @@
     "vanilla-js"
    ],
    "created": "2026-09-06T12:59:42Z",
-   "pushed": "2026-10-22T23:32:28Z",
-   "live": true,
-   "sizeKb": 15780
+   "pushed": "2026-10-31T13:50:45Z",
+   "sizeKb": 15785,
+   "live": true
   },
   {
    "name": "kodaros-mostruario",
@@ -834,9 +834,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-22T22:28:15Z",
-   "pushed": "2026-10-22T23:12:34Z",
-   "live": false,
-   "sizeKb": 3119
+   "pushed": "2026-10-31T20:23:46Z",
+   "sizeKb": 3121,
+   "live": false
   },
   {
    "name": "lab-backup-recuperacao",
@@ -853,8 +853,8 @@
    ],
    "created": "2026-10-03T22:58:57Z",
    "pushed": "2026-10-18T14:10:39Z",
-   "live": false,
-   "sizeKb": 433
+   "sizeKb": 433,
+   "live": false
   },
   {
    "name": "loja-ebooks-kodaros",
@@ -863,9 +863,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:30:26Z",
-   "pushed": "2026-10-18T14:13:35Z",
-   "live": false,
-   "sizeKb": 53
+   "pushed": "2026-11-01T00:30:26Z",
+   "sizeKb": 57,
+   "live": false
   },
   {
    "name": "loja-virtual-completa",
@@ -874,9 +874,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:16:10Z",
-   "pushed": "2026-10-18T14:14:34Z",
-   "live": false,
-   "sizeKb": 46
+   "pushed": "2026-10-31T23:12:45Z",
+   "sizeKb": 50,
+   "live": false
   },
   {
    "name": "mapeador-rede-lan-arp",
@@ -885,9 +885,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:31:17Z",
-   "pushed": "2026-10-18T14:13:39Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T21:54:12Z",
+   "sizeKb": 22,
+   "live": false
   },
   {
    "name": "marketplace-servicos-freelance",
@@ -896,9 +896,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:43:58Z",
-   "pushed": "2026-10-18T14:14:57Z",
-   "live": false,
-   "sizeKb": 57
+   "pushed": "2026-10-31T22:36:27Z",
+   "sizeKb": 61,
+   "live": false
   },
   {
    "name": "MegaAGT",
@@ -908,8 +908,8 @@
    "topics": [],
    "created": "2026-10-07T18:40:56Z",
    "pushed": "2026-10-17T22:36:29Z",
-   "live": false,
-   "sizeKb": 795
+   "sizeKb": 795,
+   "live": false
   },
   {
    "name": "miniguia-estudos-notebooklm",
@@ -926,8 +926,8 @@
    ],
    "created": "2026-07-09T20:21:48Z",
    "pushed": "2026-10-18T14:09:05Z",
-   "live": false,
-   "sizeKb": 34
+   "sizeKb": 34,
+   "live": false
   },
   {
    "name": "mlops-registro-drift",
@@ -936,9 +936,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:32:08Z",
-   "pushed": "2026-10-18T14:13:43Z",
-   "live": false,
-   "sizeKb": 23
+   "pushed": "2026-10-31T21:28:49Z",
+   "sizeKb": 28,
+   "live": false
   },
   {
    "name": "modbus-scanner",
@@ -954,9 +954,9 @@
     "windows"
    ],
    "created": "2026-10-03T23:40:28Z",
-   "pushed": "2026-10-19T17:53:35Z",
-   "live": false,
-   "sizeKb": 143
+   "pushed": "2026-10-31T19:58:13Z",
+   "sizeKb": 145,
+   "live": false
   },
   {
    "name": "modelos-de-sites",
@@ -965,9 +965,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-11T14:31:06Z",
-   "pushed": "2026-10-18T14:11:54Z",
-   "live": false,
-   "sizeKb": 612
+   "pushed": "2026-10-31T20:17:23Z",
+   "sizeKb": 616,
+   "live": false
   },
   {
    "name": "monitor-qos-enlace",
@@ -976,9 +976,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:44:45Z",
-   "pushed": "2026-10-18T14:15:00Z",
-   "live": false,
-   "sizeKb": 23
+   "pushed": "2026-10-31T20:47:34Z",
+   "sizeKb": 28,
+   "live": false
   },
   {
    "name": "network-ci-pipeline",
@@ -994,9 +994,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:58:20Z",
-   "pushed": "2026-10-18T14:10:36Z",
-   "live": false,
-   "sizeKb": 100
+   "pushed": "2026-10-31T21:05:21Z",
+   "sizeKb": 105,
+   "live": false
   },
   {
    "name": "olaria",
@@ -1005,9 +1005,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-13T20:17:14Z",
-   "pushed": "2026-10-18T14:12:08Z",
-   "live": false,
-   "sizeKb": 4364
+   "pushed": "2026-10-31T20:05:57Z",
+   "sizeKb": 4370,
+   "live": false
   },
   {
    "name": "opencode-browser-chat",
@@ -1017,8 +1017,8 @@
    "topics": [],
    "created": "2026-10-13T20:17:13Z",
    "pushed": "2026-10-18T14:11:59Z",
-   "live": false,
-   "sizeKb": 125
+   "sizeKb": 125,
+   "live": false
   },
   {
    "name": "organizador-imposto-de-renda",
@@ -1037,8 +1037,8 @@
    ],
    "created": "2026-08-23T19:36:45Z",
    "pushed": "2026-10-18T14:09:32Z",
-   "live": false,
-   "sizeKb": 42
+   "sizeKb": 42,
+   "live": false
   },
   {
    "name": "pagina-status-sistema",
@@ -1047,9 +1047,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:33:00Z",
-   "pushed": "2026-10-18T14:13:47Z",
-   "live": false,
-   "sizeKb": 42
+   "pushed": "2026-11-01T00:25:50Z",
+   "sizeKb": 45,
+   "live": false
   },
   {
    "name": "pentest-lab-scanner",
@@ -1065,9 +1065,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:57:10Z",
-   "pushed": "2026-10-18T14:10:25Z",
-   "live": false,
-   "sizeKb": 89
+   "pushed": "2026-10-31T19:45:43Z",
+   "sizeKb": 96,
+   "live": false
   },
   {
    "name": "pipeline-iot-energia",
@@ -1076,9 +1076,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:45:24Z",
-   "pushed": "2026-10-18T14:15:04Z",
-   "live": false,
-   "sizeKb": 20
+   "pushed": "2026-10-31T20:45:36Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "portal-autoatendimento-helpdesk",
@@ -1087,9 +1087,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:33:52Z",
-   "pushed": "2026-10-18T14:13:51Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-11-01T00:11:16Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "portal-cliente-oauth2-rbac",
@@ -1098,9 +1098,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:46:03Z",
-   "pushed": "2026-10-18T14:15:08Z",
-   "live": false,
-   "sizeKb": 66
+   "pushed": "2026-10-31T20:43:07Z",
+   "sizeKb": 71,
+   "live": false
   },
   {
    "name": "portfolio",
@@ -1116,9 +1116,9 @@
     "vanilla-js"
    ],
    "created": "2026-09-02T19:15:08Z",
-   "pushed": "2026-10-20T17:52:31Z",
-   "live": true,
-   "sizeKb": 8609
+   "pushed": "2026-10-31T20:19:44Z",
+   "sizeKb": 8700,
+   "live": true
   },
   {
    "name": "previsao-demanda-estoque",
@@ -1127,9 +1127,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T23:34:44Z",
-   "pushed": "2026-10-18T14:13:55Z",
-   "live": false,
-   "sizeKb": 18
+   "pushed": "2026-10-31T21:26:51Z",
+   "sizeKb": 22,
+   "live": false
   },
   {
    "name": "previsor-inadimplencia-xgboost",
@@ -1138,9 +1138,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T12:46:47Z",
-   "pushed": "2026-10-18T14:15:12Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T20:40:40Z",
+   "sizeKb": 23,
+   "live": false
   },
   {
    "name": "prompt-analise-feedbacks-bancarios-dio",
@@ -1157,8 +1157,8 @@
    ],
    "created": "2026-07-10T23:38:04Z",
    "pushed": "2026-10-18T14:09:08Z",
-   "live": false,
-   "sizeKb": 23
+   "sizeKb": 23,
+   "live": false
   },
   {
    "name": "rack-planner",
@@ -1175,8 +1175,8 @@
    ],
    "created": "2026-10-03T23:30:05Z",
    "pushed": "2026-10-18T14:10:47Z",
-   "live": false,
-   "sizeKb": 62
+   "sizeKb": 62,
+   "live": false
   },
   {
    "name": "recomendador-produtos-ml",
@@ -1185,9 +1185,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:06:34Z",
-   "pushed": "2026-10-18T14:13:59Z",
-   "live": false,
-   "sizeKb": 20
+   "pushed": "2026-10-31T21:21:53Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "rede-lab-topologia",
@@ -1203,9 +1203,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:54:12Z",
-   "pushed": "2026-10-18T14:10:10Z",
-   "live": false,
-   "sizeKb": 73
+   "pushed": "2026-10-31T21:51:17Z",
+   "sizeKb": 77,
+   "live": false
   },
   {
    "name": "relatorio-compliance-lgpd",
@@ -1214,9 +1214,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T13:18:28Z",
-   "pushed": "2026-10-18T14:15:16Z",
-   "live": false,
-   "sizeKb": 34
+   "pushed": "2026-10-31T20:34:31Z",
+   "sizeKb": 39,
+   "live": false
   },
   {
    "name": "reset-senha-ad-automacao",
@@ -1225,9 +1225,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:07:26Z",
-   "pushed": "2026-10-18T14:14:03Z",
-   "live": false,
-   "sizeKb": 20
+   "pushed": "2026-11-01T00:07:52Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "scanner-owasp-top10-web",
@@ -1236,9 +1236,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T13:19:00Z",
-   "pushed": "2026-10-18T14:15:19Z",
-   "live": false,
-   "sizeKb": 31
+   "pushed": "2026-10-31T20:31:34Z",
+   "sizeKb": 36,
+   "live": false
   },
   {
    "name": "scanner-portas-banner",
@@ -1247,9 +1247,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:08:18Z",
-   "pushed": "2026-10-18T14:14:07Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T23:35:37Z",
+   "sizeKb": 22,
+   "live": false
   },
   {
    "name": "serverless-log-guard",
@@ -1266,8 +1266,8 @@
    ],
    "created": "2026-10-03T23:42:26Z",
    "pushed": "2026-10-18T14:11:01Z",
-   "live": false,
-   "sizeKb": 45
+   "sizeKb": 45,
+   "live": false
   },
   {
    "name": "siem-logs-lab",
@@ -1283,9 +1283,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:57:34Z",
-   "pushed": "2026-10-18T14:10:28Z",
-   "live": false,
-   "sizeKb": 98
+   "pushed": "2026-10-31T19:50:06Z",
+   "sizeKb": 103,
+   "live": false
   },
   {
    "name": "siem-luz-brute-force",
@@ -1294,9 +1294,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T13:19:32Z",
-   "pushed": "2026-10-18T14:15:23Z",
-   "live": false,
-   "sizeKb": 23
+   "pushed": "2026-10-31T20:29:17Z",
+   "sizeKb": 27,
+   "live": false
   },
   {
    "name": "simulador-ospf-simples",
@@ -1305,9 +1305,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:09:07Z",
-   "pushed": "2026-10-18T14:14:10Z",
-   "live": false,
-   "sizeKb": 21
+   "pushed": "2026-10-31T21:53:18Z",
+   "sizeKb": 24,
+   "live": false
   },
   {
    "name": "sistema-agendamento-consultas",
@@ -1316,9 +1316,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T13:20:07Z",
-   "pushed": "2026-10-18T14:15:27Z",
-   "live": false,
-   "sizeKb": 58
+   "pushed": "2026-10-31T22:24:49Z",
+   "sizeKb": 62,
+   "live": false
   },
   {
    "name": "slidestage",
@@ -1327,9 +1327,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-13T20:17:14Z",
-   "pushed": "2026-10-18T14:12:13Z",
-   "live": false,
-   "sizeKb": 2863
+   "pushed": "2026-10-31T21:15:28Z",
+   "sizeKb": 2868,
+   "live": false
   },
   {
    "name": "status-page-multi-regiao",
@@ -1338,9 +1338,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T00:09:57Z",
-   "pushed": "2026-10-18T14:14:14Z",
-   "live": false,
-   "sizeKb": 17
+   "pushed": "2026-10-31T23:26:54Z",
+   "sizeKb": 20,
+   "live": false
   },
   {
    "name": "techcards",
@@ -1350,8 +1350,8 @@
    "topics": [],
    "created": "2026-09-29T20:42:25Z",
    "pushed": "2026-10-18T14:10:06Z",
-   "live": false,
-   "sizeKb": 35
+   "sizeKb": 35,
+   "live": false
   },
   {
    "name": "tessumax-landing",
@@ -1360,9 +1360,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-16T00:20:52Z",
-   "pushed": "2026-10-18T14:12:17Z",
-   "live": false,
-   "sizeKb": 2384
+   "pushed": "2026-10-31T20:14:29Z",
+   "sizeKb": 2389,
+   "live": false
   },
   {
    "name": "threat-intel-dashboard",
@@ -1378,9 +1378,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:55:37Z",
-   "pushed": "2026-10-18T14:10:17Z",
-   "live": false,
-   "sizeKb": 78
+   "pushed": "2026-10-31T21:33:24Z",
+   "sizeKb": 82,
+   "live": false
   },
   {
    "name": "validador-qos-voip",
@@ -1389,9 +1389,9 @@
    "homepage": null,
    "topics": [],
    "created": "2026-10-17T13:20:47Z",
-   "pushed": "2026-10-18T14:15:31Z",
-   "live": false,
-   "sizeKb": 19
+   "pushed": "2026-10-31T20:26:33Z",
+   "sizeKb": 23,
+   "live": false
   },
   {
    "name": "vms-integration-labs",
@@ -1408,8 +1408,8 @@
    ],
    "created": "2026-10-03T23:44:10Z",
    "pushed": "2026-10-18T14:11:13Z",
-   "live": false,
-   "sizeKb": 56
+   "sizeKb": 56,
+   "live": false
   },
   {
    "name": "vpc-3-tier-segura",
@@ -1425,9 +1425,9 @@
     "windows"
    ],
    "created": "2026-10-03T22:59:18Z",
-   "pushed": "2026-10-18T14:10:43Z",
-   "live": false,
-   "sizeKb": 81
+   "pushed": "2026-10-31T19:55:07Z",
+   "sizeKb": 87,
+   "live": false
   },
   {
    "name": "wifi-site-survey",
@@ -1444,8 +1444,8 @@
    ],
    "created": "2026-10-03T23:41:15Z",
    "pushed": "2026-10-18T14:10:54Z",
-   "live": false,
-   "sizeKb": 319
+   "sizeKb": 319,
+   "live": false
   },
   {
    "name": "workstation-onboarding",
@@ -1462,8 +1462,8 @@
    ],
    "created": "2026-10-04T00:17:59Z",
    "pushed": "2026-10-18T14:11:41Z",
-   "live": false,
-   "sizeKb": 77
+   "sizeKb": 77,
+   "live": false
   }
  ]
 }

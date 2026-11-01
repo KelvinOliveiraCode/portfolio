@@ -154,6 +154,19 @@ body:not([data-prefix=""]) .hero .linha-lead {
 }
 .cert .lnk:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+/* ---------- projetos principais (home + página de projetos) ---------- */
+.pp-desc { font-size: var(--fs-2); color: var(--muted); max-width: 42ch; }
+.pp-links {
+  margin-top: var(--s-2);
+  font-family: var(--font-mono); font-size: var(--fs-1); color: var(--accent);
+}
+.pp-links a { color: var(--accent); text-decoration: none; }
+.pp-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.pp-nota {
+  margin-top: auto; padding-top: var(--s-2);
+  font-size: var(--fs-0); color: var(--muted); max-width: 46ch;
+}
+
 /* ---------- responsivo ---------- */
 @media (max-width: 560px) {
   .arquivo-grid, .certs, .stack-grid { grid-template-columns: 1fr; }
