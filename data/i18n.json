@@ -40,9 +40,9 @@
       "vazio": "Nada encontrado para esta busca.",
       "caso": "caso"
     },
-    "caso": { "anterior": "anterior", "proximo": "próximo", "papel": "Autor individual: desenhei, escrevi e mantenho todos os códigos deste projeto." },
+    "caso": { "anterior": "anterior", "proximo": "próximo", "papel": "Projeto individual: desenhei a solução, orquestrei os agentes que a implementaram, revisei e mantenho o código." },
     "certificados": { "verificar": "verificar na DIO ↗", "concluido": "concluído" },
-    "contato": { "convite": "Tenho interesse em oportunidades em dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.", "falar": "Falar comigo" },
+    "contato": { "convite": "Tenho interesse em oportunidades em IA e agentes, dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.", "falar": "Falar comigo" },
     "rodape": { "paginas": "Páginas", "contato": "Contato", "direitos": "© 2026 Kelvin Rebelo de Oliveira" },
     "areasNomes": { "dados": "Dados & IA", "backend": "Backend", "web": "Web & Produto", "cyber": "Cibersegurança", "infra": "Redes & Infra", "ti": "TI & Suporte" }
   },
@@ -87,9 +87,9 @@
       "vazio": "Nothing found for this search.",
       "caso": "case"
     },
-    "caso": { "anterior": "previous", "proximo": "next", "papel": "Individual author: I designed, wrote and maintain every line of this project." },
+    "caso": { "anterior": "previous", "proximo": "next", "papel": "A one-person project: I designed the solution, orchestrated the AI agents that implement it, and I review and maintain the code." },
     "certificados": { "verificar": "verify at DIO ↗", "concluido": "completed" },
-    "contato": { "convite": "I'm open to opportunities in data, backend, cybersecurity or IT — if your team needs someone who already ships published projects, get in touch.", "falar": "Get in touch" },
+    "contato": { "convite": "I'm interested in opportunities in AI and agents, data, backend, cybersecurity and IT. If your team needs someone who has already put projects live and keeps them running, get in touch.", "falar": "Get in touch" },
     "rodape": { "paginas": "Pages", "contato": "Contact", "direitos": "© 2026 Kelvin Rebelo de Oliveira" },
     "areasNomes": { "dados": "Data & AI", "backend": "Backend", "web": "Web & Product", "cyber": "Cybersecurity", "infra": "Networking & Infra", "ti": "IT & Support" }
   }
