@@ -39,3 +39,60 @@
   text-transform: uppercase;
   color: var(--accent);
 }
+
+/* ---------- projetos principais (home) ----------
+   As mesmas regras de .stack-grid/.stack-cell que a página Sobre usa
+   (css/paginas.css, carregado só nas subpáginas). Aqui a home não
+   carrega paginas.css, então o componente é redefinido aqui para
+   ficar idêntico ao da página Sobre. */
+.stack-grid {
+  display: grid; gap: var(--s-5) var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  margin-top: var(--s-6);
+}
+.stack-cell { padding: var(--s-4) 0; display: flex; flex-direction: column; gap: var(--s-2); }
+.stack-cell h3 {
+  font-family: var(--font-display); font-size: var(--fs-3); font-weight: 400;
+  color: var(--fg);
+}
+.stack-cell ul {
+  margin-top: var(--s-2); list-style: none; display: flex; flex-wrap: wrap; gap: 6px;
+}
+.stack-cell li {
+  font-family: var(--font-mono); font-size: var(--fs-0); color: var(--muted);
+}
+.pp-desc { font-size: var(--fs-2); color: var(--muted); max-width: 42ch; }
+.pp-links {
+  margin-top: var(--s-2);
+  font-family: var(--font-mono); font-size: var(--fs-1); color: var(--accent);
+}
+.pp-links a { color: var(--accent); text-decoration: none; }
+.pp-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.pp-nota {
+  margin-top: auto; padding-top: var(--s-2);
+  font-size: var(--fs-0); color: var(--muted); max-width: 46ch;
+}
+
+/* ---------- o que construí: grade de domínios ---------- */
+.dominios {
+  margin-top: var(--s-5);
+  list-style: none;
+  display: grid; gap: var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.dominios li {
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 6px;
+}
+.dominios strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
+.dominios span { font-size: var(--fs-2); color: var(--muted); }
+.dominios a {
+  font-family: var(--font-mono); font-size: var(--fs-1);
+  color: var(--accent); text-decoration: none;
+}
+.dominios a:hover { text-decoration: underline; text-underline-offset: 4px; }
+
+@media (max-width: 560px) {
+  .stack-grid, .dominios { grid-template-columns: 1fr; }
+}
