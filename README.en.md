@@ -4,7 +4,7 @@
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#) [![Vanilla JS](https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222?style=flat-square&logo=githubpages)](#) [![PT/EN](https://img.shields.io/badge/i18n-PT%2FEN-4AA8E0?style=flat-square)](#)
 
-A multi-page portfolio for **Kelvin Oliveira** — pure HTML/CSS/JS, no build, in Portuguese and English.
+A multi-page portfolio for **Kelvin Oliveira**: pure HTML/CSS/JS, no build, in Portuguese and English.
 
 ## What it is
 

@@ -15,7 +15,7 @@
   "textos": {
     "javaforge": {
       "area": "backend",
-      "titulo": { "pt": "JavaForge — construtor visual de Swing", "en": "JavaForge — visual Swing builder" },
+      "titulo": { "pt": "JavaForge: construtor visual de Swing", "en": "JavaForge: visual Swing builder" },
       "stack": ["Rust", "SQLite", "Tooling"],
       "badge": null,
       "oQue": {
@@ -24,7 +24,7 @@
       },
       "entregas": [
         { "pt": "Interfaces Swing montadas por arrastar e soltar, sem boilerplate.", "en": "Swing interfaces assembled by drag and drop, with no boilerplate." },
-        { "pt": "Projeto persistido em SQLite — a ferramenta guarda e reabre o trabalho do usuário.", "en": "Projects persist in SQLite — the tool saves and reopens the user's work." },
+        { "pt": "Projeto persistido em SQLite: a ferramenta guarda e reabre o trabalho do usuário.", "en": "Projects persist in SQLite: the tool saves and reopens the user's work." },
         { "pt": "Eventos ligados sem código manual, encurtando o caminho do protótipo à aplicação.", "en": "Events wired without manual code, shortening the path from prototype to application." },
         { "pt": "Escrita em Rust, fora da zona de conforto Java da lista de linguagens.", "en": "Written in Rust, outside the Java comfort zone of my active language list." }
       ],
@@ -40,7 +40,7 @@
         "en": "The abstraction: an API that listens, understands and answers by voice over the user's own finances."
       },
       "entregas": [
-        { "pt": "Transcrição local com Whisper — o áudio do usuário não depende de nuvem.", "en": "Local transcription with Whisper — the user's audio does not depend on the cloud." },
+        { "pt": "Transcrição local com Whisper: o áudio do usuário não depende de nuvem.", "en": "Local transcription with Whisper: the user's audio does not depend on the cloud." },
         { "pt": "Tool calling com Spring AI responde só sobre os dados do usuário.", "en": "Spring AI tool calling answers only over the user's own data." },
         { "pt": "O modelo não inventa saldo: a resposta sai dos dados consultados, não da imaginação do LLM.", "en": "The model never invents a balance: the answer comes from the queried data, not from the LLM's imagination." },
         { "pt": "Ciclo completo por voz: pergunta falada, consulta e resposta falada.", "en": "A full voice loop: spoken question, query and spoken reply." }
@@ -59,7 +59,7 @@
       "entregas": [
         { "pt": "Seis padrões GoF aplicados com propósito: Chain, Strategy, Observer, Builder, Factory e Singleton.", "en": "Six GoF patterns applied with purpose: Chain, Strategy, Observer, Builder, Factory and Singleton." },
         { "pt": "Testes automatizados cobrindo os caminhos de pagamento.", "en": "Automated tests covering the payment paths." },
-        { "pt": "Pipeline de integração contínua verde — o padrão de código não é só documento.", "en": "A green continuous-integration pipeline — the pattern catalogue is not just a document." },
+        { "pt": "Pipeline de integração contínua verde: o padrão de código não é só documento.", "en": "A green continuous-integration pipeline: the pattern catalogue is not just a document." },
         { "pt": "Projeto final do bootcamp CI&T, avaliado com critério externo.", "en": "The CI&T bootcamp capstone, evaluated against external criteria." }
       ],
       "metricasExtras": [ { "v": "6", "pt": "padrões GoF aplicados com propósito", "en": "GoF patterns applied with purpose" } ]
@@ -87,7 +87,7 @@
     },
     "dio-lab-bia-do-futuro": {
       "area": "dados",
-      "titulo": { "pt": "BIA — agente financeiro anti-alucinação", "en": "BIA — anti-hallucination finance agent" },
+      "titulo": { "pt": "BIA: agente financeiro anti-alucinação", "en": "BIA: anti-hallucination finance agent" },
       "stack": ["Python", "GenAI", "LLM"],
       "badge": { "pt": "Projeto final Bradesco", "en": "Bradesco capstone" },
       "oQue": {
@@ -130,7 +130,7 @@
       },
       "entregas": [
         { "pt": "Sete regras de detecção avaliando eventos em tempo real.", "en": "Seven detection rules evaluating events in real time." },
-        { "pt": "Correlação temporal entre eventos — o alerta nasce do padrão, não do ruído.", "en": "Temporal correlation across events — the alert comes from the pattern, not the noise." },
+        { "pt": "Correlação temporal entre eventos: o alerta nasce do padrão, não do ruído.", "en": "Temporal correlation across events: the alert comes from the pattern, not the noise." },
         { "pt": "Alertas mapeados em MITRE ATT&CK, a taxonomia que integra com o resto do mercado.", "en": "Alerts mapped to MITRE ATT&CK, the taxonomy that plugs into the rest of the industry." },
         { "pt": "Rodando local, sem depender de plataforma paga para aprender detecção.", "en": "Runs locally, with no paid platform needed to learn detection." }
       ],
@@ -146,7 +146,7 @@
         "en": "The abstraction: the industrial Modbus TCP protocol reimplemented without a library, byte by byte."
       },
       "entregas": [
-        { "pt": "Protocolo implementado sem biblioteca de terceiros — cada frame escrito do zero.", "en": "The protocol implemented without a third-party library — every frame written from scratch." },
+        { "pt": "Protocolo implementado sem biblioteca de terceiros, com cada frame escrito do zero.", "en": "The protocol implemented without a third-party library, with every frame written from scratch." },
         { "pt": "Servidor de laboratório que emula equipamentos de chão de fábrica.", "en": "A lab server emulating shop-floor equipment." },
         { "pt": "Scanner de rede industrial para descobrir e ler medidores.", "en": "An industrial network scanner to discover and read meters." },
         { "pt": "Leitura em medidores reais, não só em simulação.", "en": "Reads from real meters, not only from simulation." }

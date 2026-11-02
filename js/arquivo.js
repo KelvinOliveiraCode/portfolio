@@ -21,11 +21,14 @@
     kb = Number(kb) || 0;
     return kb >= 1024 ? (kb / 1024).toFixed(1) + ' MB' : kb + ' KB';
   }
+  function semTravessao(s) {
+    return String(s || '').replace(/\s*\u2014\s*/, ': ').replace(/\s*\u2014\s*/g, ', ');
+  }
   function parteBilingue(desc, lang) {
     var s = String(desc || '');
     var i = s.indexOf(' | ');
-    if (i === -1) return s;
-    return lang === 'en' ? s.slice(i + 3) : s.slice(0, i);
+    if (i === -1) return semTravessao(s);
+    return semTravessao(lang === 'en' ? s.slice(i + 3) : s.slice(0, i));
   }
 
   var REPOS = null, AREAS = null, LIVE = null, DESTAQUES = null, DICT = null;

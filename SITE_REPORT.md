@@ -72,3 +72,19 @@ Zonas intocadas: CSS, `js/`, `data/repos.json` (dados crus da API do GitHub) e a
 - Validação de `data/*.json` e dos blocos JSON-LD (PT e EN) → todos parseiam.
 - Crawl das 16 páginas HTML: 236 links internos, **0 quebrados**; 41 URLs externas, **1 não-200** (`linkedin.com/in/kelvin-oliveira-code/` responde 999 para requisições automáticas — bloqueio anti-bot, esperado; aberto manualmente responde normal).
 - Grep de termos banidos → restam apenas as 3 descrições cruas em `data/repos.json` (texto da API do GitHub, não é copy do autor — ver `SITE_NEEDS_INPUT.md` item 8) e a própria regra de substituição no script.
+
+## Segunda passada da onda 3 (mesma branch)
+
+Pedido do dono: tirar travessão do texto (sinal de IA) e parar de listar linguagens fixas.
+
+| Antes | Depois |
+|---|---|
+| travessão `—` em títulos, rótulos de seção, rodapé e prosa (483 ocorrências, 106 strings únicas) | `·` em títulos e numeração de seção (`01 · Quem sou`), `:` em rótulo e valor (`LinkedIn: kelvin-oliveira-code`), `Caso de estudo · Dados & IA`), e prosa reescrita com ponto, vírgula, dois-pontos ou parênteses. **Zero travessão** em todas as 16 páginas HTML e em `data/destaques.json` e `data/i18n.json` |
+| "…que implementam na tecnologia que o projeto pedir — Python, Java, TypeScript, Rust, JavaScript, HTML, PowerShell ou planilhas — e levo cada um até o fim." | "…que implementam na stack que o projeto pedir, seja linguagem, framework ou outra ferramenta, e levo cada um até o fim." (EN: "in whatever stack the project calls for, whether a language, a framework or another tool, and I take each one all the way.") |
+| frase oficial de posicionamento com travessão após o cargo | dois-pontos: "Engenheiro de Sistemas de IA: Workflows Agênticos…" (as palavras não mudaram) |
+| descrições de repositório vinham cruas do GitHub | `ajustarDescricao()` em `scripts/gen-case-pages.mjs` normaliza travessão (`Nome: descrição`); `js/arquivo.js` e `js/tree.js` ganharam `semTravessao()` para o explorador e a árvore, que renderizam descrição em tempo de execução |
+
+`data/repos.json` segue como espelho fiel da API do GitHub (58 travessões). Nada disso chega ao leitor: a normalização acontece na geração das páginas de caso e na renderização do explorador.
+
+- `js/tree.js`: o separador de linguagem no nó da árvore (`versus`) passou de `—` para `·`, igual ao separador de tamanho ao lado. Era o único travessão que ainda chegava à tela.
+- `README.md` e `README.en.md`: separador do parágrafo de abertura trocado por dois-pontos. Comentários de `js/*.js` e `css/*.css` mantêm o travessão (não são copy). `SITE_REPORT.md` e `SITE_NEEDS_INPUT.md` mantêm quando citam o próprio caractere.
