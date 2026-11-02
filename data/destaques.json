@@ -23,7 +23,7 @@
         "en": "The abstraction: a desktop tool written in Rust that builds Java Swing interfaces by drag and drop."
       },
       "entregas": [
-        { "pt": "Interfaces Swing montadas por arrastar e soltar, sem escrever o boilerplate à mão.", "en": "Swing interfaces assembled by drag and drop, without hand-writing the boilerplate." },
+        { "pt": "Interfaces Swing montadas por arrastar e soltar, sem boilerplate.", "en": "Swing interfaces assembled by drag and drop, with no boilerplate." },
         { "pt": "Projeto persistido em SQLite — a ferramenta guarda e reabre o trabalho do usuário.", "en": "Projects persist in SQLite — the tool saves and reopens the user's work." },
         { "pt": "Eventos ligados sem código manual, encurtando o caminho do protótipo à aplicação.", "en": "Events wired without manual code, shortening the path from prototype to application." },
         { "pt": "Escrita em Rust, fora da zona de conforto Java da lista de linguagens.", "en": "Written in Rust, outside the Java comfort zone of my active language list." }
@@ -104,18 +104,18 @@
     },
     "pentest-lab-scanner": {
       "area": "cyber",
-      "titulo": { "pt": "Scanner de pentest com laudo por CWE", "en": "Pentest scanner with CWE reporting" },
+      "titulo": { "pt": "Scanner de pentest com relatório por CWE", "en": "Pentest scanner with CWE reporting" },
       "stack": ["Python", "CWE", "AppSec"],
       "badge": null,
       "oQue": {
-        "pt": "Abstração: um scanner que audita uma aplicação vulnerável em laboratório e devolve laudo técnico.",
+        "pt": "Abstração: um scanner que audita uma aplicação vulnerável em laboratório e devolve relatório técnico.",
         "en": "The abstraction: a scanner that audits a deliberately vulnerable app in a lab and returns a technical report."
       },
       "entregas": [
         { "pt": "11 falhas plantadas na aplicação de laboratório, confirmadas uma a uma.", "en": "11 planted flaws in the lab application, confirmed one by one." },
         { "pt": "Cada falha classificada por CWE com veredito de exploração.", "en": "Every flaw classified by CWE with an exploitation verdict." },
         { "pt": "Ambiente delimitado: o scanner ataca só o laboratório local.", "en": "Bounded scope: the scanner attacks only the local lab." },
-        { "pt": "O laudo sai no formato que um time de AppSec espera ler.", "en": "The report comes out in the shape an AppSec team expects to read." }
+        { "pt": "O relatório sai no formato que um time de AppSec espera ler.", "en": "The report comes out in the shape an AppSec team expects to read." }
       ],
       "metricasExtras": [ { "v": "11", "pt": "falhas plantadas e confirmadas", "en": "planted flaws confirmed" } ]
     },
@@ -146,7 +146,7 @@
         "en": "The abstraction: the industrial Modbus TCP protocol reimplemented without a library, byte by byte."
       },
       "entregas": [
-        { "pt": "Protocolo implementado sem biblioteca — cada frame construído à mão.", "en": "The protocol implemented without a library — every frame built by hand." },
+        { "pt": "Protocolo implementado sem biblioteca de terceiros — cada frame escrito do zero.", "en": "The protocol implemented without a third-party library — every frame written from scratch." },
         { "pt": "Servidor de laboratório que emula equipamentos de chão de fábrica.", "en": "A lab server emulating shop-floor equipment." },
         { "pt": "Scanner de rede industrial para descobrir e ler medidores.", "en": "An industrial network scanner to discover and read meters." },
         { "pt": "Leitura em medidores reais, não só em simulação.", "en": "Reads from real meters, not only from simulation." }
@@ -189,15 +189,15 @@
     },
     "kb-search": {
       "area": "dados",
-      "titulo": { "pt": "Busca por similaridade com TF-IDF à mão", "en": "Similarity search with hand-written TF-IDF" },
+      "titulo": { "pt": "Busca por similaridade com TF-IDF próprio", "en": "Similarity search with an own TF-IDF implementation" },
       "stack": ["Python", "TF-IDF", "NLP"],
       "badge": null,
       "oQue": {
-        "pt": "Abstração: TF-IDF e similaridade de cosseno escritos à mão para mostrar o que acontece dentro de toda busca.",
-        "en": "The abstraction: TF-IDF and cosine similarity written by hand to show what happens inside every search engine."
+        "pt": "Abstração: TF-IDF e similaridade de cosseno escritos do zero para mostrar o que acontece dentro de toda busca.",
+        "en": "The abstraction: TF-IDF and cosine similarity written from scratch to show what happens inside every search engine."
       },
       "entregas": [
-        { "pt": "TF-IDF e cosseno implementados manualmente, sem biblioteca de busca.", "en": "TF-IDF and cosine implemented by hand, with no search library." },
+        { "pt": "TF-IDF e cosseno implementados do zero, sem biblioteca de busca.", "en": "TF-IDF and cosine implemented from scratch, with no search library." },
         { "pt": "Busca semântica numa base de conhecimento real.", "en": "Semantic search over a real knowledge base." },
         { "pt": "Resultado explicável: dá para rastrear por que cada documento ficou onde ficou.", "en": "Explainable results: you can trace why each document ranked where it did." },
         { "pt": "A matemática da busca entendida, não só chamada.", "en": "The mathematics of search understood, not just called." }
