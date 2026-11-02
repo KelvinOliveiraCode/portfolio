@@ -88,3 +88,33 @@ Pedido do dono: tirar travessão do texto (sinal de IA) e parar de listar lingua
 
 - `js/tree.js`: o separador de linguagem no nó da árvore (`versus`) passou de `—` para `·`, igual ao separador de tamanho ao lado. Era o único travessão que ainda chegava à tela.
 - `README.md` e `README.en.md`: separador do parágrafo de abertura trocado por dois-pontos. Comentários de `js/*.js` e `css/*.css` mantêm o travessão (não são copy). `SITE_REPORT.md` e `SITE_NEEDS_INPUT.md` mantêm quando citam o próprio caractere.
+
+---
+
+# Quarta onda — cross-link com o mostruário (branch `docs/crosslink-mostruario`)
+
+Pedido do dono: uma seção no portfólio que leve ao mostruário de sites (`modelos-de-sites`, GitHub Pages aberto) e uma seção no mostruário que leve de volta ao portfólio.
+
+Escopo: `index.html` do portfólio e `index.html` do repositório `modelos-de-sites`. Sem CSS novo no portfólio (reaproveita `.bloco-id`, `.cab secao-cab`, `.prosa`, `.pp-links`).
+
+## Mudanças no portfólio
+
+| Antes | Depois |
+|---|---|
+| `index.html` sem menção ao mostruário | nova §05 `id="mostruario"` "Mostruário de sites" com link para `https://kelvinoliveiracode.github.io/modelos-de-sites/` e para o repositório; copy PT/EN |
+| seções seguintes numeradas 05, 06, 07 | renumeradas para 06 (O repositório), 07 (Meu papel), 08 (Bootcamps) |
+
+## Mudanças no mostruário (`modelos-de-sites`)
+
+| Antes | Depois |
+|---|---|
+| sem seção de autor | nova seção `.autor` `id="portfolio"` entre `.processo` e `.contato`, com "Ver o portfólio" e "GitHub" |
+| nav e rodapé sem link para o portfólio | link `#portfolio` no nav do topo e no nav do rodapé |
+| sem CSS para a seção de autor | bloco `.autor` + regra responsiva em `@media (max-width:1080px)` |
+
+## Verificação desta onda
+
+- Portfólio: 10 seções abre/fecha, 37 `div` abre/fecha, zero travessão, numeração `01`–`08` sequencial, `id="mostruario"` e links do mostruário presentes.
+- Mostruário: 5 seções abre/fecha, 18 `div` abre/fecha, zero travessão, `id="portfolio"`, link do portfólio e 2 ocorrências de `#portfolio`.
+
+Entrega via pull request nas duas pontas (`MODO_ENTREGA = pull_request`); as mudanças só entram no ar quando o dono faz o merge.
