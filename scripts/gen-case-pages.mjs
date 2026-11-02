@@ -68,7 +68,6 @@ function rodape(prefix) {
       <li><a href="mailto:kelvinrebelosw@gmail.com">kelvinrebelosw@gmail.com</a></li>
       <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener">(91) 98613-4599</a></li>
       <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub — KelvinOliveiraCode</a></li>
-      <li><a href="https://web.dio.me/users/kelvinrebelosw" target="_blank" rel="noopener">DIO — kelvinrebelosw</a></li>
     </ul>
   </div>
 </footer>`;
@@ -96,7 +95,7 @@ function convite() {
 <section class="convite" id="contato">
   <span class="rotulo" data-pt="Contato" data-en="Contact">Contato</span>
   <h2 data-pt="Vamos conversar sobre o seu problema." data-en="Let's talk about your problem.">Vamos conversar sobre o seu problema.</h2>
-  <p data-pt="Tenho interesse em oportunidades em dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame." data-en="I'm interested in opportunities in data, backend, cybersecurity and IT. If your team needs someone who has already put projects live and keeps them running, get in touch.">Tenho interesse em oportunidades em dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.</p>
+  <p data-pt="Tenho interesse em oportunidades em IA e agentes, dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame." data-en="I'm interested in opportunities in AI and agents, data, backend, cybersecurity and IT. If your team needs someone who has already put projects live and keeps them running, get in touch.">Tenho interesse em oportunidades em IA e agentes, dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.</p>
   <div class="acoes">
     <a class="btn-solido" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener" data-pt="LinkedIn ↗" data-en="LinkedIn ↗">LinkedIn ↗</a>
     <a class="btn-linha" href="mailto:kelvinrebelosw@gmail.com">kelvinrebelosw@gmail.com</a>
@@ -157,10 +156,17 @@ function gerarCaso(slug, anterior, proximo) {
   const papel = dicto.pt.caso.papel;
   const papelEn = dicto.en.caso.papel;
 
+  // Descrição vem da API do GitHub; normaliza termos fora do posicionamento
+  // sem alterar o fato descrito (a fonte crua segue em data/repos.json).
+  const ajustarDescricao = (texto) => String(texto)
+    .replace(/escrit[oa] a m[ãa]o/gi, 'implementado do zero')
+    .replace(/\ba m[ãa]o\b/gi, 'do zero')
+    .replace(/\blaudo\b/gi, 'relatório');
+
   const descRepo = repo && repo.description
     ? {
-      pt: String(repo.description).split(' | ')[0],
-      en: String(repo.description).includes(' | ') ? String(repo.description).split(' | ')[1] : String(repo.description)
+      pt: ajustarDescricao(String(repo.description).split(' | ')[0]),
+      en: ajustarDescricao(String(repo.description).includes(' | ') ? String(repo.description).split(' | ')[1] : String(repo.description))
     }
     : { pt: 'Repositório no GitHub.', en: 'Repository on GitHub.' };
 

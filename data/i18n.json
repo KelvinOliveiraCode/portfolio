@@ -25,7 +25,7 @@
         "dados": "Dados & IA — pipelines em Python, machine learning com scikit-learn e XGBoost, dashboards e agentes com validação anti-alucinação.",
         "backend": "Backend — APIs REST com Spring Boot 3 e Java 21, padrões de projeto com propósito, testes e CI.",
         "web": "Web & Produto — sites estáticos em HTML/CSS/JS puro, PWAs offline-first e produtos que saem da ideia ao deploy.",
-        "cyber": "Cibersegurança — pentest com laudo por CWE, detecção com alertas MITRE ATT&CK, honeypot e conformidade LGPD.",
+        "cyber": "Cibersegurança — pentest com relatório por CWE, detecção com alertas MITRE ATT&CK, honeypot e conformidade LGPD.",
         "infra": "Redes & Infraestrutura — topologia LAN, Modbus TCP do zero, survey de Wi-Fi, VPC em camadas e infraestrutura como código.",
         "ti": "TI & Suporte — service desk com SLA, automação de estações, backup com verificação por hash e onboarding de câmeras."
       }

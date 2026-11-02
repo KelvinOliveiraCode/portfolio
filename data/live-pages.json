@@ -1,7 +1,11 @@
 {
- "verifierizedAt": "2026-10-25",
- "source": "index.html aprovado do repo; cada URL testada com HTTP 200 em 2026-10-25",
+ "verifiedAt": "2026-11-01",
+ "source": "cada URL abaixo foi testada com HTTP 200 em 2026-11-01; a lista sai de uma varredura nos 103 repositórios públicos (kelvinoliveiracode.github.io/<repo>/)",
  "pages": [
+  {
+   "repo": "chopp-gourmet",
+   "url": "https://kelvinoliveiracode.github.io/chopp-gourmet/"
+  },
   {
    "repo": "cloud4all",
    "url": "https://kelvinoliveiracode.github.io/cloud4all/"
@@ -9,6 +13,10 @@
   {
    "repo": "dashboard-vendas-porsche-dio",
    "url": "https://kelvinoliveiracode.github.io/dashboard-vendas-porsche-dio/"
+  },
+  {
+   "repo": "esquematicoedu",
+   "url": "https://kelvinoliveiracode.github.io/esquematicoedu/"
   },
   {
    "repo": "garimpo",
@@ -27,12 +35,20 @@
    "url": "https://kelvinoliveiracode.github.io/kodaros-landing/"
   },
   {
+   "repo": "kodaros-mostruario",
+   "url": "https://kelvinoliveiracode.github.io/kodaros-mostruario/"
+  },
+  {
    "repo": "modelos-de-sites",
    "url": "https://kelvinoliveiracode.github.io/modelos-de-sites/"
   },
   {
    "repo": "portfolio",
    "url": "https://kelvinoliveiracode.github.io/portfolio/"
+  },
+  {
+   "repo": "techcards",
+   "url": "https://kelvinoliveiracode.github.io/techcards/"
   },
   {
    "repo": "tessumax-landing",

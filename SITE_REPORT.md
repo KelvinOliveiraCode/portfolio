@@ -40,3 +40,35 @@ Cada trecho trocou PT e EN juntos (data-pt/data-en / data-*-content), sem tocar 
 ## Grep final (critério 8)
 
 `grep -rniE "escrev|à mão|by hand|Curso Ciência" index.html sobre/ projetos/index.html certificados/ 404.html` → **vazio** (0 ocorrências). Nenhuma citação histórica desses padrões permanece nas páginas-alvo. Referência legítima do TF-IDF no `projetos/*/` (fora do escopo) não aparece nas cinco páginas editadas.
+
+---
+
+# Terceira onda — branch `docs/site-copy-wave-3`
+
+Escopo: fechar a dívida da onda 1 (páginas de caso), corrigir números que envelheceram, separar o papel do autor dos bootcamps e tirar do ar um link morto.
+
+Zona alterada: `index.html`, `sobre/index.html`, `projetos/index.html`, `certificados/index.html`, `data/destaques.json`, `data/i18n.json`, `data/live-pages.json`, `scripts/gen-case-pages.mjs` e as 11 páginas de caso regeneradas por ele.
+Zonas intocadas: CSS, `js/`, `data/repos.json` (dados crus da API do GitHub) e a lógica de layout.
+
+## Mudanças
+
+| Arquivo | Antes | Depois |
+|---|---|---|
+| `index.html` (og/twitter description) | resumo parcial | frase oficial completa, PT e EN |
+| `index.html` (§números) | "103 repositórios" sem data; "13 páginas" sem método | "103 repositórios" com nota "contagem de 01/11/2026"; "13 páginas, cada URL testada com HTTP 200 em 01/11/2026" |
+| `index.html` (§06) | "Meu papel" diluído entre os bootcamps | §06 "Meu papel" separada; nova §07 "Bootcamps" com os 4 bootcamps da DIO e o projeto entregue em cada um |
+| `index.html` (rodapé) | "GitHub de Kelvin" | "Meu GitHub" (primeira pessoa consistente) |
+| `sobre/`, `projetos/`, `certificados/` (head) | descriptions antigas | frase oficial; `projetos` com title "Projetos — Kelvin Oliveira, Engenheiro de Sistemas de IA" |
+| `data/destaques.json` | "à mão"/"by hand", "laudo" | "do zero"/"próprio", "relatório" |
+| `data/i18n.json` | "laudo por CWE" | "relatório por CWE" |
+| `data/live-pages.json` | `verifiedAt` desatualizado | `2026-11-01`, 13 páginas verificadas (inclui chopp-gourmet, esquematicoedu, kodaros-mostruario, techcards) |
+| `scripts/gen-case-pages.mjs` | contato sem "IA e agentes"; descrição do repo copiada crua | contato atualizado; `ajustarDescricao()` normaliza "escrito à mão"→"implementado do zero" e "laudo"→"relatório" na descrição vinda do GitHub |
+| `projetos/*/index.html` (11) | "laudo por CWE", "TF-IDF à mão", "construído à mão" | regeneradas, sem os termos banidos |
+| Todas as 16 páginas HTML | link `web.dio.me/users/kelvinrebelosw` (HTTP 404) e no `sameAs` do JSON-LD | link removido; perfil DIO virou pergunta em `SITE_NEEDS_INPUT.md` |
+
+## Verificação executada nesta onda
+
+- `node scripts/gen-case-pages.mjs` → exit 0, 11 páginas.
+- Validação de `data/*.json` e dos blocos JSON-LD (PT e EN) → todos parseiam.
+- Crawl das 16 páginas HTML: 236 links internos, **0 quebrados**; 41 URLs externas, **1 não-200** (`linkedin.com/in/kelvin-oliveira-code/` responde 999 para requisições automáticas — bloqueio anti-bot, esperado; aberto manualmente responde normal).
+- Grep de termos banidos → restam apenas as 3 descrições cruas em `data/repos.json` (texto da API do GitHub, não é copy do autor — ver `SITE_NEEDS_INPUT.md` item 8) e a própria regra de substituição no script.
