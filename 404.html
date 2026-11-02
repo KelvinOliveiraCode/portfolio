@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title data-pt-content="página não encontrada | Kelvin Oliveira" data-en-content="page not found | Kelvin Oliveira">página não encontrada | Kelvin Oliveira</title>
-<meta name="description" content="Engenheiro de Sistemas de IA — Workflows Agênticos e Arquitetura Multiagente aplicados à criação e ao desenvolvimento de softwares, sites, sistemas, infraestrutura, cibersegurança, dados, backend e redes."
-      data-pt-content="Engenheiro de Sistemas de IA — Workflows Agênticos e Arquitetura Multiagente aplicados à criação e ao desenvolvimento de softwares, sites, sistemas, infraestrutura, cibersegurança, dados, backend e redes."
-      data-en-content="AI Systems Engineer — Agentic Workflows and Multi-Agent Architecture applied to building and developing software, websites, systems, infrastructure, cybersecurity, data, backend and networks.">
+<meta name="description" content="Engenheiro de Sistemas de IA: Workflows Agênticos e Arquitetura Multiagente aplicados à criação e ao desenvolvimento de softwares, sites, sistemas, infraestrutura, cibersegurança, dados, backend e redes."
+      data-pt-content="Engenheiro de Sistemas de IA: Workflows Agênticos e Arquitetura Multiagente aplicados à criação e ao desenvolvimento de softwares, sites, sistemas, infraestrutura, cibersegurança, dados, backend e redes."
+      data-en-content="AI Systems Engineer: Agentic Workflows and Multi-Agent Architecture applied to building and developing software, websites, systems, infrastructure, cybersecurity, data, backend and networks.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
@@ -151,7 +151,7 @@
 </nav>
 
 <main id="inicio">
-  <span class="rotulo"><b>404</b> — <span data-pt="página não encontrada" data-en="page not found">página não encontrada</span></span>
+  <span class="rotulo"><b>404</b> · <span data-pt="página não encontrada" data-en="page not found">página não encontrada</span></span>
   <h1 data-pt="Esta página saiu do ar." data-en="This page is off the air.">Esta página saiu do ar.</h1>
   <p class="texto" data-pt="O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial." data-en="The link you followed does not exist (or never did). The portfolio, the projects and the contact details are all on the home page.">O link que você seguiu não existe (ou nunca existiu). O portfólio, os projetos e os contatos estão todos na página inicial.</p>
   <div class="acoes">
@@ -168,12 +168,12 @@
     try {
       var saved = localStorage.getItem(KEY);
       if (saved === 'en' || saved === 'pt') lang = saved;
-      // sem preferência salva, segue o navegador — mesma regra do site
+      // sem preferência salva, segue o navegador, mesma regra do site
       else if ((navigator.language || '').toLowerCase().indexOf('pt') !== 0) lang = 'en';
     } catch (e) { /* ignora */ }
 
     // No preview local (404.html aberto direto), os links absolutos da
-    // URL canônica viram relativos — assim a navegação de revisão fica
+    // URL canônica viram relativos, assim a navegação de revisão fica
     // no próprio projeto. No GitHub Pages, servido em caminho fundo, os
     // links seguem absolutos (é o único jeito de acertar a raiz).
     if (/\/404\.html$/.test(location.pathname)) {

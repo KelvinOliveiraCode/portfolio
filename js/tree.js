@@ -26,6 +26,9 @@
     return !!(LIVE && LIVE.pages && LIVE.pages.some(function (p) { return p.repo === nome; }));
   }
   function formatKb(kb) { return kb >= 1024 ? (kb / 1024).toFixed(1) + ' MB' : kb + ' KB'; }
+  function semTravessao(s) {
+    return String(s || '').replace(/\s*\u2014\s*/, ': ').replace(/\s*\u2014\s*/g, ', ');
+  }
 
   /* ---------- construção ---------- */
 
@@ -77,7 +80,7 @@
         liFolha.innerHTML =
           '<button type="button" class="nodo" data-contexto=\'{"tipo":"repo","name":' + esc(JSON.stringify(repo.name)) + '}\'>' +
             '<span class="marca-nodo">' + esc(repo.name) + '</span>' +
-            (repo.language ? '<span class="versus">— ' + esc(repo.language) + '</span>' : '') +
+            (repo.language ? '<span class="versus">· ' + esc(repo.language) + '</span>' : '') +
             (repo.sizeKb ? '<span class="versus">· ' + formatKb(repo.sizeKb) + '</span>' : '') +
             (estaNoAr(repo.name) ? '<span class="no-ar">' + esc(DICT.strip.noAr) + '</span>' : '') +
           '</button>';
@@ -173,7 +176,7 @@
       var repo = (REPOS.repos || []).filter(function (r) { return r.name === nome; })[0] || { name: nome };
       titulo = repo.name;
       tamanho = repo.sizeKb ? formatKb(repo.sizeKb) : '';
-      desc = repo.description || DICT.arvore.semDescricao;
+      desc = semTravessao(repo.description || DICT.arvore.semDescricao);
       pilha = [repo.language].filter(Boolean).concat((AREAS[nome] || []).map(function (a) { return DICT.areasNomes[a] || a; }));
       links.push({ href: 'https://github.com/KelvinOliveiraCode/' + repo.name, texto: DICT.arvore.abrirNoGithub });
       if (estaNoAr(repo.name)) links.push({ href: 'https://kelvinoliveiracode.github.io/' + repo.name + '/', texto: DICT.arvore.paginaNoAr });

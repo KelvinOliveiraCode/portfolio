@@ -1,4 +1,4 @@
-/* gen-case-pages.mjs — gera as 11 páginas de caso de estudo em
+/* gen-case-pages.mjs: gera as 11 páginas de caso de estudo em
    projetos/<slug>/index.html a partir dos dados curados:
      data/destaques.json  → textos do caso (título, o-que, entregas, métricas)
      data/repos.json      → linguagem, tamanho medido, descrição real
@@ -64,10 +64,10 @@ function rodape(prefix) {
   <div>
     <h3 data-pt="Contato" data-en="Contact">Contato</h3>
     <ul>
-      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn — kelvin-oliveira-code</a></li>
+      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn: kelvin-oliveira-code</a></li>
       <li><a href="mailto:kelvinrebelosw@gmail.com">kelvinrebelosw@gmail.com</a></li>
       <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener">(91) 98613-4599</a></li>
-      <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub — KelvinOliveiraCode</a></li>
+      <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub: KelvinOliveiraCode</a></li>
     </ul>
   </div>
 </footer>`;
@@ -159,6 +159,8 @@ function gerarCaso(slug, anterior, proximo) {
   // Descrição vem da API do GitHub; normaliza termos fora do posicionamento
   // sem alterar o fato descrito (a fonte crua segue em data/repos.json).
   const ajustarDescricao = (texto) => String(texto)
+    .replace(/\s*\u2014\s*/, ': ')
+    .replace(/\s*\u2014\s*/g, ', ')
     .replace(/escrit[oa] a m[ãa]o/gi, 'implementado do zero')
     .replace(/\ba m[ãa]o\b/gi, 'do zero')
     .replace(/\blaudo\b/gi, 'relatório');
@@ -188,7 +190,7 @@ function gerarCaso(slug, anterior, proximo) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title data-pt-content="${esc(titulo.pt)} — Kelvin Oliveira" data-en-content="${esc(titulo.en)} — Kelvin Oliveira">${esc(titulo.pt)} — Kelvin Oliveira</title>
+<title data-pt-content="${esc(titulo.pt)} · Kelvin Oliveira" data-en-content="${esc(titulo.en)} · Kelvin Oliveira">${esc(titulo.pt)} · Kelvin Oliveira</title>
 <meta name="description" content="${esc(descMeta.pt)}"
       data-pt-content="${esc(descMeta.pt)}"
       data-en-content="${esc(descMeta.en)}">
@@ -231,7 +233,7 @@ ${nav('../../')}
 
   <header class="hero">
     <div class="hero-texto">
-      <span class="rotulo eyebrow" data-pt="Caso de estudo — ${esc(areaNome.pt)}" data-en="Case study — ${esc(areaNome.en)}">Caso de estudo — ${esc(areaNome.pt)}</span>${badge ? ' ' + badge : ''}
+      <span class="rotulo eyebrow" data-pt="Caso de estudo · ${esc(areaNome.pt)}" data-en="Case study · ${esc(areaNome.en)}">Caso de estudo · ${esc(areaNome.pt)}</span>${badge ? ' ' + badge : ''}
       <h1${attrPtEn(titulo.pt, titulo.en)}>${esc(titulo.pt)}</h1>
       <p class="linha-lead"${attrPtEn(lead.pt, lead.en)}>${esc(lead.pt)}</p>
       <p class="linha-meta">${metaHero}</p>
@@ -242,7 +244,7 @@ ${numeros ? `
   <section class="secao" id="metricas">
     <div class="wrap-interno">
       <div class="secao-cab">
-        <span class="num">01 — <span data-pt="Números" data-en="Numbers">Números</span></span>
+        <span class="num">01 · <span data-pt="Números" data-en="Numbers">Números</span></span>
         <h2 data-pt="O que os dados mostram." data-en="What the data shows.">O que os dados mostram.</h2>
 
       </div>
@@ -254,7 +256,7 @@ ${numeros}
   <section class="secao" id="entregas">
     <div class="wrap-interno">
       <div class="secao-cab">
-        <span class="num">${numeros ? '02' : '01'} — <span data-pt="O que foi entregue" data-en="What was delivered">O que foi entregue</span></span>
+        <span class="num">${numeros ? '02' : '01'} · <span data-pt="O que foi entregue" data-en="What was delivered">O que foi entregue</span></span>
         <h2 data-pt="Entregas nomeadas." data-en="Deliverables, named.">Entregas nomeadas.</h2>
 
       </div>
@@ -266,7 +268,7 @@ ${numeros}
   <section class="secao" id="stack-papel">
     <div class="wrap-interno">
       <div class="secao-cab">
-        <span class="num">${numeros ? '03' : '02'} — <span data-pt="Stack & papel" data-en="Stack & role">Stack &amp; papel</span></span>
+        <span class="num">${numeros ? '03' : '02'} · <span data-pt="Stack & papel" data-en="Stack & role">Stack &amp; papel</span></span>
         <h2 data-pt="Com o que foi feito." data-en="What it was built with.">Com o que foi feito.</h2>
 
       </div>
@@ -280,9 +282,9 @@ ${numeros}
   <section class="secao" id="explorador">
     <div class="wrap-interno">
       <div class="secao-cab">
-        <span class="num">${numeros ? '04' : '03'} — <span data-pt="No repositório" data-en="In the repository">No repositório</span></span>
+        <span class="num">${numeros ? '04' : '03'} · <span data-pt="No repositório" data-en="In the repository">No repositório</span></span>
         <h2 data-pt="O código por trás do caso." data-en="The code behind the case.">O código por trás do caso.</h2>
-        <p class="medida" data-pt="O explorador abaixo abre o GitHub inteiro — este caso está pré-selecionado." data-en="The explorer below opens the whole GitHub — this case is pre-selected.">O explorador abaixo abre o GitHub inteiro — este caso está pré-selecionado.</p>
+        <p class="medida" data-pt="O explorador abaixo abre o GitHub inteiro, com este caso já pré-selecionado." data-en="The explorer below opens the whole GitHub, with this case already selected.">O explorador abaixo abre o GitHub inteiro, com este caso já pré-selecionado.</p>
 
       </div>
       <div class="arvore-zona">
