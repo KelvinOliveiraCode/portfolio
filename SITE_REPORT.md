@@ -1,4 +1,4 @@
-# SITE_REPORT.md — Segunda onda da reescrita de copy (branch `docs/site-copy-rewrite`)
+﻿# SITE_REPORT.md — Segunda onda da reescrita de copy (branch `docs/site-copy-rewrite`)
 
 Zona alterada: `index.html`, `sobre/index.html`, `projetos/index.html`, `certificados/index.html`, `404.html`.
 Zonas intocadas: `data/`, `js/`, `projetos/*/index.html`, `destaques.json`, CSS e logicas.
@@ -118,3 +118,45 @@ Escopo: `index.html` do portfólio e `index.html` do repositório `modelos-de-si
 - Mostruário: 5 seções abre/fecha, 18 `div` abre/fecha, zero travessão, `id="portfolio"`, link do portfólio e 2 ocorrências de `#portfolio`.
 
 Entrega via pull request nas duas pontas (`MODO_ENTREGA = pull_request`); as mudanças só entram no ar quando o dono faz o merge.
+
+---
+
+# Quinta onda — consistência de copy e links por domínio (branch `fix/site-copy-wave-4`)
+
+Pedido do dono: uma passada de consistência em cima do site publicado — deduplicar o parágrafo de agentes, tirar ambiguidade de navegação, provar cada nome citado no §04 com link de repositório, recolocar os casos de estudo nos certificados e fechar os links mortos do Garimpo.
+
+Zona alterada: `index.html`, `sobre/index.html`, `certificados/index.html`, `projetos/index.html` e `css/index.css`.
+Zonas intocadas: `data/`, `js/`, páginas de caso, workflow de deploy.
+
+## Mudanças
+
+| # | Arquivo | Antes | Depois |
+|---|---|---|---|
+| A1 | `index.html` (§01) | parágrafo repetia "Construo cada projeto orquestrando agentes de IA que implementam na stack que o projeto pedir" (já dito no hero) | "Levo cada projeto até o fim: do pipeline de dados à API em Spring Boot..." — só a parte que o hero não diz |
+| A2 | `index.html` (§números) | legendas sem parênteses: "repositórios públicos no GitHub", "páginas no ar, clicáveis agora", "bootcamps corporativos com seleção", "de formação concluída na DIO" | "repositórios públicos (GitHub)", "páginas no ar (clicáveis agora)", "bootcamps corporativos (com seleção)", "de formação concluída (DIO)" |
+| A3 | `index.html` (§02) | "o explorador abaixo abre meu GitHub inteiro" | "a seção 06 abre meu GitHub inteiro" (o explorador é a §06, não o que está logo abaixo) |
+| A4 | `index.html` (§07) + `sobre/index.html` | "publicar o deploy direto do meu repositório, sem plataforma no meio" | "publicar os projetos direto do meu próprio repositório (GitHub Pages na maioria, Vercel no Garimpo)" — afirmação verificável, sem promessa absoluta |
+| A5 | `index.html` (§04) | "Cada domínio abaixo tem repositório público ligado: mesmo nome, mesma stack, mesmo histórico", um link por domínio, com KodaGrid / Sistemas / Backend sem prova | "Cada domínio abaixo liga aos repositórios públicos que o sustentam"; cada domínio liga a **todos** os repos que o sustentam (2 a 4 por linha), KodaGrid sai, Terraform entra |
+| A6 | `sobre/index.html` (competências) | Windows Server e Active Directory dentro de "Produto e negócio"; "Idiomas" tinha sido removido | Windows Server e Active Directory em "Redes e infraestrutura"; "Idiomas" volta como 9ª célula ("Português (nativo)", "Inglês (técnico e leitura)") sem mexer nos 8 grupos do posicionamento |
+| A7 | `index.html` (card Garimpo) + `projetos/index.html` | "SEO e llms.txt" (o repo não tem `llms.txt`); link do site ia para `kelvinoliveiracode.github.io/garimpo/` | item removido; link do site vai para `https://garimpo-oficial.vercel.app/` (endereço oficial); "filtros e wishlist" mantido, comprovado no código |
+| A8 | `certificados/index.html` | os dois links "caso de estudo →" tinham sido removidos em `f533614` | restaurados: Bradesco → `../projetos/dio-lab-bia-do-futuro/`, CI&T → `../projetos/kodapay-api/` |
+| A11 | `index.html` (card Cloud4All) | "Contagens conferidas... Aprovado para apresentação no CONNEPI 2026, em Fortaleza." no mesmo parágrafo | CONNEPI em `pp-nota` próprio, na linha seguinte |
+| — | `css/index.css` | `.dominios li` é `flex-direction: column`, então as linhas com vários links quebrariam um por linha com o "·" solto | nova classe `.dominios-links` agrupa a linha de links e mantém a quebra natural dentro dela |
+
+## Provas consultadas
+
+- `data/repos.json` (103 repos, espelho da API do GitHub): existem `olaria`, `slidestage`, `javaforge`, `garimpo`, `kodaros-landing`, `cloud4all`, `modelos-de-sites`, `kodapay-api`, `portal-cliente-oauth2-rbac`, `iac-terraform-github-actions`, `infra-as-code-lab`, `finops-dashboard`, `vpc-3-tier-segura`, `pentest-lab-scanner`, `siem-logs-lab`, `deteccao-de-fraudes`, `kodabudget-api`, `modbus-scanner`, `wifi-site-survey`. **Não existe** `kodagrid` — por isso a citação saiu.
+- Garimpo: `canonical`, `og:url`, `sitemap` e `robots` do próprio site apontam para `https://garimpo-oficial.vercel.app/`; o repo **não tem** `llms.txt`; a wishlist existe (`localStorage` `garimpo_wishlist`, `wishlist-btn`, filtro de wishlist).
+- O `homepage` do Garimpo em `data/repos.json` continua `kelvinoliveiracode.github.io/garimpo/` **de propósito**: é o espelho do metadado do GitHub. Só os links editoriais do site apontam para o endereço Vercel.
+
+## Verificação desta onda
+
+- `—` (travessão) em `*.html`: **0 ocorrências** (grep na árvore inteira).
+- Frase oficial: **1 variante única de 208 caracteres** em todas as páginas (meta description, og, twitter, JSON-LD) — sem divergência de pontuação.
+- Diff: 4 páginas + 1 CSS; todos os links novos conferidos contra `data/repos.json`.
+
+## Itens deixados para o dono
+
+- Publicar ou não o caso "Como construo com agentes" (pergunta em `SITE_NEEDS_INPUT.md`).
+- Atualizar as descrições dos 3 repositórios no GitHub (`ATUALIZAR_DESCRICOES_NO_GITHUB` veio `no`): `calculadora-enlace-cobre`, `certificador-cobre-simulado`, `kb-search`.
+- Endereço oficial do Garimpo fora do site (e-books, Hotmart, Instagram, WhatsApp antigo) — registrado no `SITE_NEEDS_INPUT.md` do `kodaros-ferramentas`.

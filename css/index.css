@@ -87,6 +87,7 @@
 }
 .dominios strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
 .dominios span { font-size: var(--fs-2); color: var(--muted); }
+.dominios-links { font-family: var(--font-mono); font-size: var(--fs-1); line-height: 1.7; color: var(--muted); }
 .dominios a {
   font-family: var(--font-mono); font-size: var(--fs-1);
   color: var(--accent); text-decoration: none;
