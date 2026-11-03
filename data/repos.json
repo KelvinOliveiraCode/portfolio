@@ -5,7 +5,7 @@
  "repos": [
   {
    "name": "agente-suporte-bancario-rag",
-   "description": "Projeto funcional — agente-suporte-bancario-rag",
+   "description": "Projeto funcional · agente-suporte-bancario-rag",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -16,7 +16,7 @@
   },
   {
    "name": "analisador-logs-ssh-mitre",
-   "description": "Projeto funcional — analisador-logs-ssh-mitre",
+   "description": "Projeto funcional · analisador-logs-ssh-mitre",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -27,7 +27,7 @@
   },
   {
    "name": "analisador-pcap-anomalias",
-   "description": "Projeto funcional — analisador-pcap-anomalias",
+   "description": "Projeto funcional · analisador-pcap-anomalias",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -38,7 +38,7 @@
   },
   {
    "name": "analise-churn-cohort",
-   "description": "Projeto funcional — analise-churn-cohort",
+   "description": "Projeto funcional · analise-churn-cohort",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -49,7 +49,7 @@
   },
   {
    "name": "api-gestao-frota-veiculos",
-   "description": "Projeto funcional — api-gestao-frota-veiculos",
+   "description": "Projeto funcional · api-gestao-frota-veiculos",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -60,7 +60,7 @@
   },
   {
    "name": "app-bancario-digital",
-   "description": "Projeto funcional — app-bancario-digital",
+   "description": "Projeto funcional · app-bancario-digital",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -71,7 +71,7 @@
   },
   {
    "name": "auditor-headers-seguranca",
-   "description": "Projeto funcional — auditor-headers-seguranca",
+   "description": "Projeto funcional · auditor-headers-seguranca",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -82,7 +82,7 @@
   },
   {
    "name": "backup-gfs-verificacao-hash",
-   "description": "Projeto funcional — backup-gfs-verificacao-hash",
+   "description": "Projeto funcional · backup-gfs-verificacao-hash",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -93,7 +93,7 @@
   },
   {
    "name": "backup-remoto-s3-criptografado",
-   "description": "Projeto funcional — backup-remoto-s3-criptografado",
+   "description": "Projeto funcional · backup-remoto-s3-criptografado",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -104,7 +104,7 @@
   },
   {
    "name": "bot-fii-sentimento",
-   "description": "Projeto funcional — bot-fii-sentimento",
+   "description": "Projeto funcional · bot-fii-sentimento",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -133,7 +133,7 @@
   },
   {
    "name": "calculadora-financeira-pwa",
-   "description": "Projeto funcional — calculadora-financeira-pwa",
+   "description": "Projeto funcional · calculadora-financeira-pwa",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -209,7 +209,7 @@
   },
   {
    "name": "classificador-documentos-fiscais",
-   "description": "Projeto funcional — classificador-documentos-fiscais",
+   "description": "Projeto funcional · classificador-documentos-fiscais",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -220,7 +220,7 @@
   },
   {
    "name": "cloud4all",
-   "description": "Cloud4All — a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA",
+   "description": "Cloud4All · a nuvem ideal por regra aberta: 124 servicos de 8 marcas, filtro deterministico, modo claro/escuro e catalogo aberto (JSON + llms.txt) para qualquer chat de IA",
    "language": "JavaScript",
    "homepage": "https://kelvinoliveiracode.github.io/cloud4all/",
    "topics": [],
@@ -231,7 +231,7 @@
   },
   {
    "name": "cofre-senhas-aes256",
-   "description": "Projeto funcional — cofre-senhas-aes256",
+   "description": "Projeto funcional · cofre-senhas-aes256",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -260,7 +260,7 @@
   },
   {
    "name": "container-scanner-imagens",
-   "description": "Projeto funcional — container-scanner-imagens",
+   "description": "Projeto funcional · container-scanner-imagens",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -271,7 +271,7 @@
   },
   {
    "name": "dashboard-metricas-site",
-   "description": "Projeto funcional — dashboard-metricas-site",
+   "description": "Projeto funcional · dashboard-metricas-site",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -282,7 +282,7 @@
   },
   {
    "name": "dashboard-sla-helpdesk",
-   "description": "Projeto funcional — dashboard-sla-helpdesk",
+   "description": "Projeto funcional · dashboard-sla-helpdesk",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -313,7 +313,7 @@
   },
   {
    "name": "dashboard-vendas-streamlit",
-   "description": "Projeto funcional — dashboard-vendas-streamlit",
+   "description": "Projeto funcional · dashboard-vendas-streamlit",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -362,7 +362,7 @@
   },
   {
    "name": "desligamento-agendado-frota",
-   "description": "Projeto funcional — desligamento-agendado-frota",
+   "description": "Projeto funcional · desligamento-agendado-frota",
    "language": "PowerShell",
    "homepage": null,
    "topics": [],
@@ -394,7 +394,7 @@
   },
   {
    "name": "detector-deepfake-audio",
-   "description": "Projeto funcional — detector-deepfake-audio",
+   "description": "Projeto funcional · detector-deepfake-audio",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -405,7 +405,7 @@
   },
   {
    "name": "dio-lab-bia-do-futuro",
-   "description": "BIA — Agente financeiro bancário com IA generativa, anti-alucinação em 4 camadas | Banking AI agent with 4-layer anti-hallucination",
+   "description": "BIA · Agente financeiro bancário com IA generativa, anti-alucinação em 4 camadas | Banking AI agent with 4-layer anti-hallucination",
    "language": "Python",
    "homepage": null,
    "topics": [
@@ -427,7 +427,7 @@
   },
   {
    "name": "editor-json-visual",
-   "description": "Projeto funcional — editor-json-visual",
+   "description": "Projeto funcional · editor-json-visual",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -467,7 +467,7 @@
   },
   {
    "name": "etl-vendas-datawarehouse",
-   "description": "Projeto funcional — etl-vendas-datawarehouse",
+   "description": "Projeto funcional · etl-vendas-datawarehouse",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -498,7 +498,7 @@
   },
   {
    "name": "finops-alerta-orcamento",
-   "description": "Projeto funcional — finops-alerta-orcamento",
+   "description": "Projeto funcional · finops-alerta-orcamento",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -548,7 +548,7 @@
   },
   {
    "name": "forense-memoria-simples",
-   "description": "Projeto funcional — forense-memoria-simples",
+   "description": "Projeto funcional · forense-memoria-simples",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -559,7 +559,7 @@
   },
   {
    "name": "garimpo",
-   "description": "Curadoria de 131 ofertas Shopee: filtros, wishlist e SEO — 100% client-side | Curated Shopee deals site, 100% client-side",
+   "description": "Curadoria de 131 ofertas Shopee: filtros, wishlist e SEO · 100% client-side | Curated Shopee deals site, 100% client-side",
    "language": "HTML",
    "homepage": "https://kelvinoliveiracode.github.io/garimpo/",
    "topics": [
@@ -579,7 +579,7 @@
   },
   {
    "name": "gerador-curriculos-ats-v2",
-   "description": "Projeto funcional — gerador-curriculos-ats-v2",
+   "description": "Projeto funcional · gerador-curriculos-ats-v2",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -630,7 +630,7 @@
   },
   {
    "name": "honeypot-portas-evidencia",
-   "description": "Projeto funcional — honeypot-portas-evidencia",
+   "description": "Projeto funcional · honeypot-portas-evidencia",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -641,7 +641,7 @@
   },
   {
    "name": "iac-terraform-github-actions",
-   "description": "Projeto funcional — iac-terraform-github-actions",
+   "description": "Projeto funcional · iac-terraform-github-actions",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -670,7 +670,7 @@
   },
   {
    "name": "inventario-ativos-ti",
-   "description": "Projeto funcional — inventario-ativos-ti",
+   "description": "Projeto funcional · inventario-ativos-ti",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -710,7 +710,7 @@
   },
   {
    "name": "KelvinOliveiraCode",
-   "description": "Perfil — Kelvin Oliveira | Dados, IA e produtos digitais",
+   "description": "Perfil · Kelvin Oliveira | Dados, IA e produtos digitais",
    "language": null,
    "homepage": "https://kelvinoliveiracode.github.io/portfolio/",
    "topics": [
@@ -778,7 +778,7 @@
   },
   {
    "name": "kodapay-api-v2",
-   "description": "Projeto funcional — kodapay-api-v2",
+   "description": "Projeto funcional · kodapay-api-v2",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -809,7 +809,7 @@
   },
   {
    "name": "kodaros-landing",
-   "description": "KODAROS — plataforma: 8 e-books, diagnóstico interativo e ferramentas | KODAROS platform landing with interactive diagnosis funnel",
+   "description": "KODAROS · plataforma: 8 e-books, diagnóstico interativo e ferramentas | KODAROS platform landing with interactive diagnosis funnel",
    "language": "HTML",
    "homepage": "https://kelvinoliveiracode.github.io/kodaros-landing/",
    "topics": [
@@ -829,7 +829,7 @@
   },
   {
    "name": "kodaros-mostruario",
-   "description": "Mostruário de landing pages — 50 demos, uma para cada nicho",
+   "description": "Mostruário de landing pages · 50 demos, uma para cada nicho",
    "language": "HTML",
    "homepage": null,
    "topics": [],
@@ -858,7 +858,7 @@
   },
   {
    "name": "loja-ebooks-kodaros",
-   "description": "Projeto funcional — loja-ebooks-kodaros",
+   "description": "Projeto funcional · loja-ebooks-kodaros",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -869,7 +869,7 @@
   },
   {
    "name": "loja-virtual-completa",
-   "description": "Projeto funcional — loja-virtual-completa",
+   "description": "Projeto funcional · loja-virtual-completa",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -880,7 +880,7 @@
   },
   {
    "name": "mapeador-rede-lan-arp",
-   "description": "Projeto funcional — mapeador-rede-lan-arp",
+   "description": "Projeto funcional · mapeador-rede-lan-arp",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -891,7 +891,7 @@
   },
   {
    "name": "marketplace-servicos-freelance",
-   "description": "Projeto funcional — marketplace-servicos-freelance",
+   "description": "Projeto funcional · marketplace-servicos-freelance",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -902,7 +902,7 @@
   },
   {
    "name": "MegaAGT",
-   "description": "MegaAGT — app desktop (Tauri + Rust) para o OpenCode CLI v2: sessoes, subagentes, raciocinio e diffs em um so lugar",
+   "description": "MegaAGT · app desktop (Tauri + Rust) para o OpenCode CLI v2: sessoes, subagentes, raciocinio e diffs em um so lugar",
    "language": "Rust",
    "homepage": null,
    "topics": [],
@@ -931,7 +931,7 @@
   },
   {
    "name": "mlops-registro-drift",
-   "description": "Projeto funcional — mlops-registro-drift",
+   "description": "Projeto funcional · mlops-registro-drift",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -971,7 +971,7 @@
   },
   {
    "name": "monitor-qos-enlace",
-   "description": "Projeto funcional — monitor-qos-enlace",
+   "description": "Projeto funcional · monitor-qos-enlace",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1042,7 +1042,7 @@
   },
   {
    "name": "pagina-status-sistema",
-   "description": "Projeto funcional — pagina-status-sistema",
+   "description": "Projeto funcional · pagina-status-sistema",
    "language": "TypeScript",
    "homepage": null,
    "topics": [],
@@ -1071,7 +1071,7 @@
   },
   {
    "name": "pipeline-iot-energia",
-   "description": "Projeto funcional — pipeline-iot-energia",
+   "description": "Projeto funcional · pipeline-iot-energia",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1082,7 +1082,7 @@
   },
   {
    "name": "portal-autoatendimento-helpdesk",
-   "description": "Projeto funcional — portal-autoatendimento-helpdesk",
+   "description": "Projeto funcional · portal-autoatendimento-helpdesk",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1093,7 +1093,7 @@
   },
   {
    "name": "portal-cliente-oauth2-rbac",
-   "description": "Projeto funcional — portal-cliente-oauth2-rbac",
+   "description": "Projeto funcional · portal-cliente-oauth2-rbac",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -1104,7 +1104,7 @@
   },
   {
    "name": "portfolio",
-   "description": "Portfólio — Kelvin Oliveira | Portfolio: dados, IA e produtos digitais",
+   "description": "Portfólio · Kelvin Oliveira | Portfolio: dados, IA e produtos digitais",
    "language": "HTML",
    "homepage": "https://kelvinoliveiracode.github.io/portfolio/",
    "topics": [
@@ -1122,7 +1122,7 @@
   },
   {
    "name": "previsao-demanda-estoque",
-   "description": "Projeto funcional — previsao-demanda-estoque",
+   "description": "Projeto funcional · previsao-demanda-estoque",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1133,7 +1133,7 @@
   },
   {
    "name": "previsor-inadimplencia-xgboost",
-   "description": "Projeto funcional — previsor-inadimplencia-xgboost",
+   "description": "Projeto funcional · previsor-inadimplencia-xgboost",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1180,7 +1180,7 @@
   },
   {
    "name": "recomendador-produtos-ml",
-   "description": "Projeto funcional — recomendador-produtos-ml",
+   "description": "Projeto funcional · recomendador-produtos-ml",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1209,7 +1209,7 @@
   },
   {
    "name": "relatorio-compliance-lgpd",
-   "description": "Projeto funcional — relatorio-compliance-lgpd",
+   "description": "Projeto funcional · relatorio-compliance-lgpd",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1220,7 +1220,7 @@
   },
   {
    "name": "reset-senha-ad-automacao",
-   "description": "Projeto funcional — reset-senha-ad-automacao",
+   "description": "Projeto funcional · reset-senha-ad-automacao",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1231,7 +1231,7 @@
   },
   {
    "name": "scanner-owasp-top10-web",
-   "description": "Projeto funcional — scanner-owasp-top10-web",
+   "description": "Projeto funcional · scanner-owasp-top10-web",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1242,7 +1242,7 @@
   },
   {
    "name": "scanner-portas-banner",
-   "description": "Projeto funcional — scanner-portas-banner",
+   "description": "Projeto funcional · scanner-portas-banner",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1289,7 +1289,7 @@
   },
   {
    "name": "siem-luz-brute-force",
-   "description": "Projeto funcional — siem-luz-brute-force",
+   "description": "Projeto funcional · siem-luz-brute-force",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1300,7 +1300,7 @@
   },
   {
    "name": "simulador-ospf-simples",
-   "description": "Projeto funcional — simulador-ospf-simples",
+   "description": "Projeto funcional · simulador-ospf-simples",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1311,7 +1311,7 @@
   },
   {
    "name": "sistema-agendamento-consultas",
-   "description": "Projeto funcional — sistema-agendamento-consultas",
+   "description": "Projeto funcional · sistema-agendamento-consultas",
    "language": "Java",
    "homepage": null,
    "topics": [],
@@ -1333,7 +1333,7 @@
   },
   {
    "name": "status-page-multi-regiao",
-   "description": "Projeto funcional — status-page-multi-regiao",
+   "description": "Projeto funcional · status-page-multi-regiao",
    "language": "Python",
    "homepage": null,
    "topics": [],
@@ -1384,7 +1384,7 @@
   },
   {
    "name": "validador-qos-voip",
-   "description": "Projeto funcional — validador-qos-voip",
+   "description": "Projeto funcional · validador-qos-voip",
    "language": "Python",
    "homepage": null,
    "topics": [],

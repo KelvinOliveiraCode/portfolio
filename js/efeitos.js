@@ -1,8 +1,8 @@
-/* efeitos.js — revelação suave no scroll.
+/* efeitos.js · revelação suave no scroll.
    Cada seção que ainda está abaixo da dobra ganha .revela nos filhos
    diretos (com stagger de 70 ms) e um IntersectionObserver solta .visto
    no contêiner quando ela entra na tela. O que já está na dobra na
-   carga entra sem efeito — nada de piscar conteúdo visível.
+   carga entra sem efeito · nada de piscar conteúdo visível.
    Na home o hero é uma camada fixa por cima do conteúdo: o fade de
    opacity ao rolar é um requisito de LAYOUT (não decoração), por isso
    roda antes do early-return de prefers-reduced-motion. */
@@ -11,7 +11,7 @@
 
   /* hero fixo da home: o opacity acompanha o scroll (0 → 40% da altura
      da viewport) e o conteúdo só é liberado (body.hero-saiu) quando o
-     texto inicial está totalmente invisível — sem sobreposição */
+     texto inicial está totalmente invisível · sem sobreposição */
   if (document.body.getAttribute('data-prefix') === '') {
     var hero = document.querySelector('.hero');
     if (hero) {

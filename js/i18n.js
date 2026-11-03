@@ -1,4 +1,4 @@
-/* i18n.js — troca PT/EN do site inteiro.
+/* i18n.js · troca PT/EN do site inteiro.
    Fonte de tradução: data/i18n.json (dicionário de rótulos de interface).
    A prosa longa das páginas viaja embutida no HTML por data-pt/data-en,
    então o site funciona mesmo sem o JSON. O prefixo de profundidade das

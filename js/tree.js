@@ -1,10 +1,10 @@
-/* tree.js — explorador do portfólio em árvore interativa (padrão WAI-ARIA Tree View).
+/* tree.js · explorador do portfólio em árvore interativa (padrão WAI-ARIA Tree View).
    Raiz: GitHub de Kelvin · ramos: áreas · folhas: repositórios públicos.
    Dados: data/repos.json (folhas, tamanhos), data/areas.json (ramos),
    data/live-pages.json (marca “no ar”), data/i18n.json (rótulos).
    O painel ao lado mostra o que faz, stack, tamanho e link.
    Teclado: ← recolhe/parente · → expande/filho · ↑↓ navega · Home/End · Enter aciona.
-   Repositório sem área não entra na árvore — fica no relatório, sem adivinhação. */
+   Repositório sem área não entra na árvore · fica no relatório, sem adivinhação. */
 (function () {
   'use strict';
 
