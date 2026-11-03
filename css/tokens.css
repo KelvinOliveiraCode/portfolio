@@ -1,5 +1,5 @@
 /* ============================================================
-   tokens.css — única fonte de verdade de estilo do site.
+   tokens.css · única fonte de verdade de estilo do site.
    Fundo #000, texto #fff, cinza para o secundário, linhas
    rgba 8%/18%, superfícies planas, sem acento cromático.
    Tipografia: sans de sistema em peso 400 (títulos 500),
@@ -22,17 +22,17 @@
   --accent-soft: rgba(255, 255, 255, 0.1);
 
   /* Sans de sistema, igual à referência: uma única família
-     para tudo — sem mono, sem serif. */
+     para tudo · sem mono, sem serif. */
   --font-display: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --font-mono: var(--font-display);
 
   /* Escala medida @1440: corpo 15.5px, lead 19.74px,
      h2 31px/400, número grande 72px/400, h1 118px/500. */
-  --fs-0: 0.75rem;                         /* 12px — microrrótulos */
-  --fs-1: 0.8125rem;                       /* 13px — legenda */
-  --fs-2: 0.96875rem;                      /* 15.5px — corpo */
-  --fs-3: 1.0625rem;                       /* 17px — secundário */
-  --fs-4: 1.234rem;                        /* 19.74px — lead/parágrafo */
+  --fs-0: 0.75rem;                         /* 12px · microrrótulos */
+  --fs-1: 0.8125rem;                       /* 13px · legenda */
+  --fs-2: 0.96875rem;                      /* 15.5px · corpo */
+  --fs-3: 1.0625rem;                       /* 17px · secundário */
+  --fs-4: 1.234rem;                        /* 19.74px · lead/parágrafo */
   --fs-5: 1.5rem;                          /* 24px */
   --fs-6: 1.9375rem;                       /* 31px */
   --fs-name: clamp(2.5rem, 6vw, 3.5rem);   /* nome no hero de subpáginas */
@@ -56,7 +56,7 @@
   --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.55);
 
   --t: 200ms;                              /* mudança de estado */
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* saída suave — entrada e revelação */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);  /* saída suave · entrada e revelação */
 
   --measure: 860px;                        /* coluna de texto medida da referência */
 }

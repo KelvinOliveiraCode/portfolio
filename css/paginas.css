@@ -1,12 +1,12 @@
 /* ============================================================
-   paginas.css — ajustes exclusivos das subpáginas (projetos,
+   paginas.css · ajustes exclusivos das subpáginas (projetos,
    caso, sobre, certificados). A estrutura comum vem de site.css.
    ============================================================ */
 
 /* ---------- hero compacto das subpáginas ---------- */
 /* Nas subpáginas o hero fica no fluxo (o de site.css é a capa fixa da
    home), com respiro abaixo da nav e a mesma composição em duas
-   colunas: texto à esquerda, planeta à direita — ambos dentro da
+   colunas: texto à esquerda, planeta à direita · ambos dentro da
    coluna de conteúdo, nunca encostados na borda da viewport. */
 body:not([data-prefix=""]) .hero {
   padding-top: 136px;
