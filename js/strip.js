@@ -1,4 +1,4 @@
-/* strip.js — faixa superior de troca rápida entre os destaques.
+/* strip.js · faixa superior de troca rápida entre os destaques.
    Cada item: “Área: Nome” → /projetos/<slug>/. Vem de data/destaques.json
    (ordem curada) + data/areas.json. Página de caso marca aria-current.    */
 (function () {

@@ -1,5 +1,5 @@
 # Servidor local do portfólio: igual ao http.server, mas manda
-# Cache-Control: no-store — ferramentas de teste nunca veem JS/CSS
+# Cache-Control: no-store · ferramentas de teste nunca veem JS/CSS
 # velho do cache do navegador. Raiz = repositório (uma pasta acima).
 import http.server
 import os

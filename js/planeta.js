@@ -1,7 +1,6 @@
-/* planeta.js — globo de Terra em canvas 2D, ancorado aos heros
+/* planeta.js · globo de Terra em canvas 2D, ancorado aos heros
    ([data-globe]). Único motivo decorativo do site: a esfera de pontos
-   com os continentes reais, cercada por uma órbita também de pontos —
-   a mesma linguagem visual, com escala fechada (nada sangra pela
+   com os continentes reais, cercada por uma órbita também de pontos · a mesma linguagem visual, com escala fechada (nada sangra pela
    borda, nada cresce sem limite).
 
    A esfera é uma distribuição de Fibonacci (~2600 pontos); a máscara
@@ -67,13 +66,13 @@
 
   /* ---------- câmera ---------- */
   var INCLINACAO = -0.35;    // eixo inclinado, como um planeta de verdade
-  var VELOCIDADE = 0.022;    // rad/s — volta completa em ~4,8 min
+  var VELOCIDADE = 0.022;    // rad/s · volta completa em ~4,8 min
   var LUZ = { x: -0.48, y: -0.4, z: 0.78 };  // normalizada, canto superior esquerdo
   var CLARO = '#f4f4f4';
 
   /* ---------- proporções da cena (quadrado) ----------
      raio da esfera = 0,33 do lado; órbita = elipse de 0,47 x 0,16
-     girada -0,28 rad — a órbita inteira cabe na caixa, com folga. */
+     girada -0,28 rad · a órbita inteira cabe na caixa, com folga. */
   var ESCALA_ESFERA = 0.33;
   var ORBITA_A = 0.47;
   var ORBITA_B = 0.16;

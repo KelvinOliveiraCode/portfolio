@@ -1,6 +1,6 @@
-// scripts/sync-repos.mjs — roda no GitHub Actions (Node 20).
+// scripts/sync-repos.mjs · roda no GitHub Actions (Node 20).
 // Gera data/repos.json direto da API do GitHub. Se a API falhar, mantém
-// o snapshot commitado e sai 0 — o deploy nunca quebra por limite de taxa.
+// o snapshot commitado e sai 0 · o deploy nunca quebra por limite de taxa.
 import { writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
@@ -31,7 +31,7 @@ async function main() {
     repos: repos.filter(r => !r.fork)
       .map(r => ({
         name: r.name,
-        description: r.description,
+        description: (r.description || '').replace(/\s*\u2014\s*/g, ' \u00b7 '),
         language: r.language,
         homepage: r.homepage || null,
         topics: r.topics || [],

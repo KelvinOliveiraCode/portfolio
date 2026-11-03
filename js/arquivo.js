@@ -1,4 +1,4 @@
-/* arquivo.js — grade completa de repositórios da página /projetos/.
+/* arquivo.js · grade completa de repositórios da página /projetos/.
    Dados: data/repos.json (folhas), data/areas.json (ramos),
    data/live-pages.json (marca “no ar”), data/destaques.json (marca “caso”),
    data/i18n.json (rótulos). Filtro por área (botões aria-pressed),
