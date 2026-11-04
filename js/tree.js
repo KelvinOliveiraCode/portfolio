@@ -3,6 +3,7 @@
    Dados: data/repos.json (folhas, tamanhos), data/areas.json (ramos),
    data/live-pages.json (marca “no ar”), data/i18n.json (rótulos).
    O painel ao lado mostra o que faz, stack, tamanho e link.
+   Estado inicial: raiz aberta, ramos fechados (clique/teclado abre).
    Teclado: ← recolhe/parente · → expande/filho · ↑↓ navega · Home/End · Enter aciona.
    Repositório sem área não entra na árvore · fica no relatório, sem adivinhação. */
 (function () {
@@ -58,7 +59,7 @@
 
     var liRaiz = itemNivel(document.createElement('li'), 1);
     liRaiz.innerHTML =
-      '<button type="button" class="nodo" data-contexto=\'{"tipo":"raiz"}\'>' + setaSvg() +
+      '<button type="button" class="nodo" aria-expanded="true" data-contexto=\'{"tipo":"raiz"}\'>' + setaSvg() +
         '<span class="marca-nodo">' + esc(DICT.arvore.raizNome) + '</span>' +
         '<span class="tamanho">' + REPOS.total + ' ' + esc(DICT.arvore.repositorios) + '</span>' +
       '</button><ul role="group"></ul>';
@@ -69,10 +70,10 @@
       if (!itens.length) return;
       var liArea = itemNivel(document.createElement('li'), 2);
       liArea.innerHTML =
-        '<button type="button" class="nodo" data-contexto=\'{"tipo":"area","area":' + JSON.stringify(area) + '}\'>' + setaSvg() +
+        '<button type="button" class="nodo" aria-expanded="false" data-contexto=\'{"tipo":"area","area":' + JSON.stringify(area) + '}\'>' + setaSvg() +
           '<span class="marca-nodo">' + esc(DICT.areasNomes[area] || area) + '</span>' +
           '<span class="tamanho">' + itens.length + ' ' + esc(DICT.arvore.repositorios) + '</span>' +
-        '</button><ul role="group"></ul>';
+        '</button><ul role="group" hidden></ul>';
       var grupoArea = liArea.querySelector('[role="group"]');
       itens.forEach(function (repo) {
         var liFolha = itemNivel(document.createElement('li'), 3);
@@ -95,6 +96,23 @@
     container.setAttribute('role', 'tree');
     container.setAttribute('aria-label', DICT.arvore.etiqueta);
     liRaiz.tabIndex = 0; // único item focável na partida
+    // Estado inicial: raiz aberta, ramos fechados (como no print).
+    // Nas páginas de caso, o ramo do caso abre para a folha ficar visível.
+    if (CASE_ATUAL) {
+      var liCaso = container.querySelector('li[data-repo="' + CSS.escape(CASE_ATUAL) + '"]');
+      if (liCaso) {
+        var anc = liCaso;
+        while (anc && anc.parentElement) {
+          var paiLi = anc.parentElement.closest('li[role="treeitem"]');
+          if (paiLi) expandir(paiLi, true);
+          anc = paiLi;
+        }
+        pintarPainel(liCaso);
+      }
+    } else {
+      var primeiraArea = liRaiz.querySelector('li[data-nivel="2"]');
+      if (primeiraArea) pintarPainel(primeiraArea);
+    }
 
     container.addEventListener('click', function (ev) {
       var botao = ev.target.closest('button.nodo');
@@ -300,7 +318,12 @@
         }
       } else {
         var raizLi = container.querySelector('li[role="treeitem"]');
-        if (raizLi) { raizLi.tabIndex = 0; pintarPainel(raizLi); }
+        if (raizLi) {
+          raizLi.tabIndex = 0;
+          // contribui: sem repo selecionado, o painel volta à primeira área
+          var primeiraArea = container.querySelector('li[data-nivel="2"]');
+          if (primeiraArea) pintarPainel(primeiraArea); else pintarPainel(raizLi);
+        }
       }
     }
   });
