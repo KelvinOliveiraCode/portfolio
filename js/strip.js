@@ -6,6 +6,7 @@
 
   var PREFIX = document.body.dataset.prefix || '';
   var CASE_ATUAL = document.body.dataset.case || null;
+  var OCULTOS = { 'techcards': true, 'chopp-gourmet': true };
 
   function esc(s) {
     return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -27,7 +28,7 @@
       nomes = nomesAtuais || nomes;
       var html = destaques.order.map(function (slug) {
         var t = destaques.textos[slug];
-        if (!t) return '';
+        if (!t || OCULTOS[slug]) return '';
         var area = (areas[slug] || t.area || [''])[0] || '';
         var nomeArea = (nomes && nomes[area]) || area;
         var rotulo = (t.titulo && (t.titulo[window.KO_LANG === 'en' ? 'en' : 'pt'])) || slug;

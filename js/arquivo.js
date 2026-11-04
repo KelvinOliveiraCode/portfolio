@@ -35,6 +35,8 @@
   var FILTRO = '';
   var BUSCA = '';
   var PRONTOS = false;
+  var TOTAL = 0;
+  var OCULTOS = { 'techcards': true, 'chopp-gourmet': true };
 
   function dict() {
     var lang = window.KO_LANG === 'en' ? 'en' : 'pt';
@@ -139,7 +141,7 @@
     }
 
     if (contagem && d) {
-      contagem.textContent = itens.length + ' / ' + REPOS.length + ' ' + (d.projetos.estruturaContar || 'repositórios')
+      contagem.textContent = itens.length + ' / ' + TOTAL + ' ' + (d.projetos.estruturaContar || 'repositórios')
         + (FILTRO && d.areasNomes[FILTRO] ? ' · ' + d.areasNomes[FILTRO] : '');
     }
   }
@@ -190,7 +192,8 @@
   ]).then(function (rs) {
     REPOS = rs[0]; AREAS = rs[1]; LIVE = rs[2]; DESTAQUES = rs[3]; DICT = rs[4];
     if (!REPOS || !Array.isArray(REPOS.repos)) return;
-    REPOS = REPOS.repos;
+    TOTAL = REPOS.total || REPOS.repos.length;
+    REPOS = REPOS.repos.filter(function (r) { return !OCULTOS[r.name]; });
     REPOS.sort(function (a, b) { return a.name.localeCompare(b.name); });
     preselecionarArea();
     ligarFiltros();

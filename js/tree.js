@@ -12,6 +12,9 @@
   var PREFIX = document.body.dataset.prefix || '';
   var CASE_ATUAL = document.body.dataset.case || null;
   var ORDEM = ['dados', 'backend', 'web', 'cyber', 'infra', 'ti'];
+  // Ocultos: não aparecem como folha na árvore (nem no painel), mas a
+  // contagem total e por área não muda.
+  var OCULTOS = { 'techcards': true, 'chopp-gourmet': true };
 
   var REPOS = null, AREAS = null, LIVE = null, DICT = null;
 
@@ -49,10 +52,14 @@
     if (!container) return;
 
     var porArea = {};
-    ORDEM.forEach(function (a) { porArea[a] = []; });
+    var contagemOrig = {};
+    ORDEM.forEach(function (a) { porArea[a] = []; contagemOrig[a] = 0; });
     (REPOS.repos || []).forEach(function (r) {
       (AREAS[r.name] || []).forEach(function (a) {
-        if (porArea[a]) porArea[a].push(r);
+        if (!porArea[a]) return;
+        contagemOrig[a] += 1;
+        if (OCULTOS[r.name]) return;
+        porArea[a].push(r);
       });
     });
     ORDEM.forEach(function (a) { porArea[a].sort(function (x, y) { return x.name.localeCompare(y.name); }); });
@@ -72,7 +79,7 @@
       liArea.innerHTML =
         '<button type="button" class="nodo" aria-expanded="false" data-contexto=\'{"tipo":"area","area":' + JSON.stringify(area) + '}\'>' + setaSvg() +
           '<span class="marca-nodo">' + esc(DICT.areasNomes[area] || area) + '</span>' +
-          '<span class="tamanho">' + itens.length + ' ' + esc(DICT.arvore.repositorios) + '</span>' +
+          '<span class="tamanho">' + contagemOrig[area] + ' ' + esc(DICT.arvore.repositorios) + '</span>' +
         '</button><ul role="group" hidden></ul>';
       var grupoArea = liArea.querySelector('[role="group"]');
       itens.forEach(function (repo) {
@@ -183,8 +190,7 @@
       links.push({ href: 'https://github.com/KelvinOliveiraCode', texto: DICT.arvore.abrirNoGithub });
     } else if (cliques.tipo === 'area') {
       var area = cliques.area;
-      var liArea = li.querySelector('[role="group"]');
-      var contagem = liArea ? liArea.querySelectorAll('li[data-nivel="3"]').length : (porAreaContagem(area));
+      var contagem = porAreaContagem(area);
       titulo = DICT.areasNomes[area] || area;
       tamanho = contagem + ' ' + DICT.arvore.repositorios;
       desc = DICT.arvore.areas[area] || '';
