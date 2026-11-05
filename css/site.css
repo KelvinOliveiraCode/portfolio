@@ -92,14 +92,20 @@ body[data-prefix=""].hero-saiu main > :not(.hero) { opacity: 1; transition: opac
    mantido no HTML, só escondido · a referência não tem faixa) ---------- */
 .topo-strip { display: none; }
 
-/* ---------- navegação: pill fixa centrada, transparente ---------- */
+/* ---------- navegação: pill fixa centrada, com caixa de fundo ---------- */
+/* A caixa dá contraste aos links sobre a cena do fundo. Com ela, o
+   item ativo não precisa da pill branca: fica na mesma cor dos demais. */
 .nav-bar {
   position: fixed; top: 22px; left: 50%; transform: translateX(-50%);
   z-index: 40;
   display: flex; align-items: center; gap: 2px;
   padding: 6px;
-  background: transparent;
+  background: rgba(13, 13, 13, 0.72);
+  border: 1px solid var(--line);
   border-radius: 999px;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 .nav-bar .marca {
   font-family: var(--font-display); font-size: 15px; font-weight: 500;
@@ -118,8 +124,13 @@ body[data-prefix=""].hero-saiu main > :not(.hero) { opacity: 1; transition: opac
   border-radius: 999px;
   transition: color var(--t);
 }
-/* ativo: pill branca com texto preto, peso 500 */
-.nav-links a[aria-current="page"] { background: var(--fg); color: var(--bg); font-weight: 500; }
+/* ativo: mesma cor dos demais; só um fundo sutil arredondado indica a
+   página atual */
+.nav-links a[aria-current="page"] {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 400;
+}
 .nav-links a:hover { color: var(--fg); }
 .nav-end { display: flex; align-items: center; gap: 2px; }
 .nav-end .ico {

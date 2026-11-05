@@ -94,6 +94,57 @@
 }
 .dominios a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+/* ---------- como uso agentes ---------- */
+.agentes-aviso {
+  margin-top: var(--s-5);
+  padding: var(--s-4);
+  max-width: var(--measure);
+  background: var(--bg-2);
+  border: 1px solid var(--line);
+  border-radius: var(--r-2);
+  font-size: var(--fs-2);
+  line-height: 1.5;
+  color: var(--muted);
+}
+.agentes-aviso strong { color: var(--fg); font-weight: 400; }
+
+.agentes {
+  margin-top: var(--s-6);
+  list-style: none;
+  display: grid; gap: var(--s-4);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.agentes li {
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.agente-topo {
+  display: flex; flex-wrap: wrap; align-items: center;
+  justify-content: space-between; gap: 8px 12px;
+}
+.agente-nome { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
+.agente-amb { display: flex; flex-wrap: wrap; gap: 6px; }
+.agente-amb span {
+  font-family: var(--font-display); font-size: var(--fs-0);
+  color: var(--muted);
+  padding: 2px 8px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+}
+.agente-uso { font-size: var(--fs-2); color: var(--muted); max-width: 46ch; }
+
+.agentes-orq {
+  margin-top: var(--s-5);
+  padding: var(--s-4);
+  max-width: var(--measure);
+  border: 1px solid var(--line);
+  border-radius: var(--r-2);
+  display: flex; flex-direction: column; gap: 8px;
+}
+.agentes-orq h3 { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
+.agentes-orq p { font-size: var(--fs-2); color: var(--muted); line-height: 1.5; }
+
 @media (max-width: 560px) {
-  .stack-grid, .dominios { grid-template-columns: 1fr; }
+  .stack-grid, .dominios, .agentes { grid-template-columns: 1fr; }
 }
