@@ -366,6 +366,9 @@ body[data-prefix=""] .hero > *:nth-child(2) { animation-delay: 90ms; }
   .nav-links a, .nav-bar .marca { font-size: 13px; padding: 6px 10px; min-height: 30px; }
   .numeros { grid-template-columns: 1fr; }
   .numeros .numero b { font-size: 56px; }
+  .convite .acoes { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .convite .acoes .btn-linha { padding-left: 0; padding-right: 0; }
+  .convite .acoes .btn-solido { margin-bottom: var(--s-2); }
   #meu-papel .etapas li { grid-template-columns: 1fr; gap: 6px; }
 }
 
