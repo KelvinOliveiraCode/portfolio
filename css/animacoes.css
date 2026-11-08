@@ -1,0 +1,19 @@
+/* ============================================================
+   animacoes.css · camada decorativa de pontos (fundo + seções).
+   Só aparece onde há um canvas/ícone criado por js/fundo.js e
+   js/cenas.js. Nada aqui afeta layout de texto, foco ou leitura:
+   tudo é aria-hidden e pointer-events: none.
+   ============================================================ */
+
+/* ---------- fundo global: campo de pontos ---------- */
+/* z-index negativo: pinta acima do preto do <html> e abaixo de
+   qualquer conteúdo. O body já é transparente (site.css). */
+.fundo-campo {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  pointer-events: none;
+}
