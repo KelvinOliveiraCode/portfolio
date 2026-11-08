@@ -34,6 +34,7 @@
 
 /* 08 · agentes: cena à direita no desktop, bloco no mobile */
 #como-uso-agentes { position: relative; }
+#resumo, #o-que-e, #explorador { position: relative; }
 .cena-agentes {
   width: 100%;
   max-width: 420px;
@@ -63,12 +64,13 @@
 @media (min-width: 1280px) {
   .cena-lado {
     position: absolute;
-    top: 120px;
+    top: 50%;
     right: max(var(--gutter), calc(50% - 596px));
-    width: clamp(240px, 22vw, 320px);
-    height: clamp(240px, 22vw, 320px);
+    width: clamp(220px, 18vw, 290px);
+    height: clamp(220px, 18vw, 290px);
     max-width: none;
     margin: 0;
+    transform: translateY(-50%);
   }
 }
 
