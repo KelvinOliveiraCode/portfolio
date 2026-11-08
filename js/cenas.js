@@ -160,48 +160,6 @@
     ctx.globalAlpha = 1;
   }
 
-  /* ---------- 02 · mini sistema solar ---------- */
-  /* Centro = KODAROS; quatro órbitas pontilhadas, um corpo em cada. */
-
-  function cenaSistema(ctx, w, h, t) {
-    var cx = w / 2, cy = h / 2;
-    var base = Math.min(w, h);
-    var maxR = base * 0.44;
-    var raios = [0.30, 0.48, 0.66, 0.84, 1];
-    var voltas = [0.34, 0.24, 0.18, 0.14, 0.10]; // rad/s
-    var fases = [0.4, 2.1, 4.0, 5.2, 1.2];
-
-    /* núcleo: pequeno enxame de pontos */
-    for (var c = 0; c < 14; c++) {
-      var ac = (c / 14) * 6.2832 + t * 0.12;
-      var rc = base * 0.012 + (c % 3) * 1.4;
-      ponto(ctx, cx + Math.cos(ac) * rc, cy + Math.sin(ac) * rc * 0.9,
-        c === 0 ? 1.7 : 1, c === 0 ? 0.8 : 0.35);
-    }
-
-    for (var o = 0; o < raios.length; o++) {
-      var rx = maxR * raios[o], ry = rx * 0.62;
-      var qtd = 48 + o * 12;
-      for (var i = 0; i < qtd; i++) {
-        var a = (i / qtd) * 6.2832;
-        var prof = Math.sin(a);
-        ponto(ctx, cx + Math.cos(a) * rx, cy + prof * ry,
-          0.65 + 0.3 * ((prof + 1) / 2), 0.06 + 0.05 * ((prof + 1) / 2));
-      }
-      /* corpo da órbita */
-      var ang = t * voltas[o] + fases[o];
-      var bx = cx + Math.cos(ang) * rx;
-      var by = cy + Math.sin(ang) * ry;
-      var frente = Math.sin(ang) > 0;
-      for (var p = 0; p < 6; p++) {
-        var pa = (p / 6) * 6.2832 + t * 0.4;
-        ponto(ctx, bx + Math.cos(pa) * 2.4, by + Math.sin(pa) * 2.4,
-          0.8, frente ? 0.35 : 0.18);
-      }
-      ponto(ctx, bx, by, 1.9, frente ? 0.85 : 0.45);
-    }
-  }
-
   /* ---------- 03 · corpos dos cards ---------- */
 
   function cenaPlanetaAnel(ctx, w, h, t) {
@@ -429,125 +387,6 @@
     }
   }
 
-  /* ---------- 04 · ícones de domínio (SVG) ---------- */
-
-  function svgIcone(tipo) {
-    var NS = 'http://www.w3.org/2000/svg';
-    var svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('viewBox', '0 0 48 48');
-    svg.setAttribute('width', '48');
-    svg.setAttribute('height', '48');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('focusable', 'false');
-    svg.classList.add('ico-pontos');
-    svg.dataset.tipo = tipo;
-
-    function dot(x, y, r, a) {
-      var c = document.createElementNS(NS, 'circle');
-      c.setAttribute('cx', x.toFixed(2));
-      c.setAttribute('cy', y.toFixed(2));
-      c.setAttribute('r', (r || 1).toFixed(2));
-      c.setAttribute('fill', '#f4f4f4');
-      c.setAttribute('opacity', (a == null ? 0.75 : a).toFixed(2));
-      return c;
-    }
-    function linha(x1, y1, x2, y2, passos, a) {
-      passos = passos || 10;
-      for (var i = 0; i <= passos; i++) {
-        var f = i / passos;
-        svg.appendChild(dot(x1 + (x2 - x1) * f, y1 + (y2 - y1) * f, 0.8, a));
-      }
-    }
-    function circulo(cx, cy, r, qtd, a, inicio) {
-      for (var i = 0; i < qtd; i++) {
-        var ang = ((i / qtd) * 6.2832) + (inicio || 0);
-        svg.appendChild(dot(cx + Math.cos(ang) * r, cy + Math.sin(ang) * r, 0.8, a));
-      }
-    }
-
-    if (tipo === 'cubo') {
-      /* isométrico: face de cima + duas laterais, em pontos */
-      var topo = [[24, 7], [40, 15], [24, 23], [8, 15]];
-      var baixo = [[8, 15], [8, 31], [24, 39], [40, 31], [40, 15], [24, 23]];
-      for (var i = 0; i < topo.length; i++) {
-        var a1 = topo[i], a2 = topo[(i + 1) % topo.length];
-        linha(a1[0], a1[1], a2[0], a2[1], 7, 0.7);
-      }
-      linha(8, 15, 8, 31, 8, 0.5); linha(8, 31, 24, 39, 7, 0.5);
-      linha(24, 39, 40, 31, 7, 0.5); linha(40, 31, 40, 15, 8, 0.5);
-      linha(24, 23, 24, 39, 8, 0.4);
-      svg.classList.add('gira');
-    } else if (tipo === 'janela') {
-      linha(6, 10, 42, 10, 18, 0.7); linha(6, 10, 6, 38, 14, 0.55);
-      linha(42, 10, 42, 38, 14, 0.55); linha(6, 38, 42, 38, 18, 0.55);
-      for (var d = 0; d < 3; d++) svg.appendChild(dot(10 + d * 3, 14, 0.9, 0.65));
-      linha(10, 22, 28, 22, 9, 0.35); linha(10, 27, 24, 27, 7, 0.3);
-      linha(10, 32, 20, 32, 5, 0.25);
-    } else if (tipo === 'engrenagem') {
-      circulo(24, 24, 12, 26, 0.55);
-      circulo(24, 24, 6, 14, 0.35, 0.2);
-      for (var g = 0; g < 8; g++) {
-        var ag = (g / 8) * 6.2832;
-        linha(24 + Math.cos(ag) * 13, 24 + Math.sin(ag) * 13,
-          24 + Math.cos(ag) * 18, 24 + Math.sin(ag) * 18, 3, 0.6);
-      }
-      svg.classList.add('gira');
-    } else if (tipo === 'camadas') {
-      for (var c in [0, 1, 2]) {
-        var oy = Number(c) * 8;
-        var pts = [[24, 8 + oy], [40, 16 + oy], [24, 24 + oy], [8, 16 + oy]];
-        for (var p2 = 0; p2 < pts.length; p2++) {
-          var b1 = pts[p2], b2 = pts[(p2 + 1) % pts.length];
-          linha(b1[0], b1[1], b2[0], b2[1], 6, 0.62 - Number(c) * 0.12);
-        }
-      }
-    } else if (tipo === 'escudo') {
-      var esq = [[24, 5], [9, 11], [9, 24], [24, 43], [39, 24], [39, 11]];
-      for (var e2 = 0; e2 < esq.length; e2++) {
-        var c1 = esq[e2], c2 = esq[(e2 + 1) % esq.length];
-        linha(c1[0], c1[1], c2[0], c2[1], 8, 0.62);
-      }
-      var scan = document.createElementNS(NS, 'line');
-      scan.setAttribute('x1', '9'); scan.setAttribute('x2', '39');
-      scan.setAttribute('y1', '12'); scan.setAttribute('y2', '12');
-      scan.setAttribute('stroke', '#ffffff');
-      scan.setAttribute('stroke-width', '0.7');
-      scan.setAttribute('opacity', '0.5');
-      scan.classList.add('varredura');
-      svg.appendChild(scan);
-    } else if (tipo === 'dados') {
-      var pos = [[12, 14], [20, 10], [30, 16], [36, 11], [16, 24], [26, 22],
-        [34, 27], [11, 33], [21, 35], [31, 36], [39, 34], [25, 29]];
-      for (var dp = 0; dp < pos.length; dp++) {
-        svg.appendChild(dot(pos[dp][0], pos[dp][1], 0.9, 0.22 + (dp % 4) * 0.12));
-      }
-      linha(16, 24, 26, 22, 6, 0.16); linha(26, 22, 34, 27, 5, 0.16);
-      var fora = dot(38, 8, 1.8, 0.9);
-      fora.classList.add('pisca');
-      svg.appendChild(fora);
-    } else if (tipo === 'hexagono') {
-      for (var hx = 0; hx < 6; hx++) {
-        var a3 = (hx / 6) * 6.2832 - Math.PI / 2;
-        var a4 = ((hx + 1) / 6) * 6.2832 - Math.PI / 2;
-        linha(24 + Math.cos(a3) * 17, 24 + Math.sin(a3) * 17,
-          24 + Math.cos(a4) * 17, 24 + Math.sin(a4) * 17, 9, 0.62);
-      }
-      circulo(24, 24, 4, 10, 0.3, 0.4);
-    } else if (tipo === 'redes') {
-      svg.appendChild(dot(24, 34, 1.6, 0.9));
-      for (var r = 1; r <= 3; r++) {
-        var raio = r * 6.5;
-        for (var q = 0; q < 7 + r * 2; q++) {
-          var aq = Math.PI + (q / (6 + r * 2)) * Math.PI;
-          svg.appendChild(dot(24 + Math.cos(aq) * raio, 34 + Math.sin(aq) * raio,
-            0.7, 0.45 - r * 0.09));
-        }
-      }
-    }
-
-    return svg;
-  }
-
   /* ---------- 05 · mostruário: grade 5x4 que vira wireframe ---------- */
 
   function cenaMostruario(ctx, w, h, t) {
@@ -607,62 +446,6 @@
       var y = de[p].y + (para[p].y - de[p].y) * f;
       var brilho = 0.28 + 0.34 * (p % 5) / 4;
       ponto(ctx, x, y, 1.15, brilho);
-    }
-  }
-
-  /* ---------- 06 · árvore radial que cresce ---------- */
-
-  function cenaArvore(ctx, w, h, t) {
-    var cx = w / 2, cy = h * 0.54;
-    var R = Math.min(w * 0.30, h * 0.46);
-    var progresso = Math.min(1, t / 2.6);
-    var ease = 1 - Math.pow(1 - progresso, 3);
-
-    function ramo(x0, y0, ang, comp, forca) {
-      var passos = Math.max(5, Math.round(comp / 7));
-      for (var i = 1; i <= passos; i++) {
-        var f = (i / passos) * forca;
-        if (f > 1) f = 1;
-        ponto(ctx, x0 + Math.cos(ang) * comp * f,
-          y0 + Math.sin(ang) * comp * f,
-          0.75, 0.12 + 0.26 * f);
-      }
-    }
-
-    /* raiz: pequeno enxame */
-    for (var r = 0; r < 12; r++) {
-      var ar = (r / 12) * 6.2832 + t * 0.06;
-      var rr = 2 + (r % 3) * 1.6;
-      ponto(ctx, cx + Math.cos(ar) * rr, cy + Math.sin(ar) * rr, 0.9,
-        r === 0 ? 0.95 : 0.35);
-    }
-
-    var ramos = 6;
-    for (var b = 0; b < ramos; b++) {
-      var ang = (b / ramos) * 6.2832 - Math.PI / 2 + 0.25;
-      var comprimento = R * (0.82 + (b % 3) * 0.07);
-      var local = Math.max(0, Math.min(1, (ease - b * 0.02) / (1 - b * 0.02)));
-      ramo(cx, cy, ang, comprimento, local);
-
-      if (local > 0.45) {
-        var fm = (local - 0.45) / 0.55;
-        var mx = cx + Math.cos(ang) * comprimento * 0.55;
-        var my = cy + Math.sin(ang) * comprimento * 0.55;
-        var perto = Math.min(1, fm * 1.4);
-        ramo(mx, my, ang - 0.46, comprimento * 0.34, perto);
-        ramo(mx, my, ang + 0.46, comprimento * 0.34, perto);
-
-        var fimX = cx + Math.cos(ang) * comprimento;
-        var fimY = cy + Math.sin(ang) * comprimento;
-        for (var folha = 0; folha < 4; folha++) {
-          var fa = ang + (folha - 1.5) * 0.38;
-          var fr = comprimento * (0.10 + (folha % 2) * 0.05);
-          var fx = fimX + Math.cos(fa) * fr;
-          var fy = fimY + Math.sin(fa) * fr;
-          var pulso = 0.26 + 0.26 * Math.sin(t * 0.85 + b * 1.3 + folha * 2.1);
-          ponto(ctx, fx, fy, 1.2, pulso * Math.min(1, fm * 2));
-        }
-      }
     }
   }
 
@@ -789,13 +572,11 @@
   function iniciar() {
     var mapa = {
       pilha: cenaPilha,
-      sistema: cenaSistema,
       kodaros: cenaPlanetaAnel,
       garimpo: cenaCristal,
       cloud4all: cenaNuvem,
       agentes: cenaOrbitaAgentes,
       mostruario: cenaMostruario,
-      arvore: cenaArvore,
       papel: cenaPapel,
       bootcamps: cenaBootcamps,
       contato: cenaContato
@@ -807,18 +588,6 @@
       if (!mapa[tipo]) continue;
       var cena = criar(alvos[i], mapa[tipo]);
       if (tipo === 'agentes') cenaAgentes = cena;
-    }
-
-    /* ícones de domínio: injetados no início de cada item, sem texto */
-    var dominios = document.querySelectorAll('[data-dominio]');
-    for (var d = 0; d < dominios.length; d++) {
-      var li = dominios[d];
-      if (li.querySelector('.ico-pontos')) continue;
-      var ico = document.createElement('span');
-      ico.className = 'dom-ico';
-      ico.setAttribute('aria-hidden', 'true');
-      ico.appendChild(svgIcone(li.dataset.dominio));
-      li.insertBefore(ico, li.firstChild);
     }
 
     /* hover/foco na lista de agentes acende o satélite correspondente */
