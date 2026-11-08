@@ -614,46 +614,55 @@
 
   function cenaArvore(ctx, w, h, t) {
     var cx = w / 2, cy = h * 0.54;
-    var R = Math.min(w, h) * 0.40;
-    var progresso = Math.min(1, t / 2.8);
+    var R = Math.min(w * 0.30, h * 0.46);
+    var progresso = Math.min(1, t / 2.6);
     var ease = 1 - Math.pow(1 - progresso, 3);
 
-    ponto(ctx, cx, cy, 2.2, 0.9);
+    function ramo(x0, y0, ang, comp, forca) {
+      var passos = Math.max(5, Math.round(comp / 7));
+      for (var i = 1; i <= passos; i++) {
+        var f = (i / passos) * forca;
+        if (f > 1) f = 1;
+        ponto(ctx, x0 + Math.cos(ang) * comp * f,
+          y0 + Math.sin(ang) * comp * f,
+          0.75, 0.12 + 0.26 * f);
+      }
+    }
+
+    /* raiz: pequeno enxame */
+    for (var r = 0; r < 12; r++) {
+      var ar = (r / 12) * 6.2832 + t * 0.06;
+      var rr = 2 + (r % 3) * 1.6;
+      ponto(ctx, cx + Math.cos(ar) * rr, cy + Math.sin(ar) * rr, 0.9,
+        r === 0 ? 0.95 : 0.35);
+    }
 
     var ramos = 6;
     for (var b = 0; b < ramos; b++) {
       var ang = (b / ramos) * 6.2832 - Math.PI / 2 + 0.25;
-      var comprimento = R * (0.78 + (b % 3) * 0.08);
-      var fimX = cx + Math.cos(ang) * comprimento;
-      var fimY = cy + Math.sin(ang) * comprimento;
+      var comprimento = R * (0.82 + (b % 3) * 0.07);
+      var local = Math.max(0, Math.min(1, (ease - b * 0.02) / (1 - b * 0.02)));
+      ramo(cx, cy, ang, comprimento, local);
 
-      var passos = 16;
-      for (var i = 1; i <= passos; i++) {
-        var f = (i / passos) * ease;
-        if (f > 1) f = 1;
-        var x = cx + (fimX - cx) * f;
-        var y = cy + (fimY - cy) * f;
-        ponto(ctx, x, y, 0.75, 0.10 + 0.22 * f);
-        if (i === passos && ease > 0.98) {
-          /* folhas: três por ramo, pulso em tempos diferentes */
-          for (var folha = 0; folha < 3; folha++) {
-            var fa = ang + (folha - 1) * 0.55;
-            var fr = comprimento * (0.16 + folha * 0.06);
-            var fx = fimX + Math.cos(fa) * fr;
-            var fy = fimY + Math.sin(fa) * fr;
-            var pulso = 0.24 + 0.24 * Math.sin(t * 0.9 + b * 1.3 + folha * 2.1);
-            ponto(ctx, fx, fy, 1.15, pulso);
-          }
+      if (local > 0.45) {
+        var fm = (local - 0.45) / 0.55;
+        var mx = cx + Math.cos(ang) * comprimento * 0.55;
+        var my = cy + Math.sin(ang) * comprimento * 0.55;
+        var perto = Math.min(1, fm * 1.4);
+        ramo(mx, my, ang - 0.46, comprimento * 0.34, perto);
+        ramo(mx, my, ang + 0.46, comprimento * 0.34, perto);
+
+        var fimX = cx + Math.cos(ang) * comprimento;
+        var fimY = cy + Math.sin(ang) * comprimento;
+        for (var folha = 0; folha < 4; folha++) {
+          var fa = ang + (folha - 1.5) * 0.38;
+          var fr = comprimento * (0.10 + (folha % 2) * 0.05);
+          var fx = fimX + Math.cos(fa) * fr;
+          var fy = fimY + Math.sin(fa) * fr;
+          var pulso = 0.26 + 0.26 * Math.sin(t * 0.85 + b * 1.3 + folha * 2.1);
+          ponto(ctx, fx, fy, 1.2, pulso * Math.min(1, fm * 2));
         }
       }
-    }
-
-    /* nós internos, um por ramo, com pulso discreto */
-    for (var n = 0; n < ramos; n++) {
-      var an = (n / ramos) * 6.2832 - Math.PI / 2 + 0.25;
-      var rn = R * 0.42;
-      var p = 0.35 + 0.35 * Math.sin(t * 0.7 + n);
-      if (ease > 0.5) ponto(ctx, cx + Math.cos(an) * rn, cy + Math.sin(an) * rn, 1.1, p * 0.6);
     }
   }
 
