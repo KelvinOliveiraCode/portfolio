@@ -1,7 +1,7 @@
 /* home.js · grade de números da home.
    Fontes reais: data/repos.json (total de repositórios) e
    data/live-pages.json (páginas no ar, verificadas por HTTP 200).
-   Bootcamps (4) e horas (169): estáticos,  
+   Bootcamps (5) e horas (219): estáticos,  
    vêm do index aprovado e nunca mudam aqui.
    No HTML já há valores de fallback (snapshot de 25/10/2026) · o JS só
    atualiza se os dados carregarem. */
