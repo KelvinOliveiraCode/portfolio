@@ -17,3 +17,68 @@
   display: block;
   pointer-events: none;
 }
+
+/* ---------- cenas de seção: canvas decorativo ---------- */
+.cena {
+  position: relative;
+  pointer-events: none;
+  z-index: 0;
+}
+.cena canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* o conteúdo da seção fica acima da cena, sem mudança de fluxo */
+.cena ~ * { position: relative; z-index: 1; }
+
+/* 08 · agentes: cena à direita no desktop, bloco no mobile */
+#como-uso-agentes { position: relative; }
+.cena-agentes {
+  width: 100%;
+  max-width: 420px;
+  height: 340px;
+  margin: var(--s-4) 0 var(--s-6);
+}
+@media (min-width: 1280px) {
+  .cena-agentes {
+    position: absolute;
+    top: 190px;
+    right: max(var(--gutter), calc(50% - 596px));
+    width: clamp(280px, 24vw, 360px);
+    height: clamp(280px, 24vw, 360px);
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* cenas laterais (seções 01, 02 e 06): no desktop ocupam a margem
+   direita da coluna de 1192px; abaixo disso viram bloco no fluxo */
+.cena-lado {
+  width: 100%;
+  max-width: 460px;
+  height: 320px;
+  margin: var(--s-5) 0 var(--s-6);
+}
+@media (min-width: 1280px) {
+  .cena-lado {
+    position: absolute;
+    top: 120px;
+    right: max(var(--gutter), calc(50% - 596px));
+    width: clamp(240px, 22vw, 320px);
+    height: clamp(240px, 22vw, 320px);
+    max-width: none;
+    margin: 0;
+  }
+}
+
+/* cenas em linha cheia (seções 05, 07 e 09) */
+.cena-linha {
+  width: 100%;
+  max-width: var(--measure);
+  height: 220px;
+  margin: var(--s-5) 0 var(--s-6);
+}
+.cena-papel { height: 150px; }
+.cena-arvore { height: 300px; }
+
