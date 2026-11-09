@@ -32,27 +32,6 @@
 /* o conteúdo da seção fica acima da cena, sem mudança de fluxo */
 .cena ~ * { position: relative; z-index: 1; }
 
-/* 08 · agentes: cena à direita no desktop, bloco no mobile */
-#como-uso-agentes { position: relative; }
-#resumo, #o-que-e, #explorador { position: relative; }
-.cena-agentes {
-  width: 100%;
-  max-width: 420px;
-  height: 340px;
-  margin: var(--s-4) 0 var(--s-6);
-}
-@media (min-width: 1280px) {
-  .cena-agentes {
-    position: absolute;
-    top: 190px;
-    right: max(var(--gutter), calc(50% - 596px));
-    width: clamp(280px, 24vw, 360px);
-    height: clamp(280px, 24vw, 360px);
-    max-width: none;
-    margin: 0;
-  }
-}
-
 /* cenas laterais (seções 01, 02 e 06): no desktop ocupam a margem
    direita da coluna de 1192px; abaixo disso viram bloco no fluxo */
 .cena-lado {

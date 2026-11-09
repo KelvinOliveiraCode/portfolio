@@ -311,82 +311,6 @@
     }
   }
 
-  /* ---------- 08 · Traycer + cinco satélites ---------- */
-  /* A cena mais importante: órbitas pontilhadas, pulsos que saem do
-     centro e acendem o satélite correspondente ao item da lista. */
-
-  var AGENTES = ['claude', 'codex', 'opencode', 'deepseek', 'hermes'];
-  var cenaAgentes = null;
-
-  function cenaOrbitaAgentes(ctx, w, h, t) {
-    var cx = w / 2, cy = h / 2;
-    var maxR = Math.min(w, h) * 0.45;
-    var raios = [0.46, 0.60, 0.74, 0.88, 1.0];
-    var voltas = [0.11, 0.085, 0.065, 0.052, 0.042];
-    var fases = [-1.1, 0.3, 1.7, 3.0, 4.4];
-    var destaque = cenaAgentes ? cenaAgentes.destaque : -1;
-
-    /* órbitas: elipses achatadas e inclinadas, pontos apagados */
-    for (var o = 0; o < raios.length; o++) {
-      var rx = maxR * raios[o];
-      var ry = rx * 0.72;
-      var qtd = 70 + o * 10;
-      var ativa = destaque === o;
-      for (var i = 0; i < qtd; i++) {
-        var a = (i / qtd) * 6.2832;
-        var prof = Math.sin(a);
-        ponto(ctx, cx + Math.cos(a) * rx, cy + prof * ry,
-          0.65 + 0.3 * ((prof + 1) / 2),
-          (ativa ? 0.20 : 0.085) + 0.075 * ((prof + 1) / 2));
-      }
-    }
-
-    /* centro: núcleo de pontos, respirando devagar */
-    for (var c = 0; c < 24; c++) {
-      var ac = (c / 24) * 6.2832 + t * 0.05;
-      var rc = 5 + (c % 4) * 2.2 + Math.sin(t * 0.6 + c) * 0.9;
-      ponto(ctx, cx + Math.cos(ac) * rc, cy + Math.sin(ac) * rc * 0.9,
-        c === 0 ? 2.2 : 1, c === 0 ? 0.95 : 0.34);
-    }
-
-    for (var s = 0; s < AGENTES.length; s++) {
-      var ang = t * voltas[s] + fases[s];
-      var bx = cx + Math.cos(ang) * maxR * raios[s];
-      var by = cy + Math.sin(ang) * maxR * raios[s] * 0.72;
-      var ativo = destaque === s;
-      var frente = Math.sin(ang) > 0;
-      var brilho = ativo ? 1 : (frente ? 0.70 : 0.42);
-
-      /* satélite: enxame de 9 pontos + núcleo */
-      for (var k = 0; k < 9; k++) {
-        var ka = (k / 9) * 6.2832 + t * 0.3;
-        var kr = ativo ? 7.4 : 5.2;
-        ponto(ctx, bx + Math.cos(ka) * kr, by + Math.sin(ka) * kr * 0.9,
-          0.8, brilho * (ativo ? 0.9 : 0.62));
-      }
-      ponto(ctx, bx, by, ativo ? 3.0 : 2.2, brilho);
-      if (ativo) {
-        ponto(ctx, bx, by, 9, 0.14);
-        ponto(ctx, bx, by, 15, 0.06);
-        /* fio pontilhado ligando o centro ao satélite ativo */
-        for (var fio = 1; fio < 26; fio++) {
-          var ff = fio / 26;
-          ponto(ctx, cx + (bx - cx) * ff, cy + (by - cy) * ff, 0.7, 0.18);
-        }
-      }
-
-      /* pulsos do centro até o satélite */
-      for (var p = 0; p < 4; p++) {
-        var ciclo = (t * (ativo ? 0.55 : 0.30) + s * 0.27 + p * 0.25) % 1;
-        var ease = ciclo * ciclo * (3 - 2 * ciclo);
-        var px = cx + (bx - cx) * ease;
-        var py = cy + (by - cy) * ease;
-        var alfaP = (ativo ? 0.9 : 0.42) * Math.sin(Math.PI * ciclo);
-        ponto(ctx, px, py, ativo ? 1.9 : 1.25, alfaP);
-      }
-    }
-  }
-
   /* ---------- 05 · mostruário: grade 5x4 que vira wireframe ---------- */
 
   function cenaMostruario(ctx, w, h, t) {
@@ -575,7 +499,6 @@
       kodaros: cenaPlanetaAnel,
       garimpo: cenaCristal,
       cloud4all: cenaNuvem,
-      agentes: cenaOrbitaAgentes,
       mostruario: cenaMostruario,
       papel: cenaPapel,
       bootcamps: cenaBootcamps,
@@ -587,22 +510,6 @@
       var tipo = alvos[i].dataset.cena;
       if (!mapa[tipo]) continue;
       var cena = criar(alvos[i], mapa[tipo]);
-      if (tipo === 'agentes') cenaAgentes = cena;
-    }
-
-    /* hover/foco na lista de agentes acende o satélite correspondente */
-    if (cenaAgentes) {
-      var itens = document.querySelectorAll('[data-agente]');
-      for (var a = 0; a < itens.length; a++) {
-        (function (item) {
-          var idx = AGENTES.indexOf(item.dataset.agente);
-          if (idx < 0) return;
-          item.addEventListener('mouseenter', function () { cenaAgentes.destaque = idx; });
-          item.addEventListener('mouseleave', function () { cenaAgentes.destaque = -1; });
-          item.addEventListener('focusin', function () { cenaAgentes.destaque = idx; });
-          item.addEventListener('focusout', function () { cenaAgentes.destaque = -1; });
-        })(itens[a]);
-      }
     }
 
     /* hero: reação leve ao mouse (CSS transform no canvas do planeta) */
