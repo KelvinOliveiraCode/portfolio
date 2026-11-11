@@ -152,3 +152,47 @@
   .stack-grid, .dominios { grid-template-columns: 1fr; }
   .agentes li { grid-template-columns: 1fr; gap: 6px; }
 }
+
+/* ---------- grade dos tres projetos principais ---------- */
+/* O .stack-grid compartilhado usa auto-fill com minmax(260px, 1fr): em
+   1192px isso cria quatro colunas e sobra uma vazia, espremendo os tres
+   cards. Aqui a grade e fixa em tres colunas iguais. */
+.stack-grid--projetos {
+  display: grid;
+  gap: var(--s-6) var(--s-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--s-6);
+}
+@media (max-width: 1000px) {
+  .stack-grid--projetos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .stack-grid--projetos { grid-template-columns: 1fr; }
+}
+
+/* ---------- disponibilidade (contato) ---------- */
+/* Duas linhas curtas: o que a pessoa procura num recrutador/cliente e
+   o que ela oferece na mentoria. O selo respira, mas nao pisca.
+.disponibilidade {
+  margin-top: var(--s-6);
+  display: grid; gap: var(--s-3);
+  max-width: var(--measure);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line);
+}
+.disp-linha {
+  display: grid; grid-template-columns: 10px 200px minmax(0, 1fr);
+  gap: 12px; align-items: baseline;
+}
+.disp-linha strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
+.disp-linha span { font-size: var(--fs-2); color: var(--muted); line-height: 1.5; }
+.disp-selo {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--fg);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.10);
+  transform: translateY(-2px);
+}
+@media (max-width: 640px) {
+  .disp-linha { grid-template-columns: 10px minmax(0, 1fr); gap: 4px 12px; }
+  .disp-linha span { grid-column: 2; }
+}

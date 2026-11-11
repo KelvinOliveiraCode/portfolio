@@ -100,6 +100,17 @@ body:not([data-prefix=""]) .hero .linha-lead {
 }
 .card-a .linha-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+/* ---------- grade dos tres projetos principais (nao reusa o
+   auto-fill do stack-grid, que sobra uma quarta coluna vazia) ---------- */
+.stack-grid--projetos {
+  display: grid; gap: var(--s-6) var(--s-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: var(--s-6);
+}
+@media (max-width: 1000px) {
+  .stack-grid--projetos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
 /* ---------- navegação anterior/próximo do caso ---------- */
 .prev-next {
   display: flex; justify-content: space-between; gap: var(--s-4);
@@ -167,9 +178,47 @@ body:not([data-prefix=""]) .hero .linha-lead {
   font-size: var(--fs-0); color: var(--muted); max-width: 46ch;
 }
 
+/* ---------- capturas reais dos projetos ---------- */
+/* Fica aqui, e nao no index.css: /projetos/ carrega paginas.css e
+   NAO carrega index.css. Com a regra no arquivo errado, o card perdia
+   a proporcao e a imagem era esticada por width/height do atributo. */
+/* A captura nunca e esticada: o quadro define a proporcao e a imagem
+   entra com contain, entao nada e cortado nem deformado. */
+.pp-shot {
+  display: block;
+  position: relative;
+  margin-bottom: var(--s-3);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-2);
+  overflow: hidden;
+  background: var(--bg-2);
+  text-decoration: none;
+  aspect-ratio: 16 / 10;
+}
+.pp-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center top;
+  filter: grayscale(0.45) contrast(1.02);
+  transition: filter 420ms var(--ease);
+}
+.pp-shot:hover img,
+.pp-shot:focus-visible img { filter: grayscale(0) contrast(1); }
+.stack-cell .pp-shot + h3 { margin-top: 2px; }
+
+/* telas estreitas: o recorte 16/10 fica baixo demais para ler a
+   interface, entao a caixa cresce em altura e a imagem segue em contain */
+@media (max-width: 760px) {
+  .pp-shot { aspect-ratio: 4 / 3; }
+}
+@media (max-width: 480px) {
+  .pp-shot { aspect-ratio: 3 / 4; }
+}
+
 /* ---------- responsivo ---------- */
 @media (max-width: 560px) {
-  .arquivo-grid, .certs, .stack-grid { grid-template-columns: 1fr; }
+  .arquivo-grid, .certs, .stack-grid, .stack-grid--projetos { grid-template-columns: 1fr; }
   .prev-next { flex-direction: column; }
   .prev-next .lado.fim { align-items: flex-start; text-align: left; }
 }

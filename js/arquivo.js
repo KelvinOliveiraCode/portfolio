@@ -193,6 +193,10 @@
     REPOS = rs[0]; AREAS = rs[1]; LIVE = rs[2]; DESTAQUES = rs[3]; DICT = rs[4];
     if (!REPOS || !Array.isArray(REPOS.repos)) return;
     TOTAL = REPOS.total || REPOS.repos.length;
+    // o hero mostra o mesmo total: sem isto o numero ficava congelado no
+    // valor que estava escrito no HTML quando o snapshot cresceu.
+    var hero = document.getElementById('contagem-hero');
+    if (hero) hero.textContent = String(TOTAL);
     REPOS = REPOS.repos.filter(function (r) { return !OCULTOS[r.name]; });
     REPOS.sort(function (a, b) { return a.name.localeCompare(b.name); });
     preselecionarArea();
