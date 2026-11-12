@@ -28,101 +28,7 @@
 }
 #meu-papel .etapas a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
-/* ---------- mentoria ---------- */
-.mentoria-topicos {
-  margin-top: var(--s-6);
-  list-style: none;
-  display: grid; gap: var(--s-4) var(--s-5);
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  max-width: var(--measure);
-}
-.mentoria-topicos li { display: flex; flex-direction: column; gap: 6px; }
-.mentoria-topicos strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
-.mentoria-topicos span { font-size: var(--fs-2); color: var(--muted); line-height: 1.5; }
-.mentoria-topicos + .prosa { margin-top: var(--s-6); }
-.mentoria-acoes {
-  margin-top: var(--s-6);
-  display: flex; flex-wrap: wrap; align-items: center;
-  gap: var(--s-3) var(--s-5);
-}
-.mentoria-acoes .btn-linha { padding-left: 0; padding-right: 0; }
-.mentoria-nota {
-  display: block;
-  margin-top: var(--s-3);
-  font-size: var(--fs-1); color: var(--muted);
-}
 
-@media (max-width: 760px) {
-  .mentoria-topicos { grid-template-columns: 1fr; }
-}
-
-@media (max-width: 560px) {
-  .mentoria-acoes { flex-direction: column; align-items: flex-start; gap: var(--s-2); }
-  .mentoria-acoes .btn-solido { margin-bottom: var(--s-2); }
-}
-
-/* selo "no ar" das folhas da árvore */
-.no-ar {
-  margin-left: auto;
-  font-size: var(--fs-0);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-/* ---------- projetos principais (home) ----------
-   As mesmas regras de .stack-grid/.stack-cell que a página Sobre usa
-   (css/paginas.css, carregado só nas subpáginas). Aqui a home não
-   carrega paginas.css, então o componente é redefinido aqui para
-   ficar idêntico ao da página Sobre. */
-.stack-grid {
-  display: grid; gap: var(--s-5) var(--s-4);
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  margin-top: var(--s-6);
-}
-.stack-cell { padding: var(--s-4) 0; display: flex; flex-direction: column; gap: var(--s-2); }
-.stack-cell h3 {
-  font-family: var(--font-display); font-size: var(--fs-3); font-weight: 400;
-  color: var(--fg);
-}
-.stack-cell ul {
-  margin-top: var(--s-2); list-style: none; display: flex; flex-wrap: wrap; gap: 6px;
-}
-.stack-cell li {
-  font-family: var(--font-mono); font-size: var(--fs-0); color: var(--muted);
-}
-.pp-desc { font-size: var(--fs-2); color: var(--muted); max-width: 42ch; }
-.pp-links {
-  margin-top: var(--s-2);
-  font-family: var(--font-mono); font-size: var(--fs-1); color: var(--accent);
-}
-.pp-links a { color: var(--accent); text-decoration: none; }
-.pp-links a:hover { text-decoration: underline; text-underline-offset: 4px; }
-.pp-nota {
-  margin-top: auto; padding-top: var(--s-2);
-  font-size: var(--fs-0); color: var(--muted); max-width: 46ch;
-}
-
-/* ---------- o que construí: grade de domínios ---------- */
-.dominios {
-  margin-top: var(--s-5);
-  list-style: none;
-  display: grid; gap: var(--s-4);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-.dominios li {
-  padding-top: var(--s-3);
-  border-top: 1px solid var(--line);
-  display: flex; flex-direction: column; gap: 6px;
-}
-.dominios strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
-.dominios span { font-size: var(--fs-2); color: var(--muted); }
-.dominios-links { font-family: var(--font-mono); font-size: var(--fs-1); line-height: 1.7; color: var(--muted); }
-.dominios a {
-  font-family: var(--font-mono); font-size: var(--fs-1);
-  color: var(--accent); text-decoration: none;
-}
-.dominios a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
 /* ---------- como uso agentes ---------- */
 /* Mesma linguagem das outras seções: prosa corrida e linhas de papel
@@ -146,7 +52,9 @@
   text-transform: uppercase; color: var(--muted);
 }
 .agente-uso { font-size: var(--fs-2); color: var(--muted); line-height: 1.5; }
-.agentes-orq { margin-top: var(--s-6); }
+/* o respiro entre blocos fica no padding da secao: margem extra aqui
+   somava e abria um vao de 304px entre Explorador e esta secao. */
+.agentes-orq { margin-top: var(--s-5); }
 
 @media (max-width: 560px) {
   .stack-grid, .dominios { grid-template-columns: 1fr; }
@@ -159,9 +67,9 @@
    cards. Aqui a grade e fixa em tres colunas iguais. */
 .stack-grid--projetos {
   display: grid;
-  gap: var(--s-6) var(--s-4);
+  gap: var(--s-5) var(--s-4);
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: var(--s-6);
+  margin-top: var(--s-4);
 }
 @media (max-width: 1000px) {
   .stack-grid--projetos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -170,29 +78,8 @@
   .stack-grid--projetos { grid-template-columns: 1fr; }
 }
 
-/* ---------- disponibilidade (contato) ---------- */
-/* Duas linhas curtas: o que a pessoa procura num recrutador/cliente e
-   o que ela oferece na mentoria. O selo respira, mas nao pisca.
-.disponibilidade {
-  margin-top: var(--s-6);
-  display: grid; gap: var(--s-3);
-  max-width: var(--measure);
-  padding-top: var(--s-5);
-  border-top: 1px solid var(--line);
-}
-.disp-linha {
-  display: grid; grid-template-columns: 10px 200px minmax(0, 1fr);
-  gap: 12px; align-items: baseline;
-}
-.disp-linha strong { font-weight: 400; font-size: var(--fs-3); color: var(--fg); }
-.disp-linha span { font-size: var(--fs-2); color: var(--muted); line-height: 1.5; }
-.disp-selo {
-  width: 7px; height: 7px; border-radius: 50%;
-  background: var(--fg);
-  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.10);
-  transform: translateY(-2px);
-}
-@media (max-width: 640px) {
-  .disp-linha { grid-template-columns: 10px minmax(0, 1fr); gap: 4px 12px; }
-  .disp-linha span { grid-column: 2; }
-}
+/* ---------- ritmo vertical: secao 02 muito alta ---------- */
+/* #o-que-e tem um unico paragrafo curto; com o padding padrao sobrava
+   138px de vazio abaixo do texto, o dobro das vizinhas. A prosa trava
+   na medida e a secao fica no mesmo ritmo das outras. */
+#o-que-e .prosa { max-width: var(--measure); }

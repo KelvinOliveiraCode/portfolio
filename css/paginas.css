@@ -216,9 +216,78 @@ body:not([data-prefix=""]) .hero .linha-lead {
   .pp-shot { aspect-ratio: 3 / 4; }
 }
 
+/* ---------- meu papel como fecho de "como uso agentes" ---------- */
+/* Antes era uma secao propria e ficava isolada entre a arvore e os
+   agentes. Virou o fecho do bloco: titulo menor, separador curto acima
+   e a mesma prosa cinza do resto da pagina. */
+.papel-agente {
+  margin-top: var(--s-6);
+  padding-top: var(--s-5);
+  max-width: var(--measure);
+}
+.papel-agente h3 {
+  font-weight: 400;
+  font-size: var(--fs-3);
+  color: var(--fg);
+}
+.papel-agente p {
+  margin-top: var(--s-3);
+  font-size: var(--fs-4);
+  color: var(--muted);
+  line-height: 1.32;
+}
+
+/* ---------- respiro entre blocos dentro da mesma secao ---------- */
+/* Sem isto o texto de introducao encosta no primeiro item da lista
+   (acontecia em Bootcamps). */
+.prosa + .etapas { margin-top: var(--s-6); }
+
+/* ---------- mentoria e contato ---------- */
+/* Mesma linguagem dos agentes/role rows: rotulo a esquerda, descricao
+   a direita, sem marcadores, sem linhas internas. */
+.mentoria-topicos {
+  margin: var(--s-5) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: var(--s-4);
+  max-width: var(--measure);
+}
+.mentoria-topicos li {
+  display: grid;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 20px;
+  align-items: baseline;
+}
+.mentoria-topicos strong {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--fg);
+}
+.mentoria-topicos span {
+  font-size: var(--fs-2);
+  color: var(--muted);
+  line-height: 1.5;
+}
+.mentoria-fecho {
+  margin-top: var(--s-5);
+  max-width: var(--measure);
+}
+.mentoria-fecho p + p { margin-top: var(--s-3); }
+.mentoria-acoes {
+  margin-top: var(--s-5);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+}
+
 /* ---------- responsivo ---------- */
 @media (max-width: 560px) {
   .arquivo-grid, .certs, .stack-grid, .stack-grid--projetos { grid-template-columns: 1fr; }
   .prev-next { flex-direction: column; }
   .prev-next .lado.fim { align-items: flex-start; text-align: left; }
+  .mentoria-topicos li { grid-template-columns: 1fr; gap: 6px; }
+  .mentoria-acoes { flex-direction: column; align-items: flex-start; gap: 4px; }
+  .mentoria-acoes .btn-linha { padding-left: 0; padding-right: 0; }
 }

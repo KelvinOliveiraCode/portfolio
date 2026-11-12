@@ -183,6 +183,9 @@ body[data-prefix=""] .hero button { pointer-events: auto; }
 }
 .hero .linha-meta a { color: var(--fg); text-decoration: underline; text-underline-offset: 5px; text-decoration-color: var(--line-strong); }
 .hero .linha-meta a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+/* ritmo uniforme entre secoes */
+#o-que-e .prosa { max-width: var(--measure); }
+
 /* ---------- cabeçalho de seção ---------- */
 /* Sem eyebrows numerados: a referência usa só um h2 pequeno branco. */
 .secao-cab { margin-bottom: var(--s-5); }
@@ -250,7 +253,7 @@ body[data-prefix=""] .hero button { pointer-events: auto; }
 .setinha { flex: 0 0 auto; transition: transform var(--t); color: var(--muted); }
 [aria-expanded="true"] .setinha { transform: rotate(90deg); }
 
-.arvore-painel { padding: var(--s-4) 0; position: sticky; top: 80px; }
+.arvore-painel { padding: var(--s-4) 0 0; position: sticky; top: 80px; }
 .arvore-painel h3 { font-weight: 400; font-size: var(--fs-3); }
 .arvore-painel .tamanho-fila { font-family: var(--font-display); font-size: var(--fs-1); color: var(--muted); margin: 6px 0 var(--s-3); }
 .arvore-painel p { color: var(--muted); font-size: var(--fs-2); max-width: 40ch; }
@@ -298,6 +301,34 @@ body[data-prefix=""] .hero button { pointer-events: auto; }
   max-width: 420px;
 }
 .rodape .rodape-blurb p + p { margin-top: 12px; }
+
+
+/* ---------- icones de contato do rodape ---------- */
+/* O simbolo real da rede ao lado do nome: o nome continua visivel
+   porque sozinho o icone deixa duvida, e o aria-label cobre o
+   leitor de tela. O traco herda a cor do link. */
+.rodape-icones { display: grid; gap: 4px; }
+.rodape-icones a {
+  display: inline-flex; align-items: center; gap: 10px;
+  min-height: 32px; padding: 4px 0;
+  color: var(--muted); text-decoration: none;
+  transition: color var(--t);
+}
+.rodape-icones a:hover { color: var(--fg); }
+.rodape-icones svg { flex: 0 0 auto; }
+.rodape-icones span { font-size: var(--fs-3); }
+
+/* ---------- planeta do rodape, sob o copyright ---------- */
+/* Alinhado a esquerda com o blurb (mesma coluna), tamanho fechado e
+   sem interacao. O planeta.js instancia qualquer [data-globe]. */
+.rodape-blurb { display: flex; flex-direction: column; align-items: flex-start; gap: var(--s-3); }
+.rodape-globo {
+  position: relative;
+  width: clamp(150px, 16vw, 210px);
+  aspect-ratio: 1 / 1;
+  margin-top: var(--s-2);
+  pointer-events: none;
+}
 
 /* ---------- grain do fundo (próprio, bem sutil) ---------- */
 .grao {

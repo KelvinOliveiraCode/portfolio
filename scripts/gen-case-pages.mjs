@@ -51,6 +51,7 @@ function rodape(prefix) {
 <footer class="rodape">
   <div class="rodape-blurb">
     <p data-pt="© 2026 Kelvin Rebelo de Oliveira" data-en="© 2026 Kelvin Rebelo de Oliveira">© 2026 Kelvin Rebelo de Oliveira</p>
+    <div class="rodape-globo" data-globe aria-hidden="true"></div>
   </div>
   <div>
     <h3 data-pt="Páginas" data-en="Pages">Páginas</h3>
@@ -63,11 +64,11 @@ function rodape(prefix) {
   </div>
   <div>
     <h3 data-pt="Contato" data-en="Contact">Contato</h3>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener">LinkedIn: kelvin-oliveira-code</a></li>
-      <li><a href="mailto:kelvinrebelosw@gmail.com">kelvinrebelosw@gmail.com</a></li>
-      <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener">(91) 98613-4599</a></li>
-      <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub: KelvinOliveiraCode</a></li>
+    <ul class="rodape-icones">
+      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener" aria-label="LinkedIn de Kelvin Oliveira" data-pt-aria="LinkedIn de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a></li>
+      <li><a href="mailto:kelvinrebelosw@gmail.com" aria-label="Enviar e-mail para Kelvin Oliveira" data-pt-aria="Enviar e-mail para Kelvin Oliveira" data-en-aria="Email Kelvin Oliveira"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg><span data-pt="E-mail" data-en="Email">E-mail</span></a></li>
+      <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener" aria-label="WhatsApp de Kelvin Oliveira" data-pt-aria="WhatsApp de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.045-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>WhatsApp</span></a></li>
+      <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener" aria-label="GitHub de Kelvin Oliveira" data-pt-aria="GitHub de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.7.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.3.5 12 .5z"/></svg><span>GitHub</span></a></li>
     </ul>
   </div>
 </footer>`;
