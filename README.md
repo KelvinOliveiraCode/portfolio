@@ -4,7 +4,7 @@
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)](#) [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)](#) [![Vanilla JS](https://img.shields.io/badge/Vanilla%20JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black)](#) [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222?style=flat-square&logo=githubpages)](#) [![PT/EN](https://img.shields.io/badge/i18n-PT%2FEN-4AA8E0?style=flat-square)](#)
 
-Portfólio multipágina de **Kelvin Oliveira** — HTML/CSS/JS puros, sem build, em português e inglês.
+Portfólio multipágina de **Kelvin Oliveira**, HTML/CSS/JS puros, sem build, em português e inglês.
 
 ## O que é
 
@@ -16,13 +16,13 @@ Em produção (versão v2). Publicado em <https://kelvinoliveiracode.github.io/p
 
 ## Funcionalidades
 
-- **6 páginas**: Home, Projetos (arquivo completo), casos de estudo (`/projetos/<slug>/`), Sobre, Certificados e 404.
+- 6 páginas: Home, Projetos (arquivo completo), casos de estudo (`/projetos/<slug>/`), Sobre, Certificados e 404.
 - **Explorador em árvore do GitHub** na home, com números rastreados a uma fonte.
 - **Filtro por área e busca** na página de projetos.
 - **11 casos de estudo** gerados por `scripts/gen-case-pages.mjs`.
 - **4 certificados DIO** com link de verificação.
 - **i18n PT/EN** (`data/i18n.json`).
-- **Direção visual**: preto e branco sem acento cromático, planeta de Terra em pontos (canvas 2D) no hero, movimento opcional que respeita `prefers-reduced-motion`, contraste mínimo 4,5:1.
+- Direção visual: preto e branco sem acento cromático, planeta de Terra em pontos (canvas 2D) no hero, movimento opcional que respeita `prefers-reduced-motion`, contraste mínimo 4,5:1.
 
 ## Arquitetura
 
@@ -51,7 +51,7 @@ flowchart LR
 
 ## Estrutura do repositório
 
-```
+```text
 portfolio/
 ├── index.html · 404.html
 ├── css/                 # tokens, site, páginas, index
@@ -70,7 +70,9 @@ portfolio/
 
 Nenhum para servir. Para desenvolvimento, Python 3 ou Node.
 
-## Desenvolvimento local
+## Como executar
+
+Requer Node.js 18 ou superior. Não há build.
 
 ```bash
 python scripts/servidor_local.py
@@ -91,9 +93,9 @@ Não há suíte de testes automatizada (ausência de `package.json`/framework de
 
 ## Decisões técnicas e trade-offs
 
-- **Zero build/framework**: site leve, direto no GitHub Pages; o custo é gerenciar rotas e i18n à mão.
-- **Dados em JSON com fonte rastreada**: cada número do site tem origem verificável; sincronização automática do snapshot de repositórios no deploy.
-- **Design monocromático discreto com um único motivo (planeta)**: identidade forte sem ruído; movimento opcional por acessibilidade.
+- Zero build/framework: site leve, direto no GitHub Pages; o custo é gerenciar rotas e i18n à mão.
+- Dados em JSON com fonte rastreada: cada número do site tem origem verificável; sincronização automática do snapshot de repositórios no deploy.
+- Design monocromático discreto com um único motivo (planeta): identidade forte sem ruído; movimento opcional por acessibilidade.
 
 ## Limitações conhecidas e roadmap
 
