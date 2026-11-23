@@ -215,11 +215,11 @@
       <div class="secao-cab">
         <span class="num">04 · <span data-pt="Evidências" data-en="Evidence">Evidências</span></span>
         <h2 data-pt="Números medidos, não prometidos." data-en="Measured numbers, not promises.">Números medidos, não prometidos.</h2>
-        <p class="medida" data-pt="Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 de novembro de 2026, versão 1.5.0." data-en="Each line below comes from a command anyone can run in the repository. Measured on 22 November 2026, version 1.5.0.">Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 de novembro de 2026, versão 1.5.0.</p>
+        <p class="medida" data-pt="Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 e 23 de novembro de 2026, versão 2.0.0." data-en="Each line below comes from a command anyone can run in the repository. Measured on 22 and 23 November 2026, version 2.0.0.">Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 e 23 de novembro de 2026, versão 2.0.0.</p>
       </div>
       <div class="tabela-zona">
         <table class="tabela">
-          <caption class="tabela-titulo" data-pt="Medidas do projeto em 22 de novembro de 2026" data-en="Project measurements on 22 November 2026">Medidas do projeto em 22 de novembro de 2026</caption>
+          <caption class="tabela-titulo" data-pt="Medidas do projeto em novembro de 2026" data-en="Project measurements in November 2026">Medidas do projeto em novembro de 2026</caption>
           <thead>
             <tr>
               <th scope="col" data-pt="Medida" data-en="Measurement">Medida</th>
@@ -230,8 +230,13 @@
           <tbody>
             <tr>
               <th scope="row" data-pt="Testes" data-en="Tests">Testes</th>
-              <td data-pt="1.044 (1.043 passam, 1 skip)" data-en="1,044 (1,043 pass, 1 skip)">1.044 (1.043 passam, 1 skip)</td>
+              <td data-pt="1.303 (1.296 passam, 7 pulados)" data-en="1,303 (1,296 pass, 7 skip)">1.303 (1.296 passam, 7 pulados)</td>
               <td><code>npm test</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Equipes e eventos" data-en="Teams and events">Equipes e eventos</th>
+              <td data-pt="64 testes passam" data-en="64 tests pass">64 testes passam</td>
+              <td><code>node --test core/agent/team.test.mjs core/forge/events.test.mjs</code></td>
             </tr>
             <tr>
               <th scope="row" data-pt="Verificação completa" data-en="Full verification">Verificação completa</th>
@@ -289,7 +294,7 @@
       <div class="secao-cab">
         <span class="num">05 · <span data-pt="Escopo" data-en="Scope">Escopo</span></span>
         <h2 data-pt="O que existe e o que não existe." data-en="What exists and what does not.">O que existe e o que não existe.</h2>
-        <p class="medida" data-pt="Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 1.5.0, sem arredondar para cima." data-en="An honest project says where it stops. This is the SelfEvoPI boundary in version 1.5.0, with nothing rounded up.">Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 1.5.0, sem arredondar para cima.</p>
+        <p class="medida" data-pt="Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 2.0.0, sem arredondar para cima." data-en="An honest project says where it stops. This is the SelfEvoPI boundary in version 2.0.0, with nothing rounded up.">Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 2.0.0, sem arredondar para cima.</p>
       </div>
 
       <div class="duas-colunas">
@@ -302,6 +307,8 @@
             <li><p data-pt="Roteador multi-provider com 48 modelos verificados e esforços de raciocínio lidos da metadata." data-en="A multi-provider router with 48 verified models and reasoning efforts read from metadata.">Roteador multi-provider com 48 modelos verificados e esforços de raciocínio lidos da metadata.</p></li>
             <li><p data-pt="Memória persistente, sandbox Windows nativo e ledger de segurança com excerpt redigido." data-en="Persistent memory, a Windows-native sandbox and a security ledger with redacted excerpts.">Memória persistente, sandbox Windows nativo e ledger de segurança com excerpt redigido.</p></li>
             <li><p data-pt="Interface em inglês e português, doze temas e degradação honesta para ANSI-256." data-en="An interface in English and Portuguese, twelve themes and honest degradation to ANSI-256.">Interface em inglês e português, doze temas e degradação honesta para ANSI-256.</p></li>
+            <li><p data-pt="Equipes persistentes com quadro, mensagens e passo determinístico, e barramento de eventos local com cursor salvo." data-en="Persistent teams with a board, messages and a deterministic step, plus a local event bus with a saved cursor.">Equipes persistentes com quadro, mensagens e passo determinístico, e barramento de eventos local com cursor salvo.</p></li>
+            <li><p data-pt="Memória automática com redação de segredo, células persistentes restritas e auditoria de refutação na CLI." data-en="Automatic memory with secret redaction, restricted persistent cells and a refutation audit in the CLI.">Memória automática com redação de segredo, células persistentes restritas e auditoria de refutação na CLI.</p></li>
             <li><p data-pt="Zero dependências npm, ESM puro, Windows nativo sem Docker, WSL ou VM." data-en="Zero npm dependencies, pure ESM, native Windows with no Docker, WSL or VM.">Zero dependências npm, ESM puro, Windows nativo sem Docker, WSL ou VM.</p></li>
           </ul>
         </div>
@@ -314,6 +321,7 @@
             <li><p data-pt="Grupo B do gate com chamadas reais de modelo no CI: roda local, para quem tem credencial." data-en="Gate group B with real model calls in CI: it runs locally, for those who hold credentials.">Grupo B do gate com chamadas reais de modelo no CI: roda local, para quem tem credencial.</p></li>
             <li><p data-pt="Quatro modelos do catálogo que não devolvem texto no prompt mínimo: é comportamento do provedor, não divergência de capacidade." data-en="Four catalog models that return no text on the minimal prompt: that is provider behavior, not a capability divergence.">Quatro modelos do catálogo que não devolvem texto no prompt mínimo: é comportamento do provedor, não divergência de capacidade.</p></li>
             <li><p data-pt="Barra de progresso no título da janela, keybindings customizáveis e o comando /btw." data-en="A progress bar in the window title, custom keybindings and the /btw command.">Barra de progresso no título da janela, keybindings customizáveis e o comando /btw.</p></li>
+            <li><p data-pt="Células usam ferramentas internas mínimas; servidor LSP real e depuração de processo real seguem sem prova." data-en="Cells use minimal internal tools; a real LSP server and real process debugging remain unproven.">Células usam ferramentas internas mínimas; servidor LSP real e depuração de processo real seguem sem prova.</p></li>
             <li><p data-pt="Multiplataforma: o sandbox é Windows nativo, então Linux e macOS ficam de fora por decisão, não por esquecimento." data-en="Cross-platform support: the sandbox is Windows-native, so Linux and macOS are out by decision, not by oversight.">Multiplataforma: o sandbox é Windows nativo, então Linux e macOS ficam de fora por decisão, não por esquecimento.</p></li>
           </ul>
         </div>

@@ -1,6 +1,6 @@
 {
  "verifiedAt": "2026-11-01",
- "source": "cada URL abaixo foi testada com HTTP 200 em 2026-11-01; a lista sai de uma varredura nos 105 repositórios públicos (kelvinoliveiracode.github.io/<repo>/)",
+ "source": "cada URL abaixo foi testada com HTTP 200 em 2026-11-01; a entrada do SelfEvoPI foi conferida em 2026-11-23. A lista sai de uma varredura nos repositórios públicos (kelvinoliveiracode.github.io/<repo>/)",
  "pages": [
   {
    "repo": "chopp-gourmet",
@@ -45,6 +45,10 @@
   {
    "repo": "portfolio",
    "url": "https://kelvinoliveiracode.github.io/portfolio/"
+  },
+  {
+   "repo": "SelfEvoPI",
+   "url": "https://kelvinoliveiracode.github.io/SelfEvoPI-site/"
   },
   {
    "repo": "techcards",

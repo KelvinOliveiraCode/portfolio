@@ -58,7 +58,7 @@ portfolio/
 ├── css/                 # tokens, site, páginas, index
 ├── js/                  # home, efeitos, i18n, tree, strip, arquivo, planeta
 ├── data/
-│   ├── repos.json       # public snapshot (103 repos)
+│   ├── repos.json       # public snapshot (109 repos)
 │   ├── destaques.json   # case-study texts
 │   ├── live-pages.json  # verified published pages
 │   ├── areas.json · i18n.json
