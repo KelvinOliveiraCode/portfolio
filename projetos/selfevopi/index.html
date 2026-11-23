@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-pt-content="SelfEvoPI: harness de agente de código · Kelvin Oliveira" data-en-content="SelfEvoPI: coding-agent harness · Kelvin Oliveira">SelfEvoPI: harness de agente de código · Kelvin Oliveira</title>
+<meta name="description" content="um harness de agente de código leve, agnóstico e auto-evolutivo: a CLI é a única superfície e o motor por baixo é detalhe de implementação. (2026)"
+      data-pt-content="um harness de agente de código leve, agnóstico e auto-evolutivo: a CLI é a única superfície e o motor por baixo é detalhe de implementação. (2026)"
+      data-en-content="a lightweight, engine-agnostic, self-evolving coding-agent harness: the CLI is the only surface and the engine underneath is an implementation detail. (2026)">
+<meta name="author" content="Kelvin Rebelo de Oliveira">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="canonical" href="https://kelvinoliveiracode.github.io/portfolio/projetos/selfevopi/">
+<link rel="icon" type="image/png" sizes="32x32" href="../../assets/favicon.png">
+<link rel="apple-touch-icon" href="../../assets/favicon-180.png">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="SelfEvoPI: harness de agente de código" data-pt-content="SelfEvoPI: harness de agente de código" data-en-content="SelfEvoPI: coding-agent harness">
+<meta property="og:description" content="um harness de agente de código leve, agnóstico e auto-evolutivo: detecta a lacuna, gera o artefato, testa isolado e só promove o que não regride. (2026)" data-pt-content="um harness de agente de código leve, agnóstico e auto-evolutivo: detecta a lacuna, gera o artefato, testa isolado e só promove o que não regride. (2026)" data-en-content="a lightweight, engine-agnostic, self-evolving coding-agent harness: it detects the gap, generates the artifact, tests it in isolation and only promotes what does not regress. (2026)">
+<meta property="og:url" content="https://kelvinoliveiracode.github.io/portfolio/projetos/selfevopi/">
+<meta property="og:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
+<meta property="og:image:width" content="1920">
+<meta property="og:image:height" content="1080">
+<meta property="og:locale" content="pt_BR" data-pt-content="pt_BR" data-en-content="en_US">
+<meta property="og:locale:alternate" content="en_US" data-pt-content="en_US" data-en-content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://kelvinoliveiracode.github.io/portfolio/assets/gravura-poster.jpg">
+<meta name="twitter:title" content="SelfEvoPI: harness de agente de código" data-pt-content="SelfEvoPI: harness de agente de código" data-en-content="SelfEvoPI: coding-agent harness">
+<meta name="twitter:description" content="um harness de agente de código leve, agnóstico e auto-evolutivo: detecta a lacuna, gera o artefato, testa isolado e só promove o que não regride. (2026)" data-pt-content="um harness de agente de código leve, agnóstico e auto-evolutivo: detecta a lacuna, gera o artefato, testa isolado e só promove o que não regride. (2026)" data-en-content="a lightweight, engine-agnostic, self-evolving coding-agent harness: it detects the gap, generates the artifact, tests it in isolation and only promotes what does not regress. (2026)">
+
+<link rel="stylesheet" href="../../css/tokens.css">
+<link rel="stylesheet" href="../../css/site.css">
+<link rel="stylesheet" href="../../css/paginas.css">
+</head>
+<body data-prefix="../../" data-case="selfevopi">
+
+<a class="skip" href="#inicio" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+
+<div id="faixa-destaques" class="topo-strip" aria-label="Destaques" data-pt-aria="Destaques" data-en-aria="Featured work"></div>
+
+<div class="grao" aria-hidden="true"></div>
+
+
+<nav class="nav-bar" aria-label="Navegação principal" data-pt-aria="Navegação principal" data-en-aria="Main navigation">
+  <ul class="nav-links">
+    <li><a href="../../index.html" data-pt="Início" data-en="Home">Início</a></li>
+    <li><a href="../../sobre/" data-pt="Sobre" data-en="About">Sobre</a></li>
+    <li><a href="../../projetos/" aria-current="page" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+    <li><a href="../../certificados/" data-pt="Certificados" data-en="Certificates">Certificados</a></li>
+  </ul>
+  <div class="nav-end">
+    <a class="ico" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener" aria-label="GitHub de Kelvin Oliveira" data-pt-aria="GitHub de Kelvin Oliveira" data-en-aria="Kelvin Oliveira's GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.7.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.3.5 12.5z"/></svg></a>
+    <a class="ico" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener" aria-label="LinkedIn de Kelvin Oliveira" data-pt-aria="LinkedIn de Kelvin Oliveira" data-en-aria="Kelvin Oliveira's LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.9-3-1.9 0-2.2 1.4-2.2 2.9v5.7H9.2V9h3.4v1.6c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.4 2.4 4.4 5.6v6.1zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.4H3.5V9h3.6v11.4z"/></svg></a>
+    <button id="lang-toggle" class="lang-btn" type="button" aria-live="polite">EN</button>
+  </div>
+</nav>
+
+<main id="inicio">
+
+  <header class="hero hero-case">
+    <div class="hero-texto">
+      <span class="rotulo eyebrow" data-pt="Caso de estudo · Agentes" data-en="Case study · Agents">Caso de estudo · Agentes</span>
+      <h1><img class="hero-wordmark" src="../../assets/projetos/selfevopi-wordmark.svg" width="450" height="96" alt="SelfEvoPI" data-pt-alt="SelfEvoPI" data-en-alt="SelfEvoPI"></h1>
+      <p class="linha-lead" data-pt="A self-evolving coding-agent harness: leve, agnóstico e auto-evolutivo. Detecta a lacuna de capacidade, escreve o artefato que a fecha, testa isolado e só promove o que não quebra nada." data-en="A self-evolving coding-agent harness: lightweight, engine-agnostic and self-evolving. It detects the capability gap, writes the artifact that closes it, tests it in isolation and only promotes what breaks nothing.">A self-evolving coding-agent harness: leve, agnóstico e auto-evolutivo. Detecta a lacuna de capacidade, escreve o artefato que a fecha, testa isolado e só promove o que não quebra nada.</p>
+      <p class="linha-meta"><span>Node ≥ 22.19</span><span aria-hidden="true">·</span><span>MIT</span><span aria-hidden="true">·</span><span>2026</span><span aria-hidden="true">·</span><a href="https://github.com/KelvinOliveiraCode/SelfEvoPI" target="_blank" rel="noopener">GitHub ↗</a><span aria-hidden="true">·</span><a href="https://kelvinoliveiracode.github.io/SelfEvoPI-site/" target="_blank" rel="noopener" data-pt="site ↗" data-en="site ↗">site ↗</a></p>
+    </div>
+    <div class="hero-cena" data-globe aria-hidden="true"></div>
+  </header>
+
+
+  <section class="secao" id="o-que-e">
+    <div class="wrap-interno">
+      <div class="secao-cab">
+        <span class="num">01 · <span data-pt="O que é" data-en="What this is">O que é</span></span>
+        <h2 data-pt="O que é." data-en="What it is.">O que é.</h2>
+      </div>
+      <div class="prosa">
+        <p data-pt="SelfEvoPI é um harness de agente de código: uma camada fina e deliberada em volta de um motor de IA. Ele não faz fork do motor. Acrescenta um roteador multi-provider, uma suíte de evals com gate de regressão, memória persistente, sandbox Windows nativo e um núcleo que percebe uma lacuna de capacidade, gera o artefato que a fecha, testa esse artefato isolado e só o promove quando nada regride." data-en="SelfEvoPI is a coding-agent harness: a thin, deliberate layer around an AI engine. It does not fork the engine. It adds a multi-provider router, an eval suite with a regression gate, persistent memory, a Windows-native sandbox and a core that notices a capability gap, generates the artifact that closes it, tests that artifact in isolation and only promotes it when nothing regresses.">SelfEvoPI é um harness de agente de código: uma camada fina e deliberada em volta de um motor de IA. Ele não faz fork do motor. Acrescenta um roteador multi-provider, uma suíte de evals com gate de regressão, memória persistente, sandbox Windows nativo e um núcleo que percebe uma lacuna de capacidade, gera o artefato que a fecha, testa esse artefato isolado e só o promove quando nada regride.</p>
+        <p data-pt="O produto é a CLI. Uma superfície, uma conversa. O motor por baixo é detalhe de implementação que ninguém precisa ver." data-en="The product is the CLI. One surface, one conversation. The engine underneath is an implementation detail nobody has to see.">O produto é a CLI. Uma superfície, uma conversa. O motor por baixo é detalhe de implementação que ninguém precisa ver.</p>
+      </div>
+      <ul class="propriedades">
+        <li>
+          <strong data-pt="Contexto é orçamento." data-en="Context is a budget.">Contexto é orçamento.</strong>
+          <p data-pt="Cada token no prompt de sistema é pago em todo turno, para sempre. A contribuição do SelfEvoPI tem teto de 1.500 tokens e mede +499 no teto. Skills e schemas de MCP carregam sob demanda, não na abertura." data-en="Every token in the system prompt is paid on every turn, forever. The SelfEvoPI contribution is capped at 1,500 tokens and measures +499 at the ceiling. Skills and MCP schemas load on demand, not at boot.">Cada token no prompt de sistema é pago em todo turno, para sempre. A contribuição do SelfEvoPI tem teto de 1.500 tokens e mede +499 no teto. Skills e schemas de MCP carregam sob demanda, não na abertura.</p>
+        </li>
+        <li>
+          <strong data-pt="Latência é feature." data-en="Latency is a feature.">Latência é feature.</strong>
+          <p data-pt="A CLI abre em ~82 ms nesta máquina: nada pesado carrega no boot. Um harness que demora a abrir é um harness que se evita usar, e um harness que ninguém usa não evolui." data-en="The CLI starts in ~82 ms on this machine: nothing heavy loads at boot. A harness that is slow to open is a harness people avoid using, and a harness nobody uses does not evolve.">A CLI abre em ~82 ms nesta máquina: nada pesado carrega no boot. Um harness que demora a abrir é um harness que se evita usar, e um harness que ninguém usa não evolui.</p>
+        </li>
+        <li>
+          <strong data-pt="Qualidade se mede." data-en="Quality is measured.">Qualidade se mede.</strong>
+          <p data-pt="&ldquo;Funciona&rdquo; não é resultado. &ldquo;85 de 87 na baseline, com a tarefa estocástica nomeada&rdquo; é. O núcleo nunca edita o juiz nem o freio: evals e governança ficam fora do alcance do loop. Quando o gate reprova, o delta é revertido e a baseline só muda com justificativa. Nada de enfraquecer o verificador para passar." data-en="&ldquo;It works&rdquo; is not a result. &ldquo;85 out of 87 on the baseline, with the stochastic task named&rdquo; is. The core never edits the judge or the brake: evals and governance stay out of the loop's reach. When the gate fails, the delta is reverted and the baseline only changes with a justification. No weakening the verifier to get through.">&ldquo;Funciona&rdquo; não é resultado. &ldquo;85 de 87 na baseline, com a tarefa estocástica nomeada&rdquo; é. O núcleo nunca edita o juiz nem o freio: evals e governança ficam fora do alcance do loop. Quando o gate reprova, o delta é revertido e a baseline só muda com justificativa. Nada de enfraquecer o verificador para passar.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="secao" id="ciclo">
+    <div class="wrap-interno">
+      <div class="secao-cab">
+        <span class="num">02 · <span data-pt="O ciclo adaptativo" data-en="The adaptive loop">O ciclo adaptativo</span></span>
+        <h2 data-pt="Seis etapas, cada uma testável." data-en="Six stages, each one testable.">Seis etapas, cada uma testável.</h2>
+        <p class="medida" data-pt="O núcleo não tem um script: tem um ciclo que se percorre até o artefato passar ou ser descartado. Cada etapa é injetável, então nenhuma delas é caixa-preta." data-en="The core has no script: it has a loop that runs until the artifact passes or is discarded. Every stage is injectable, so none of them is a black box.">O núcleo não tem um script: tem um ciclo que se percorre até o artefato passar ou ser descartado. Cada etapa é injetável, então nenhuma delas é caixa-preta.</p>
+      </div>
+
+      <figure class="diagrama diagrama--ciclo">
+        <svg viewBox="0 0 560 560" width="560" height="560" role="img" aria-labelledby="ciclo-titulo ciclo-desc">
+          <title id="ciclo-titulo" data-pt="Ciclo adaptativo do SelfEvoPI" data-en="SelfEvoPI adaptive loop">Ciclo adaptativo do SelfEvoPI</title>
+          <desc id="ciclo-desc" data-pt="Seis nós em círculo: detectar, especificar, gerar, verificar, gate e promover ou reverter. No centro, a palavra SelfEvoPI." data-en="Six nodes in a circle: detect, specify, generate, verify, gate, and promote or revert. SelfEvoPI sits at the center.">Seis nós em círculo: detectar, especificar, gerar, verificar, gate e promover ou reverter. No centro, a palavra SelfEvoPI.</desc>
+          <circle cx="280" cy="280" r="212" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1"/>
+          <g class="diagrama-centro">
+            <text x="280" y="274" text-anchor="middle" class="diagrama-centro-t">SelfEvoPI</text>
+            <text x="280" y="300" text-anchor="middle" class="diagrama-centro-s" data-pt="ciclo adaptativo" data-en="adaptive loop">ciclo adaptativo</text>
+          </g>
+          <g class="diagrama-nos">
+            <g class="diagrama-no">
+              <circle cx="280" cy="68" r="30"/>
+              <text x="280" y="73" text-anchor="middle" class="diagrama-no-t">detect</text>
+              <text x="280" y="120" text-anchor="middle" class="diagrama-no-s" data-pt="abre a lacuna" data-en="opens the gap">abre a lacuna</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="464" cy="174" r="30"/>
+              <text x="464" y="179" text-anchor="middle" class="diagrama-no-t">specify</text>
+              <text x="464" y="226" text-anchor="middle" class="diagrama-no-s" data-pt="define o contrato" data-en="sets the contract">define o contrato</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="464" cy="386" r="30"/>
+              <text x="464" y="391" text-anchor="middle" class="diagrama-no-t">generate</text>
+              <text x="464" y="438" text-anchor="middle" class="diagrama-no-s" data-pt="escreve o artefato" data-en="writes the artifact">escreve o artefato</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="280" cy="492" r="30"/>
+              <text x="280" y="497" text-anchor="middle" class="diagrama-no-t">verify</text>
+              <text x="280" y="544" text-anchor="middle" class="diagrama-no-s" data-pt="sonda o contrato" data-en="probes the contract">sonda o contrato</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="96" cy="386" r="30"/>
+              <text x="96" y="391" text-anchor="middle" class="diagrama-no-t">gate</text>
+              <text x="96" y="438" text-anchor="middle" class="diagrama-no-s" data-pt="mede a regressão" data-en="measures the regression">mede a regressão</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="96" cy="174" r="30"/>
+              <text x="96" y="179" text-anchor="middle" class="diagrama-no-t">promote</text>
+              <text x="96" y="226" text-anchor="middle" class="diagrama-no-s" data-pt="ou reverte" data-en="or revert">ou reverte</text>
+            </g>
+          </g>
+        </svg>
+        <figcaption class="diagrama-fecho" data-pt="O mesmo ciclo vale para o harness e para as tarefas que ele executa: quando o gate reprova, o delta volta e a baseline fica intacta." data-en="The same loop applies to the harness and to the tasks it runs: when the gate fails, the delta goes back and the baseline stays intact.">O mesmo ciclo vale para o harness e para as tarefas que ele executa: quando o gate reprova, o delta volta e a baseline fica intacta.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="secao" id="arquitetura">
+    <div class="wrap-interno">
+      <div class="secao-cab">
+        <span class="num">03 · <span data-pt="Arquitetura" data-en="Architecture">Arquitetura</span></span>
+        <h2 data-pt="Oito camadas em volta da CLI." data-en="Eight layers around the CLI.">Oito camadas em volta da CLI.</h2>
+        <p class="medida" data-pt="A CLI é a única superfície. Tudo o mais é camada que ela chama por RPC ou por processo filho, e cada camada pode ser trocada sem reescrever a de cima." data-en="The CLI is the only surface. Everything else is a layer it calls over RPC or as a child process, and each layer can be swapped without rewriting the one above.">A CLI é a única superfície. Tudo o mais é camada que ela chama por RPC ou por processo filho, e cada camada pode ser trocada sem reescrever a de cima.</p>
+      </div>
+
+      <figure class="diagrama diagrama--camadas">
+        <svg viewBox="0 0 560 460" width="560" height="460" role="img" aria-labelledby="camadas-titulo camadas-desc">
+          <title id="camadas-titulo" data-pt="Arquitetura em camadas do SelfEvoPI" data-en="SelfEvoPI layered architecture">Arquitetura em camadas do SelfEvoPI</title>
+          <desc id="camadas-desc" data-pt="Nó central SelfEvoPI com oito camadas ao redor: CLI, cliente RPC, roteador, evals, memória, sandbox, governança e grafo." data-en="A central SelfEvoPI node with eight layers around it: CLI, RPC client, router, evals, memory, sandbox, governance and graph.">Nó central SelfEvoPI com oito camadas ao redor: CLI, cliente RPC, roteador, evals, memória, sandbox, governança e grafo.</desc>
+          <g class="diagrama-nos">
+            <g class="diagrama-no">
+              <circle cx="280" cy="52" r="26"/>
+              <text x="280" y="56" text-anchor="middle" class="diagrama-no-t">CLI</text>
+              <text x="280" y="100" text-anchor="middle" class="diagrama-no-s" data-pt="superfície única" data-en="only surface">superfície única</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="442" cy="146" r="26"/>
+              <text x="442" y="150" text-anchor="middle" class="diagrama-no-t">RPC</text>
+              <text x="442" y="194" text-anchor="middle" class="diagrama-no-s" data-pt="cliente" data-en="client">cliente</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="442" cy="314" r="26"/>
+              <text x="442" y="318" text-anchor="middle" class="diagrama-no-t">router</text>
+              <text x="442" y="362" text-anchor="middle" class="diagrama-no-s" data-pt="48 modelos" data-en="48 models">48 modelos</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="280" cy="408" r="26"/>
+              <text x="280" y="412" text-anchor="middle" class="diagrama-no-t">evals</text>
+              <text x="280" y="456" text-anchor="middle" class="diagrama-no-s" data-pt="gate" data-en="gate">gate</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="118" cy="314" r="26"/>
+              <text x="118" y="318" text-anchor="middle" class="diagrama-no-t">memory</text>
+              <text x="118" y="362" text-anchor="middle" class="diagrama-no-s" data-pt="persistente" data-en="persistent">persistente</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="118" cy="146" r="26"/>
+              <text x="118" y="150" text-anchor="middle" class="diagrama-no-t">sandbox</text>
+              <text x="118" y="194" text-anchor="middle" class="diagrama-no-s" data-pt="Windows" data-en="Windows">Windows</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="210" cy="230" r="26"/>
+              <text x="210" y="234" text-anchor="middle" class="diagrama-no-t">governance</text>
+            </g>
+            <g class="diagrama-no">
+              <circle cx="350" cy="230" r="26"/>
+              <text x="350" y="234" text-anchor="middle" class="diagrama-no-t">graph</text>
+            </g>
+          </g>
+          <circle cx="280" cy="230" r="46" class="diagrama-nucleo"/>
+          <text x="280" y="235" text-anchor="middle" class="diagrama-nucleo-t">SelfEvoPI</text>
+        </svg>
+        <figcaption class="diagrama-fecho" data-pt="Nada disso é decorativo: o roteador é o que fala com 48 modelos sem prender o harness a um provedor, e a governança é o que impede o núcleo de editar o próprio juiz." data-en="None of this is decorative: the router is what talks to 48 models without tying the harness to one provider, and governance is what stops the core from editing its own judge.">Nada disso é decorativo: o roteador é o que fala com 48 modelos sem prender o harness a um provedor, e a governança é o que impede o núcleo de editar o próprio juiz.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="secao" id="evidencias">
+    <div class="wrap-interno">
+      <div class="secao-cab">
+        <span class="num">04 · <span data-pt="Evidências" data-en="Evidence">Evidências</span></span>
+        <h2 data-pt="Números medidos, não prometidos." data-en="Measured numbers, not promises.">Números medidos, não prometidos.</h2>
+        <p class="medida" data-pt="Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 de novembro de 2026, versão 1.5.0." data-en="Each line below comes from a command anyone can run in the repository. Measured on 22 November 2026, version 1.5.0.">Cada linha abaixo vem de um comando que qualquer pessoa pode rodar no repositório. Medição de 22 de novembro de 2026, versão 1.5.0.</p>
+      </div>
+      <div class="tabela-zona">
+        <table class="tabela">
+          <caption class="tabela-titulo" data-pt="Medidas do projeto em 22 de novembro de 2026" data-en="Project measurements on 22 November 2026">Medidas do projeto em 22 de novembro de 2026</caption>
+          <thead>
+            <tr>
+              <th scope="col" data-pt="Medida" data-en="Measurement">Medida</th>
+              <th scope="col" data-pt="Valor" data-en="Value">Valor</th>
+              <th scope="col" data-pt="Comando" data-en="Command">Comando</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row" data-pt="Testes" data-en="Tests">Testes</th>
+              <td data-pt="1.044 (1.043 passam, 1 skip)" data-en="1,044 (1,043 pass, 1 skip)">1.044 (1.043 passam, 1 skip)</td>
+              <td><code>npm test</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Verificação completa" data-en="Full verification">Verificação completa</th>
+              <td data-pt="exit 0" data-en="exit 0">exit 0</td>
+              <td><code>npm run verify</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Cold start da CLI" data-en="CLI cold start">Cold start da CLI</th>
+              <td data-pt="~82 ms (7 execuções, 80–102 ms)" data-en="~82 ms (7 runs, 80–102 ms)">~82 ms (7 execuções, 80–102 ms)</td>
+              <td><code>node apps/cli.mjs --version</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Acréscimo de prompt" data-en="Prompt overhead">Acréscimo de prompt</th>
+              <td data-pt="+499 tok, no teto de 1.500" data-en="+499 tok, against a 1,500 ceiling">+499 tok, no teto de 1.500</td>
+              <td><code>node scripts/measure-selfevopi-overhead.mjs --runs 3</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Modelos verificados" data-en="Models verified">Modelos verificados</th>
+              <td data-pt="48 de 48 sem divergência" data-en="48 of 48 with no divergence">48 de 48 sem divergência</td>
+              <td><code>npm run models:check</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Evals A/B/C" data-en="Evals A/B/C">Evals A/B/C</th>
+              <td data-pt="verdes, sem regressão" data-en="green, no regression">verdes, sem regressão</td>
+              <td><code>node evals/run.mjs --group A</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Integridade de fontes" data-en="Source integrity">Integridade de fontes</th>
+              <td data-pt="ok 33, falhas 0" data-en="33 ok, 0 failures">ok 33, falhas 0</td>
+              <td><code>node scripts/verify-urls.mjs</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Contraste dos papéis de texto" data-en="Text role contrast">Contraste dos papéis de texto</th>
+              <td data-pt="acima de 7:1 em todos os temas" data-en="above 7:1 in every theme">acima de 7:1 em todos os temas</td>
+              <td><code>core/agent/theme.test.mjs</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Largura da TUI" data-en="TUI width">Largura da TUI</th>
+              <td data-pt="no máximo 72 colunas" data-en="at most 72 columns">no máximo 72 colunas</td>
+              <td><code>--render status</code></td>
+            </tr>
+            <tr>
+              <th scope="row" data-pt="Saída em pipe e CI" data-en="Pipe and CI output">Saída em pipe e CI</th>
+              <td data-pt="zero escapes de cursor" data-en="zero cursor escapes">zero escapes de cursor</td>
+              <td><code>logs das 12 tarefas</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="secao" id="limites">
+    <div class="wrap-interno">
+      <div class="secao-cab">
+        <span class="num">05 · <span data-pt="Escopo" data-en="Scope">Escopo</span></span>
+        <h2 data-pt="O que existe e o que não existe." data-en="What exists and what does not.">O que existe e o que não existe.</h2>
+        <p class="medida" data-pt="Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 1.5.0, sem arredondar para cima." data-en="An honest project says where it stops. This is the SelfEvoPI boundary in version 1.5.0, with nothing rounded up.">Um projeto honesto diz onde termina. Esta é a fronteira do SelfEvoPI na versão 1.5.0, sem arredondar para cima.</p>
+      </div>
+
+      <div class="duas-colunas">
+        <div class="coluna">
+          <h3 class="coluna-titulo" data-pt="O que existe" data-en="What exists">O que existe</h3>
+          <ul class="coluna-lista">
+            <li><p data-pt="CLI com conversa em streaming, paleta de comandos, barra de estado e modos /ask, /build, /plan e /manual." data-en="A CLI with streaming conversation, a command palette, a status bar and /ask, /build, /plan and /manual modes.">CLI com conversa em streaming, paleta de comandos, barra de estado e modos /ask, /build, /plan e /manual.</p></li>
+            <li><p data-pt="Núcleo auto-evolutivo com o ciclo completo e hierarquia de artefatos: config, skill, CLI, extensão e servidor MCP." data-en="A self-evolving core with the full loop and an artifact hierarchy: config, skill, CLI, extension and MCP server.">Núcleo auto-evolutivo com o ciclo completo e hierarquia de artefatos: config, skill, CLI, extensão e servidor MCP.</p></li>
+            <li><p data-pt="Gate de regressão determinístico, com evals e governança fora do alcance do loop." data-en="A deterministic regression gate, with evals and governance out of the loop's reach.">Gate de regressão determinístico, com evals e governança fora do alcance do loop.</p></li>
+            <li><p data-pt="Roteador multi-provider com 48 modelos verificados e esforços de raciocínio lidos da metadata." data-en="A multi-provider router with 48 verified models and reasoning efforts read from metadata.">Roteador multi-provider com 48 modelos verificados e esforços de raciocínio lidos da metadata.</p></li>
+            <li><p data-pt="Memória persistente, sandbox Windows nativo e ledger de segurança com excerpt redigido." data-en="Persistent memory, a Windows-native sandbox and a security ledger with redacted excerpts.">Memória persistente, sandbox Windows nativo e ledger de segurança com excerpt redigido.</p></li>
+            <li><p data-pt="Interface em inglês e português, doze temas e degradação honesta para ANSI-256." data-en="An interface in English and Portuguese, twelve themes and honest degradation to ANSI-256.">Interface em inglês e português, doze temas e degradação honesta para ANSI-256.</p></li>
+            <li><p data-pt="Zero dependências npm, ESM puro, Windows nativo sem Docker, WSL ou VM." data-en="Zero npm dependencies, pure ESM, native Windows with no Docker, WSL or VM.">Zero dependências npm, ESM puro, Windows nativo sem Docker, WSL ou VM.</p></li>
+          </ul>
+        </div>
+
+        <div class="coluna">
+          <h3 class="coluna-titulo" data-pt="O que não existe" data-en="What does not exist">O que não existe</h3>
+          <ul class="coluna-lista">
+            <li><p data-pt="Auto-disparo do loop por evento externo: o modo --watch e o dry-run existem, mas webhook, fila e ticket ainda não." data-en="Event-driven loop triggering: --watch mode and dry-run exist, but webhooks, queues and tickets do not yet.">Auto-disparo do loop por evento externo: o modo --watch e o dry-run existem, mas webhook, fila e ticket ainda não.</p></li>
+            <li><p data-pt="Recuperação de skills por embeddings: a busca é lexical, por termo e tag, sem vetor." data-en="Skill retrieval by embeddings: search is lexical, by term and tag, with no vectors.">Recuperação de skills por embeddings: a busca é lexical, por termo e tag, sem vetor.</p></li>
+            <li><p data-pt="Grupo B do gate com chamadas reais de modelo no CI: roda local, para quem tem credencial." data-en="Gate group B with real model calls in CI: it runs locally, for those who hold credentials.">Grupo B do gate com chamadas reais de modelo no CI: roda local, para quem tem credencial.</p></li>
+            <li><p data-pt="Quatro modelos do catálogo que não devolvem texto no prompt mínimo: é comportamento do provedor, não divergência de capacidade." data-en="Four catalog models that return no text on the minimal prompt: that is provider behavior, not a capability divergence.">Quatro modelos do catálogo que não devolvem texto no prompt mínimo: é comportamento do provedor, não divergência de capacidade.</p></li>
+            <li><p data-pt="Barra de progresso no título da janela, keybindings customizáveis e o comando /btw." data-en="A progress bar in the window title, custom keybindings and the /btw command.">Barra de progresso no título da janela, keybindings customizáveis e o comando /btw.</p></li>
+            <li><p data-pt="Multiplataforma: o sandbox é Windows nativo, então Linux e macOS ficam de fora por decisão, não por esquecimento." data-en="Cross-platform support: the sandbox is Windows-native, so Linux and macOS are out by decision, not by oversight.">Multiplataforma: o sandbox é Windows nativo, então Linux e macOS ficam de fora por decisão, não por esquecimento.</p></li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="pp-links"><a href="https://kelvinoliveiracode.github.io/SelfEvoPI-site/" target="_blank" rel="noopener" data-pt="ver o site completo ↗" data-en="see the full site ↗">ver o site completo ↗</a></p>
+    </div>
+  </section>
+
+  <nav class="prev-next" aria-label="Casos anterior e próximo" data-pt-aria="Casos anterior e próximo" data-en-aria="Previous and next case">
+<a class="lado" href="../wifi-site-survey/">
+        <small data-pt="anterior" data-en="previous">anterior</small>
+        <span data-pt="Pesquisa de cobertura de Wi-Fi" data-en="Wi-Fi coverage survey">Pesquisa de cobertura de Wi-Fi</span>
+      </a>
+<span></span>
+  </nav>
+
+
+<section class="convite" id="contato">
+  <span class="rotulo" data-pt="Contato" data-en="Contact">Contato</span>
+  <h2 data-pt="Vamos conversar sobre o seu problema." data-en="Let's talk about your problem.">Vamos conversar sobre o seu problema.</h2>
+  <p data-pt="Tenho interesse em oportunidades em IA e agentes, dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame." data-en="I'm interested in opportunities in AI and agents, data, backend, cybersecurity and IT. If your team needs someone who has already put projects live and keeps them running, get in touch.">Tenho interesse em oportunidades em IA e agentes, dados, backend, cibersegurança e TI. Se o seu time precisa de alguém que já colocou projeto no ar e mantém tudo rodando, me chame.</p>
+  <div class="acoes">
+    <a class="btn-solido" href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener" data-pt="LinkedIn ↗" data-en="LinkedIn ↗">LinkedIn ↗</a>
+    <a class="btn-linha" href="mailto:kelvinrebelosw@gmail.com">kelvinrebelosw@gmail.com</a>
+    <a class="btn-linha" href="https://wa.me/5591986134599" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="btn-linha" href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="rodape">
+  <div class="rodape-blurb">
+    <p data-pt="© 2026 Kelvin Rebelo de Oliveira" data-en="© 2026 Kelvin Rebelo de Oliveira">© 2026 Kelvin Rebelo de Oliveira</p>
+    <div class="rodape-globo" data-globe aria-hidden="true"></div>
+  </div>
+  <div>
+    <h3 data-pt="Páginas" data-en="Pages">Páginas</h3>
+    <ul>
+      <li><a href="../../index.html" data-pt="Início" data-en="Home">Início</a></li>
+      <li><a href="../../sobre/" data-pt="Sobre" data-en="About">Sobre</a></li>
+      <li><a href="../../projetos/" data-pt="Projetos" data-en="Projects">Projetos</a></li>
+      <li><a href="../../certificados/" data-pt="Certificados" data-en="Certificates">Certificados</a></li>
+    </ul>
+  </div>
+  <div>
+    <h3 data-pt="Contato" data-en="Contact">Contato</h3>
+    <ul class="rodape-icones">
+      <li><a href="https://www.linkedin.com/in/kelvin-oliveira-code/" target="_blank" rel="noopener" aria-label="LinkedIn de Kelvin Oliveira" data-pt-aria="LinkedIn de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on LinkedIn"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zm1.78 13.02H3.56V9h3.56v11.45z"/></svg><span>LinkedIn</span></a></li>
+      <li><a href="mailto:kelvinrebelosw@gmail.com" aria-label="Enviar e-mail para Kelvin Oliveira" data-pt-aria="Enviar e-mail para Kelvin Oliveira" data-en-aria="Email Kelvin Oliveira"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 6.5 9 6.5 9-6.5"/></svg><span data-pt="E-mail" data-en="Email">E-mail</span></a></li>
+      <li><a href="https://wa.me/5591986134599" target="_blank" rel="noopener" aria-label="WhatsApp de Kelvin Oliveira" data-pt-aria="WhatsApp de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on WhatsApp"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.86 9.86 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.23 8.25-8.23 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.82c0 4.54-3.69 8.23-8.23 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.045-.38-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.12-.14.16-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.56c.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29z"/></svg><span>WhatsApp</span></a></li>
+      <li><a href="https://github.com/KelvinOliveiraCode" target="_blank" rel="noopener" aria-label="GitHub de Kelvin Oliveira" data-pt-aria="GitHub de Kelvin Oliveira" data-en-aria="Kelvin Oliveira on GitHub"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5C5.7.5.5 5.6.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.6-3.9-1.6-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.6-1.5 7.9-5.8 7.9-10.9C23.5 5.6 18.3.5 12 .5z"/></svg><span>GitHub</span></a></li>
+    </ul>
+  </div>
+</footer>
+
+<script src="../../js/planeta.js" defer></script>
+<script src="../../js/efeitos.js" defer></script>
+<script src="../../js/i18n.js"></script>
+<script src="../../js/strip.js"></script>
+<script src="../../js/tree.js"></script>
+</body>
+</html>

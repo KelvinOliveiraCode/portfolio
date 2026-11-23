@@ -1282,6 +1282,24 @@
    "live": false
   },
   {
+   "name": "SelfEvoPI",
+   "description": "SelfEvoPI · harness de agente de código leve, agnóstico e auto-evolutivo: roteador multi-provider, evals com gate de regressão, memória, sandbox Windows e núcleo que gera o artefato que falta | SelfEvoPI · lightweight, engine-agnostic, self-evolving coding-agent harness with a multi-provider router, a regression gate, memory, a Windows sandbox and a core that builds the missing artifact",
+   "language": "JavaScript",
+   "homepage": "https://kelvinoliveiracode.github.io/SelfEvoPI-site/",
+   "topics": [
+    "agent-harness",
+    "cli",
+    "code-agent",
+    "evals",
+    "self-evolving",
+    "windows"
+   ],
+   "created": "2026-11-15T00:00:00Z",
+   "pushed": "2026-11-22T00:00:00Z",
+   "sizeKb": 4235,
+   "live": true
+  },
+  {
    "name": "serverless-log-guard",
    "description": "Funcao serverless simulada: normaliza evento, mascara PII, aplica retencao e custo",
    "language": "Python",

@@ -17,6 +17,7 @@ Em produção (versão v2). Publicado em <https://kelvinoliveiracode.github.io/p
 ## Funcionalidades
 
 - 6 páginas: Home, Projetos (arquivo completo), casos de estudo (`/projetos/<slug>/`), Sobre, Certificados e 404.
+- **SelfEvoPI**: seção própria na home, com a wordmark do projeto, os números medidos e o link para o repositório.
 - **Explorador em árvore do GitHub** na home, com números rastreados a uma fonte.
 - **Filtro por área e busca** na página de projetos.
 - **11 casos de estudo** gerados por `scripts/gen-case-pages.mjs`.

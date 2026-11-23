@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -12 450 96" width="450" height="96" role="img" aria-label="SelfEvoPI">
+  <title>SelfEvoPI</title>
+  <g fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <path transform="translate(0 0)" d="M38 12 C36 4 29 0 20 0 C10 0 3 6 3 17 C3 28 11 32 20 36 C30 40 38 44 38 55 C38 66 30 72 20 72 C10 72 3 68 2 60"/>
+    <path transform="translate(52 0)" d="M4 48 H44 C44 34 36 24 24 24 C12 24 4 34 4 48 C4 62 12 72 24 72 C34 72 40 68 43 62"/>
+    <path transform="translate(110 0)" d="M4 0 V60 Q4 72 16 72"/>
+    <path transform="translate(142 0)" d="M8 72 V18 Q8 0 26 0 M0 24 H22"/>
+    <path transform="translate(184 0)" d="M34 0 H4 V72 H34 M4 36 H28"/>
+    <path transform="translate(234 0)" d="M2 24 L22 72 L42 24"/>
+    <ellipse transform="translate(288 0)" cx="24" cy="48" rx="22" ry="24"/>
+    <g transform="translate(354 0)">
+      <path d="M0 20 H68"/>
+      <path d="M20 20 V72"/>
+      <path d="M48 20 V56 Q48 72 64 72"/>
+    </g>
+  </g>
+</svg>
